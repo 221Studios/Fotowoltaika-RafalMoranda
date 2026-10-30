@@ -1,33 +1,29 @@
 import PageHeader from "@/components/PageHeader";
 import FirmIntro from "@/components/FirmIntro";
-import Team from "@/components/Team";
-import OpenPositions from "@/components/OpenPositions";
 import StatementBanner from "@/components/StatementBanner";
+import { BRAND_COLORS } from "@/lib/brandColors";
 
 export const metadata = {
-  title: "Inside the Firm — Tessera Labs",
+  title: "O firmie — Fotowoltaika Kalisz — Rafał Morańda",
 };
 
 export default function FirmPage() {
   return (
     <>
       <PageHeader
-        title="Inside"
-        subtitle="the Firm"
-        description="A look at how the lab thinks, works, and decides what matters."
-        icon="OrbitIcon"
+        title="Poznaj nas"
+        subtitle="ALFA Rafał Morańda"
+        description="Doświadczenie w branży instalacyjnej zdobywamy od 1998 roku."
+        icon="HomeIcon"
       />
 
       <FirmIntro />
 
-      <Team />
-
-      <OpenPositions />
-
       <StatementBanner
-        src="/images/firm/banner.jpg"
-        copyTopLeft={`The questions worth chasing rarely pay off fast.`}
-        copyBottomRight={`So we protect the slow research that does not earn its keep yet.`}
+        src="/images/firm/banner.webp"
+        lightColor={BRAND_COLORS.gray}
+        copyTopLeft={`Rozwiązania dopasowane do Twoich potrzeb.`}
+        copyBottomRight={`Od doradztwa i projektu po montaż oraz serwis.`}
       />
     </>
   );

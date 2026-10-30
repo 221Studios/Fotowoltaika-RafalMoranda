@@ -10,28 +10,17 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import { useGSAP } from "@gsap/react";
 
-import DitherImage from "../DitherImage/DitherImage";
-
 gsap.registerPlugin(ScrollTrigger, SplitText, useGSAP);
 
 const LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/work", label: "Work" },
-  { href: "/research", label: "Research Areas" },
-  { href: "/firm", label: "Inside the Firm" },
-  { href: "/partnerships", label: "Partnerships" },
-  { href: "/journal", label: "Journal" },
-  { href: "/contact", label: "Let's Talk" },
+  { href: "/firm", label: "O nas" },
+  { href: "/research", label: "Fotowoltaika" },
+  { href: "/journal", label: "CCTV" },
+  { href: "/partnerships", label: "Elektryka" },
+  { href: "/work", label: "Realizacje" },
+  { href: "/contact", label: "Kontakt" },
+  { href: "/contact#faq", label: "FAQ" },
 ];
-
-const HANDS = [
-  { src: "/images/footer/hand-left.png", side: "left" },
-  { src: "/images/footer/hand-right.png", side: "right" },
-];
-
-const PARALLAX_STRENGTH = 30;
-const PARALLAX_EASE = 0.05;
-const PARALLAX_SCALE = 1 + (PARALLAX_STRENGTH * 2) / 200;
 
 export default function Footer() {
   const pathname = usePathname();
@@ -42,7 +31,6 @@ export default function Footer() {
       if (pathname === "/work") return;
       const footer = rootRef.current;
       if (!footer) return;
-      const hands = gsap.utils.toArray(`.${styles.footerHand}`);
 
       const headingSplits = gsap.utils
         .toArray(`.${styles.footerWord}`)
@@ -57,72 +45,13 @@ export default function Footer() {
       const contentLines = lineSplits.flatMap((split) => split.lines);
       const splits = [...headingSplits, ...lineSplits];
 
-      const reveal = { left: -125, right: 125 };
       gsap.set(headingChars, {
         position: "relative",
         yPercent: 125,
       });
       gsap.set(contentLines, { yPercent: 100 });
 
-      const pointer = { x: 0, y: 0 };
-      const drift = { x: 0, y: 0 };
-      const mouse = { x: 0, y: 0, active: false };
-
-      const updatePointer = () => {
-        const rect = footer.getBoundingClientRect();
-        const overFooter =
-          mouse.active &&
-          mouse.x >= rect.left &&
-          mouse.x <= rect.right &&
-          mouse.y >= rect.top &&
-          mouse.y <= rect.bottom;
-
-        if (!overFooter) {
-          pointer.x = 0;
-          pointer.y = 0;
-          return;
-        }
-
-        pointer.x =
-          ((mouse.x - rect.left) / rect.width - 0.5) * PARALLAX_STRENGTH * 2;
-        pointer.y =
-          ((mouse.y - rect.top) / rect.height - 0.5) * PARALLAX_STRENGTH * 2;
-      };
-
-      const onMove = (event) => {
-        mouse.x = event.clientX;
-        mouse.y = event.clientY;
-        mouse.active = true;
-        updatePointer();
-      };
-
-      const onLeave = () => {
-        mouse.active = false;
-        updatePointer();
-      };
-
-      const tick = () => {
-        updatePointer();
-        drift.x += (pointer.x - drift.x) * PARALLAX_EASE;
-        drift.y += (pointer.y - drift.y) * PARALLAX_EASE;
-
-        hands.forEach((hand, index) => {
-          const direction = index === 0 ? 1 : -1;
-          const revealX = index === 0 ? reveal.left : reveal.right;
-          const x = drift.x * direction;
-          const y = -drift.y;
-          hand.style.transform = `translate(calc(${x}px + ${revealX}%), ${y}px) scale(${PARALLAX_SCALE})`;
-        });
-      };
-
       const animateIn = () => {
-        gsap.to(reveal, {
-          left: 0,
-          right: 0,
-          duration: 1,
-          ease: "power3.out",
-          overwrite: true,
-        });
         gsap.to(headingChars, {
           yPercent: 0,
           duration: 1,
@@ -140,13 +69,6 @@ export default function Footer() {
       };
 
       const animateOut = () => {
-        gsap.to(reveal, {
-          left: -125,
-          right: 125,
-          duration: 0.4,
-          ease: "power2.in",
-          overwrite: true,
-        });
         gsap.to(headingChars, {
           yPercent: 125,
           duration: 0.4,
@@ -163,11 +85,6 @@ export default function Footer() {
         });
       };
 
-      tick();
-
-      window.addEventListener("mousemove", onMove);
-      window.addEventListener("mouseleave", onLeave);
-      gsap.ticker.add(tick);
       ScrollTrigger.create({
         trigger: footer,
         start: "top 50%",
@@ -180,9 +97,6 @@ export default function Footer() {
       });
 
       return () => {
-        window.removeEventListener("mousemove", onMove);
-        window.removeEventListener("mouseleave", onLeave);
-        gsap.ticker.remove(tick);
         splits.forEach((split) => split.revert());
       };
     },
@@ -195,26 +109,9 @@ export default function Footer() {
       ref={rootRef}
       aria-hidden={pathname === "/work"}
     >
-      <div className={styles.footerHands} aria-hidden="true">
-        {HANDS.map(({ src, side }) => (
-          <div
-            key={side}
-            className={`${styles.footerHand} ${
-              side === "left" ? styles.footerHandLeft : styles.footerHandRight
-            }`}
-          >
-            <DitherImage
-              src={src}
-              alt=""
-              darkColor={"#e8e6e0"}
-              lightColor={"#1757e8"}
-            />
-          </div>
-        ))}
-      </div>
       <div className={`container ${styles.footerInner}`}>
         <div className={styles.footerContent}>
-          <nav className={styles.footerLinks} aria-label="Footer">
+          <nav className={styles.footerLinks} aria-label="Nawigacja w stopce">
             {LINKS.map(({ href, label }) => (
               <Link key={href} href={href} className={styles.footerLink}>
                 <h6>{label}</h6>
@@ -222,14 +119,14 @@ export default function Footer() {
             ))}
           </nav>
           <p className={styles.footerCopy}>
-            An independent lab working on machine intelligence, building systems
-            that reason under real conditions and proving they hold up long
-            after the demo is over.
+            Fotowoltaika, instalacje elektryczne i monitoring. Doradzamy,
+            projektujemy, montujemy i serwisujemy rozwiązania dla domu oraz
+            biznesu.
           </p>
         </div>
         <div className={styles.footerHeader}>
-          <h1 className={styles.footerWord}>Tessera</h1>
-          <h1 className={styles.footerWord}>Labs</h1>
+          <p className={styles.footerLabel}>Fotowoltaika Kalisz</p>
+          <h1 className={styles.footerWord}>Rafał Morańda</h1>
         </div>
       </div>
     </footer>

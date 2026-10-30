@@ -17,34 +17,19 @@ const CLIP_END = "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)";
 
 const GROUPS = [
   {
-    label: "Address",
-    lines: ["Research Quarter", "Edinburgh, Scotland", "United Kingdom"],
+    label: "Adres",
+    lines: ["Ceków Kolonia 6a", "62-834 Ceków"],
   },
   {
-    label: "Comms",
+    label: "Kontakt",
     lines: [
-      { href: "tel:+441312555014", text: "+44 131 255 5014" },
-      { href: "mailto:hello@researchlab.com", text: "hello@tessera.com" },
+      { href: "tel:+48600306425", text: "+48 600 306 425" },
+      { href: "mailto:rafal@moranda.com.pl", text: "rafal@moranda.com.pl" },
     ],
   },
   {
-    label: "Visit",
-    lines: ["55.9533 / -3.1883", "Lab R-07"],
-  },
-  {
-    label: "Social",
-    lines: [
-      {
-        href: "https://www.linkedin.com",
-        text: "LinkedIn",
-        external: true,
-      },
-      {
-        href: "https://github.com",
-        text: "GitHub",
-        external: true,
-      },
-    ],
+    label: "Zakres usług",
+    lines: ["Fotowoltaika", "Instalacje elektryczne", "Monitoring i alarmy"],
   },
 ];
 
@@ -92,20 +77,19 @@ export default function ContactBanner() {
   return (
     <section ref={sectionRef} className={styles.contactBanner}>
       <div className={styles.bg} aria-hidden="true">
-        <DitherImage src="/images/contact/banner.jpg" alt="" />
+        <DitherImage src="/images/contact/banner.webp" alt="" />
       </div>
 
       <div className={styles.wrap}>
         <div ref={panelRef} className={styles.panel}>
           <div className={styles.intro}>
             <Copy delay={0.2} trigger={`.${styles.panel}`}>
-              <h6>Get in touch</h6>
+              <h6>Skontaktuj się z nami</h6>
             </Copy>
             <Copy delay={0.35} trigger={`.${styles.panel}`}>
               <p>
-                Have a research question, a system to investigate, or an idea
-                worth testing. Tell us what you are working on and we will take
-                it from there.
+                Zapytaj o instalację fotowoltaiczną, elektryczną lub system
+                zabezpieczeń. Doradzimy i przygotujemy bezpłatną wycenę.
               </p>
             </Copy>
           </div>

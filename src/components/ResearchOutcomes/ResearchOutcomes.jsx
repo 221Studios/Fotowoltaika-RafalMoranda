@@ -14,14 +14,14 @@ import SectionHeader from "@/components/SectionHeader";
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const OUTCOMES = [
-  "Models that ship, not just papers",
-  "Evaluations anyone can rerun",
-  "Failure modes found before users do",
-  "Systems that hold under real traffic",
-  "Reasoning you can trace and check",
-  "Benchmarks we keep honest over time",
-  "Findings we publish in full",
-  "Tools partners can build on",
+  "Dobór mocy do zużycia energii",
+  "Projekt po oględzinach i pomiarach",
+  "Moduły fotowoltaiczne JaSolar",
+  "Falowniki i magazyny energii Huawei",
+  "Mocowania dopasowane do pokrycia dachu",
+  "Montaż i uruchomienie instalacji",
+  "Monitoring pracy systemu w aplikacji",
+  "Serwis i okresowe przeglądy",
 ];
 
 export default function ResearchOutcomes() {
@@ -59,24 +59,24 @@ export default function ResearchOutcomes() {
         <Copy variant="flicker">
           <SectionHeader
             bullet
-            left="What comes out"
-            right="Proof over promises"
+            left="Zakres instalacji"
+            right="Projekt i montaż"
           />
         </Copy>
 
         <Copy>
           <h2 className={styles.title}>
-            What we
+            Instalacja
             <br />
-            prove
+            dopasowana
           </h2>
         </Copy>
 
         <Copy>
           <p className={`lg ${styles.copy}`}>
-            Research that stops at a benchmark is easy to fake and hard to trust.
-            Every track here is meant to leave something real behind, whether that
-            is a model, an evaluation, or a system already run in production.
+            Każdy budynek i sposób korzystania z energii jest inny. Dlatego
+            zaczynamy od rozmowy, oględzin oraz pomiarów, a potem dobieramy
+            urządzenia i sposób montażu do konkretnej instalacji.
           </p>
         </Copy>
 

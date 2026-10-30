@@ -113,7 +113,7 @@ export default function Preloader({ active = true, onExpand }) {
   return (
     <div ref={overlayRef} className={styles.overlay} aria-hidden="true">
       <div ref={progressRef} className={styles.progressBar}>
-        <p>Loading</p>
+        <p>Ładowanie</p>
         <p>
           <span ref={counterRef}>0</span>
         </p>

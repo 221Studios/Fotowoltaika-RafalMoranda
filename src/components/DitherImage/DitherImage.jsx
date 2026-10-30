@@ -4,6 +4,8 @@ import styles from "./DitherImage.module.css";
 
 import { forwardRef, useEffect, useImperativeHandle, useRef } from "react";
 import * as THREE from "three";
+import { BRAND_COLORS } from "@/lib/brandColors";
+import { assetPath } from "@/lib/assetPath";
 
 const DEFAULTS = {
   mode: "ordered",
@@ -13,8 +15,8 @@ const DEFAULTS = {
   threshold: 0.5,
   brightness: 0,
   contrast: 1,
-  darkColor: "#1757e8",
-  lightColor: "#e8e6e0",
+  darkColor: BRAND_COLORS.red,
+  lightColor: BRAND_COLORS.white,
 
   matrixSize: 4,
   lumPixelSize: 1,
@@ -940,6 +942,7 @@ const DitherImage = forwardRef(function DitherImage(
   { src, alt = "", className, style, onReady, ...props },
   ref,
 ) {
+  const resolvedSrc = assetPath(src);
   const imgRef = useRef(null);
   const canvasRef = useRef(null);
   const instanceRef = useRef(null);
@@ -954,8 +957,9 @@ const DitherImage = forwardRef(function DitherImage(
   useImperativeHandle(ref, () => ({
     setSrc(next) {
       const img = imgRef.current;
-      if (!img || img.getAttribute("src") === next) return;
-      img.src = next;
+      const resolvedNext = assetPath(next);
+      if (!img || img.getAttribute("src") === resolvedNext) return;
+      img.src = resolvedNext;
       instanceRef.current?.reload();
     },
     redraw: () => instanceRef.current?.redraw(),
@@ -1041,7 +1045,7 @@ const DitherImage = forwardRef(function DitherImage(
       return;
     }
     instanceRef.current?.reload?.();
-  }, [src]);
+  }, [resolvedSrc]);
 
   useEffect(() => {
     instanceRef.current?.redraw();
@@ -1052,7 +1056,7 @@ const DitherImage = forwardRef(function DitherImage(
       className={className ? `${styles.wrapper} ${className}` : styles.wrapper}
       style={style}
     >
-      <img ref={imgRef} src={src} alt={alt} className={styles.img} />
+      <img ref={imgRef} src={resolvedSrc} alt={alt} className={styles.img} />
       <canvas ref={canvasRef} aria-hidden="true" className={styles.canvas} />
     </div>
   );

@@ -9,23 +9,23 @@ import DitherCursorTrail from "@/components/DitherCursorTrail";
 
 const googleSansFlex = Google_Sans_Flex({
   variable: "--font-google-sans-flex",
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
 });
 
 const googleSansCode = Google_Sans_Code({
   variable: "--font-google-sans-code",
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
 });
 
 export const metadata = {
-  title: "Tessera — Codegrid",
-  description: "MWT by Codegrid — September 2026",
+  title: "Fotowoltaika Kalisz — Rafał Morańda",
+  description: "Fotowoltaika w Kaliszu — Rafał Morańda. Energia słoneczna dla domu i firmy.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html
-      lang="en"
+      lang="pl"
       className={`${googleSansFlex.variable} ${googleSansCode.variable}`}
     >
       <body>

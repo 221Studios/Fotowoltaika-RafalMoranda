@@ -3,22 +3,22 @@ import StatementBanner from "@/components/StatementBanner";
 import JournalArticles from "@/components/JournalArticles";
 
 export const metadata = {
-  title: "Journal — Tessera Labs",
+  title: "Monitoring CCTV — Fotowoltaika Kalisz — Rafał Morańda",
 };
 
 export default function JournalPage() {
   return (
     <>
       <PageHeader
-        title="Journal"
-        subtitle="features"
-        description="Articles and blogs where the lab, and the work, were written about."
-        icon="BookIcon"
+        title="Monitoring"
+        subtitle="CCTV"
+        description="Projektujemy i montujemy systemy kamer dla domów oraz firm."
+        icon="EyeIcon"
       />
 
       <StatementBanner
         showContent={false}
-        src="/images/journal/banner.jpg"
+        src="/images/journal/banner.webp"
       />
 
       <JournalArticles />

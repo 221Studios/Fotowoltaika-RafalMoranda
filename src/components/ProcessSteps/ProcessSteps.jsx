@@ -9,14 +9,26 @@ import { useGSAP } from "@gsap/react";
 import { FiArrowRight } from "react-icons/fi";
 
 import Copy from "@/components/Copy";
-import SectionFooter from "@/components/SectionFooter";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const CARDS = [
-  { index: "01", copy: "Bring us the problem." },
-  { index: "02", copy: "We scope the research." },
-  { index: "03", copy: "We build and evaluate." },
+  {
+    index: "01",
+    copy: "Konsultacje. Zadzwoń, aby dowiedzieć się więcej lub umówić bezpłatną rozmowę.",
+  },
+  {
+    index: "02",
+    copy: "Wycena instalacji i kalkulacja w oparciu o dotychczasowe zużycie.",
+  },
+  {
+    index: "03",
+    copy: "Planowanie projektu po oględzinach i pomiarach w miejscu montażu.",
+  },
+  {
+    index: "04",
+    copy: "Montaż paneli i falownika w dogodnym dla klienta terminie.",
+  },
 ];
 
 const SCALE_STEP = 0.1;
@@ -77,7 +89,7 @@ export default function ProcessSteps() {
         });
 
         gsap.to(card.querySelector("p"), {
-          color: "#9a9892",
+          color: "var(--base-500)",
           ease: "none",
           scrollTrigger: {
             trigger: card,
@@ -109,12 +121,15 @@ export default function ProcessSteps() {
             </article>
           ))}
           <a
-            href="/partnerships"
+            href="/contact"
             className={`${styles.step} ${styles.cta}`}
             style={{ zIndex: CARDS.length + 1 }}
           >
             <div className={styles.face}>
-              <p className="lg">We ship it into production.</p>
+              <p className="lg">
+                Bezpłatna wycena. Zadzwoń:{" "}
+                <span className={styles.phone}>+48 600 306 425</span>
+              </p>
               <span className={styles.arrow} aria-hidden="true">
                 <FiArrowRight />
               </span>
@@ -123,18 +138,11 @@ export default function ProcessSteps() {
         </div>
         <Copy start="top 75%" trigger={`.${styles.processSteps}`}>
           <h5 className={styles.headline}>
-            How a problem becomes a deployed system, in four steps.
+            Indywidualne i ukierunkowane podejście.
           </h5>
         </Copy>
       </div>
 
-      <Copy variant="flicker">
-        <SectionFooter
-          bullet
-          left="Start to deployment"
-          right="Research to production"
-        />
-      </Copy>
     </section>
   );
 }

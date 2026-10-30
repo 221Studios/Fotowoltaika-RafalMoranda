@@ -3,6 +3,7 @@
 import styles from "./DitherCursorTrail.module.css";
 
 import { useEffect, useRef } from "react";
+import { BRAND_COLORS } from "@/lib/brandColors";
 
 type DitherCursorTrailProps = {
 
@@ -20,7 +21,7 @@ type DitherCursorTrailProps = {
 };
 
 const DEFAULT_PIXEL_SIZE = 8;
-const DEFAULT_COLOR: [number, number, number] = [23, 87, 232];
+const DEFAULT_COLOR: [number, number, number] = [...BRAND_COLORS.redRgb];
 
 function resolveColor(
   color: string | [number, number, number],

@@ -22,12 +22,13 @@ import {
 gsap.registerPlugin(useGSAP, SplitText);
 
 const NAV_LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/work", label: "Work" },
-  { href: "/research", label: "Research Areas" },
-  { href: "/firm", label: "Inside the Firm" },
-  { href: "/partnerships", label: "Partnerships" },
-  { href: "/journal", label: "Journal" },
+  { href: "/firm", label: "O nas" },
+  { href: "/research", label: "Fotowoltaika" },
+  { href: "/journal", label: "CCTV" },
+  { href: "/partnerships", label: "Elektryka" },
+  { href: "/work", label: "Realizacje" },
+  { href: "/contact", label: "Kontakt" },
+  { href: "/contact#faq", label: "FAQ" },
 ];
 
 const CONTENT_STAGGER_IN = 0.05;
@@ -272,7 +273,7 @@ export default function Menu() {
 
   const toggle = () => setIsOpen((prev) => !prev);
   const handleLinkClick = (href) => {
-    if (href === pathname) setIsOpen(false);
+    if (href.split("#")[0] === pathname) setIsOpen(false);
   };
 
   return (
@@ -287,19 +288,11 @@ export default function Menu() {
           <Link
             href="/"
             className={styles.logo}
-            aria-label="Tessera — home"
+            aria-label="Strona główna — Fotowoltaika Kalisz, Rafał Morańda"
             onClick={() => handleLinkClick("/")}
           >
             <Logo />
           </Link>
-          <div className={styles.brandText}>
-            <p className="mono sm">Tessera</p>
-            <p className="mono sm">
-              Research
-              <br />
-              Labs
-            </p>
-          </div>
         </div>
 
         <span className={styles.divider} aria-hidden="true" />
@@ -309,7 +302,7 @@ export default function Menu() {
           className={styles.toggle}
           onClick={toggle}
           aria-expanded={isOpen}
-          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-label={isOpen ? "Zamknij menu" : "Otwórz menu"}
         >
           <span className={styles.toggleIcon}>
             <span />
@@ -337,13 +330,13 @@ export default function Menu() {
         </nav>
 
         <Link href="/contact" className={styles.contact}>
-          <p className={`mono sm ${styles.contactIndex} ${styles.split}`}>07</p>
+          <p className={`mono sm ${styles.contactIndex} ${styles.split}`}>08</p>
           <div className={styles.contactBody}>
             <h4 className={`${styles.contactTitle} ${styles.split}`}>
-              Let&apos;s Talk
+              Bezpłatna wycena
             </h4>
             <p className={`mono sm ${styles.contactCode} ${styles.split}`}>
-              Contact
+              +48 600 306 425
             </p>
           </div>
           <span className={styles.contactArrow} aria-hidden="true">

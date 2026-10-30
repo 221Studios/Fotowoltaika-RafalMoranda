@@ -12,6 +12,7 @@ import Copy from "@/components/Copy";
 import SectionHeader from "@/components/SectionHeader";
 import SectionFooter from "@/components/SectionFooter";
 import DitherImage from "@/components/DitherImage/DitherImage";
+import { BRAND_COLORS } from "@/lib/brandColors";
 
 gsap.registerPlugin(useGSAP, SplitText);
 
@@ -20,34 +21,34 @@ const CLIP_END = "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)";
 
 const PROJECTS = [
   {
-    title: "Sparse Recall v3",
-    image: "/images/work/sparse-recall.jpg",
-    category: "Models",
-    year: "2025",
-  },
-  {
-    title: "Grounded Decoder",
-    image: "/images/work/grounded-decoder.jpg",
-    category: "Models",
+    title: "Stary Nakwasin",
+    image: "/images/realizacje/stary-nakwasin.webp",
+    category: "JaSolar 550 Wp · Huawei 10 kW · LUNA 10 kWh",
     year: "2024",
   },
   {
-    title: "Latent Router 08",
-    image: "/images/work/latent-router.jpg",
-    category: "Systems",
-    year: "2025",
-  },
-  {
-    title: "Redline Eval Suite",
-    image: "/images/work/redline-eval.jpg",
-    category: "Alignment",
+    title: "Przespolew Kościelny",
+    image: "/images/realizacje/przespolew-koscielny.webp",
+    category: "JaSolar 500 Wp · Huawei 8 kW · LUNA 5 kWh",
     year: "2024",
   },
   {
-    title: "Drift Monitor",
-    image: "/images/work/drift-monitor.jpg",
-    category: "Alignment",
-    year: "2025",
+    title: "Prażuchy Nowe",
+    image: "/images/realizacje/prazuchy-nowe.webp",
+    category: "JaSolar 410 Wp · Huawei 5 kW",
+    year: "2024",
+  },
+  {
+    title: "Plewnia",
+    image: "/images/realizacje/plewnia.webp",
+    category: "JaSolar 500 Wp · Huawei 6 kW",
+    year: "2024",
+  },
+  {
+    title: "Korzeniew",
+    image: "/images/realizacje/korzeniew.webp",
+    category: "JaSolar Full Black 500 Wp · Huawei 8 kW · LUNA 5 kWh",
+    year: "2024",
   },
 ];
 
@@ -64,11 +65,17 @@ const MINIMAP_H = 250;
 const COPIES = 2;
 const OFFSCREEN = 1.4;
 
-const DITHER_A = { darkColor: "#1757e8", lightColor: "#e8e6e0" };
-const DITHER_B = { darkColor: "#e8e6e0", lightColor: "#1757e8" };
+const DITHER_A = {
+  darkColor: BRAND_COLORS.red,
+  lightColor: BRAND_COLORS.white,
+};
+const DITHER_B = {
+  darkColor: BRAND_COLORS.orange,
+  lightColor: BRAND_COLORS.black,
+};
 
 function ditherColors(projectId) {
-  return projectId % 2 === 0 ? DITHER_A : DITHER_A;
+  return projectId % 2 === 0 ? DITHER_A : DITHER_B;
 }
 
 const lerp = (a, b, t) => a + (b - a) * t;
@@ -469,10 +476,19 @@ export default function WorkSlider() {
     <div className={`${styles.page}${revealed ? ` ${styles.revealed}` : ""}`}>
       <div className={styles.chrome}>
         <Copy variant="flicker" animateOnScroll={false} delay="1">
-          <SectionHeader variant="v2" bullet left="" right="Selected work" />
+          <SectionHeader
+            variant="v2"
+            bullet
+            left="ALFA Rafał Morańda"
+            right="Realizacje"
+          />
         </Copy>
         <Copy variant="flicker" animateOnScroll={false} delay="1">
-          <SectionFooter bullet left="Project index" right="Swipe through" />
+          <SectionFooter
+            bullet
+            left="Wybrane instalacje"
+            right="Przewiń realizacje"
+          />
         </Copy>
       </div>
       <div className={styles.list}>

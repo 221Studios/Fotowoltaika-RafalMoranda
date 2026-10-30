@@ -19,13 +19,14 @@ if (typeof window !== "undefined") {
 }
 
 const PAGE_LABELS = {
-  "/": "Home",
-  "/work": "Work",
-  "/research": "Research Areas",
-  "/firm": "Inside the Firm",
-  "/partnerships": "Partnerships",
-  "/journal": "Journal",
-  "/contact": "Let's Talk",
+  "/": "Start",
+  "/work": "Realizacje",
+  "/research": "Fotowoltaika",
+  "/firm": "O nas",
+  "/partnerships": "Elektryka",
+  "/journal": "CCTV",
+  "/contact": "Kontakt",
+  "/contact#faq": "FAQ",
 };
 
 const OPEN = "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)";
@@ -85,7 +86,7 @@ export default function TransitionProvider({ children }) {
         timelineRef.current?.kill();
         revertSplit();
 
-        title.textContent = PAGE_LABELS[to] ?? "Home";
+        title.textContent = PAGE_LABELS[to] ?? "Start";
         splitRef.current = new SplitText(title, {
           type: "words",
           mask: "words",

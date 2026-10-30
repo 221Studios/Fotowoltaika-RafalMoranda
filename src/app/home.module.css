@@ -17,6 +17,19 @@
   z-index: 0;
 }
 
+.heroDither {
+  position: absolute;
+  inset: 0;
+}
+
+.heroForeground {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  object-fit: cover;
+  pointer-events: none;
+}
+
 .heroContent {
   position: relative;
   z-index: 1;
@@ -28,7 +41,7 @@
 
 .heroTitle {
   width: min-content;
-  color: var(--base-500);
+  color: var(--base-100);
 }
 
 .heroCtas {

@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import CustomEase from "gsap/CustomEase";
 import { useLenis } from "lenis/react";
+import Image from "next/image";
 
 import Preloader from "@/components/Preloader";
 import DitherImage from "@/components/DitherImage/DitherImage";
@@ -16,7 +17,10 @@ import Button from "@/components/Button";
 import FocusAreas from "@/components/FocusAreas";
 import Marquee from "@/components/Marquee";
 import ProcessSteps from "@/components/ProcessSteps";
+import RecentInstallations from "@/components/RecentInstallations/RecentInstallations";
 import StatementBanner from "@/components/StatementBanner";
+import { BRAND_COLORS } from "@/lib/brandColors";
+import { assetPath } from "@/lib/assetPath";
 
 import {
   HOME_COPY_BASE_DELAY,
@@ -110,36 +114,53 @@ export default function Home() {
         data-hero-intro={showPreloader ? "" : undefined}
       >
         <div className={styles.heroBg}>
-          <DitherImage src="/images/home/hero.jpg" alt="" />
+          <DitherImage
+            className={styles.heroDither}
+            src="/images/home/hero-background.webp"
+            alt=""
+            darkColor={BRAND_COLORS.red}
+            lightColor={BRAND_COLORS.gray}
+          />
+          <Image
+            className={styles.heroForeground}
+            src={assetPath("/images/home/hero-foreground.webp")}
+            alt=""
+            width={2560}
+            height={1067}
+            unoptimized
+          />
         </div>
         <div className={styles.heroHeader}>
           <Copy variant="flicker" animateOnScroll={false} delay={wait + 1}>
             <SectionHeader
               variant="v2"
+              groupedRight
               bullet
-              left="Research in applied AI"
-              right="Edinburgh, Scotland"
+              left="DLA DOMU I BIZNESU"
+              right="Fotowoltaika Kalisz"
             />
           </Copy>
         </div>
         <div className={`container ${styles.heroContent}`}>
           <Copy animateOnScroll={false} delay={wait + 0.75}>
-            <h1 className={styles.heroTitle}>We study how systems learn.</h1>
+            <h1 className={styles.heroTitle}>
+              Najlepsze rozwiązania
+            </h1>
           </Copy>
           <div ref={ctasRef} className={styles.heroCtas}>
             <Button
               variant="primary"
-              href="/partnerships"
+              href="/research"
               className={styles.ctaPrimary}
             >
-              Build with us
+              Oferta
             </Button>
             <Button
               variant="secondary"
               href="/firm"
               className={styles.ctaSecondary}
             >
-              See the lab
+              O nas
             </Button>
           </div>
         </div>
@@ -147,16 +168,17 @@ export default function Home() {
 
       <section className={styles.about}>
         <Copy variant="flicker">
-          <SectionHeader bullet left="Organisation profile" right="Our remit" />
+          <SectionHeader bullet left="ALFA Rafał Morańda" right="Nasze usługi" />
         </Copy>
         <div className={`container ${styles.aboutCols}`}>
           <div className={styles.aboutCol} />
           <div className={styles.aboutCopy}>
             <Copy>
               <h4>
-                Tessera is an independent lab studying how machines learn to
-                reason. We build models, test them against hard problems, and
-                turn what holds up into systems people can actually use.
+                ALFA Rafał Morańda zapewnia kompleksową obsługę
+                elektryczno-telewizyjno-informatyczną oraz techniczną ochronę
+                mienia. Wykonujemy instalacje alarmowe, fotowoltaiczne i
+                elektryczne, kontrolę dostępu oraz systemy monitoringu CCTV.
               </h4>
             </Copy>
           </div>
@@ -169,7 +191,13 @@ export default function Home() {
 
       <ProcessSteps />
 
-      <StatementBanner />
+      <RecentInstallations />
+
+      <StatementBanner
+        lightColor={BRAND_COLORS.gray}
+        copyTopLeft="Bezpłatna wycena"
+        copyBottomRight={["Zadzwoń:", "+48\u00a0600\u00a0306\u00a0425"]}
+      />
     </>
   );
 }

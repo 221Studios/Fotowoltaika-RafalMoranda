@@ -1,18 +1,14 @@
-export default function Logo({ color = "var(--base-300)", className = "" }) {
+import Image from "next/image";
+import { assetPath } from "@/lib/assetPath";
+
+export default function Logo({ className = "" }) {
   return (
-    <svg
-      width="500"
-      height="500"
-      viewBox="0 0 500 500"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+    <Image
+      src={assetPath("/images/moranda-logo.svg")}
+      alt=""
+      width={394}
+      height={95}
       className={className}
-      aria-hidden="true"
-    >
-      <path
-        d="M500 0V166.75H333.333V500H166.667V166.75H0V0H500Z"
-        fill={color}
-      />
-    </svg>
+    />
   );
 }

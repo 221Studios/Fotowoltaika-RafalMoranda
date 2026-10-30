@@ -16,24 +16,24 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const ITEMS = [
   {
-    title: "The Edinburgh lab that breaks a model before it trusts it",
-    image: "/images/journal/article-1.jpg",
+    title: "Monitoring domu — podgląd obrazu z kamer w telefonie",
+    image: "/images/journal/article-1.webp",
   },
   {
-    title: "Why Tessera spends more time on evaluation than training",
-    image: "/images/journal/article-2.jpg",
+    title: "Monitoring firmy — rejestracja i archiwizacja obrazu",
+    image: "/images/journal/article-2.webp",
   },
   {
-    title: "A research group that will not ship what it cannot explain",
-    image: "/images/journal/article-3.jpg",
+    title: "System CCTV dopasowany do obiektu i jego otoczenia",
+    image: "/images/journal/article-3.webp",
   },
   {
-    title: "What one lab found when the benchmark was far too clean",
-    image: "/images/journal/article-4.jpg",
+    title: "Zdalny dostęp do obrazu przez internet",
+    image: "/images/journal/article-4.webp",
   },
   {
-    title: "Measuring alignment after a model enters production use",
-    image: "/images/journal/article-5.jpg",
+    title: "Kamery, rejestratory i serwis systemu monitoringu",
+    image: "/images/journal/article-5.webp",
   },
 ];
 
@@ -69,13 +69,13 @@ export default function JournalArticles() {
   return (
     <section ref={sectionRef} className={styles.journalArticles}>
       <Copy variant="flicker">
-        <SectionHeader bullet left="Features / 01" right="In the press" />
+        <SectionHeader bullet left="Monitoring wizyjny" right="CCTV" />
       </Copy>
 
       <div className={`container ${styles.inner}`}>
         <div className={styles.header}>
           <Copy>
-            <h2>Selected coverage</h2>
+            <h2>System monitoringu dopasowany do Twoich potrzeb</h2>
           </Copy>
         </div>
 
@@ -86,8 +86,8 @@ export default function JournalArticles() {
                 <DitherImage src={image} alt="" />
               </div>
               <h3 className={styles.title}>{title}</h3>
-              <Button href="#" className={styles.cta}>
-                Read the piece
+              <Button href="/contact" className={styles.cta}>
+                Zapytaj o montaż
               </Button>
             </article>
           ))}

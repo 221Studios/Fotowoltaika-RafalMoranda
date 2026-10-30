@@ -38,29 +38,21 @@
 .brandGroup {
   flex: 1;
   display: flex;
-  align-items: flex-start;
-  gap: var(--col-gap);
+  align-items: center;
   padding: var(--pad);
 }
 
 .logo {
   display: block;
-  width: var(--col1);
+  width: min(280px, calc(var(--w) - 156px));
   flex-shrink: 0;
   line-height: 0;
 }
 
-.logo svg {
+.logo img {
+  display: block;
   width: 100%;
   height: auto;
-}
-
-.brandText {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  color: var(--base-500);
 }
 
 .divider {
@@ -215,6 +207,7 @@
 
 .contactCode {
   opacity: 0.85;
+  white-space: nowrap;
 }
 
 .contactArrow {
@@ -233,6 +226,24 @@
 @media (max-width: 768px) {
   .menu {
     --w: calc(100vw - 2 * var(--gap));
+  }
+
+  .contact {
+    grid-template-columns: 1fr auto;
+    column-gap: 0.75rem;
+    padding-left: var(--pad);
+  }
+
+  .contactIndex {
+    display: none;
+  }
+
+  .contactArrow {
+    width: 54px;
+  }
+
+  .contactCode {
+    font-size: 0.7rem;
   }
 
   .word {

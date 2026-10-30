@@ -7,10 +7,12 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import { useGSAP } from "@gsap/react";
+import Copy from "@/components/Copy";
+import SectionHeader from "@/components/SectionHeader";
 import {
-  TensorIcon,
-  GradientCheckIcon,
-  LockIcon,
+  SunIcon,
+  BoltIcon,
+  EyeIcon,
 } from "@unlocalhosted/dither-icons";
 
 gsap.registerPlugin(ScrollTrigger, SplitText, useGSAP);
@@ -23,23 +25,23 @@ const CLIP_END = "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)";
 const CARDS = [
   {
     index: "01",
-    title: "Learning & Reasoning",
-    copy: "We build and train the models, studying how they learn to reason and where that reasoning breaks down.",
-    Icon: TensorIcon,
+    title: "Fotowoltaika",
+    copy: "Fotowoltaika pozwala pozyskiwać energię ze słońca, oszczędzać na rachunkach i dbać o środowisko.",
+    Icon: SunIcon,
     cardClass: styles.accent,
   },
   {
     index: "02",
-    title: "Systems at Scale",
-    copy: "We turn a working model into infrastructure that runs reliably in the real world, long after the paper ships.",
-    Icon: GradientCheckIcon,
+    title: "Instalacje elektryczne",
+    copy: "Projektujemy, montujemy i uruchamiamy instalacje elektryczne. Wykonujemy też modernizacje i przeróbki.",
+    Icon: BoltIcon,
     cardClass: styles.dark,
   },
   {
     index: "03",
-    title: "Trust & Alignment",
-    copy: "We test how these systems behave, so they stay honest, predictable, and safe to hand to real people.",
-    Icon: LockIcon,
+    title: "Systemy CCTV",
+    copy: "Montujemy systemy kamer do odbioru, przekazywania, wyświetlania i archiwizacji obrazu.",
+    Icon: EyeIcon,
     cardClass: styles.light,
   },
 ];
@@ -143,6 +145,13 @@ export default function FocusAreas() {
 
   return (
     <section ref={rootRef} className={styles.focusAreas}>
+      <Copy variant="flicker">
+        <SectionHeader
+          bullet
+          left="Jak możemy Ci pomóc"
+          right="Najlepsze rozwiązania dla domu i biznesu"
+        />
+      </Copy>
       <div className={`container ${styles.inner}`}>
         {CARDS.map(({ index, title, copy, Icon, cardClass }) => (
           <div key={index} className={`${styles.area} ${cardClass}`}>

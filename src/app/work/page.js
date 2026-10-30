@@ -1,7 +1,7 @@
 import WorkSlider from "@/components/WorkSlider";
 
 export const metadata = {
-  title: "Work — Tessera Labs",
+  title: "Realizacje — Fotowoltaika Kalisz — Rafał Morańda",
 };
 
 export default function WorkPage() {

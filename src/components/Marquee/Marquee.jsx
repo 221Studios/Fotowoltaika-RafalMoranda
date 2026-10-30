@@ -10,8 +10,7 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger, SplitText, useGSAP);
 
-const PHRASE =
-  "Applied research in machine reasoning, from the first model to production.";
+const PHRASE = "Zawsze jesteśmy skupieni na Twoim sukcesie.";
 const LINE = `${PHRASE}${"\u00A0".repeat(6)}`.repeat(4);
 
 export default function Marquee() {

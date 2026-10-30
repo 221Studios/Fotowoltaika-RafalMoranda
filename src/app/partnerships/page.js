@@ -3,22 +3,22 @@ import StatementBanner from "@/components/StatementBanner";
 import PartnersSection from "@/components/PartnersSection";
 
 export const metadata = {
-  title: "Partnerships — Tessera Labs",
+  title: "Instalacje elektryczne — Fotowoltaika Kalisz — Rafał Morańda",
 };
 
 export default function PartnershipsPage() {
   return (
     <>
       <PageHeader
-        title="Partnerships"
-        subtitle="and pilots"
-        description="We take on a small number of partners each year and go deep with them."
-        icon="UserIcon"
+        title="Instalacje"
+        subtitle="elektryczne"
+        description="Projektujemy, montujemy i modernizujemy instalacje elektryczne oraz niskoprądowe."
+        icon="BoltIcon"
       />
 
       <StatementBanner
         showContent={false}
-        src="/images/partnerships/banner.jpg"
+        src="/images/partnerships/banner.webp"
       />
 
       <PartnersSection />

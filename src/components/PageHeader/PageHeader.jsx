@@ -99,7 +99,7 @@ export default function PageHeader({
               type="button"
               className={`di-trigger ${styles.scrollBtn}`}
               onClick={scrollNext}
-              aria-label="Scroll to content"
+              aria-label="Przewiń do treści"
             >
               <span ref={iconRef} className={styles.iconWrap}>
                 <HeaderIcon icon={icon} />

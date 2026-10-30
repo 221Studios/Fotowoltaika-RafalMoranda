@@ -5,13 +5,14 @@ export default function SectionHeader({
   right,
   variant = "v1",
   bullet = false,
+  groupedRight = false,
   ref,
   ...rest
 }) {
   return (
     <div ref={ref} className={styles.wrap} {...rest}>
       <div
-        className={`container ${styles.bar}${variant === "v2" ? ` ${styles.v2}` : ""}`}
+        className={`container ${styles.bar}${variant === "v2" ? ` ${styles.v2}` : ""}${groupedRight ? ` ${styles.groupedRight}` : ""}`}
       >
         {left ? (
           <p className={`mono sm ${styles.label}`}>

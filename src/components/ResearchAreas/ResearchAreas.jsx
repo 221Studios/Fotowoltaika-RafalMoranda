@@ -7,44 +7,45 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import {
-  CpuIcon,
-  FlaskIcon,
-  NetworkIcon,
-  TensorIcon,
+  SunIcon,
+  BoltIcon,
+  HomeIcon,
+  CheckIcon,
 } from "@unlocalhosted/dither-icons";
 
 import DitherImage from "@/components/DitherImage/DitherImage";
+import { BRAND_COLORS } from "@/lib/brandColors";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const CARDS = [
   {
-    title: "How models reach an answer",
-    label: "Models",
+    title: "Panele fotowoltaiczne",
+    label: "Moduły",
     description:
-      "We study how models actually reach an answer, where that reasoning holds, and where it quietly falls apart.",
-    Icon: CpuIcon,
+      "Dobieramy moc instalacji do zużycia energii i warunków montażu. W ofercie mamy m.in. moduły JaSolar.",
+    Icon: SunIcon,
   },
   {
-    title: "Systems that hold up at scale",
-    label: "Systems",
+    title: "Falowniki i monitoring",
+    label: "Sterowanie",
     description:
-      "We turn a working model into infrastructure that stays fast and reliable long after the paper ships.",
-    Icon: NetworkIcon,
+      "Dobieramy falownik do instalacji i pomagamy monitorować jej pracę w aplikacji.",
+    Icon: BoltIcon,
   },
   {
-    title: "Alignment you can inspect",
-    label: "Alignment",
+    title: "Magazyny energii",
+    label: "Autokonsumpcja",
     description:
-      "We build the evaluations and safeguards that keep a system honest before it ever reaches a real user.",
-    Icon: TensorIcon,
+      "Wybrane falowniki Huawei można połączyć z magazynami energii LUNA 2000.",
+    Icon: HomeIcon,
   },
   {
-    title: "Tested against real problems",
-    label: "Field tests",
+    title: "Konstrukcje montażowe",
+    label: "Montaż",
     description:
-      "We take the work out of the benchmark and run it on the messy problems it will actually face in production.",
-    Icon: FlaskIcon,
+      "Dobieramy system mocowań do rodzaju dachu lub montażu naziemnego. Wykorzystujemy m.in. rozwiązania BAKS.",
+    Icon: CheckIcon,
   },
 ];
 
@@ -92,10 +93,10 @@ export default function ResearchAreas() {
     <section className={styles.researchAreas} ref={container}>
       <div className={styles.bg} aria-hidden="true">
         <DitherImage
-          src="/images/research/areas.jpg"
+          src="/images/research/areas.webp"
           alt=""
-          darkColor="#1757e8"
-          lightColor="#e8e6e0"
+          darkColor={BRAND_COLORS.red}
+          lightColor={BRAND_COLORS.white}
         />
       </div>
 

@@ -1,0 +1,61 @@
+.recentInstallations {
+  position: relative;
+  background-color: var(--base-200);
+  padding-bottom: 5rem;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  min-width: 0;
+  background-color: var(--base-100);
+}
+
+.image {
+  aspect-ratio: 1.7;
+  overflow: hidden;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem;
+}
+
+.copy h3 {
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  letter-spacing: -0.04em;
+}
+
+.copy p {
+  font-size: 0.95rem;
+}
+
+.more {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--base-500);
+  font-size: 1.1rem;
+  text-decoration-color: var(--base-300);
+  text-underline-offset: 0.3em;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

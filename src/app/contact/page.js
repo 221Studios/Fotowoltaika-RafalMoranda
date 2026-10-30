@@ -3,16 +3,16 @@ import ContactBanner from "@/components/ContactBanner";
 import FAQ from "@/components/FAQ";
 
 export const metadata = {
-  title: "Contact — Tessera Labs",
+  title: "Kontakt — Fotowoltaika Kalisz — Rafał Morańda",
 };
 
 export default function ContactPage() {
   return (
     <>
       <PageHeader
-        title="Let's build"
-        subtitle="together"
-        description="Reach out with a question, an idea, or something worth exploring."
+        title="Kontakt"
+        subtitle="Bezpłatna wycena"
+        description="Zadzwoń lub napisz. Porozmawiamy o Twojej instalacji i przygotujemy wycenę."
         icon="SendIcon"
       />
 

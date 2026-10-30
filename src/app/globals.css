@@ -1,9 +1,11 @@
 :root {
   --base-100: #ffffff;
-  --base-200: #e8e6e0;
-  --base-300: #1757e8;
-  --base-400: #021e5f;
-  --base-500: #000;
+  --base-200: #ebebeb;
+  --base-300: #e30016;
+  --base-400: #f58220;
+  --base-500: #000000;
+  --brand-red: #e30016;
+  --brand-orange: #f58220;
 }
 
 * {

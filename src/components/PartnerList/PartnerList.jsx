@@ -7,22 +7,9 @@ import { useCallback, useEffect, useRef, useState } from "react";
 const MOBILE_QUERY = "(max-width: 1000px)";
 
 const ROWS = [
-  ["Meridian", "North Axis", "Ferrotype", "Glasshaus"],
-  [
-    "Field Office",
-    "Load Path",
-    "Vanta Works",
-    "Orbit Division",
-    "Site Assembly",
-  ],
-  ["Atelier Ferro", "Hollow Works", "Bench Lab", "Occupied Space"],
-  [
-    "Composite Guild",
-    "Real Load",
-    "On-Site",
-    "Matter Studio",
-    "Axis Fabrication",
-  ],
+  ["Projekt", "Montaż", "Modernizacja", "Uruchomienie"],
+  ["Instalacje elektryczne", "Instalacje niskoprądowe", "Alarmy"],
+  ["Domofony", "Kontrola dostępu", "Kamery CCTV"],
 ];
 
 const NAMES = ROWS.flat();

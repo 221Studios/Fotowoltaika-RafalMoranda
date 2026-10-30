@@ -27,8 +27,14 @@
   align-self: flex-end;
   max-width: 8em;
   color: var(--base-500);
+  font-size: clamp(18px, 3vw, 42px);
 }
 
 .multiline {
   max-width: none;
+}
+
+.copyLine {
+  display: block;
+  white-space: nowrap;
 }

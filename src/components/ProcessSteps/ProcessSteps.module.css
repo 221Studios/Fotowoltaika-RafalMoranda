@@ -52,6 +52,10 @@
   text-decoration: none;
 }
 
+.phone {
+  white-space: nowrap;
+}
+
 .cta .face {
   background-color: var(--base-300);
   border-color: var(--base-300);

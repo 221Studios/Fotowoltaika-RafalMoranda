@@ -14,38 +14,43 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const ITEMS = [
   {
-    question: "What does Tessera Lab work on?",
+    question: "Czy panele można zamontować na każdym dachu?",
     answer: [
-      "We work across data, machine learning, and applied AI, with a focus on problems that require more than an off-the-shelf solution.",
-      "That can mean developing new models, investigating unfamiliar datasets, building intelligent systems, or testing a research idea in a real environment.",
-      "We are interested in difficult questions where the answer is not obvious at the outset.",
+      "Dobór mocowań zależy od rodzaju pokrycia, kąta nachylenia i stanu dachu.",
+      "Przed wyceną sprawdzamy warunki montażu i dobieramy do nich odpowiednią konstrukcję.",
     ],
   },
-
   {
-    question: "Do you work with proprietary or private data?",
+    question: "Czy instalację można rozbudować o magazyn energii?",
     answer: [
-      "Yes. We work with both public datasets and private data provided by research or industry partners.",
-      "The approach depends on the problem, the data available, and the constraints around how it can be used.",
-      "Data access, governance, privacy, and security are considered as part of the research from the beginning.",
+      "Tak, wybrane falowniki Huawei współpracują z magazynami energii LUNA 2000.",
+      "Możliwości rozbudowy potwierdzamy dla konkretnego modelu urządzenia.",
     ],
   },
-
   {
-    question: "What does a research engagement look like?",
+    question: "Czy można zamontować panele na dachu skierowanym na wschód i zachód?",
     answer: [
-      "We start with a question and define what would make an investigation useful.",
-      "From there, we move through data, experimentation, modelling, and evaluation, adapting the approach as we learn more.",
-      "The outcome might be a validated model, a working prototype, a new method, or evidence that a particular direction is not worth pursuing.",
+      "Tak. Układ wschód–zachód może dobrze rozłożyć produkcję energii w ciągu dnia.",
+      "Projekt i przewidywaną produkcję dobieramy do orientacji oraz warunków na miejscu.",
     ],
   },
-
   {
-    question: "How do we start working with Tessera?",
+    question: "Czy aplikacja do obsługi instalacji jest po polsku?",
     answer: [
-      "Bring us a problem, a research question, or a system you want to understand better.",
-      "A clear objective is useful, but a finished specification is not required. We can help define the scope and identify what should be tested first.",
-      "If there is a meaningful question to investigate, we can start there.",
+      "Tak. Aplikacja do monitorowania produkcji i pracy instalacji jest dostępna w języku polskim.",
+    ],
+  },
+  {
+    question: "Jak wygląda współpraca?",
+    answer: [
+      "Zaczynamy od rozmowy o zużyciu energii i oczekiwaniach.",
+      "Po oględzinach przygotowujemy wycenę i plan montażu, a następnie instalujemy i uruchamiamy system.",
+    ],
+  },
+  {
+    question: "Czy oferujecie bezpłatną wycenę?",
+    answer: [
+      "Tak. Skontaktuj się z nami telefonicznie lub mailowo, aby umówić konsultację i wycenę.",
     ],
   },
 ];
@@ -155,15 +160,15 @@ export default function FAQ() {
   );
 
   return (
-    <section className={styles.faq} ref={rootRef}>
+    <section id="faq" className={styles.faq} ref={rootRef}>
       <Copy variant="flicker">
-        <SectionHeader bullet left="FAQ / 01" right="Lab Notes" />
+        <SectionHeader bullet left="FAQ" right="Fotowoltaika i instalacje" />
       </Copy>
 
       <div className={`container ${styles.inner}`}>
         <div className={styles.header}>
           <Copy>
-            <h2>Your questions answered</h2>
+            <h2>Najczęściej zadawane pytania</h2>
           </Copy>
         </div>
 

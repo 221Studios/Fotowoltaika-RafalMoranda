@@ -1,9 +1,8 @@
 import styles from "./StatementBanner.module.css";
 
-import { Fragment } from "react";
-
 import DitherImage from "@/components/DitherImage/DitherImage";
 import Copy from "@/components/Copy";
+import { BRAND_COLORS } from "@/lib/brandColors";
 
 function copyLines(copy) {
   if (copy == null || copy === "") return [];
@@ -20,10 +19,12 @@ function BannerCopy({ copy, className }) {
         className={`${className}${lines.length > 1 ? ` ${styles.multiline}` : ""}`}
       >
         {lines.map((line, i) => (
-          <Fragment key={i}>
-            {i > 0 ? <br /> : null}
+          <span
+            key={i}
+            className={lines.length > 1 ? styles.copyLine : undefined}
+          >
             {line}
-          </Fragment>
+          </span>
         ))}
       </h6>
     </Copy>
@@ -32,14 +33,20 @@ function BannerCopy({ copy, className }) {
 
 export default function StatementBanner({
   showContent = true,
-  src = "/images/home/statement.jpg",
-  copyTopLeft = "The models we trust tomorrow are the ones we break today.",
-  copyBottomRight = "We build intelligence that earns its place in production.",
+  src = "/images/firm/banner.webp",
+  lightColor = BRAND_COLORS.white,
+  copyTopLeft = "Bezpłatna wycena instalacji",
+  copyBottomRight = ["Zadzwoń:", "+48\u00a0600\u00a0306\u00a0425"],
 }) {
   return (
     <section className={styles.statementBanner}>
       <div className={styles.bg}>
-        <DitherImage src={src} alt="" />
+        <DitherImage
+          src={src}
+          alt=""
+          darkColor={BRAND_COLORS.red}
+          lightColor={lightColor}
+        />
       </div>
       {showContent ? (
         <div className={`container ${styles.content}`}>

@@ -74,6 +74,10 @@
   text-decoration: none;
 }
 
+.lines a[href^="tel:"] {
+  white-space: nowrap;
+}
+
 @media (max-width: 768px) {
   .panel {
     gap: 2.75rem;
