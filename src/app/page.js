@@ -8,18 +8,17 @@ import gsap from "gsap";
 import CustomEase from "gsap/CustomEase";
 import { useLenis } from "lenis/react";
 import Image from "next/image";
+import { CheckIcon } from "@unlocalhosted/dither-icons";
 
 import Preloader from "@/components/Preloader";
-import DitherImage from "@/components/DitherImage/DitherImage";
 import Copy from "@/components/Copy";
 import SectionHeader from "@/components/SectionHeader";
 import Button from "@/components/Button";
 import FocusAreas from "@/components/FocusAreas";
 import Marquee from "@/components/Marquee";
-import ProcessSteps from "@/components/ProcessSteps";
+import RegionalServiceMap from "@/components/RegionalServiceMap/RegionalServiceMap";
 import RecentInstallations from "@/components/RecentInstallations/RecentInstallations";
-import StatementBanner from "@/components/StatementBanner";
-import { BRAND_COLORS } from "@/lib/brandColors";
+import CustomerReviews from "@/components/CustomerReviews/CustomerReviews";
 import { withBasePath } from "@/lib/withBasePath";
 
 import {
@@ -36,6 +35,35 @@ gsap.registerPlugin(useGSAP, CustomEase);
 if (typeof window !== "undefined") {
   CustomEase.create("preloaderHop", PRELOADER_EASE);
 }
+
+const BUSINESS_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  name: "ALFA Rafał Morańda",
+  url: "https://www.moranda.com.pl/",
+  image: "https://www.moranda.com.pl/images/home/hero.webp",
+  logo: "https://www.moranda.com.pl/images/moranda-logo.svg",
+  telephone: "+48 600 306 425",
+  email: "rafal@moranda.com.pl",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Ceków Kolonia 6a",
+    addressLocality: "Ceków",
+    postalCode: "62-834",
+    addressRegion: "Wielkopolskie",
+    addressCountry: "PL",
+  },
+  areaServed: [
+    { "@type": "City", name: "Kalisz" },
+    { "@type": "AdministrativeArea", name: "Powiat kaliski" },
+  ],
+  knowsAbout: [
+    "Instalacje fotowoltaiczne",
+    "Magazyny energii",
+    "Instalacje elektryczne",
+    "Systemy alarmowe i monitoring CCTV",
+  ],
+};
 
 export default function Home() {
   const heroRef = useRef(null);
@@ -106,6 +134,12 @@ export default function Home() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(BUSINESS_SCHEMA).replace(/</g, "\\u003c"),
+        }}
+      />
       {showPreloader ? <Preloader onExpand={expandHero} /> : null}
 
       <section
@@ -114,16 +148,9 @@ export default function Home() {
         data-hero-intro={showPreloader ? "" : undefined}
       >
         <div className={styles.heroBg}>
-          <DitherImage
-            className={styles.heroDither}
-            src="/images/home/hero-background.webp"
-            alt=""
-            darkColor={BRAND_COLORS.red}
-            lightColor={BRAND_COLORS.gray}
-          />
           <Image
-            className={styles.heroForeground}
-            src={withBasePath("/images/home/hero-foreground.webp")}
+            className={styles.heroImage}
+            src={withBasePath("/images/home/hero.webp")}
             alt=""
             width={2560}
             height={1067}
@@ -136,68 +163,148 @@ export default function Home() {
               variant="v2"
               groupedRight
               bullet
-              left="DLA DOMU I BIZNESU"
+              left="Dla domu i biznesu"
               right="Fotowoltaika Kalisz"
             />
           </Copy>
         </div>
         <div className={`container ${styles.heroContent}`}>
-          <Copy animateOnScroll={false} delay={wait + 0.75}>
-            <h1 className={styles.heroTitle}>
-              Najlepsze rozwiązania
-            </h1>
-          </Copy>
+          <div className={styles.heroIntro}>
+            <Copy animateOnScroll={false} delay={wait + 0.75}>
+              <h1 className={styles.heroTitle}>
+                Fotowoltaika w Kaliszu dla domu i firmy
+              </h1>
+            </Copy>
+            <Copy animateOnScroll={false} delay={wait + 1}>
+              <p className={styles.heroLead}>
+                Projektujemy i montujemy instalacje fotowoltaiczne dopasowane do
+                zużycia energii i warunków na miejscu. Od bezpłatnej konsultacji
+                i wyceny po montaż oraz uruchomienie.
+              </p>
+            </Copy>
+          </div>
           <div ref={ctasRef} className={styles.heroCtas}>
             <Button
               variant="primary"
-              href="/research"
+              href="/contact"
               className={styles.ctaPrimary}
             >
-              Oferta
+              Umów bezpłatną wycenę
             </Button>
             <Button
               variant="secondary"
-              href="/firm"
+              href="/work"
               className={styles.ctaSecondary}
             >
-              O nas
+              Zobacz realizacje
             </Button>
           </div>
         </div>
       </section>
 
-      <section className={styles.about}>
-        <Copy variant="flicker">
-          <SectionHeader bullet left="ALFA Rafał Morańda" right="Nasze usługi" />
-        </Copy>
-        <div className={`container ${styles.aboutCols}`}>
-          <div className={styles.aboutCol} />
-          <div className={styles.aboutCopy}>
-            <Copy>
-              <h4>
-                ALFA Rafał Morańda zapewnia kompleksową obsługę
-                elektryczno-telewizyjno-informatyczną oraz techniczną ochronę
-                mienia. Wykonujemy instalacje alarmowe, fotowoltaiczne i
-                elektryczne, kontrolę dostępu oraz systemy monitoringu CCTV.
-              </h4>
-            </Copy>
+      <section className={styles.offerGroup} aria-label="Oferta firmy ALFA">
+        <FocusAreas />
+
+        <div className={styles.offerTeaser}>
+          <div className={`container ${styles.offerTeaserContent}`}>
+            <div className={styles.offerHeading}>
+              <p className={`mono ${styles.localLabel}`}>Oferta ALFA · Kalisz i okolica</p>
+              <h2>Fotowoltaika, instalacje elektryczne i systemy bezpieczeństwa.</h2>
+            </div>
+            <div className={styles.offerDescription}>
+              <p>
+                Projektujemy, montujemy i serwisujemy instalacje fotowoltaiczne,
+                elektryczne oraz niskoprądowe. Wykonujemy także alarmy, kontrolę
+                dostępu i monitoring CCTV dla domów i firm w Kaliszu i okolicy.
+              </p>
+              <Button
+                variant="primary"
+                href="/contact"
+                className={styles.offerCta}
+              >
+                Porozmawiaj o zakresie prac
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      <FocusAreas />
-
       <Marquee />
 
-      <ProcessSteps />
+      <div className={styles.areaGroup}>
+        <RegionalServiceMap />
+        <RecentInstallations />
+      </div>
 
-      <RecentInstallations />
+      <CustomerReviews />
 
-      <StatementBanner
-        lightColor={BRAND_COLORS.gray}
-        copyTopLeft="Bezpłatna wycena"
-        copyBottomRight={["Zadzwoń:", "+48\u00a0600\u00a0306\u00a0425"]}
-      />
+      <section className={styles.trust} aria-labelledby="credentials-title">
+        <div className={`container ${styles.credentialsInner}`}>
+          <div className={styles.credentialsHeading}>
+            <div>
+              <p className={`mono ${styles.trustLabel}`}>Poznaj ALFA Rafał Morańda</p>
+              <h2 id="credentials-title">Komponenty, kwalifikacje i serwis</h2>
+            </div>
+            <Button variant="primary" href="/firm" className={styles.aboutLink}>
+              Poznaj naszą firmę
+            </Button>
+          </div>
+          <div className={styles.trustGrid}>
+            <article className={styles.experienceCard}>
+              <p className={`mono ${styles.trustLabel}`}>Doświadczenie</p>
+              <p className={styles.experienceNumber}>25+</p>
+              <h3>lat praktyki instalacyjnej</h3>
+              <p className={styles.trustCopy}>
+                Doświadczenie zdobywamy od 1998 roku. Firma ALFA działa od 2005
+                roku.
+              </p>
+            </article>
+            <article className={styles.brandsCard}>
+              <p className={`mono ${styles.trustLabel}`}>Marki komponentów</p>
+              <div className={styles.brandNames} role="group" aria-label="Marki komponentów">
+                <span className={styles.brandLogo}>
+                  <Image src="/images/brands/ja-solar.svg" alt="JA Solar" width={181} height={32} />
+                </span>
+                <span className={styles.brandLogo}>
+                  <Image src="/images/brands/huawei.svg" alt="Huawei" width={180} height={29} />
+                </span>
+                <span className={`${styles.brandLogo} ${styles.baksLogo}`}>
+                  <Image src="/images/brands/baks.svg" alt="" width={28} height={33} />
+                  <strong>BAKS</strong>
+                </span>
+              </div>
+              <p className={styles.trustCopy}>
+                Dobór komponentów zależy od projektu i warunków montażu.
+              </p>
+            </article>
+            <article>
+              <p className={`mono ${styles.trustLabel}`}>Uprawnienia</p>
+              <div className={styles.qualificationIcons} aria-hidden="true">
+                <span className={styles.sepWordmark}>SEP</span>
+              </div>
+              <h3>SEP i licencja II stopnia</h3>
+              <p className={styles.trustCopy}>
+                Uprawnienia SEP oraz licencja pracownika zabezpieczenia
+                technicznego II stopnia.
+              </p>
+            </article>
+            <article>
+              <p className={`mono ${styles.trustLabel}`}>Gwarancja i opieka</p>
+              <div className={styles.qualificationIcons} aria-hidden="true">
+                <span className={`${styles.qualificationIcon} ${styles.warrantyIcon}`}>
+                  <CheckIcon size={48} texture="dither" animate />
+                </span>
+              </div>
+              <h3>Serwis także po montażu</h3>
+              <p className={styles.trustCopy}>
+                Serwis gwarancyjny i pogwarancyjny, przeglądy oraz konserwacja.
+                Zakres gwarancji zależy od urządzenia i warunków oferty.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
     </>
   );
 }

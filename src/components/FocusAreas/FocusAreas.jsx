@@ -9,6 +9,7 @@ import { SplitText } from "gsap/SplitText";
 import { useGSAP } from "@gsap/react";
 import Copy from "@/components/Copy";
 import SectionHeader from "@/components/SectionHeader";
+import Link from "next/link";
 import {
   SunIcon,
   BoltIcon,
@@ -26,21 +27,24 @@ const CARDS = [
   {
     index: "01",
     title: "Fotowoltaika",
-    copy: "Fotowoltaika pozwala pozyskiwać energię ze słońca, oszczędzać na rachunkach i dbać o środowisko.",
+    copy: "Projekt i montaż instalacji PV dla domu i firmy, z możliwością doboru magazynu energii.",
+    href: "/research",
     Icon: SunIcon,
     cardClass: styles.accent,
   },
   {
     index: "02",
     title: "Instalacje elektryczne",
-    copy: "Projektujemy, montujemy i uruchamiamy instalacje elektryczne. Wykonujemy też modernizacje i przeróbki.",
+    copy: "Nowe instalacje, modernizacje i przeróbki dla domu oraz firmy.",
+    href: "/partnerships",
     Icon: BoltIcon,
     cardClass: styles.dark,
   },
   {
     index: "03",
-    title: "Systemy CCTV",
-    copy: "Montujemy systemy kamer do odbioru, przekazywania, wyświetlania i archiwizacji obrazu.",
+    title: "Monitoring CCTV",
+    copy: "Projekt i montaż kamer, rejestratorów, podgląd obrazu i serwis systemu.",
+    href: "/journal",
     Icon: EyeIcon,
     cardClass: styles.light,
   },
@@ -90,7 +94,7 @@ export default function FocusAreas() {
 
         cards.forEach((card, index) => {
           const icon = card.querySelector(`.${styles.icon}`);
-          const texts = card.querySelectorAll("p");
+          const texts = card.querySelectorAll("h2, p");
           const cardSplits = gsap.utils.toArray(texts).map((element) =>
             SplitText.create(element, {
               type: "lines",
@@ -144,17 +148,17 @@ export default function FocusAreas() {
   );
 
   return (
-    <section ref={rootRef} className={styles.focusAreas}>
+    <div ref={rootRef} className={styles.focusAreas}>
       <Copy variant="flicker">
         <SectionHeader
           bullet
           left="Jak możemy Ci pomóc"
-          right="Najlepsze rozwiązania dla domu i biznesu"
+          right="Główne obszary działania"
         />
       </Copy>
       <div className={`container ${styles.inner}`}>
-        {CARDS.map(({ index, title, copy, Icon, cardClass }) => (
-          <div key={index} className={`${styles.area} ${cardClass}`}>
+        {CARDS.map(({ index, title, copy, href, Icon, cardClass }) => (
+          <Link key={index} href={href} className={`${styles.area} ${cardClass}`}>
             <div className={styles.top}>
               <div className={`di-trigger ${styles.icon}`}>
                 <Icon
@@ -167,12 +171,12 @@ export default function FocusAreas() {
               <p className="mono sm">{index}</p>
             </div>
             <div className={styles.copy}>
-              <p className="lg">{title}</p>
+              <h2 className={styles.areaTitle}>{title}</h2>
               <p>{copy}</p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
-    </section>
+    </div>
   );
 }

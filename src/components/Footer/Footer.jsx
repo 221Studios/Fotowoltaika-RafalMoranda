@@ -15,6 +15,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText, useGSAP);
 const LINKS = [
   { href: "/firm", label: "O nas" },
   { href: "/research", label: "Fotowoltaika" },
+  { href: "/kalisz", label: "Kalisz" },
   { href: "/journal", label: "CCTV" },
   { href: "/partnerships", label: "Elektryka" },
   { href: "/work", label: "Realizacje" },
@@ -126,7 +127,7 @@ export default function Footer() {
         </div>
         <div className={styles.footerHeader}>
           <p className={styles.footerLabel}>Fotowoltaika Kalisz</p>
-          <h1 className={styles.footerWord}>Rafał Morańda</h1>
+          <h2 className={styles.footerWord}>Rafał Morańda</h2>
         </div>
       </div>
     </footer>

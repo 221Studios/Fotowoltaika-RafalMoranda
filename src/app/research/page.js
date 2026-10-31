@@ -2,6 +2,7 @@ import PageHeader from "@/components/PageHeader";
 import StatementBanner from "@/components/StatementBanner";
 import ResearchAreas from "@/components/ResearchAreas";
 import ResearchOutcomes from "@/components/ResearchOutcomes";
+import ProcessSteps from "@/components/ProcessSteps";
 
 export const metadata = {
   title: "Fotowoltaika — Kalisz — Rafał Morańda",
@@ -25,6 +26,8 @@ export default function ResearchPage() {
       <ResearchAreas />
 
       <ResearchOutcomes />
+
+      <ProcessSteps />
     </>
   );
 }

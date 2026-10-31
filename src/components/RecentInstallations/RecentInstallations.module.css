@@ -1,7 +1,7 @@
 .recentInstallations {
   position: relative;
   background-color: var(--base-200);
-  padding-bottom: 5rem;
+  padding-bottom: 0;
 }
 
 .inner {
@@ -20,6 +20,7 @@
 .card {
   min-width: 0;
   background-color: var(--base-100);
+  scroll-margin-top: 7rem;
 }
 
 .image {

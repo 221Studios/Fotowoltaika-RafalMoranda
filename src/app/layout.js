@@ -18,8 +18,9 @@ const googleSansCode = Google_Sans_Code({
 });
 
 export const metadata = {
-  title: "Fotowoltaika Kalisz — Rafał Morańda",
-  description: "Fotowoltaika w Kaliszu — Rafał Morańda. Energia słoneczna dla domu i firmy.",
+  title: "Fotowoltaika Kalisz - Bezpłatna Wycena | ALFA",
+  description:
+    "Fotowoltaika w Kaliszu dla domu i firmy. Projekt, montaż i serwis instalacji PV, magazynów energii, instalacji elektrycznych i CCTV. Bezpłatna wycena.",
 };
 
 export default function RootLayout({ children }) {

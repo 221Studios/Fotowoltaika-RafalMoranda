@@ -23,21 +23,21 @@ const CARDS = [
     title: "Panele fotowoltaiczne",
     label: "Moduły",
     description:
-      "Dobieramy moc instalacji do zużycia energii i warunków montażu. W ofercie mamy m.in. moduły JaSolar.",
+      "Dobieramy moc instalacji do zużycia energii i warunków montażu. W realizacjach wykorzystaliśmy moduły JaSolar o mocy 410–550 Wp.",
     Icon: SunIcon,
   },
   {
     title: "Falowniki i monitoring",
     label: "Sterowanie",
     description:
-      "Dobieramy falownik do instalacji i pomagamy monitorować jej pracę w aplikacji.",
+      "Dobieramy falowniki Huawei SUN2000 do instalacji i pomagamy monitorować jej pracę w aplikacji.",
     Icon: BoltIcon,
   },
   {
     title: "Magazyny energii",
     label: "Autokonsumpcja",
     description:
-      "Wybrane falowniki Huawei można połączyć z magazynami energii LUNA 2000.",
+      "Wybrane falowniki Huawei SUN2000 można połączyć z magazynami energii LUNA 2000. Kompatybilność potwierdzamy dla konkretnego modelu.",
     Icon: HomeIcon,
   },
   {

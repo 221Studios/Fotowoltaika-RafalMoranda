@@ -22,12 +22,12 @@ import {
 gsap.registerPlugin(useGSAP, SplitText);
 
 const NAV_LINKS = [
-  { href: "/firm", label: "O nas" },
+  { href: "/kalisz", label: "Kalisz" },
   { href: "/research", label: "Fotowoltaika" },
+  { href: "/work", label: "Realizacje" },
   { href: "/journal", label: "CCTV" },
   { href: "/partnerships", label: "Elektryka" },
-  { href: "/work", label: "Realizacje" },
-  { href: "/contact", label: "Kontakt" },
+  { href: "/firm", label: "O nas" },
   { href: "/contact#faq", label: "FAQ" },
 ];
 
@@ -145,54 +145,62 @@ export default function Menu() {
         clearHover();
         if (!desktopMq.matches) return;
 
-        gsap.utils.toArray(`.${styles.navItem}`).forEach((item) => {
-          const label = item.querySelector(`.${styles.label}`);
-          if (!label) return;
+        gsap.utils
+          .toArray(`.${styles.navItem}, .${styles.contact}`)
+          .forEach((item) => {
+            const label = item.querySelector(
+              `.${styles.label}, .${styles.contactTitle}`,
+            );
+            if (!label) return;
 
-          const line =
-            label.querySelector("div > div") ||
-            label.querySelector("div") ||
-            label;
-          const wordSplit = new SplitText(line, {
-            type: "words",
-            mask: "words",
-            wordsClass: styles.word,
-          });
-          const words = wordSplit.words;
-          if (!words?.length) {
-            wordSplit.revert();
-            return;
-          }
-
-          const applyShift = () => {
-            words.forEach((word) => {
-              word.style.setProperty("--shift", `${word.offsetHeight}px`);
+            const line =
+              label.querySelector("div > div") ||
+              label.querySelector("div") ||
+              label;
+            const wordSplit = new SplitText(line, {
+              type: "words",
+              mask: "words",
+              wordsClass: styles.word,
             });
-          };
-          applyShift();
-          document.fonts?.ready.then(applyShift);
+            const words = wordSplit.words;
+            if (!words?.length) {
+              wordSplit.revert();
+              return;
+            }
 
-          const play = (enter) => {
-            gsap.to(words, {
-              y: (_index, word) => (enter ? word.offsetHeight : 0),
-              duration: HOVER_DURATION,
-              ease: "power1.inOut",
-              stagger: HOVER_STAGGER,
-              overwrite: "auto",
+            const applyShift = () => {
+              words.forEach((word) => {
+                word.style.setProperty("--shift", `${word.offsetHeight}px`);
+              });
+            };
+            applyShift();
+            document.fonts?.ready.then(applyShift);
+
+            const play = (enter) => {
+              gsap.to(words, {
+                y: (_index, word) => (enter ? word.offsetHeight : 0),
+                duration: HOVER_DURATION,
+                ease: "power1.inOut",
+                stagger: HOVER_STAGGER,
+                overwrite: "auto",
+              });
+            };
+
+            const onEnter = () => play(true);
+            const onLeave = () => play(false);
+            item.addEventListener("mouseenter", onEnter);
+            item.addEventListener("mouseleave", onLeave);
+            item.addEventListener("focusin", onEnter);
+            item.addEventListener("focusout", onLeave);
+
+            hoverCleanups.push(() => {
+              item.removeEventListener("mouseenter", onEnter);
+              item.removeEventListener("mouseleave", onLeave);
+              item.removeEventListener("focusin", onEnter);
+              item.removeEventListener("focusout", onLeave);
+              wordSplit.revert();
             });
-          };
-
-          const onEnter = () => play(true);
-          const onLeave = () => play(false);
-          item.addEventListener("mouseenter", onEnter);
-          item.addEventListener("mouseleave", onLeave);
-
-          hoverCleanups.push(() => {
-            item.removeEventListener("mouseenter", onEnter);
-            item.removeEventListener("mouseleave", onLeave);
-            wordSplit.revert();
           });
-        });
       };
 
       bindHover();
@@ -333,7 +341,7 @@ export default function Menu() {
           <p className={`mono sm ${styles.contactIndex} ${styles.split}`}>08</p>
           <div className={styles.contactBody}>
             <h4 className={`${styles.contactTitle} ${styles.split}`}>
-              Bezpłatna wycena
+              Kontakt
             </h4>
             <p className={`mono sm ${styles.contactCode} ${styles.split}`}>
               +48 600 306 425
