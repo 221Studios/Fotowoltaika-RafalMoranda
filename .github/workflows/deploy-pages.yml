@@ -29,7 +29,7 @@ jobs:
       - name: Build static site
         run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: /TesseraLabs
+          NEXT_PUBLIC_BASE_PATH: /Fotowoltaika-RafalMoranda
       - name: Mark static output for Pages
         run: touch ./out/.nojekyll
       - name: Upload Pages artifact
