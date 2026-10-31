@@ -7,6 +7,7 @@ import { FiArrowRight } from "react-icons/fi";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/SplitText";
+import { withBasePath } from "@/lib/withBasePath";
 
 gsap.registerPlugin(useGSAP, SplitText);
 
@@ -101,9 +102,10 @@ export default function Button({
   const classNames = [styles.button, styles[variant], className]
     .filter(Boolean)
     .join(" ");
+  const resolvedHref = withBasePath(href);
 
   return (
-    <a ref={rootRef} href={href} className={classNames}>
+    <a ref={rootRef} href={resolvedHref} className={classNames}>
       <span ref={labelRef} className={styles.label}>
         {children}
       </span>

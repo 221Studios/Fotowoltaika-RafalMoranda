@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import Copy from "@/components/Copy";
 import SectionHeader from "@/components/SectionHeader";
-import { assetPath } from "@/lib/assetPath";
+import { withBasePath } from "@/lib/withBasePath";
 
 const PROJECTS = [
   {
@@ -42,7 +42,7 @@ export default function RecentInstallations() {
             <article className={styles.card} key={title}>
               <div className={styles.image}>
                 <Image
-                  src={assetPath(image)}
+                  src={withBasePath(image)}
                   alt={title}
                   width={1024}
                   height={461}

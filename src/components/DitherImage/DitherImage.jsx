@@ -5,7 +5,7 @@ import styles from "./DitherImage.module.css";
 import { forwardRef, useEffect, useImperativeHandle, useRef } from "react";
 import * as THREE from "three";
 import { BRAND_COLORS } from "@/lib/brandColors";
-import { assetPath } from "@/lib/assetPath";
+import { withBasePath } from "@/lib/withBasePath";
 
 const DEFAULTS = {
   mode: "ordered",
@@ -942,7 +942,7 @@ const DitherImage = forwardRef(function DitherImage(
   { src, alt = "", className, style, onReady, ...props },
   ref,
 ) {
-  const resolvedSrc = assetPath(src);
+  const resolvedSrc = withBasePath(src);
   const imgRef = useRef(null);
   const canvasRef = useRef(null);
   const instanceRef = useRef(null);
@@ -957,7 +957,7 @@ const DitherImage = forwardRef(function DitherImage(
   useImperativeHandle(ref, () => ({
     setSrc(next) {
       const img = imgRef.current;
-      const resolvedNext = assetPath(next);
+      const resolvedNext = withBasePath(next);
       if (!img || img.getAttribute("src") === resolvedNext) return;
       img.src = resolvedNext;
       instanceRef.current?.reload();

@@ -20,7 +20,7 @@ import ProcessSteps from "@/components/ProcessSteps";
 import RecentInstallations from "@/components/RecentInstallations/RecentInstallations";
 import StatementBanner from "@/components/StatementBanner";
 import { BRAND_COLORS } from "@/lib/brandColors";
-import { assetPath } from "@/lib/assetPath";
+import { withBasePath } from "@/lib/withBasePath";
 
 import {
   HOME_COPY_BASE_DELAY,
@@ -123,7 +123,7 @@ export default function Home() {
           />
           <Image
             className={styles.heroForeground}
-            src={assetPath("/images/home/hero-foreground.webp")}
+            src={withBasePath("/images/home/hero-foreground.webp")}
             alt=""
             width={2560}
             height={1067}
