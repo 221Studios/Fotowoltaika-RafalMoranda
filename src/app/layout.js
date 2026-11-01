@@ -1,6 +1,6 @@
 import "./globals.css";
 
-import { Google_Sans_Flex, Google_Sans_Code } from "next/font/google";
+import { Google_Sans_Flex, Google_Sans_Code, Manrope } from "next/font/google";
 
 import ClientLayout from "@/components/ClientLayout";
 import Menu from "@/components/Menu";
@@ -17,6 +17,11 @@ const googleSansCode = Google_Sans_Code({
   subsets: ["latin", "latin-ext"],
 });
 
+const manrope = Manrope({
+  variable: "--font-manrope",
+  subsets: ["latin", "latin-ext"],
+});
+
 export const metadata = {
   title: "Fotowoltaika Kalisz - Bezpłatna Wycena | ALFA",
   description:
@@ -27,7 +32,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="pl"
-      className={`${googleSansFlex.variable} ${googleSansCode.variable}`}
+      className={`${googleSansFlex.variable} ${googleSansCode.variable} ${manrope.variable}`}
     >
       <body>
         <ClientLayout>

@@ -1,9 +1,9 @@
-import WorkSlider from "@/components/WorkSlider";
+import LegacyRouteRedirect from "@/components/LegacyRouteRedirect";
 
 export const metadata = {
-  title: "Realizacje — Fotowoltaika Kalisz — Rafał Morańda",
+  alternates: { canonical: "/realizacje/" },
 };
 
-export default function WorkPage() {
-  return <WorkSlider />;
+export default function LegacyWorkPage() {
+  return <LegacyRouteRedirect href="/realizacje/" label="Realizacje" />;
 }

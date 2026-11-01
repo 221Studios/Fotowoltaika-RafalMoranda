@@ -1,0 +1,322 @@
+.page {
+  --base-100: rgb(242 237 230);
+  --base-200: rgb(204 200 194);
+  --base-300: rgb(153 143 130);
+  --base-350: rgb(128 119 108);
+  --base-400: rgb(102 95 86);
+  --base-500: rgb(20 19 19);
+
+  overflow: hidden;
+  font-family: var(--font-manrope), sans-serif;
+  color: var(--base-100);
+  background: #141313;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 150svh;
+  overflow: hidden;
+}
+
+.hero > img,
+.heroShade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero > img {
+  z-index: 0;
+  object-fit: cover;
+}
+
+.heroShade {
+  z-index: 1;
+  background: rgb(20 19 19 / 50%);
+}
+
+.heroContainer {
+  position: relative;
+  z-index: 2;
+  padding: 35svh 2rem 0;
+  color: var(--base-100);
+}
+
+.heroHeader h1 {
+  position: relative;
+  font-size: 5rem;
+  font-weight: 500;
+  letter-spacing: -0.25rem;
+  line-height: 1.05;
+}
+
+.heroContent,
+.detailsLayout {
+  display: flex;
+  position: relative;
+  gap: 2rem;
+}
+
+.detailsLayout {
+  padding-inline: 2rem;
+}
+
+.heroContent {
+  padding: 4rem 0 8rem;
+}
+
+.heroCol:nth-child(1),
+.detailsCol:nth-child(1) {
+  flex: 2;
+}
+
+.heroCol:nth-child(2),
+.detailsCol:nth-child(2) {
+  flex: 3;
+}
+
+.heroDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.heroDetails h3,
+.equipment h3,
+.details h3 {
+  width: 85%;
+  margin-bottom: 2rem;
+  color: var(--base-100);
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: -0.075rem;
+  line-height: 1.2;
+}
+
+.heroMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  color: var(--base-100);
+}
+
+.heroRow {
+  display: flex;
+  gap: 2rem;
+}
+
+.heroSubCol {
+  flex: 1;
+}
+
+.heroSubCol p:first-child {
+  margin-bottom: 1rem;
+  color: var(--base-350);
+}
+
+.heroSubCol p {
+  color: var(--base-100);
+}
+
+.details {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding-top: 4rem;
+  color: var(--base-350);
+}
+
+.equipment h3 {
+  margin-bottom: 2rem;
+}
+
+.equipmentRow {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  color: var(--base-100);
+}
+
+.equipmentRow p {
+  flex: 1;
+}
+
+.equipmentRow p:first-child {
+  color: var(--base-350);
+}
+
+.sourceNote {
+  max-width: 48rem;
+  margin-top: 3rem;
+  color: var(--base-350);
+}
+
+.featureImage {
+  width: 75%;
+  overflow: hidden;
+  margin-top: 4rem;
+  border-radius: 2rem;
+}
+
+.featureImage img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.85;
+}
+
+.detailsGallery {
+  padding-bottom: 5rem;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.galleryImage {
+  width: 75%;
+  overflow: hidden;
+  margin-top: 4rem;
+  border-radius: 2rem;
+}
+
+.galleryImage:nth-child(even) {
+  margin-left: auto;
+}
+
+.galleryImage img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.85;
+}
+
+.nextProject {
+  position: relative;
+  display: flex;
+  min-height: 78svh;
+  align-items: center;
+  overflow: hidden;
+  color: var(--base-100);
+  background: #141313;
+  isolation: isolate;
+}
+
+.nextProjectImage {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.42;
+}
+
+.nextProjectImage img {
+  object-fit: cover;
+  filter: blur(0.4rem);
+  transform: scale(1.04);
+}
+
+.nextProjectCopy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.nextEyebrow {
+  margin-bottom: 1rem;
+  color: var(--base-350);
+  font-family: var(--font-google-sans-code), monospace;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.nextProjectCopy a {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: var(--base-100);
+  font-size: clamp(3.5rem, 10vw, 9rem);
+  letter-spacing: -0.075em;
+  line-height: 0.95;
+  text-decoration: none;
+}
+
+.nextProjectCopy a:hover {
+  color: var(--base-300);
+}
+
+@media (max-width: 1000px) {
+  .heroContent,
+  .detailsLayout {
+    flex-direction: column;
+    gap: 4rem;
+    padding-inline: 1rem;
+  }
+
+  .heroDetails h3,
+  .equipment h3,
+  .details h3 {
+    width: 100%;
+  }
+
+  .heroHeader h1 {
+    font-size: 3rem;
+    letter-spacing: -0.1rem;
+  }
+
+  .featureImage,
+  .galleryImage {
+    width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .heroContainer {
+    padding: 30svh 1rem 0;
+  }
+
+  .galleryImage {
+    width: 100%;
+    margin-top: 2rem;
+    border-radius: 1.25rem;
+  }
+
+  .featureImage {
+    width: 100%;
+    margin-top: 2rem;
+    border-radius: 1.25rem;
+  }
+
+  .heroDetails h3,
+  .equipment h3,
+  .details h3 {
+    font-size: 1.5rem;
+    letter-spacing: -0.025rem;
+  }
+
+  .nextProject {
+    min-height: 58svh;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroRow {
+    gap: 1rem;
+  }
+
+  .equipmentRow {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .nextProjectCopy a {
+    font-size: 3.5rem;
+  }
+}

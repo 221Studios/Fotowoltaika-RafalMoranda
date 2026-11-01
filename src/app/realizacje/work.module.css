@@ -1,0 +1,270 @@
+.page {
+  --base-100: rgb(242 237 230);
+  --base-200: rgb(204 200 194);
+  --base-300: rgb(153 143 130);
+  --base-350: rgb(128 119 108);
+  --base-400: rgb(102 95 86);
+  --base-500: rgb(20 19 19);
+
+  overflow: hidden;
+  font-family: var(--font-manrope), sans-serif;
+  color: var(--base-100);
+  background: #141313;
+}
+
+.catalogHeader {
+  display: flex;
+  height: 60svh;
+  align-items: flex-end;
+}
+
+.headerGrid {
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.headerSpacer {
+  flex: 2;
+}
+
+.headerContent {
+  display: flex;
+  flex: 5;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.filters button,
+.resultCount {
+  font-family: var(--font-google-sans-code), monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.headerContent h1 {
+  font-size: 5rem;
+  font-weight: 500;
+  letter-spacing: -0.25rem;
+  line-height: 1.05;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.filters button {
+  padding: 0.5rem 0;
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--base-300);
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.filters button:hover,
+.filters .filterActive {
+  color: var(--base-100);
+}
+
+.filters .filterActive {
+  color: var(--base-100);
+}
+
+.resultCount {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.projectList {
+  padding-bottom: 7rem;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-inline: 2rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.projectImage {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 4;
+  border-radius: 2rem;
+  background: #252323;
+}
+
+.projectImage img {
+  opacity: 0.76;
+  transition: opacity 0.35s ease, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.project:hover .projectImage img,
+.project:focus-visible .projectImage img {
+  opacity: 1;
+  transform: scale(1.025);
+}
+
+.projectInfo {
+  display: flex;
+  gap: 2rem;
+}
+
+.projectDate {
+  flex: 2;
+  color: var(--base-350);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.projectMainInfo {
+  display: flex;
+  flex: 5;
+  gap: 2rem;
+}
+
+.projectName {
+  flex: 4;
+}
+
+.projectName h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+  font-weight: 500;
+  letter-spacing: -0.05rem;
+  line-height: 1.1;
+}
+
+.projectName p {
+  color: var(--base-300);
+  font-size: 0.98rem;
+}
+
+.projectClient {
+  display: flex;
+  flex: 3;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.projectClient p {
+  color: var(--base-350);
+  font-size: 1rem;
+}
+
+.clientMark {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 2rem;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--base-300);
+  color: var(--base-500);
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+@media (max-width: 1000px) {
+  .headerGrid {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0;
+    padding: 2rem;
+  }
+
+  .headerSpacer {
+    display: none;
+  }
+
+  .headerContent {
+    flex: 1;
+    gap: 1.25rem;
+  }
+
+  .filters {
+    gap: 0.5rem;
+  }
+
+  .filters button {
+    font-size: 1rem;
+  }
+
+  .projectImage {
+    aspect-ratio: 5 / 3;
+    border-radius: 1.4rem;
+  }
+
+  .listContainer {
+    padding-inline: 1rem;
+  }
+
+  .projectInfo {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .projectMainInfo {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .projectDate {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .headerGrid {
+    padding: 1rem;
+  }
+
+  .headerContent h1 {
+    font-size: 3rem;
+    letter-spacing: -0.1rem;
+  }
+
+  .filters {
+    width: 100%;
+    gap: 0.45rem 0.9rem;
+  }
+
+  .listContainer {
+    padding-inline: 1rem;
+    gap: 2.5rem;
+  }
+
+  .projectImage {
+    aspect-ratio: 5 / 3;
+    border-radius: 1rem;
+  }
+
+  .projectName h2 {
+    font-size: 1.5rem;
+  }
+
+}
