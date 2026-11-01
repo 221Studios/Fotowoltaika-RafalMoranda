@@ -1,24 +1,15 @@
-import PageHeader from "@/components/PageHeader";
-import ContactBanner from "@/components/ContactBanner";
-import FAQ from "@/components/FAQ";
+import LegacyRouteRedirect from "@/components/LegacyRouteRedirect";
 
 export const metadata = {
-  title: "Kontakt — Fotowoltaika Kalisz — Rafał Morańda",
+  alternates: { canonical: "/kontakt/" },
 };
 
-export default function ContactPage() {
+export default function LegacyContactPage() {
   return (
-    <>
-      <PageHeader
-        title="Kontakt"
-        subtitle="Bezpłatna wycena"
-        description="Zadzwoń lub napisz. Porozmawiamy o Twojej instalacji i przygotujemy wycenę."
-        icon="SendIcon"
-      />
-
-      <ContactBanner />
-
-      <FAQ />
-    </>
+    <LegacyRouteRedirect
+      href="/kontakt/"
+      label="Kontakt"
+      hashRedirects={{ faq: "/kontakt/faq/" }}
+    />
   );
 }

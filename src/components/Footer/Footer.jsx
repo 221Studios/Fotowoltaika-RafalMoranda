@@ -9,18 +9,19 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import { useGSAP } from "@gsap/react";
+import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 
 gsap.registerPlugin(ScrollTrigger, SplitText, useGSAP);
 
 const LINKS = [
-  { href: "/firm", label: "O nas" },
-  { href: "/research", label: "Fotowoltaika" },
+  { href: "/o-nas", label: "O nas" },
+  { href: "/fotowoltaika", label: "Fotowoltaika" },
   { href: "/kalisz", label: "Kalisz" },
-  { href: "/journal", label: "CCTV" },
-  { href: "/partnerships", label: "Elektryka" },
-  { href: "/work", label: "Realizacje" },
-  { href: "/contact", label: "Kontakt" },
-  { href: "/contact#faq", label: "FAQ" },
+  { href: "/cctv", label: "CCTV" },
+  { href: "/elektryka", label: "Elektryka" },
+  { href: "/realizacje", label: "Realizacje" },
+  { href: "/kontakt", label: "Kontakt" },
+  { href: "/kontakt/faq", label: "FAQ" },
 ];
 
 export default function Footer() {
@@ -29,7 +30,7 @@ export default function Footer() {
 
   useGSAP(
     () => {
-      if (pathname === "/work") return;
+      if (pathname === "/realizacje") return;
       const footer = rootRef.current;
       if (!footer) return;
 
@@ -39,7 +40,9 @@ export default function Footer() {
       const headingChars = headingSplits.flatMap((split) => split.chars);
 
       const lineSplits = gsap.utils
-        .toArray(`.${styles.footerLink} h6, .${styles.footerCopy}`)
+        .toArray(
+          `.${styles.footerLink} h6, .${styles.quickContactTitle}, .${styles.quickContactText}`,
+        )
         .map(
           (element) => new SplitText(element, { type: "lines", mask: "lines" }),
         );
@@ -106,9 +109,9 @@ export default function Footer() {
 
   return (
     <footer
-      className={`${styles.footer}${pathname === "/work" ? ` ${styles.hidden}` : ""}`}
+      className={`${styles.footer}${pathname === "/realizacje" ? ` ${styles.hidden}` : ""}`}
       ref={rootRef}
-      aria-hidden={pathname === "/work"}
+      aria-hidden={pathname === "/realizacje"}
     >
       <div className={`container ${styles.footerInner}`}>
         <div className={styles.footerContent}>
@@ -119,11 +122,32 @@ export default function Footer() {
               </Link>
             ))}
           </nav>
-          <p className={styles.footerCopy}>
-            Fotowoltaika, instalacje elektryczne i monitoring. Doradzamy,
-            projektujemy, montujemy i serwisujemy rozwiązania dla domu oraz
-            biznesu.
-          </p>
+          <section className={styles.quickContact} aria-labelledby="quick-contact-title">
+            <h3 className={styles.quickContactTitle} id="quick-contact-title">
+              Szybki kontakt
+            </h3>
+            <address className={styles.quickContactList}>
+              <p className={styles.quickContactItem}>
+                <FiMapPin aria-hidden="true" />
+                <span className={styles.quickContactText}>
+                  Ceków Kolonia 6a, 62-834 Ceków
+                </span>
+              </p>
+              <a
+                className={styles.quickContactItem}
+                href="mailto:rafal@moranda.com.pl"
+              >
+                <FiMail aria-hidden="true" />
+                <span className={styles.quickContactText}>
+                  rafal@moranda.com.pl
+                </span>
+              </a>
+              <a className={styles.quickContactItem} href="tel:+48600306425">
+                <FiPhone aria-hidden="true" />
+                <span className={styles.quickContactText}>+48 600 306 425</span>
+              </a>
+            </address>
+          </section>
         </div>
         <div className={styles.footerHeader}>
           <p className={styles.footerLabel}>Fotowoltaika Kalisz</p>

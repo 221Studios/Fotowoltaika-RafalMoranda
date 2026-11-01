@@ -186,14 +186,14 @@ export default function Home() {
           <div ref={ctasRef} className={styles.heroCtas}>
             <Button
               variant="primary"
-              href="/contact"
+              href="/kontakt"
               className={styles.ctaPrimary}
             >
               Umów bezpłatną wycenę
             </Button>
             <Button
               variant="secondary"
-              href="/work"
+              href="/realizacje"
               className={styles.ctaSecondary}
             >
               Zobacz realizacje
@@ -219,7 +219,7 @@ export default function Home() {
               </p>
               <Button
                 variant="primary"
-                href="/contact"
+                href="/kontakt"
                 className={styles.offerCta}
               >
                 Porozmawiaj o zakresie prac
@@ -245,7 +245,7 @@ export default function Home() {
               <p className={`mono ${styles.trustLabel}`}>Poznaj ALFA Rafał Morańda</p>
               <h2 id="credentials-title">Komponenty, kwalifikacje i serwis</h2>
             </div>
-            <Button variant="primary" href="/firm" className={styles.aboutLink}>
+            <Button variant="primary" href="/o-nas" className={styles.aboutLink}>
               Poznaj naszą firmę
             </Button>
           </div>

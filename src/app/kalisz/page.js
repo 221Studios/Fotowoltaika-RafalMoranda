@@ -67,7 +67,7 @@ export default function KaliszPage() {
           </Copy>
           <Copy animateOnScroll={false} delay={1}>
             <div className={styles.actions}>
-              <Link className={styles.primaryAction} href="/contact">
+              <Link className={styles.primaryAction} href="/kontakt">
                 Zapytaj o obsługę w Kaliszu
               </Link>
               <a className={styles.phoneAction} href="tel:+48600306425">
@@ -95,7 +95,7 @@ export default function KaliszPage() {
                 adresu.
               </p>
             </Copy>
-            <Link className={styles.textLink} href="/research">
+            <Link className={styles.textLink} href="/fotowoltaika">
               Poznaj ofertę fotowoltaiki <span aria-hidden="true">↗</span>
             </Link>
           </div>
@@ -114,7 +114,7 @@ export default function KaliszPage() {
             Nasze lokalne instalacje znajdziesz w Starym Nakwasinie,
             Przespolewie Kościelnym i Prażuchach Nowych.
           </p>
-          <Link className={styles.textLink} href="/work">
+          <Link className={styles.textLink} href="/realizacje">
             Zobacz zdjęcia i szczegóły realizacji <span aria-hidden="true">↗</span>
           </Link>
         </div>
@@ -154,7 +154,7 @@ export default function KaliszPage() {
             <h2>Porozmawiajmy o fotowoltaice dla Twojego domu lub firmy.</h2>
           </Copy>
           <Copy>
-            <Link className={styles.primaryAction} href="/contact">
+            <Link className={styles.primaryAction} href="/kontakt">
               Umów bezpłatną wycenę
             </Link>
           </Copy>

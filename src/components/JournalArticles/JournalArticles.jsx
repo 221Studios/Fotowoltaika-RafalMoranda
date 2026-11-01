@@ -86,7 +86,7 @@ export default function JournalArticles() {
                 <DitherImage src={image} alt="" />
               </div>
               <h3 className={styles.title}>{title}</h3>
-              <Button href="/contact" className={styles.cta}>
+              <Button href="/kontakt" className={styles.cta}>
                 Zapytaj o montaż
               </Button>
             </article>

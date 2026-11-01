@@ -123,7 +123,7 @@ export default function OpenPositions() {
               stagger={0}
               trigger={`.${styles.list}`}
             >
-              <Link href="/contact" className={styles.row}>
+              <Link href="/kontakt" className={styles.row}>
                 <p className={`lg ${styles.role}`} data-copy-text>
                   {title}
                 </p>

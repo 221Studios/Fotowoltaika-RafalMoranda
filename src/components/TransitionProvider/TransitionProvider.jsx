@@ -20,14 +20,40 @@ if (typeof window !== "undefined") {
 
 const PAGE_LABELS = {
   "/": "Start",
+  "/realizacje": "Realizacje",
   "/work": "Realizacje",
+  "/fotowoltaika": "Fotowoltaika",
   "/research": "Fotowoltaika",
+  "/o-nas": "O nas",
   "/firm": "O nas",
+  "/elektryka": "Elektryka",
   "/partnerships": "Elektryka",
+  "/cctv": "CCTV",
   "/journal": "CCTV",
+  "/kontakt": "Kontakt",
   "/contact": "Kontakt",
+  "/kontakt/faq": "FAQ",
+  "/contact/faq": "FAQ",
   "/contact#faq": "FAQ",
 };
+
+function pageLabelForDestination(to) {
+  const destination = new URL(to, window.location.href);
+  const basePath = (process.env.NEXT_PUBLIC_BASE_PATH ?? "").replace(
+    /\/+$/,
+    "",
+  );
+  let pathname = destination.pathname.replace(/\/+$/, "") || "/";
+
+  if (basePath && (pathname === basePath || pathname.startsWith(`${basePath}/`))) {
+    pathname = pathname.slice(basePath.length) || "/";
+  }
+
+  const route = pathname.startsWith("/") ? pathname : `/${pathname}`;
+  return (
+    PAGE_LABELS[`${route}${destination.hash}`] ?? PAGE_LABELS[route] ?? "Start"
+  );
+}
 
 const OPEN = "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)";
 const CLOSED = "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)";
@@ -86,7 +112,7 @@ export default function TransitionProvider({ children }) {
         timelineRef.current?.kill();
         revertSplit();
 
-        title.textContent = PAGE_LABELS[to] ?? "Start";
+        title.textContent = pageLabelForDestination(to);
         splitRef.current = new SplitText(title, {
           type: "words",
           mask: "words",

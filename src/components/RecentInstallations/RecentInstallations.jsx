@@ -65,7 +65,7 @@ export default function RecentInstallations() {
         </div>
 
         <Copy>
-          <Link className={styles.more} href="/work">
+          <Link className={styles.more} href="/realizacje">
             Zobacz wszystkie realizacje <span aria-hidden="true">↗</span>
           </Link>
         </Copy>

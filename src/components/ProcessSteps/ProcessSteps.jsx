@@ -122,7 +122,7 @@ export default function ProcessSteps() {
             </article>
           ))}
           <a
-            href={withBasePath("/contact")}
+            href={withBasePath("/kontakt")}
             className={`${styles.step} ${styles.cta}`}
             style={{ zIndex: CARDS.length + 1 }}
           >

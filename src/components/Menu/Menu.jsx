@@ -23,12 +23,12 @@ gsap.registerPlugin(useGSAP, SplitText);
 
 const NAV_LINKS = [
   { href: "/kalisz", label: "Kalisz" },
-  { href: "/research", label: "Fotowoltaika" },
-  { href: "/work", label: "Realizacje" },
-  { href: "/journal", label: "CCTV" },
-  { href: "/partnerships", label: "Elektryka" },
-  { href: "/firm", label: "O nas" },
-  { href: "/contact#faq", label: "FAQ" },
+  { href: "/fotowoltaika", label: "Fotowoltaika" },
+  { href: "/realizacje", label: "Realizacje" },
+  { href: "/cctv", label: "CCTV" },
+  { href: "/elektryka", label: "Elektryka" },
+  { href: "/o-nas", label: "O nas" },
+  { href: "/kontakt/faq", label: "FAQ" },
 ];
 
 const CONTENT_STAGGER_IN = 0.05;
@@ -337,7 +337,7 @@ export default function Menu() {
           ))}
         </nav>
 
-        <Link href="/contact" className={styles.contact}>
+        <Link href="/kontakt" className={styles.contact}>
           <p className={`mono sm ${styles.contactIndex} ${styles.split}`}>08</p>
           <div className={styles.contactBody}>
             <h4 className={`${styles.contactTitle} ${styles.split}`}>
