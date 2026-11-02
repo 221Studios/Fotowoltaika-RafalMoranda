@@ -6,10 +6,6 @@
   color: var(--base-100);
 }
 
-.hidden {
-  display: none;
-}
-
 .footerInner {
   min-height: 68svh;
   display: flex;
@@ -45,6 +41,22 @@
 .quickContactTitle {
   font-size: clamp(1.65rem, 2.4vw, 2.35rem);
   line-height: 1.1;
+}
+
+.serviceArea {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.quickContactLabel {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.serviceArea .quickContactText {
+  max-width: 30rem;
+  line-height: 1.45;
 }
 
 .quickContactList {

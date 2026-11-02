@@ -38,7 +38,7 @@ if (typeof window !== "undefined") {
 
 const BUSINESS_SCHEMA = {
   "@context": "https://schema.org",
-  "@type": "Electrician",
+  "@type": "HomeAndConstructionBusiness",
   name: "ALFA Rafał Morańda",
   url: "https://www.moranda.com.pl/",
   image: "https://www.moranda.com.pl/images/home/hero.webp",
@@ -54,8 +54,16 @@ const BUSINESS_SCHEMA = {
     addressCountry: "PL",
   },
   areaServed: [
-    { "@type": "City", name: "Kalisz" },
-    { "@type": "AdministrativeArea", name: "Powiat kaliski" },
+    {
+      "@type": "City",
+      name: "Kalisz",
+      sameAs: "https://www.wikidata.org/entity/Q52842",
+    },
+    {
+      "@type": "AdministrativeArea",
+      name: "Powiat kaliski",
+      sameAs: "https://www.wikidata.org/entity/Q133178",
+    },
   ],
   knowsAbout: [
     "Instalacje fotowoltaiczne",

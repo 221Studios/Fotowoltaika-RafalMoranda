@@ -31,6 +31,10 @@ const GROUPS = [
     label: "Zakres usług",
     lines: ["Fotowoltaika", "Instalacje elektryczne", "Monitoring i alarmy"],
   },
+  {
+    label: "Obszar obsługi",
+    lines: ["Kalisz i okolice w promieniu około 50 km od miasta"],
+  },
 ];
 
 function Line({ line }) {

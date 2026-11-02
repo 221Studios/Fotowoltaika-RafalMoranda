@@ -2,8 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Copy from "@/components/Copy";
+import { INSTALLATIONS } from "@/data/installations";
 import styles from "./kalisz.module.css";
 import { withBasePath } from "@/lib/withBasePath";
+
+const KALISZ_INSTALLATIONS = INSTALLATIONS.filter(
+  ({ location }) => location === "Kalisz",
+);
 
 const FAQ = [
   {
@@ -85,14 +90,16 @@ export default function KaliszPage() {
           </Copy>
           <div>
             <Copy>
-              <h2>Fotowoltaika w regionie, który znamy z realizacji</h2>
+              <h2>Firma z Cekowa obsługująca Kalisz i okolice</h2>
             </Copy>
             <Copy>
               <p>
-                Działamy z Cekowa, w powiecie kaliskim, dlatego możemy
-                porozmawiać o warunkach realizacji bezpośrednio w Twojej
-                okolicy. Zasięg i termin dojazdu ustalamy dla konkretnego
-                adresu.
+                Nasze biuro i magazyn znajdują się w Cekowie, około 30 minut
+                drogi od centrum Kalisza. Baza poza centrum ułatwia nam
+                planowanie bezpośrednich dojazdów na montaże w Kaliszu, Nowych
+                Skalmierzycach, Opatówku i pobliskich miejscowościach. Czas
+                dojazdu zależy od trasy, ruchu i adresu inwestycji, dlatego
+                termin potwierdzamy indywidualnie.
               </p>
             </Copy>
             <Link className={styles.textLink} href="/fotowoltaika">
@@ -105,18 +112,55 @@ export default function KaliszPage() {
       <section className={styles.projects}>
         <div className={`container ${styles.sectionContent}`}>
           <Copy variant="flicker">
-            <p className={`mono ${styles.sectionLabel}`}>Blisko Kalisza</p>
+            <p className={`mono ${styles.sectionLabel}`}>
+              Realizacje z Kalisza
+            </p>
           </Copy>
           <Copy>
-            <h2>Realizacje w okolicy</h2>
+            <h2>Instalacje fotowoltaiczne wykonane w Kaliszu</h2>
           </Copy>
-          <p>
-            Nasze lokalne instalacje znajdziesz w Starym Nakwasinie,
-            Przespolewie Kościelnym i Prażuchach Nowych.
+          <p className={styles.projectsIntro}>
+            Poniżej pokazujemy realizacje opisane w archiwum firmy jako wykonane
+            w Kaliszu. Każda karta prowadzi do zdjęć i dostępnych informacji o
+            zastosowanych urządzeniach.
           </p>
-          <Link className={styles.textLink} href="/realizacje">
-            Zobacz zdjęcia i szczegóły realizacji <span aria-hidden="true">↗</span>
-          </Link>
+          <div className={styles.projectGrid}>
+            {KALISZ_INSTALLATIONS.map((installation) => {
+              const installationPower = installation.equipment.find(
+                ({ label }) => label === "Moc instalacji",
+              )?.value;
+              const equipment = installation.equipment
+                .map(({ label, value }) => `${label}: ${value}`)
+                .join(" · ");
+
+              return (
+                <Link
+                  className={styles.project}
+                  href={`/realizacje/${installation.slug}`}
+                  key={installation.slug}
+                >
+                  <div className={styles.projectImage}>
+                    <Image
+                      src={withBasePath(installation.image)}
+                      alt={`Instalacja fotowoltaiczna w Kaliszu: ${installation.originalTitle}`}
+                      width={installation.gallery[0]?.width ?? 1024}
+                      height={installation.gallery[0]?.height ?? 461}
+                      unoptimized
+                    />
+                  </div>
+                  <h3>
+                    {installationPower
+                      ? `Fotowoltaika ${installationPower} — Kalisz`
+                      : "Instalacja fotowoltaiczna — Kalisz"}
+                  </h3>
+                  <p>{equipment}</p>
+                  <span className={styles.projectLink}>
+                    Zobacz realizację <span aria-hidden="true">↗</span>
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </section>
 

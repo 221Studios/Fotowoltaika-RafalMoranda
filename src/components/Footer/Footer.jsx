@@ -30,7 +30,6 @@ export default function Footer() {
 
   useGSAP(
     () => {
-      if (pathname === "/realizacje") return;
       const footer = rootRef.current;
       if (!footer) return;
 
@@ -41,7 +40,7 @@ export default function Footer() {
 
       const lineSplits = gsap.utils
         .toArray(
-          `.${styles.footerLink} h6, .${styles.quickContactTitle}, .${styles.quickContactText}`,
+          `.${styles.footerLink} h6, .${styles.quickContactTitle}, .${styles.quickContactLabel}, .${styles.quickContactText}`,
         )
         .map(
           (element) => new SplitText(element, { type: "lines", mask: "lines" }),
@@ -108,11 +107,7 @@ export default function Footer() {
   );
 
   return (
-    <footer
-      className={`${styles.footer}${pathname === "/realizacje" ? ` ${styles.hidden}` : ""}`}
-      ref={rootRef}
-      aria-hidden={pathname === "/realizacje"}
-    >
+    <footer className={styles.footer} ref={rootRef}>
       <div className={`container ${styles.footerInner}`}>
         <div className={styles.footerContent}>
           <nav className={styles.footerLinks} aria-label="Nawigacja w stopce">
@@ -130,7 +125,7 @@ export default function Footer() {
               <p className={styles.quickContactItem}>
                 <FiMapPin aria-hidden="true" />
                 <span className={styles.quickContactText}>
-                  Ceków Kolonia 6a, 62-834 Ceków
+                  Biuro i magazyn: Ceków Kolonia 6a, 62-834 Ceków
                 </span>
               </p>
               <a
@@ -147,6 +142,12 @@ export default function Footer() {
                 <span className={styles.quickContactText}>+48 600 306 425</span>
               </a>
             </address>
+            <div className={styles.serviceArea}>
+              <p className={styles.quickContactLabel}>Obszar obsługi</p>
+              <p className={styles.quickContactText}>
+                Kalisz i okolice w promieniu około 50 km od miasta.
+              </p>
+            </div>
           </section>
         </div>
         <div className={styles.footerHeader}>
