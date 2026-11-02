@@ -7,6 +7,7 @@ import Menu from "@/components/Menu";
 import Footer from "@/components/Footer";
 import DitherCursorTrail from "@/components/DitherCursorTrail";
 import JsonLd from "@/components/JsonLd";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 import {
   BUSINESS_SCHEMA,
   DEFAULT_OG_IMAGE,
@@ -98,6 +99,7 @@ export default function RootLayout({ children }) {
           <Footer />
           <DitherCursorTrail />
         </ClientLayout>
+        <WhatsAppWidget />
       </body>
     </html>
   );
