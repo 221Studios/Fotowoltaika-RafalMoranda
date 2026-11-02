@@ -1,8 +1,7 @@
 import LegacyRouteRedirect from "@/components/LegacyRouteRedirect";
+import { createLegacyMetadata } from "@/lib/site";
 
-export const metadata = {
-  alternates: { canonical: "/kontakt/faq/" },
-};
+export const metadata = createLegacyMetadata("/kontakt/faq/");
 
 export default function LegacyContactFaqPage() {
   return <LegacyRouteRedirect href="/kontakt/faq/" label="FAQ" />;

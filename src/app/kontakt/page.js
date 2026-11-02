@@ -1,13 +1,16 @@
 import PageHeader from "@/components/PageHeader";
 import ContactBanner from "@/components/ContactBanner";
 import FAQ from "@/components/FAQ";
+import { createPageMetadata } from "@/lib/site";
 
-export const metadata = {
-  title: "Kontakt z ALFA Rafał Morańda | Ceków i Kalisz",
+export const metadata = createPageMetadata({
+  title: "Kontakt i bezpłatna wycena",
   description:
-    "Zadzwoń lub napisz do ALFA Rafał Morańda. Biuro i magazyn: Ceków Kolonia 6a, 62-834 Ceków. Obsługa Kalisza i okolic.",
-  alternates: { canonical: "/kontakt/" },
-};
+    "Skontaktuj się z firmą ALFA Rafał Morańda. Fotowoltaika, instalacje elektryczne i monitoring w Kaliszu oraz okolicach. Telefon: +48 600 306 425.",
+  path: "/kontakt/",
+  image: "/images/contact/banner.webp",
+  imageAlt: "Kontakt z firmą instalacyjną ALFA Rafał Morańda",
+});
 
 export default function ContactPage() {
   return (

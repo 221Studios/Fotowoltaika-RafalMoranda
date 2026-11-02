@@ -1,5 +1,6 @@
 import LegacyRouteRedirect from "@/components/LegacyRouteRedirect";
 import { INSTALLATIONS } from "@/data/installations";
+import { createLegacyMetadata } from "@/lib/site";
 
 export function generateStaticParams() {
   return INSTALLATIONS.map(({ slug }) => ({ slug }));
@@ -7,7 +8,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  return { alternates: { canonical: `/realizacje/${slug}/` } };
+  return createLegacyMetadata(`/realizacje/${slug}/`);
 }
 
 export default async function LegacyInstallationPage({ params }) {

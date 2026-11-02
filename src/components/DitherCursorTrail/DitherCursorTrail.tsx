@@ -268,7 +268,10 @@ export default function DitherCursorTrail({
       (typeof window.matchMedia === "function" &&
         window.matchMedia("(hover: none)").matches) ||
       "ontouchstart" in window;
-    if (isTouch) return;
+    const prefersReducedMotion =
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (isTouch || prefersReducedMotion) return;
 
     const canvas = canvasRef.current;
     if (!canvas) return;

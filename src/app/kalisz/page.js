@@ -2,9 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Copy from "@/components/Copy";
+import JsonLd from "@/components/JsonLd";
 import { INSTALLATIONS } from "@/data/installations";
 import styles from "./kalisz.module.css";
 import { withBasePath } from "@/lib/withBasePath";
+import { createPageMetadata, createServiceSchema } from "@/lib/site";
 
 const KALISZ_INSTALLATIONS = INSTALLATIONS.filter(
   ({ location }) => location === "Kalisz",
@@ -41,22 +43,26 @@ const FAQ_SCHEMA = {
   })),
 };
 
-export const metadata = {
-  title: "Instalacje fotowoltaiczne w Kaliszu | ALFA",
-  description:
-    "Fotowoltaika Kalisz — informacje o lokalnej obsłudze, dojeździe i realizacjach firmy ALFA Rafał Morańda z Cekowa.",
-  alternates: { canonical: "/kalisz/" },
-};
+const DESCRIPTION =
+  "Fotowoltaika w Kaliszu i okolicach — lokalna obsługa, dojazd i realizacje firmy ALFA Rafał Morańda z Cekowa.";
+
+export const metadata = createPageMetadata({
+  title: "Fotowoltaika w Kaliszu i okolicach",
+  description: DESCRIPTION,
+  path: "/kalisz/",
+});
+
+const SERVICE_SCHEMA = createServiceSchema({
+  name: "Fotowoltaika w Kaliszu i okolicach",
+  description: DESCRIPTION,
+  path: "/kalisz/",
+});
 
 export default function KaliszPage() {
   return (
     <main className={styles.page}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(FAQ_SCHEMA).replace(/</g, "\\u003c"),
-        }}
-      />
+      <JsonLd data={SERVICE_SCHEMA} />
+      <JsonLd data={FAQ_SCHEMA} />
       <section className={styles.hero}>
         <div className={styles.heroImage} aria-hidden="true">
           <Image
@@ -64,7 +70,8 @@ export default function KaliszPage() {
             alt=""
             width={2560}
             height={1067}
-            priority
+            loading="eager"
+            fetchPriority="high"
             unoptimized
           />
         </div>

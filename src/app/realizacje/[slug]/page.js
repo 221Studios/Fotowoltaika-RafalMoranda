@@ -2,7 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import JsonLd from "@/components/JsonLd";
 import { getInstallation, INSTALLATIONS } from "@/data/installations";
+import {
+  absoluteUrl,
+  BUSINESS_ID,
+  createPageMetadata,
+  SITE_NAME,
+} from "@/lib/site";
 import { withBasePath } from "@/lib/withBasePath";
 import styles from "./installation.module.css";
 
@@ -13,12 +20,28 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const installation = getInstallation(slug);
-  if (!installation) return { title: "Nie znaleziono realizacji | ALFA" };
+  if (!installation) {
+    return {
+      title: "Nie znaleziono realizacji",
+      robots: { index: false, follow: false },
+    };
+  }
+
+  const pageMetadata = createPageMetadata({
+    title: `${installation.title} — realizacja fotowoltaiki`,
+    description: `${installation.originalTitle}. Zdjęcia i dane urządzeń z realizacji ALFA Rafał Morańda.`,
+    path: `/realizacje/${installation.slug}/`,
+    image: installation.image,
+    imageAlt: `Instalacja fotowoltaiczna w miejscowości ${installation.location}`,
+  });
 
   return {
-    title: `${installation.location} — fotowoltaika | ALFA Rafał Morańda`,
-    description: `${installation.originalTitle}. Zdjęcia i dane z realizacji ALFA Rafał Morańda w miejscowości ${installation.location}.`,
-    alternates: { canonical: `/realizacje/${slug}/` },
+    ...pageMetadata,
+    openGraph: {
+      ...pageMetadata.openGraph,
+      type: "article",
+      publishedTime: installation.publishedAt,
+    },
   };
 }
 
@@ -32,16 +55,39 @@ export default async function InstallationPage({ params }) {
   const installationPower = installation.equipment.find(
     ({ label }) => label === "Moc instalacji",
   )?.value;
+  const canonicalUrl = absoluteUrl(`/realizacje/${installation.slug}/`);
+  const realizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${canonicalUrl}#realizacja`,
+    headline: installation.originalTitle,
+    description: installation.summary,
+    datePublished: installation.publishedAt,
+    mainEntityOfPage: canonicalUrl,
+    image: installation.gallery.map(({ src }) => absoluteUrl(src)),
+    author: { "@type": "Person", name: "Rafał Morańda" },
+    publisher: { "@id": BUSINESS_ID, name: SITE_NAME },
+    about: {
+      "@type": "Service",
+      name: "Instalacja fotowoltaiczna",
+    },
+    contentLocation: {
+      "@type": "Place",
+      name: installation.location,
+    },
+  };
 
   return (
     <main className={styles.page}>
+      <JsonLd data={realizationSchema} />
       <section className={styles.hero}>
         <Image
           src={withBasePath(installation.image)}
           alt={installation.imageAlt ?? `Zdjęcie instalacji fotowoltaicznej w ${installation.location}`}
           width={installation.gallery[0]?.width ?? 1024}
           height={installation.gallery[0]?.height ?? 461}
-          priority
+          loading="eager"
+          fetchPriority="high"
           unoptimized
         />
         <div className={styles.heroShade} />

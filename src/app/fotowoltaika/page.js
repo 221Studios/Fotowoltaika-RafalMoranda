@@ -4,17 +4,30 @@ import ResearchAreas from "@/components/ResearchAreas";
 import ResearchOutcomes from "@/components/ResearchOutcomes";
 import ProcessSteps from "@/components/ProcessSteps";
 import PhotovoltaicsLocalService from "@/components/PhotovoltaicsLocalService";
+import JsonLd from "@/components/JsonLd";
+import { createPageMetadata, createServiceSchema } from "@/lib/site";
 
-export const metadata = {
-  title: "Fotowoltaika — projekt, montaż i serwis | ALFA",
-  description:
-    "Projekt, montaż, uruchomienie i serwis instalacji fotowoltaicznych oraz magazynów energii. Firma ALFA Rafał Morańda z Cekowa obsługuje Kalisz i region.",
-  alternates: { canonical: "/fotowoltaika/" },
-};
+const DESCRIPTION =
+  "Montaż fotowoltaiki w Kaliszu i powiecie kaliskim. Lokalne realizacje JA Solar, Huawei, LUNA i BAKS. Serwis gwarancyjny i pogwarancyjny.";
+
+export const metadata = createPageMetadata({
+  title: "Fotowoltaika w Kaliszu — montaż i serwis",
+  description: DESCRIPTION,
+  path: "/fotowoltaika/",
+  image: "/images/research/banner.webp",
+  imageAlt: "Panele fotowoltaiczne montowane przez firmę ALFA",
+});
+
+const SERVICE_SCHEMA = createServiceSchema({
+  name: "Montaż i serwis instalacji fotowoltaicznych",
+  description: DESCRIPTION,
+  path: "/fotowoltaika/",
+});
 
 export default function ResearchPage() {
   return (
     <>
+      <JsonLd data={SERVICE_SCHEMA} />
       <PageHeader
         title="Fotowoltaika"
         subtitle="dla domu i biznesu"

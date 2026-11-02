@@ -17,11 +17,11 @@ export default function FirmIntro() {
 
         <div className={styles.block}>
           <Copy>
-            <h2 className={styles.heading}>
+            <p className={styles.heading}>
               Projektujemy i montujemy instalacje fotowoltaiczne oraz
               elektryczne. Wykonujemy także instalacje niskoprądowe, alarmy i
               monitoring CCTV. Zapewniamy doradztwo, uruchomienie i serwis.
-            </h2>
+            </p>
           </Copy>
         </div>
       </div>

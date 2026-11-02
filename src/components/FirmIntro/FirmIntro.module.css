@@ -23,6 +23,9 @@
 
 .heading {
   width: 100%;
+  font-size: clamp(48px, 0.06 * calc(100 * var(--vw, 1vw)), 120px);
+  font-weight: 450;
+  line-height: 1;
 }
 
 @media (max-width: 768px) {

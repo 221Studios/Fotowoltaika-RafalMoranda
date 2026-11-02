@@ -26,6 +26,8 @@
   flex-shrink: 0;
   white-space: nowrap;
   font-size: clamp(72px, 9vw, 160px);
+  font-weight: 450;
+  line-height: 1;
 }
 
 .word-mask {

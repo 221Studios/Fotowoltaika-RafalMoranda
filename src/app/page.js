@@ -36,43 +36,6 @@ if (typeof window !== "undefined") {
   CustomEase.create("preloaderHop", PRELOADER_EASE);
 }
 
-const BUSINESS_SCHEMA = {
-  "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  name: "ALFA Rafał Morańda",
-  url: "https://www.moranda.com.pl/",
-  image: "https://www.moranda.com.pl/images/home/hero.webp",
-  logo: "https://www.moranda.com.pl/images/moranda-logo.svg",
-  telephone: "+48 600 306 425",
-  email: "rafal@moranda.com.pl",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Ceków Kolonia 6a",
-    addressLocality: "Ceków",
-    postalCode: "62-834",
-    addressRegion: "Wielkopolskie",
-    addressCountry: "PL",
-  },
-  areaServed: [
-    {
-      "@type": "City",
-      name: "Kalisz",
-      sameAs: "https://www.wikidata.org/entity/Q52842",
-    },
-    {
-      "@type": "AdministrativeArea",
-      name: "Powiat kaliski",
-      sameAs: "https://www.wikidata.org/entity/Q133178",
-    },
-  ],
-  knowsAbout: [
-    "Instalacje fotowoltaiczne",
-    "Magazyny energii",
-    "Instalacje elektryczne",
-    "Systemy alarmowe i monitoring CCTV",
-  ],
-};
-
 export default function Home() {
   const heroRef = useRef(null);
   const ctasRef = useRef(null);
@@ -142,12 +105,6 @@ export default function Home() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(BUSINESS_SCHEMA).replace(/</g, "\\u003c"),
-        }}
-      />
       {showPreloader ? <Preloader onExpand={expandHero} /> : null}
 
       <section
@@ -162,6 +119,8 @@ export default function Home() {
             alt=""
             width={2560}
             height={1067}
+            loading="eager"
+            fetchPriority="high"
             unoptimized
           />
         </div>

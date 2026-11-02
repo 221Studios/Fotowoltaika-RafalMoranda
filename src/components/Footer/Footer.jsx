@@ -4,7 +4,6 @@ import styles from "./Footer.module.css";
 
 import { useRef } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
@@ -25,7 +24,6 @@ const LINKS = [
 ];
 
 export default function Footer() {
-  const pathname = usePathname();
   const rootRef = useRef(null);
 
   useGSAP(
@@ -40,7 +38,7 @@ export default function Footer() {
 
       const lineSplits = gsap.utils
         .toArray(
-          `.${styles.footerLink} h6, .${styles.quickContactTitle}, .${styles.quickContactLabel}, .${styles.quickContactText}`,
+          `.${styles.footerLink} span, .${styles.quickContactTitle}, .${styles.quickContactLabel}, .${styles.quickContactText}`,
         )
         .map(
           (element) => new SplitText(element, { type: "lines", mask: "lines" }),
@@ -103,7 +101,7 @@ export default function Footer() {
         splits.forEach((split) => split.revert());
       };
     },
-    { scope: rootRef, dependencies: [pathname] },
+    { scope: rootRef, dependencies: [] },
   );
 
   return (
@@ -113,7 +111,7 @@ export default function Footer() {
           <nav className={styles.footerLinks} aria-label="Nawigacja w stopce">
             {LINKS.map(({ href, label }) => (
               <Link key={href} href={href} className={styles.footerLink}>
-                <h6>{label}</h6>
+                <span>{label}</span>
               </Link>
             ))}
           </nav>

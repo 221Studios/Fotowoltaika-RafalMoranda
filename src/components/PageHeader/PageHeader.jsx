@@ -107,7 +107,7 @@ export default function PageHeader({
             </button>
             {description ? (
               <Copy animateOnScroll={false} delay={META_DELAY}>
-                <h6 className={styles.copy}>{description}</h6>
+                <p className={styles.copy}>{description}</p>
               </Copy>
             ) : null}
           </div>

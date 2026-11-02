@@ -85,13 +85,13 @@ export default function Marquee() {
       <div className={`container ${styles.marqueeInner}`}>
         <div className={styles.track}>
           {[0, 1].map((copy) => (
-            <h1
+            <p
               key={copy}
               className={styles.line}
               aria-hidden={copy === 1 ? true : undefined}
             >
               {LINE}
-            </h1>
+            </p>
           ))}
         </div>
       </div>

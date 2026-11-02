@@ -1056,7 +1056,14 @@ const DitherImage = forwardRef(function DitherImage(
       className={className ? `${styles.wrapper} ${className}` : styles.wrapper}
       style={style}
     >
-      <img ref={imgRef} src={resolvedSrc} alt={alt} className={styles.img} />
+      <img
+        ref={imgRef}
+        src={resolvedSrc}
+        alt={alt}
+        className={styles.img}
+        loading="lazy"
+        decoding="async"
+      />
       <canvas ref={canvasRef} aria-hidden="true" className={styles.canvas} />
     </div>
   );

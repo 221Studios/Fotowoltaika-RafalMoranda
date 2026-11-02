@@ -2,13 +2,16 @@ import PageHeader from "@/components/PageHeader";
 import FirmIntro from "@/components/FirmIntro";
 import StatementBanner from "@/components/StatementBanner";
 import { BRAND_COLORS } from "@/lib/brandColors";
+import { createPageMetadata } from "@/lib/site";
 
-export const metadata = {
-  title: "O firmie ALFA Rafał Morańda | Ceków i Kalisz",
+export const metadata = createPageMetadata({
+  title: "O firmie — doświadczenie i uprawnienia",
   description:
-    "Poznaj ALFA Rafał Morańda: firma instalacyjna działająca od 2005 roku, z praktyką branżową sięgającą 1998 roku. Siedziba w Cekowie.",
-  alternates: { canonical: "/o-nas/" },
-};
+    "Poznaj firmę ALFA Rafał Morańda z Cekowa. Doświadczenie instalacyjne od 1998 roku, działalność od 2005 roku, uprawnienia SEP i serwis.",
+  path: "/o-nas/",
+  image: "/images/firm/banner.webp",
+  imageAlt: "Firma instalacyjna ALFA Rafał Morańda",
+});
 
 export default function FirmPage() {
   return (

@@ -30,6 +30,14 @@
   text-decoration: none;
 }
 
+.footerLink span {
+  display: block;
+  font-size: clamp(24px, 0.035 * calc(100 * var(--vw, 1vw)), 54px);
+  font-weight: 450;
+  letter-spacing: -2%;
+  line-height: 1;
+}
+
 .quickContact {
   width: min(34rem, 46%);
   display: flex;

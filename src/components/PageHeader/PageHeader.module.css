@@ -63,6 +63,8 @@
   max-width: 20rem;
   text-align: right;
   font-size: clamp(16px, 0.02 * calc(100 * var(--vw, 1vw)), 36px);
+  font-weight: 450;
+  line-height: 1;
 }
 
 @media (max-width: 768px) {

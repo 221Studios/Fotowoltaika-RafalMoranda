@@ -1,24 +1,30 @@
 import { INSTALLATIONS } from "@/data/installations";
+import { absoluteUrl } from "@/lib/site";
 
-const SITE_URL = "https://www.moranda.com.pl";
+export const dynamic = "force-static";
 
-const PUBLIC_PAGES = [
+const STATIC_ROUTES = [
   "/",
-  "/kalisz/",
   "/fotowoltaika/",
+  "/kalisz/",
   "/realizacje/",
+  "/elektryka/",
+  "/cctv/",
   "/o-nas/",
   "/kontakt/",
   "/kontakt/faq/",
-  "/elektryka/",
-  "/cctv/",
 ];
 
 export default function sitemap() {
-  const pages = PUBLIC_PAGES.map((path) => ({ url: `${SITE_URL}${path}` }));
-  const installations = INSTALLATIONS.map(({ slug }) => ({
-    url: `${SITE_URL}/realizacje/${slug}/`,
+  const staticEntries = STATIC_ROUTES.map((path) => ({
+    url: absoluteUrl(path),
   }));
 
-  return [...pages, ...installations];
+  const installationEntries = INSTALLATIONS.map((installation) => ({
+    url: absoluteUrl(`/realizacje/${installation.slug}/`),
+    lastModified: installation.publishedAt,
+    images: installation.gallery.map(({ src }) => absoluteUrl(src)),
+  }));
+
+  return [...staticEntries, ...installationEntries];
 }
