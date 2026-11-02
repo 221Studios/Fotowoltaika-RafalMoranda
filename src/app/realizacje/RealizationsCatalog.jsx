@@ -15,12 +15,22 @@ gsap.registerPlugin(ScrollTrigger);
 export default function RealizationsCatalog({ installations }) {
   const [activeYear, setActiveYear] = useState("all");
   const projectsRef = useRef(null);
-  const years = [...new Set(installations.map(({ publishedAt }) => publishedAt.slice(0, 4)))].sort(
-    (a, b) => b.localeCompare(a),
-  );
+  const years = [
+    ...new Set([
+      "2026",
+      "2025",
+      ...installations.map(({ publishedAt }) => publishedAt.slice(0, 4)),
+    ]),
+  ].sort((a, b) => b.localeCompare(a));
   const visibleInstallations = installations.filter(
     ({ publishedAt }) => activeYear === "all" || publishedAt.startsWith(activeYear),
   );
+  const resultCountLabel =
+    visibleInstallations.length === 1
+      ? "realizacja"
+      : visibleInstallations.length > 1 && visibleInstallations.length < 5
+        ? "realizacje"
+        : "realizacji";
 
   useEffect(() => {
     const projects = projectsRef.current?.querySelectorAll("a");
@@ -28,20 +38,12 @@ export default function RealizationsCatalog({ installations }) {
 
     const triggers = [];
     projects.forEach((project, index) => {
-      gsap.set(project, { opacity: 0, scale: 0.75, y: 150 });
-
       if (index === 0) {
-        gsap.to(project, {
-          duration: 0.75,
-          y: 0,
-          scale: 1,
-          opacity: 1,
-          ease: "power3.out",
-          delay: 1.4,
-        });
+        gsap.set(project, { clearProps: "opacity,transform" });
         return;
       }
 
+      gsap.set(project, { opacity: 0, scale: 0.75, y: 150 });
       triggers.push(
         ScrollTrigger.create({
           trigger: project,
@@ -94,7 +96,7 @@ export default function RealizationsCatalog({ installations }) {
               ))}
             </div>
             <p className={styles.resultCount} aria-live="polite">
-              {visibleInstallations.length} {visibleInstallations.length === 1 ? "realizacja" : "realizacje"}
+              {visibleInstallations.length} {resultCountLabel}
             </p>
           </div>
         </div>
@@ -110,12 +112,22 @@ export default function RealizationsCatalog({ installations }) {
             >
               <div className={styles.projectImage}>
                 <Image
+                  className={styles.projectPhoto}
                   src={withBasePath(installation.image)}
                   alt={`Instalacja fotowoltaiczna w ${installation.location}`}
-                  width={1024}
-                  height={461}
+                  width={installation.gallery[0]?.width ?? 1600}
+                  height={installation.gallery[0]?.height ?? 1200}
                   unoptimized
                 />
+                <span className={styles.projectLogo}>
+                  <Image
+                    src={withBasePath("/images/moranda-logo.svg")}
+                    alt="ALFA Rafał Morańda"
+                    width={322}
+                    height={78}
+                    unoptimized
+                  />
+                </span>
               </div>
               <div className={styles.projectInfo}>
                 <div className={styles.projectDate}>
@@ -124,16 +136,19 @@ export default function RealizationsCatalog({ installations }) {
                 <div className={styles.projectMainInfo}>
                   <div className={styles.projectName}>
                     <h2>{installation.title}</h2>
-                    <p>{installation.location}</p>
                   </div>
-                  <div className={styles.projectClient}>
-                    <span className={styles.clientMark} aria-hidden="true">α</span>
-                    <p>Rafał Morańda</p>
+                  <div className={styles.projectSpecs}>
+                    <p>{installation.equipment.map(({ value }) => value).join(" · ")}</p>
                   </div>
                 </div>
               </div>
             </Link>
           ))}
+          {visibleInstallations.length === 0 ? (
+            <p className={styles.emptyState}>
+              Brak opublikowanych realizacji z {activeYear} roku. Nowe wpisy pojawią się tutaj po dodaniu ich do katalogu.
+            </p>
+          ) : null}
         </div>
       </section>
     </>
