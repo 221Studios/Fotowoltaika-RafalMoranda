@@ -3,7 +3,10 @@ import StatementBanner from "@/components/StatementBanner";
 import JournalArticles from "@/components/JournalArticles";
 
 export const metadata = {
-  title: "Monitoring CCTV — Fotowoltaika Kalisz — Rafał Morańda",
+  title: "Monitoring CCTV i alarmy | ALFA Rafał Morańda",
+  description:
+    "Projektowanie i montaż monitoringu CCTV, systemów alarmowych oraz kontroli dostępu dla domów i firm.",
+  alternates: { canonical: "/cctv/" },
 };
 
 export default function JournalPage() {

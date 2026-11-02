@@ -5,6 +5,7 @@ export const metadata = {
   title: "FAQ — Fotowoltaika i instalacje | ALFA Rafał Morańda",
   description:
     "Odpowiedzi na pytania o fotowoltaikę, montaż, serwis i instalacje ALFA Rafał Morańda.",
+  alternates: { canonical: "/kontakt/faq/" },
 };
 
 export default function FAQPage() {

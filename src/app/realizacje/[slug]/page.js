@@ -16,8 +16,9 @@ export async function generateMetadata({ params }) {
   if (!installation) return { title: "Nie znaleziono realizacji | ALFA" };
 
   return {
-    title: `${installation.title} — fotowoltaika | ALFA Rafał Morańda`,
+    title: `${installation.location} — fotowoltaika | ALFA Rafał Morańda`,
     description: `${installation.originalTitle}. Zdjęcia i dane z realizacji ALFA Rafał Morańda w miejscowości ${installation.location}.`,
+    alternates: { canonical: `/realizacje/${slug}/` },
   };
 }
 
@@ -28,13 +29,16 @@ export default async function InstallationPage({ params }) {
 
   const currentIndex = INSTALLATIONS.findIndex((project) => project.slug === slug);
   const nextProject = INSTALLATIONS[(currentIndex + 1) % INSTALLATIONS.length];
+  const installationPower = installation.equipment.find(
+    ({ label }) => label === "Moc instalacji",
+  )?.value;
 
   return (
     <main className={styles.page}>
       <section className={styles.hero}>
         <Image
           src={withBasePath(installation.image)}
-          alt={`Realizacja fotowoltaiczna w ${installation.location}`}
+          alt={installation.imageAlt ?? `Zdjęcie instalacji fotowoltaicznej w ${installation.location}`}
           width={installation.gallery[0]?.width ?? 1024}
           height={installation.gallery[0]?.height ?? 461}
           priority
@@ -43,7 +47,11 @@ export default async function InstallationPage({ params }) {
         <div className={styles.heroShade} />
         <div className={`container ${styles.heroContainer}`}>
           <div className={styles.heroHeader}>
-            <h1>{installation.title}</h1>
+            <h1>
+              {installationPower
+                ? `Fotowoltaika ${installationPower}`
+                : "Instalacja fotowoltaiczna"} — {installation.location}
+            </h1>
           </div>
           <div className={styles.heroContent}>
             <div className={styles.heroCol}>
@@ -97,11 +105,16 @@ export default async function InstallationPage({ params }) {
               <p className={styles.sourceNote}>
                 Data odnosi się do publikacji wpisu. Oryginalny materiał nie opisuje przebiegu montażu ani uzyskanych efektów.
               </p>
+              <p className={styles.sourceNote}>
+                <a href={installation.sourceUrl} target="_blank" rel="noreferrer">
+                  Otwórz oryginalny wpis realizacji <span aria-hidden="true">↗</span>
+                </a>
+              </p>
               {installation.gallery[0] ? (
                 <figure className={styles.featureImage}>
                   <Image
                     src={withBasePath(installation.gallery[0].src)}
-                    alt={`Zdjęcie realizacji fotowoltaicznej w ${installation.location}`}
+                    alt={`Zdjęcie instalacji fotowoltaicznej w ${installation.location}`}
                     width={installation.gallery[0].width}
                     height={installation.gallery[0].height}
                     unoptimized
@@ -123,7 +136,7 @@ export default async function InstallationPage({ params }) {
               <figure className={styles.galleryImage} key={photo.src}>
                 <Image
                   src={withBasePath(photo.src)}
-                  alt={`Zdjęcie ${index + 1} z realizacji fotowoltaicznej w ${installation.location}`}
+                  alt={`Zdjęcie ${index + 2} z galerii instalacji fotowoltaicznej w ${installation.location}`}
                   width={photo.width}
                   height={photo.height}
                   unoptimized

@@ -116,3 +116,78 @@ p.mono.lg {
   margin-inline: auto;
   padding: 1.5rem;
 }
+
+.pv-guidance {
+  padding-block: clamp(4rem, 8vw, 8rem);
+}
+
+.pv-guidance > .mono {
+  margin-bottom: 1rem;
+  color: var(--brand-red);
+}
+
+.pv-guidance > h2 {
+  max-width: 1050px;
+  margin-bottom: 1.5rem;
+  font-size: clamp(2.25rem, 5vw, 4.75rem);
+}
+
+.pv-guidance > p:not(.mono) {
+  max-width: 850px;
+  line-height: 1.55;
+}
+
+.pv-guidance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.pv-guidance-grid article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  border: 1px solid rgb(0 0 0 / 15%);
+  border-radius: 1rem;
+  background: rgb(255 255 255 / 55%);
+}
+
+.pv-guidance-grid h3 {
+  font-size: clamp(1.5rem, 2vw, 2.1rem);
+  line-height: 1.1;
+}
+
+.pv-guidance-grid p,
+.pv-guidance-note {
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.pv-guidance-grid ul {
+  display: grid;
+  gap: 0.5rem;
+  padding-left: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.pv-guidance-grid a {
+  margin-top: auto;
+  color: var(--brand-red);
+  font-weight: 600;
+  text-underline-offset: 0.2em;
+}
+
+.pv-guidance-note {
+  margin-top: 1.5rem;
+  opacity: 0.75;
+}
+
+@media (max-width: 900px) {
+  .pv-guidance-grid {
+    grid-template-columns: 1fr;
+  }
+}

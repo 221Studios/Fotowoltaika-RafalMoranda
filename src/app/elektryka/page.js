@@ -3,7 +3,10 @@ import StatementBanner from "@/components/StatementBanner";
 import PartnersSection from "@/components/PartnersSection";
 
 export const metadata = {
-  title: "Instalacje elektryczne — Fotowoltaika Kalisz — Rafał Morańda",
+  title: "Instalacje elektryczne | ALFA Rafał Morańda",
+  description:
+    "Projektowanie, montaż i modernizacja instalacji elektrycznych oraz niskoprądowych dla domów i firm.",
+  alternates: { canonical: "/elektryka/" },
 };
 
 export default function PartnershipsPage() {

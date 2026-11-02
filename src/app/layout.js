@@ -23,9 +23,11 @@ const manrope = Manrope({
 });
 
 export const metadata = {
-  title: "Fotowoltaika Kalisz - Bezpłatna Wycena | ALFA",
+  metadataBase: new URL("https://www.moranda.com.pl"),
+  title: "ALFA Rafał Morańda — instalacje dla domu i firmy",
   description:
-    "Fotowoltaika w Kaliszu dla domu i firmy. Projekt, montaż i serwis instalacji PV, magazynów energii, instalacji elektrycznych i CCTV. Bezpłatna wycena.",
+    "ALFA Rafał Morańda projektuje, montuje i serwisuje fotowoltaikę, magazyny energii, instalacje elektryczne i systemy CCTV. Siedziba w Cekowie, obsługa Kalisza i regionu.",
+  alternates: { canonical: "/" },
 };
 
 export default function RootLayout({ children }) {

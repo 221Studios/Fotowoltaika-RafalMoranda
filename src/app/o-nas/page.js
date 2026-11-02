@@ -4,7 +4,10 @@ import StatementBanner from "@/components/StatementBanner";
 import { BRAND_COLORS } from "@/lib/brandColors";
 
 export const metadata = {
-  title: "O firmie — Fotowoltaika Kalisz — Rafał Morańda",
+  title: "O firmie ALFA Rafał Morańda | Ceków i Kalisz",
+  description:
+    "Poznaj ALFA Rafał Morańda: firma instalacyjna działająca od 2005 roku, z praktyką branżową sięgającą 1998 roku. Siedziba w Cekowie.",
+  alternates: { canonical: "/o-nas/" },
 };
 
 export default function FirmPage() {

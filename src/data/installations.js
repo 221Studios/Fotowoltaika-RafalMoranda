@@ -473,6 +473,7 @@ export const INSTALLATIONS = [
     "summary": "Kalisz, Panele JaSolar 500Wp oraz falownik Huawei SUN 2000 5KTL M1 wraz z magazynem energii LUNA 2000 5kWh",
     "sourceUrl": "https://www.moranda.com.pl/kalisz-panele-jasolar-500wp-oraz-falownik-huawei-sun-2000-5ktl-m1-wraz-z-magazynem-energii-luna-2000-5kwh/",
     "image": "/images/realizacje/kalisz-panele-jasolar-500wp-oraz-falownik-huawei-sun-2000-5ktl-m1-wraz-z-magazynem-energii-luna-2000-5kwh/01.jpg",
+    "imageAlt": "Magazyn energii Huawei pod zadaszeniem z panelami fotowoltaicznymi w Kaliszu",
     "gallery": [
       {
         "src": "/images/realizacje/kalisz-panele-jasolar-500wp-oraz-falownik-huawei-sun-2000-5ktl-m1-wraz-z-magazynem-energii-luna-2000-5kwh/01.jpg",
@@ -534,6 +535,7 @@ export const INSTALLATIONS = [
     "summary": "Kalisz, Panele JaSolar 500Wp oraz falownik Huawei SUN 2000 4KTL M1",
     "sourceUrl": "https://www.moranda.com.pl/kalisz-panele-jasolar-500wp-oraz-falownik-huawei-sun-2000-4ktl-m1/",
     "image": "/images/realizacje/kalisz-panele-jasolar-500wp-oraz-falownik-huawei-sun-2000-4ktl-m1/01.jpg",
+    "imageAlt": "Skrzynka zabezpieczeń falownika przy instalacji fotowoltaicznej w Kaliszu",
     "gallery": [
       {
         "src": "/images/realizacje/kalisz-panele-jasolar-500wp-oraz-falownik-huawei-sun-2000-4ktl-m1/01.jpg",
@@ -964,6 +966,7 @@ export const INSTALLATIONS = [
     "summary": "Montaż na który składa się instalacja fotowoltaiczna – falownik Huawei Sun 2000 10KTL M1, 10kWp JA Solar oraz magazyn energii LUNA 2000 5 kWh.",
     "sourceUrl": "https://www.moranda.com.pl/kalisz-falownik-huawei-sun-2000-10ktl-m1-10kwp-ja-solar-oraz-magazyn-energii-luna-2000-5-kwh/",
     "image": "/images/realizacje/kalisz-falownik-huawei-sun-2000-10ktl-m1-10kwp-ja-solar-oraz-magazyn-energii-luna-2000-5-kwh/01.jpg",
+    "imageAlt": "Panele fotowoltaiczne na stelażu z falownikiem i magazynem energii w Kaliszu",
     "gallery": [
       {
         "src": "/images/realizacje/kalisz-falownik-huawei-sun-2000-10ktl-m1-10kwp-ja-solar-oraz-magazyn-energii-luna-2000-5-kwh/01.jpg",
@@ -1227,6 +1230,7 @@ export const INSTALLATIONS = [
     "summary": "Montaż i konfiguracja instalacji fotowoltaicznej. Falownik 10KTL M1 oraz panele fotowoltaiczne 10kWp Ja Solar.",
     "sourceUrl": "https://www.moranda.com.pl/kalisz-falownik-10ktl-m1-oraz-10kwp-ja-solar/",
     "image": "/images/realizacje/kalisz-falownik-10ktl-m1-oraz-10kwp-ja-solar/01.jpg",
+    "imageAlt": "Stelaż pod instalację fotowoltaiczną na gruncie w Kaliszu",
     "gallery": [
       {
         "src": "/images/realizacje/kalisz-falownik-10ktl-m1-oraz-10kwp-ja-solar/01.jpg",

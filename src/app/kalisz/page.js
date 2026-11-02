@@ -28,15 +28,35 @@ const FAQ = [
   },
 ];
 
+const FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ.map(({ question, answer }) => ({
+    "@type": "Question",
+    name: question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: answer,
+    },
+  })),
+};
+
 export const metadata = {
   title: "Instalacje fotowoltaiczne w Kaliszu | ALFA",
   description:
     "Fotowoltaika Kalisz — informacje o lokalnej obsłudze, dojeździe i realizacjach firmy ALFA Rafał Morańda z Cekowa.",
+  alternates: { canonical: "/kalisz/" },
 };
 
 export default function KaliszPage() {
   return (
     <main className={styles.page}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(FAQ_SCHEMA).replace(/</g, "\\u003c"),
+        }}
+      />
       <section className={styles.hero}>
         <div className={styles.heroImage} aria-hidden="true">
           <Image
@@ -117,12 +137,13 @@ export default function KaliszPage() {
             </p>
           </Copy>
           <Copy>
-            <h2>Instalacje fotowoltaiczne wykonane w Kaliszu</h2>
+            <h2>Udokumentowane instalacje ALFA wykonane w Kaliszu</h2>
           </Copy>
           <p className={styles.projectsIntro}>
-            Poniżej pokazujemy realizacje opisane w archiwum firmy jako wykonane
-            w Kaliszu. Każda karta prowadzi do zdjęć i dostępnych informacji o
-            zastosowanych urządzeniach.
+            Poniżej pokazujemy wszystkie realizacje oznaczone w archiwum firmy
+            lokalizacją „Kalisz”. Karty prowadzą do galerii, parametrów
+            opublikowanych dla danej instalacji i oryginalnego wpisu. Nie
+            przypisujemy ich do konkretnych osiedli, bo archiwum ich nie podaje.
           </p>
           <div className={styles.projectGrid}>
             {KALISZ_INSTALLATIONS.map((installation) => {
@@ -142,7 +163,7 @@ export default function KaliszPage() {
                   <div className={styles.projectImage}>
                     <Image
                       src={withBasePath(installation.image)}
-                      alt={`Instalacja fotowoltaiczna w Kaliszu: ${installation.originalTitle}`}
+                      alt={installation.imageAlt}
                       width={installation.gallery[0]?.width ?? 1024}
                       height={installation.gallery[0]?.height ?? 461}
                       unoptimized
@@ -151,7 +172,7 @@ export default function KaliszPage() {
                   <h3>
                     {installationPower
                       ? `Fotowoltaika ${installationPower} — Kalisz`
-                      : "Instalacja fotowoltaiczna — Kalisz"}
+                      : installation.originalTitle}
                   </h3>
                   <p>{equipment}</p>
                   <span className={styles.projectLink}>

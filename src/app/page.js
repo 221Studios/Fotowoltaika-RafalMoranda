@@ -172,7 +172,7 @@ export default function Home() {
               groupedRight
               bullet
               left="Dla domu i biznesu"
-              right="Fotowoltaika Kalisz"
+              right="Instalacje · Kalisz i region"
             />
           </Copy>
         </div>
@@ -180,14 +180,14 @@ export default function Home() {
           <div className={styles.heroIntro}>
             <Copy animateOnScroll={false} delay={wait + 0.75}>
               <h1 className={styles.heroTitle}>
-                Fotowoltaika w Kaliszu dla domu i firmy
+                Instalacje dla domu i firmy — ALFA Rafał Morańda
               </h1>
             </Copy>
             <Copy animateOnScroll={false} delay={wait + 1}>
               <p className={styles.heroLead}>
-                Projektujemy i montujemy instalacje fotowoltaiczne dopasowane do
-                zużycia energii i warunków na miejscu. Od bezpłatnej konsultacji
-                i wyceny po montaż oraz uruchomienie.
+                Projektujemy, montujemy i serwisujemy fotowoltaikę, instalacje
+                elektryczne oraz systemy bezpieczeństwa. Działamy z Cekowa,
+                obsługując Kalisz i okoliczne miejscowości.
               </p>
             </Copy>
           </div>
@@ -216,7 +216,7 @@ export default function Home() {
         <div className={styles.offerTeaser}>
           <div className={`container ${styles.offerTeaserContent}`}>
             <div className={styles.offerHeading}>
-              <p className={`mono ${styles.localLabel}`}>Oferta ALFA · Kalisz i okolica</p>
+              <p className={`mono ${styles.localLabel}`}>Oferta ALFA · Ceków, Kalisz i region</p>
               <h2>Fotowoltaika, instalacje elektryczne i systemy bezpieczeństwa.</h2>
             </div>
             <div className={styles.offerDescription}>

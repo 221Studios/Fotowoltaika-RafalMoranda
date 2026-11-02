@@ -3,7 +3,10 @@ import ContactBanner from "@/components/ContactBanner";
 import FAQ from "@/components/FAQ";
 
 export const metadata = {
-  title: "Kontakt — Fotowoltaika Kalisz — Rafał Morańda",
+  title: "Kontakt z ALFA Rafał Morańda | Ceków i Kalisz",
+  description:
+    "Zadzwoń lub napisz do ALFA Rafał Morańda. Biuro i magazyn: Ceków Kolonia 6a, 62-834 Ceków. Obsługa Kalisza i okolic.",
+  alternates: { canonical: "/kontakt/" },
 };
 
 export default function ContactPage() {

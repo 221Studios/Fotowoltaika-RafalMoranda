@@ -6,14 +6,12 @@ export default function PhotovoltaicsLocalService() {
     <section className={styles.localService} aria-labelledby="local-pv-title">
       <div className={`container ${styles.inner}`}>
         <header className={styles.header}>
-          <p className={`mono ${styles.eyebrow}`}>
-            ALFA Rafał Morańda · Kalisz i powiat kaliski
-          </p>
+          <p className={`mono ${styles.eyebrow}`}>ALFA Rafał Morańda · Ceków</p>
           <h2 id="local-pv-title">
-            Fotowoltaika w Kaliszu: lokalny montaż, serwis i kontakt z wykonawcą
+            Fotowoltaika: dobór, montaż, uruchomienie i serwis
           </h2>
           <p className={styles.intro}>
-            Instalacje projektuje i wykonuje ALFA Rafał Morańda z Cekowa Kolonii.
+            Instalacje projektuje i wykonuje ALFA Rafał Morańda z Cekowa.
             Przed wyceną omawiamy zużycie energii, sprawdzamy miejsce montażu
             i dobieramy urządzenia do budynku. Firma działa od 2005 roku,
             a praktyka instalacyjna Rafała Morańdy sięga 1998 roku.
@@ -76,16 +74,15 @@ export default function PhotovoltaicsLocalService() {
         <div className={styles.installations}>
           <div className={styles.installationsHeader}>
             <p className={`mono ${styles.eyebrow}`}>Przykłady z regionu</p>
-            <h3>Rzeczywiste instalacje ALFA w okolicy Kalisza</h3>
+            <h3>Przykładowe realizacje z regionu</h3>
           </div>
           <ul className={styles.installationList}>
-            {INSTALLATIONS.map(
-              ({ slug, location, panel, inverter, battery }) => (
+            {INSTALLATIONS.slice(0, 6).map(
+              ({ slug, location, equipment }) => (
                 <li key={slug}>
                   <strong>{location}</strong>
                   <span>
-                    Moduły {panel} · falownik {inverter}
-                    {battery ? ` · magazyn ${battery}` : ""}
+                    {equipment.map(({ label, value }) => `${label}: ${value}`).join(" · ")}
                   </span>
                 </li>
               ),
