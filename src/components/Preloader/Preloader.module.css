@@ -20,7 +20,7 @@
   justify-content: space-between;
   align-items: center;
   transform: translateY(-50%);
-  color: var(--base-100);
+  color: var(--base-500);
   will-change: width, opacity;
 }
 

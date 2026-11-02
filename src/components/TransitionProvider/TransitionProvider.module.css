@@ -19,7 +19,7 @@
   margin: 0;
   padding: 1rem 1.25rem;
   transform: translateY(-50%);
-  color: var(--base-100);
+  color: var(--base-500);
   font-size: 1.125rem;
   text-align: center;
 }

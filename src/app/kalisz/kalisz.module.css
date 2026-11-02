@@ -7,8 +7,8 @@
   position: relative;
   display: flex;
   min-height: 100svh;
-  color: var(--base-100);
-  background: var(--base-500);
+  color: var(--base-500);
+  background: var(--base-200);
   isolation: isolate;
 }
 
@@ -68,7 +68,7 @@
 .benefits li::before {
   content: "✓";
   margin-right: 0.75rem;
-  color: var(--base-100);
+  color: var(--base-500);
 }
 
 .actions {
@@ -86,13 +86,13 @@
   min-height: 3.5rem;
   padding: 0.95rem 1.35rem;
   background: var(--base-300);
-  color: var(--base-100);
+  color: var(--base-500);
   text-decoration: none;
   transition: background-color 0.2s ease;
 }
 
 .primaryAction:hover {
-  background: var(--base-500);
+  background: var(--base-200);
 }
 
 .phoneAction {
@@ -188,8 +188,8 @@
 }
 
 .process {
-  color: var(--base-100);
-  background: var(--base-500);
+  color: var(--base-500);
+  background: var(--base-200);
 }
 
 .steps {
@@ -282,7 +282,7 @@
 }
 
 .finalCta {
-  color: var(--base-100);
+  color: var(--base-500);
   background: var(--base-300);
 }
 
@@ -304,8 +304,8 @@
 }
 
 .finalCta .primaryAction:hover {
-  background: var(--base-500);
-  color: var(--base-100);
+  background: var(--base-200);
+  color: var(--base-500);
 }
 
 @media (max-width: 900px) {

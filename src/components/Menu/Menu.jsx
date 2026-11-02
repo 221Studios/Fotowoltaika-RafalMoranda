@@ -162,6 +162,10 @@ export default function Menu() {
               mask: "words",
               wordsClass: styles.word,
             });
+            wordSplit.masks.forEach((mask) => {
+              mask.style.display = "inline-block";
+              mask.style.verticalAlign = "bottom";
+            });
             const words = wordSplit.words;
             if (!words?.length) {
               wordSplit.revert();

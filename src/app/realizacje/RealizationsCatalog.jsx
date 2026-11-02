@@ -2,12 +2,11 @@
 
 import { useState } from "react";
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import { withBasePath } from "@/lib/withBasePath";
+import InstallationCard from "@/components/InstallationCard/InstallationCard";
 import styles from "./work.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -105,44 +104,7 @@ export default function RealizationsCatalog({ installations }) {
       <section className={styles.projectList} aria-label="Katalog realizacji">
         <div className={`container ${styles.listContainer}`} ref={projectsRef}>
           {visibleInstallations.map((installation) => (
-            <Link
-              className={styles.project}
-              href={`/realizacje/${installation.slug}`}
-              key={installation.slug}
-            >
-              <div className={styles.projectImage}>
-                <Image
-                  className={styles.projectPhoto}
-                  src={withBasePath(installation.image)}
-                  alt={`Instalacja fotowoltaiczna w ${installation.location}`}
-                  width={installation.gallery[0]?.width ?? 1600}
-                  height={installation.gallery[0]?.height ?? 1200}
-                  unoptimized
-                />
-                <span className={styles.projectLogo}>
-                  <Image
-                    src={withBasePath("/images/moranda-logo.svg")}
-                    alt="ALFA Rafał Morańda"
-                    width={322}
-                    height={78}
-                    unoptimized
-                  />
-                </span>
-              </div>
-              <div className={styles.projectInfo}>
-                <div className={styles.projectDate}>
-                  <p>{new Intl.DateTimeFormat("pl-PL", { day: "numeric", month: "long", year: "numeric" }).format(new Date(`${installation.publishedAt}T12:00:00`))}</p>
-                </div>
-                <div className={styles.projectMainInfo}>
-                  <div className={styles.projectName}>
-                    <h2>{installation.title}</h2>
-                  </div>
-                  <div className={styles.projectSpecs}>
-                    <p>{installation.equipment.map(({ value }) => value).join(" · ")}</p>
-                  </div>
-                </div>
-              </div>
-            </Link>
+            <InstallationCard installation={installation} key={installation.slug} />
           ))}
           {visibleInstallations.length === 0 ? (
             <p className={styles.emptyState}>

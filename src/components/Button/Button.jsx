@@ -52,6 +52,10 @@ export default function Button({
         mask: "words",
         wordsClass: styles.word,
       });
+      split.masks.forEach((mask) => {
+        mask.style.display = "inline-block";
+        mask.style.verticalAlign = "bottom";
+      });
       const words = split.words;
       if (!words?.length) {
         teardown();
@@ -83,9 +87,13 @@ export default function Button({
       const onLeave = () => play(false);
       root.addEventListener("mouseenter", onEnter);
       root.addEventListener("mouseleave", onLeave);
+      root.addEventListener("focusin", onEnter);
+      root.addEventListener("focusout", onLeave);
       unbind = () => {
         root.removeEventListener("mouseenter", onEnter);
         root.removeEventListener("mouseleave", onLeave);
+        root.removeEventListener("focusin", onEnter);
+        root.removeEventListener("focusout", onLeave);
       };
     };
 

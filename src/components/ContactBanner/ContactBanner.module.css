@@ -30,7 +30,7 @@
   gap: 4rem;
   padding: 5.5rem 4rem;
   background-color: var(--base-300);
-  color: var(--base-100);
+  color: var(--base-500);
   clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
 }
 

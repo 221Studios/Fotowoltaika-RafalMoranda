@@ -20,14 +20,9 @@ const REVIEW_PHOTOS = [
   "/images/realizacje/przespolew-koscielny.webp",
   "/images/realizacje/prazuchy-nowe.webp",
 ];
-
-function Rating({ large = false }) {
+function Rating() {
   return (
-    <div
-      className={`${styles.rating} ${large ? styles.largeRating : ""}`}
-      role="img"
-      aria-label="Ocena: 5 na 5 gwiazdek"
-    >
+    <div className={styles.rating} role="img" aria-label="Ocena: 5 na 5 gwiazdek">
       {Array.from({ length: 5 }, (_, index) => (
         <span key={index} aria-hidden="true">★</span>
       ))}
@@ -39,7 +34,6 @@ export default function CustomerReviews() {
   const sectionRef = useRef(null);
   const trackRef = useRef(null);
   const slideByRef = useRef(null);
-
   useEffect(() => {
     const section = sectionRef.current;
     const track = trackRef.current;
@@ -218,17 +212,19 @@ export default function CustomerReviews() {
       <div className={`container ${styles.container}`}>
         <aside className={styles.summary}>
           <p className={`mono ${styles.kicker}`}>Opinie klientów</p>
-          <h2 id="reviews-title">Opinie o współpracy z ALFA</h2>
-          <Rating large />
-          <p className={styles.summaryText}>
-            Klienci piszą o montażu, obsłudze i kontakcie.
-          </p>
-          <div className={styles.googleWordmark} aria-label="Google">
-            <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+          <h2 id="reviews-title">Polecają firmę ALFA Rafał Morańda</h2>
+          <div
+            className={styles.googleSummary}
+            role="img"
+            aria-label="Ocena Google: 4,8 na podstawie 20 opinii"
+          >
+            <span className={styles.googleScore}>4,8</span>
+            <FcGoogle className={styles.googleMark} aria-hidden="true" />
+            <span className={styles.googleReviewCount}>(20)</span>
           </div>
           <a
             className={styles.googleLink}
-            href="https://www.google.com/maps/place/?q=place_id%3AChIJW7gAcBXfGkcRpLSZ251ae5E"
+            href="https://www.google.com/maps?cid=10483072191675610276"
             target="_blank"
             rel="noreferrer"
           >

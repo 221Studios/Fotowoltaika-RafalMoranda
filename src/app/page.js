@@ -156,7 +156,7 @@ export default function Home() {
               duration={COPY_DURATION}
             >
               <h1 className={styles.heroTitle}>
-                Instalacje dla domu i firmy — ALFA Rafał Morańda
+                Instalacje dla domu i firmy w Kaliszu
               </h1>
             </Copy>
             <Copy

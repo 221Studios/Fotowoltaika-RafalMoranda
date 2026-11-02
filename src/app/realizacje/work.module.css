@@ -76,13 +76,20 @@
 }
 
 .filters button:hover {
+  border-width: 2px;
   border-color: rgb(245 130 32 / 45%);
-  background: rgb(245 130 32 / 8%);
+  background: transparent;
 }
 
 .filters .filterActive {
   border-color: var(--brand-red);
-  color: var(--base-100);
+  color: var(--base-500);
+  background: var(--brand-red);
+}
+
+.filters button.filterActive:hover {
+  border-color: var(--brand-red);
+  color: var(--base-500);
   background: var(--brand-red);
 }
 
@@ -106,111 +113,6 @@
   padding-inline: 2rem;
 }
 
-.project {
-  display: flex;
-  container-type: inline-size;
-  min-width: 0;
-  flex-direction: column;
-  gap: 0;
-  color: inherit;
-  text-decoration: none;
-  border-radius: 1.5rem;
-}
-
-.projectImage {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 4 / 3;
-  border-radius: 1.5rem 1.5rem 0 0;
-  background: var(--base-500);
-}
-
-.projectPhoto {
-  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-
-.project:hover .projectPhoto,
-.project:focus-visible .projectPhoto {
-  transform: scale(1.025);
-}
-
-.projectLogo {
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
-  z-index: 1;
-  display: block;
-  width: clamp(8rem, 18vw, 13rem);
-  padding: 0.55rem 0.75rem;
-  border-radius: 0.65rem;
-  background: rgb(255 255 255 / 92%);
-  box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 20%);
-  backdrop-filter: blur(8px);
-}
-
-.projectLogo img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-.projectInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  padding: 1.15rem 1.25rem 1.35rem;
-  border-top: 2px solid var(--brand-red);
-  border-radius: 0 0 1.5rem 1.5rem;
-  color: var(--base-500);
-  background: var(--base-100);
-}
-
-.projectDate {
-  color: rgb(0 0 0 / 58%);
-  font-family: var(--font-google-sans-code), monospace;
-  font-size: 0.8rem;
-  line-height: 1.4;
-}
-
-.projectMainInfo {
-  display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
-}
-
-.projectName {
-  flex: 0 0 34%;
-  min-width: 0;
-}
-
-.projectName h2 {
-  margin-bottom: 0.5rem;
-  font-size: 1.75rem;
-  font-weight: 450;
-  letter-spacing: -0.05rem;
-  line-height: 1.1;
-}
-
-.projectName p {
-  color: var(--base-300);
-  font-size: 0.98rem;
-}
-
-.projectSpecs {
-  flex: 1 1 0;
-  min-width: 0;
-  text-align: right;
-}
-
-.projectSpecs p {
-  color: rgb(0 0 0 / 62%);
-  font-size: clamp(0.58rem, 2cqw, 0.9rem);
-  letter-spacing: -0.025em;
-  line-height: 1.5;
-  white-space: nowrap;
-}
-
 .emptyState {
   grid-column: 1 / -1;
   padding: 2rem;
@@ -220,11 +122,6 @@
   background: var(--base-100);
   font-size: 1rem;
   line-height: 1.5;
-}
-
-.project:focus-visible {
-  outline: 2px solid var(--brand-red);
-  outline-offset: 4px;
 }
 
 @media (max-width: 1000px) {
@@ -256,19 +153,12 @@
     font-size: 1rem;
   }
 
-  .projectImage {
-    border-radius: 1.25rem 1.25rem 0 0;
-  }
-
   .listContainer {
     gap: 3rem 1rem;
     padding-inline: 1rem;
     grid-template-columns: 1fr;
   }
 
-  .projectName {
-    flex-basis: 30%;
-  }
 }
 
 @media (max-width: 700px) {
@@ -295,19 +185,6 @@
   .listContainer {
     padding-inline: 1rem;
     gap: 2.5rem;
-  }
-
-  .projectImage {
-    border-radius: 1rem 1rem 0 0;
-  }
-
-  .projectInfo {
-    padding: 1rem;
-    border-radius: 0 0 1rem 1rem;
-  }
-
-  .projectName h2 {
-    font-size: 1.5rem;
   }
 
 }

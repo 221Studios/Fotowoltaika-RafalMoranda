@@ -32,7 +32,7 @@
 }
 
 .heroHeader {
-  color: var(--base-100);
+  color: var(--text-warm-gray);
 }
 
 .heroImage {
@@ -65,12 +65,12 @@
 .heroTitle {
   width: 100%;
   max-width: 58rem;
-  color: var(--base-100);
+  color: var(--text-warm-gray);
 }
 
 .heroLead {
   max-width: 46rem;
-  color: var(--base-100);
+  color: var(--text-warm-gray);
   font-size: clamp(1.1rem, 1.8vw, 1.45rem);
   line-height: 1.4;
 }
@@ -122,10 +122,13 @@
   text-wrap: balance;
 }
 
-.aboutLink {
+.credentialsHeading .aboutLink {
+  align-items: center;
   width: min(100%, 19rem);
   flex: 0 0 auto;
   margin-bottom: 0.15rem;
+  padding: 0.75rem 0.9rem;
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
 }
 
 .trustGrid {
@@ -159,11 +162,11 @@
   justify-content: flex-start;
   border-top-color: var(--brand-red) !important;
   background: var(--brand-red) !important;
-  color: var(--base-100);
+  color: var(--base-500);
 }
 
 .experienceCard .trustLabel {
-  color: var(--base-100);
+  color: var(--base-500);
 }
 
 .experienceCard h3 {
@@ -180,7 +183,7 @@
 }
 
 .experienceCard .trustCopy {
-  color: rgb(255 255 255 / 88%);
+  color: rgb(243 241 237 / 88%);
 }
 
 .brandsCard {

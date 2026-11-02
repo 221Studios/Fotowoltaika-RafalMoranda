@@ -1,9 +1,10 @@
 :root {
-  --base-100: #ffffff;
-  --base-200: #ebebeb;
+  --base-100: #252525;
+  --base-200: #1b1b1b;
   --base-300: #e30016;
   --base-400: #f58220;
-  --base-500: #000000;
+  --text-warm-gray: #f3f1ed;
+  --base-500: var(--text-warm-gray);
   --brand-red: #e30016;
   --brand-orange: #f58220;
 }
@@ -34,6 +35,59 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+body :is(
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  button,
+  li,
+  span,
+  strong,
+  em,
+  b,
+  i,
+  u,
+  s,
+  del,
+  ins,
+  small,
+  time,
+  abbr,
+  address,
+  code,
+  pre,
+  input,
+  textarea,
+  select,
+  option,
+  output,
+  blockquote,
+  figcaption,
+  caption,
+  cite,
+  label,
+  legend,
+  summary,
+  dt,
+  dd,
+  th,
+  td,
+  q,
+  dfn,
+  var,
+  mark,
+  sup,
+  sub
+) {
+  position: relative;
+  z-index: 1;
 }
 
 h1,
@@ -150,9 +204,9 @@ p.mono.lg {
   align-items: flex-start;
   gap: 1rem;
   padding: clamp(1.25rem, 2.5vw, 2rem);
-  border: 1px solid rgb(0 0 0 / 15%);
+  border: 1px solid rgb(243 241 237 / 12%);
   border-radius: 1rem;
-  background: rgb(255 255 255 / 55%);
+  background: var(--base-100);
 }
 
 .pv-guidance-grid h3 {

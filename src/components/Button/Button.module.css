@@ -4,6 +4,8 @@
   align-items: flex-start;
   height: 88px;
   padding: 12px 14px;
+  overflow: hidden;
+  border-radius: 1rem;
   text-decoration: none;
 }
 
@@ -21,6 +23,12 @@
 
 .arrow {
   display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.button:hover .arrow,
+.button:focus-visible .arrow {
+  transform: translateX(6px);
 }
 
 @media (max-width: 768px) {
@@ -29,22 +37,14 @@
   }
 }
 
-.primary {
+.primary,
+.light,
+.dark {
   background-color: var(--base-300);
-  color: var(--base-100);
+  color: var(--text-warm-gray);
 }
 
 .secondary {
-  background-color: var(--base-400);
-  color: var(--base-100);
-}
-
-.light {
-  background-color: var(--base-100);
-  color: var(--base-400);
-}
-
-.dark {
-  background-color: var(--base-500);
-  color: var(--base-100);
+  background-color: var(--brand-orange);
+  color: var(--text-warm-gray);
 }

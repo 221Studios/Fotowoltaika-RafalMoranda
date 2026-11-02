@@ -30,12 +30,12 @@
 
 .accent {
   background-color: var(--base-300);
-  color: var(--base-100);
+  color: var(--base-500);
 }
 
 .dark {
   background-color: var(--base-400);
-  color: var(--base-100);
+  color: var(--base-500);
 }
 
 .light {

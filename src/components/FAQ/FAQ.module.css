@@ -82,7 +82,7 @@
 .answer {
   align-self: flex-start;
   background-color: var(--base-300);
-  color: var(--base-100);
+  color: var(--base-500);
 }
 
 .content {
@@ -111,7 +111,7 @@
   width: 0.55rem;
   height: 0.55rem;
   border-radius: 50%;
-  background-color: var(--base-500);
+  background-color: var(--base-100);
   animation: typing-pulse 1s infinite ease-in-out;
 }
 

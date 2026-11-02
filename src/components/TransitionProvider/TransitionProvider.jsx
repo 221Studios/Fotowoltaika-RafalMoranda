@@ -38,6 +38,14 @@ const PAGE_LABELS = {
 };
 
 function pageLabelForDestination(to) {
+  const route = routeForDestination(to);
+  const destination = new URL(to, window.location.href);
+  return (
+    PAGE_LABELS[`${route}${destination.hash}`] ?? PAGE_LABELS[route] ?? "Start"
+  );
+}
+
+function routeForDestination(to) {
   const destination = new URL(to, window.location.href);
   const basePath = (process.env.NEXT_PUBLIC_BASE_PATH ?? "").replace(
     /\/+$/,
@@ -49,14 +57,17 @@ function pageLabelForDestination(to) {
     pathname = pathname.slice(basePath.length) || "/";
   }
 
-  const route = pathname.startsWith("/") ? pathname : `/${pathname}`;
-  return (
-    PAGE_LABELS[`${route}${destination.hash}`] ?? PAGE_LABELS[route] ?? "Start"
-  );
+  return pathname.startsWith("/") ? pathname : `/${pathname}`;
+}
+
+function isRealizationDestination(to) {
+  const route = routeForDestination(to);
+  return route.startsWith("/realizacje/");
 }
 
 const OPEN = "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)";
 const CLOSED = "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)";
+const BOTTOM_CLOSED = "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)";
 
 function band(percent, span) {
   const top = (50 - percent).toFixed(3);
@@ -77,6 +88,7 @@ export default function TransitionProvider({ children }) {
   const titleRef = useRef(null);
   const splitRef = useRef(null);
   const timelineRef = useRef(null);
+  const realizationTransitionRef = useRef(false);
   const lenisRef = useRef(null);
   const lenis = useLenis();
 
@@ -112,6 +124,31 @@ export default function TransitionProvider({ children }) {
         timelineRef.current?.kill();
         revertSplit();
 
+        realizationTransitionRef.current = isRealizationDestination(to);
+        lenisRef.current?.stop();
+
+        if (realizationTransitionRef.current) {
+          title.textContent = "";
+          gsap.set(overlay, {
+            "--clip": BOTTOM_CLOSED,
+            autoAlpha: 1,
+            visibility: "visible",
+            pointerEvents: "auto",
+          });
+
+          const tl = gsap.timeline({
+            defaults: { duration: 1, ease: "hop" },
+            onComplete: () => {
+              window.dispatchEvent(new Event("transition-cover"));
+              next();
+            },
+          });
+
+          tl.to(overlay, { "--clip": OPEN });
+          timelineRef.current = tl;
+          return;
+        }
+
         title.textContent = pageLabelForDestination(to);
         splitRef.current = new SplitText(title, {
           type: "words",
@@ -130,8 +167,6 @@ export default function TransitionProvider({ children }) {
           visibility: "visible",
           pointerEvents: "auto",
         });
-
-        lenisRef.current?.stop();
 
         const tl = gsap.timeline({
           defaults: { duration: 1, ease: "hop" },
@@ -161,6 +196,7 @@ export default function TransitionProvider({ children }) {
             });
           }
           revertSplit();
+          realizationTransitionRef.current = false;
           ScrollTrigger.refresh();
           lenisRef.current?.start();
           next();
@@ -168,6 +204,17 @@ export default function TransitionProvider({ children }) {
 
         lenisRef.current?.scrollTo(0, { immediate: true, force: true });
         window.scrollTo(0, 0);
+
+        if (realizationTransitionRef.current && overlay) {
+          const tl = gsap.timeline({
+            defaults: { duration: 1, ease: "hop" },
+            onComplete: finish,
+          });
+
+          tl.to(overlay, { "--clip": BOTTOM_CLOSED });
+          timelineRef.current = tl;
+          return () => timelineRef.current?.kill();
+        }
 
         if (!overlay || !words?.length) {
           finish();
