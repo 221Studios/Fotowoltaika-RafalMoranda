@@ -22,9 +22,8 @@ import CustomerReviews from "@/components/CustomerReviews/CustomerReviews";
 import { withBasePath } from "@/lib/withBasePath";
 
 import {
-  HOME_COPY_BASE_DELAY,
-  PRELOADER_COPY_BASE_DELAY,
   PRELOADER_EASE,
+  PRELOADER_HERO_DELAY,
   PRELOADER_HERO_SCALE_DURATION,
   markPreloaderSeen,
   shouldShowPreloader,
@@ -36,14 +35,23 @@ if (typeof window !== "undefined") {
   CustomEase.create("preloaderHop", PRELOADER_EASE);
 }
 
+const INTRO_SLOWDOWN = 1.2;
+const COPY_SPEED_FACTOR = 0.8;
+const INTRO_GAP = 1.15 * COPY_SPEED_FACTOR;
+const COPY_DURATION = 0.75 * INTRO_SLOWDOWN * COPY_SPEED_FACTOR;
+const HERO_REVEAL_DURATION =
+  PRELOADER_HERO_SCALE_DURATION * INTRO_SLOWDOWN * 1.1;
+
 export default function Home() {
   const heroRef = useRef(null);
   const ctasRef = useRef(null);
   const lenis = useLenis();
   const showPreloader = shouldShowPreloader();
-  const wait = showPreloader
-    ? PRELOADER_COPY_BASE_DELAY - HOME_COPY_BASE_DELAY
-    : 0;
+  const titleDelay = showPreloader
+    ? PRELOADER_HERO_DELAY + HERO_REVEAL_DURATION + INTRO_GAP
+    : 0.3;
+  const supportingCopyDelay = titleDelay + INTRO_GAP;
+  const ctaDelay = supportingCopyDelay + INTRO_GAP;
 
   useEffect(() => {
     return () => {
@@ -70,7 +78,7 @@ export default function Home() {
         {
           scale: 1,
           rotation: 0,
-          duration: PRELOADER_HERO_SCALE_DURATION,
+          duration: HERO_REVEAL_DURATION,
           ease: "preloaderHop",
           force3D: true,
           overwrite: true,
@@ -94,13 +102,13 @@ export default function Home() {
 
       gsap.to(btns, {
         y: 0,
-        duration: 0.75,
-        delay: wait + 0.75,
-        stagger: 0.25,
+        duration: COPY_DURATION,
+        delay: ctaDelay,
+        stagger: 0.25 * INTRO_SLOWDOWN * COPY_SPEED_FACTOR,
         ease: "power3.out",
       });
     },
-    { scope: ctasRef, dependencies: [wait] },
+    { scope: ctasRef, dependencies: [ctaDelay] },
   );
 
   return (
@@ -125,7 +133,12 @@ export default function Home() {
           />
         </div>
         <div className={styles.heroHeader}>
-          <Copy variant="flicker" animateOnScroll={false} delay={wait + 1}>
+          <Copy
+            variant="flicker"
+            animateOnScroll={false}
+            delay={supportingCopyDelay}
+            duration={0.05 * INTRO_SLOWDOWN * COPY_SPEED_FACTOR}
+          >
             <SectionHeader
               variant="v2"
               groupedRight
@@ -137,12 +150,20 @@ export default function Home() {
         </div>
         <div className={`container ${styles.heroContent}`}>
           <div className={styles.heroIntro}>
-            <Copy animateOnScroll={false} delay={wait + 0.75}>
+            <Copy
+              animateOnScroll={false}
+              delay={titleDelay}
+              duration={COPY_DURATION}
+            >
               <h1 className={styles.heroTitle}>
                 Instalacje dla domu i firmy — ALFA Rafał Morańda
               </h1>
             </Copy>
-            <Copy animateOnScroll={false} delay={wait + 1}>
+            <Copy
+              animateOnScroll={false}
+              delay={supportingCopyDelay}
+              duration={COPY_DURATION}
+            >
               <p className={styles.heroLead}>
                 Projektujemy, montujemy i serwisujemy fotowoltaikę, instalacje
                 elektryczne oraz systemy bezpieczeństwa. Działamy z Cekowa,

@@ -13,9 +13,9 @@ import {
   PRELOADER_COUNT_DELAY,
   PRELOADER_COUNT_DURATION,
   PRELOADER_EASE,
+  PRELOADER_HERO_DELAY,
   PRELOADER_OPEN_DELAY,
   PRELOADER_OPEN_DURATION,
-  PRELOADER_OVERLAY_HOLD,
   PRELOADER_PROGRESS_FADE,
 } from "@/lib/preloader";
 
@@ -84,11 +84,9 @@ export default function Preloader({ active = true, onExpand }) {
       tl.add(() => {
         const done = onExpandRef.current?.();
         Promise.resolve(done).finally(() => {
-          gsap.delayedCall(PRELOADER_OVERLAY_HOLD, () => {
-            overlay.style.display = "none";
-          });
+          overlay.style.display = "none";
         });
-      }, PRELOADER_OPEN_DELAY);
+      }, PRELOADER_HERO_DELAY);
 
       tl.to(
         overlay,
