@@ -4,11 +4,14 @@ import styles from "./PageHeader.module.css";
 
 import { isValidElement, useRef } from "react";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import { useLenis } from "lenis/react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { FiEye } from "react-icons/fi";
 
 import Copy from "@/components/Copy";
+import { withBasePath } from "@/lib/withBasePath";
 
 gsap.registerPlugin(useGSAP);
 
@@ -29,7 +32,12 @@ function ditherIcon(name) {
         ),
       {
         ssr: false,
-        loading: () => <span className={styles.iconSlot} aria-hidden="true" />,
+        loading: () =>
+          name === "EyeIcon" ? (
+            <FiEye className={styles.fallbackIcon} aria-hidden="true" />
+          ) : (
+            <span className={styles.iconSlot} aria-hidden="true" />
+          ),
       },
     );
     iconCache.set(name, Icon);
@@ -53,6 +61,9 @@ export default function PageHeader({
   description,
   descriptionClassName = "",
   icon = "WorkspaceIcon",
+  theme = "default",
+  backgroundImage,
+  backgroundAlt = "",
 }) {
   const sectionRef = useRef(null);
   const iconRef = useRef(null);
@@ -70,6 +81,11 @@ export default function PageHeader({
       const iconEl = iconRef.current;
       if (!iconEl) return;
 
+      if (backgroundImage) {
+        gsap.set(iconEl, { scale: 1, transformOrigin: "center" });
+        return;
+      }
+
       gsap.set(iconEl, { scale: 0, transformOrigin: "center", force3D: false });
       gsap.to(iconEl, {
         scale: 1,
@@ -79,21 +95,48 @@ export default function PageHeader({
         force3D: false,
       });
     },
-    { scope: sectionRef, dependencies: [] },
+    { scope: sectionRef, dependencies: [backgroundImage] },
   );
 
+  const headingContent = (
+    <h1 className={styles.heading}>
+      <span>{title}</span>
+      {subtitle ? <span className={styles.subtitle}>{subtitle}</span> : null}
+    </h1>
+  );
+
+  const descriptionContent = description ? (
+    <p className={`${styles.copy} ${descriptionClassName}`}>{description}</p>
+  ) : null;
+
   return (
-    <section ref={sectionRef} className={styles.pageHeader}>
+    <section
+      ref={sectionRef}
+      className={`${styles.pageHeader}${theme === "cctv" ? ` ${styles.cctv}` : ""}`}
+    >
+      {backgroundImage ? (
+        <div className={styles.background}>
+          <Image
+            className={styles.backgroundImage}
+            src={withBasePath(backgroundImage)}
+            alt={backgroundAlt}
+            fill
+            sizes="100vw"
+            loading="eager"
+            fetchPriority="high"
+            unoptimized
+          />
+        </div>
+      ) : null}
       <div className={`container ${styles.container}`}>
         <div className={styles.inner}>
-          <Copy animateOnScroll={false} delay={HEADING_DELAY}>
-            <h1 className={styles.heading}>
-              <span>{title}</span>
-              {subtitle ? (
-                <span className={styles.subtitle}>{subtitle}</span>
-              ) : null}
-            </h1>
-          </Copy>
+          {backgroundImage ? (
+            headingContent
+          ) : (
+            <Copy animateOnScroll={false} delay={HEADING_DELAY}>
+              {headingContent}
+            </Copy>
+          )}
 
           <div className={styles.meta}>
             <button
@@ -106,10 +149,14 @@ export default function PageHeader({
                 <HeaderIcon icon={icon} />
               </span>
             </button>
-            {description ? (
-              <Copy animateOnScroll={false} delay={META_DELAY}>
-                <p className={`${styles.copy} ${descriptionClassName}`}>{description}</p>
-              </Copy>
+            {descriptionContent ? (
+              backgroundImage ? (
+                descriptionContent
+              ) : (
+                <Copy animateOnScroll={false} delay={META_DELAY}>
+                  {descriptionContent}
+                </Copy>
+              )
             ) : null}
           </div>
         </div>

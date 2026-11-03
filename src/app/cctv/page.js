@@ -1,43 +1,75 @@
 import PageHeader from "@/components/PageHeader";
-import StatementBanner from "@/components/StatementBanner";
 import JournalArticles from "@/components/JournalArticles";
 import JsonLd from "@/components/JsonLd";
 import { createPageMetadata, createServiceSchema } from "@/lib/site";
+import CctvSeoContent from "./CctvSeoContent";
+import { CCTV_FAQ_ITEMS } from "./cctvContent";
 
 const DESCRIPTION =
-  "Monitoring CCTV dla domów i firm w Kaliszu i okolicach. Dobór kamer, montaż, konfiguracja zdalnego podglądu oraz serwis systemu.";
+  "Montaż kamer i monitoring CCTV w Kaliszu dla domu i firmy. Dobór kamer, podgląd w telefonie, zapis nagrań, konfiguracja i serwis. Bezpłatna wycena.";
 
 export const metadata = createPageMetadata({
-  title: "Monitoring CCTV w Kaliszu — montaż kamer",
+  title: "Montaż kamer CCTV Kalisz — monitoring domu i firmy",
   description: DESCRIPTION,
   path: "/cctv/",
   image: "/images/journal/banner.webp",
-  imageAlt: "System monitoringu CCTV dla domu lub firmy",
+  imageAlt: "Kamera systemu monitoringu CCTV montowanego w Kaliszu",
 });
 
-const SERVICE_SCHEMA = createServiceSchema({
-  name: "Montaż i serwis monitoringu CCTV",
-  description: DESCRIPTION,
-  path: "/cctv/",
-});
+const SERVICE_SCHEMA = {
+  ...createServiceSchema({
+    name: "Montaż kamer i serwis monitoringu CCTV w Kaliszu",
+    description: DESCRIPTION,
+    path: "/cctv/",
+  }),
+  serviceType: "Montaż, konfiguracja i serwis monitoringu CCTV",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Usługi monitoringu CCTV",
+    itemListElement: [
+      "Projekt i montaż kamer CCTV",
+      "Monitoring domu i posesji",
+      "Monitoring firmy i obiektów",
+      "Konfiguracja podglądu w telefonie",
+      "Modernizacja i serwis monitoringu",
+    ].map((name) => ({
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name },
+    })),
+  },
+};
 
-export default function JournalPage() {
+const FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: CCTV_FAQ_ITEMS.map(({ question, answer }) => ({
+    "@type": "Question",
+    name: question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: answer,
+    },
+  })),
+};
+
+export default function CctvPage() {
   return (
     <>
       <JsonLd data={SERVICE_SCHEMA} />
+      <JsonLd data={FAQ_SCHEMA} />
       <PageHeader
-        title="Monitoring"
-        subtitle="CCTV"
-        description="Projektujemy i montujemy systemy kamer dla domów oraz firm."
+        title="Montaż kamer CCTV"
+        subtitle="Kalisz · dom i firma"
+        description="Projektujemy i montujemy monitoring domu, firmy i posesji. Konfigurujemy zapis nagrań, podgląd w telefonie oraz serwis systemu."
         icon="EyeIcon"
-      />
-
-      <StatementBanner
-        showContent={false}
-        src="/images/journal/banner.webp"
+        theme="cctv"
+        backgroundImage="/images/journal/banner.webp"
+        backgroundAlt="Kamera systemu monitoringu CCTV"
       />
 
       <JournalArticles />
+
+      <CctvSeoContent />
     </>
   );
 }

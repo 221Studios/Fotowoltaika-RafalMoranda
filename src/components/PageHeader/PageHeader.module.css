@@ -6,6 +6,136 @@
   color: var(--base-500);
 }
 
+.cctv {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 82% 20%, rgb(227 0 22 / 30%), transparent 28%),
+    radial-gradient(circle at 62% 105%, rgb(227 0 22 / 12%), transparent 32%),
+    linear-gradient(135deg, var(--base-200) 0%, #242424 58%, #171717 100%);
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: var(--base-200);
+}
+
+.background::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(
+      90deg,
+      rgb(16 16 16 / 86%) 0%,
+      rgb(16 16 16 / 66%) 48%,
+      rgb(16 16 16 / 74%) 100%
+    ),
+    linear-gradient(180deg, rgb(16 16 16 / 22%) 0%, rgb(16 16 16 / 52%) 100%);
+  pointer-events: none;
+  content: "";
+}
+
+.backgroundImage {
+  z-index: 0;
+  object-fit: cover;
+  object-position: 64% center;
+  animation: cctvHeroImageIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.cctv::before {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgb(243 241 237 / 3%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(243 241 237 / 3%) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.55;
+  pointer-events: none;
+  content: "";
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 48%, #000 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 48%, #000 100%);
+}
+
+.cctv::after {
+  display: none;
+}
+
+.cctv .subtitle {
+  color: var(--brand-red);
+  opacity: 1;
+}
+
+.cctv .heading {
+  animation: cctvTextIn 0.9s 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.cctv .heading > span {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  white-space: normal;
+}
+
+.cctv .scrollBtn {
+  width: 6rem;
+  height: 6rem;
+  overflow: hidden;
+  border: 0;
+  background: var(--brand-red);
+  color: #b9b7b2;
+  clip-path: polygon(
+    0 0.9rem,
+    0.9rem 0,
+    calc(100% - 0.9rem) 0,
+    100% 0.9rem,
+    100% calc(100% - 0.9rem),
+    calc(100% - 0.9rem) 100%,
+    0.9rem 100%,
+    0 calc(100% - 0.9rem)
+  );
+  filter: drop-shadow(0 0 1.25rem rgb(227 0 22 / 20%));
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.cctv .scrollBtn::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: #b9b7b2;
+  content: "";
+  transform: translateY(102%);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cctv .scrollBtn:hover,
+.cctv .scrollBtn:focus-visible {
+  color: var(--brand-red);
+  transform: translateY(-0.35rem);
+}
+
+.cctv .scrollBtn:hover::before,
+.cctv .scrollBtn:focus-visible::before {
+  transform: translateY(0);
+}
+
+.cctv .scrollBtn:hover .iconWrap,
+.cctv .scrollBtn:focus-visible .iconWrap {
+  animation: cctvEyeBlink 0.72s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.cctv .copy {
+  width: min(32rem, 45vw);
+  max-width: 32rem;
+  color: rgb(243 241 237 / 86%);
+  font-size: clamp(1rem, 1.35vw, 1.75rem);
+  line-height: 1.18;
+}
+
 .pageHeader::after {
   position: absolute;
   top: 0;
@@ -40,6 +170,44 @@
   to {
     opacity: 0.72;
     transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes cctvEyeBlink {
+  0%,
+  28%,
+  72%,
+  100% {
+    transform: scale(1) scaleY(1);
+  }
+
+  48%,
+  54% {
+    transform: scale(1) scaleY(0.08);
+  }
+}
+
+@keyframes cctvHeroImageIn {
+  from {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes cctvTextIn {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -98,6 +266,11 @@
   height: 80px;
 }
 
+.fallbackIcon {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
 .copy {
   flex-shrink: 0;
   max-width: 20rem;
@@ -128,10 +301,72 @@
     max-width: none;
     text-align: left;
   }
+
+  .cctv .copy {
+    width: 100%;
+    max-width: none;
+    font-size: clamp(1rem, 4.5vw, 1.35rem);
+  }
+
+  .cctv .heading {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(2.7rem, 11.2vw, 4rem);
+    line-height: 0.94;
+  }
+
+  .background::after {
+    background:
+      linear-gradient(180deg, rgb(16 16 16 / 76%) 0%, rgb(16 16 16 / 58%) 48%, rgb(16 16 16 / 86%) 100%),
+      linear-gradient(90deg, rgb(16 16 16 / 52%) 0%, rgb(16 16 16 / 24%) 100%);
+  }
+
+  .backgroundImage {
+    object-position: 68% center;
+  }
+
+  .cctv .scrollBtn {
+    width: 5rem;
+    height: 5rem;
+  }
+
+}
+
+@media (min-width: 1280px) {
+  .cctv {
+    height: 72svh;
+    min-height: 38rem;
+  }
+
+  .cctv .inner {
+    padding-bottom: 1.5rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .pageHeader::after {
+    animation: none;
+  }
+
+  .cctv .scrollBtn {
+    transition: none;
+  }
+
+  .cctv .scrollBtn::before {
+    transition: none;
+  }
+
+  .cctv .scrollBtn:hover .iconWrap,
+  .cctv .scrollBtn:focus-visible .iconWrap {
+    animation: none;
+  }
+
+  .backgroundImage {
+    animation: none;
+  }
+
+  .cctv .heading,
+  .cctv .copy {
     animation: none;
   }
 }

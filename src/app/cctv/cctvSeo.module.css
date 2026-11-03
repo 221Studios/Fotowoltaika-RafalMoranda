@@ -1,0 +1,290 @@
+.seoContent {
+  background: var(--base-200);
+  color: var(--text-warm-gray);
+}
+
+.scopeSection,
+.priceSection,
+.faqSection {
+  position: relative;
+}
+
+.sectionInner,
+.priceInner,
+.faqInner {
+  padding-block: 10rem 8rem;
+}
+
+.eyebrow,
+.cardIndex,
+.faqIndex {
+  color: var(--brand-red);
+}
+
+.introGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(20rem, 0.85fr);
+  align-items: end;
+  gap: 3rem clamp(3rem, 7vw, 8rem);
+}
+
+.introGrid h2,
+.priceLead h2,
+.faqHeading h2 {
+  margin-top: 1rem;
+  font-size: clamp(2.75rem, 5vw, 5.5rem);
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+.introCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.introCopy p,
+.priceLead > p:not(.eyebrow) {
+  line-height: 1.55;
+}
+
+.scopeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 5rem;
+}
+
+.scopeCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-height: 21rem;
+  padding: clamp(1.5rem, 2.5vw, 2.25rem);
+  border-top: 2px solid var(--brand-red);
+  background: var(--base-100);
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.scopeCard:hover {
+  background: #2b2b2b;
+  transform: translateY(-0.4rem);
+}
+
+.scopeCard h3 {
+  font-size: clamp(1.65rem, 2.1vw, 2.4rem);
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+.scopeCard > p:last-child {
+  margin-top: auto;
+  color: rgb(243 241 237 / 76%);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.priceSection {
+  background:
+    radial-gradient(circle at 10% 15%, rgb(227 0 22 / 14%), transparent 25rem),
+    var(--base-100);
+}
+
+.priceInner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(24rem, 1.1fr);
+  align-items: start;
+  gap: 4rem clamp(4rem, 8vw, 9rem);
+}
+
+.priceLead {
+  position: sticky;
+  top: 8rem;
+}
+
+.priceLead > p:not(.eyebrow) {
+  max-width: 42rem;
+  margin-top: 1.75rem;
+}
+
+.quoteButton {
+  width: min(100%, 28rem);
+  height: auto;
+  min-height: 5.5rem;
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+}
+
+.factorList {
+  list-style: none;
+}
+
+.factorList li {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  align-items: start;
+  gap: 1rem;
+  padding-block: 1.75rem;
+  border-bottom: 1px solid rgb(243 241 237 / 14%);
+}
+
+.factorList li:first-child {
+  border-top: 1px solid rgb(243 241 237 / 14%);
+}
+
+.factorList span {
+  color: var(--brand-red);
+}
+
+.factorList p {
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  line-height: 1.12;
+}
+
+.faqSection {
+  background: var(--base-200);
+}
+
+.faqInner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(30rem, 1.2fr);
+  align-items: start;
+  gap: 4rem clamp(4rem, 8vw, 9rem);
+}
+
+.faqHeading {
+  position: sticky;
+  top: 8rem;
+}
+
+.faqList {
+  border-top: 1px solid rgb(243 241 237 / 18%);
+}
+
+.faqItem {
+  border-bottom: 1px solid rgb(243 241 237 / 18%);
+}
+
+.faqItem summary {
+  display: grid;
+  grid-template-columns: 3rem 1fr 2rem;
+  align-items: center;
+  gap: 1rem;
+  min-height: 6rem;
+  padding-block: 1.25rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faqItem summary::-webkit-details-marker {
+  display: none;
+}
+
+.question {
+  font-size: clamp(1.2rem, 1.65vw, 1.65rem);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.plus {
+  width: 1.1rem;
+  height: 1.1rem;
+  justify-self: end;
+}
+
+.plus::before,
+.plus::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: var(--brand-red);
+  content: "";
+  transform: translate(-50%, -50%);
+  transition: transform 0.25s ease;
+}
+
+.plus::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.faqItem[open] .plus::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.answer {
+  max-width: 52rem;
+  padding: 0 3rem 1.75rem 4rem;
+  color: rgb(243 241 237 / 76%);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 1100px) {
+  .scopeGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .priceInner,
+  .faqInner {
+    grid-template-columns: 1fr;
+  }
+
+  .priceLead,
+  .faqHeading {
+    position: relative;
+    top: auto;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .sectionInner,
+  .priceInner,
+  .faqInner {
+    padding-block: 8rem 6rem;
+  }
+
+  .introGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .scopeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .scopeGrid {
+    margin-top: 3rem;
+  }
+
+  .scopeCard {
+    min-height: 0;
+  }
+
+  .priceInner,
+  .faqInner {
+    gap: 3rem;
+  }
+
+  .faqItem summary {
+    grid-template-columns: 2rem 1fr 1.5rem;
+  }
+
+  .answer {
+    padding-left: 3rem;
+    padding-right: 0;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scopeCard,
+  .plus::before,
+  .plus::after {
+    transition: none;
+  }
+}
