@@ -32,13 +32,6 @@ const GROUPS = [
     label: "Godziny pracy",
     lines: [OPENING_HOURS.label, OPENING_HOURS.closedLabel],
   },
-  {
-    label: "Obszar obsługi",
-    lines: [
-      "Kalisz, powiat kaliski i okolice do ok. 50 km",
-      "Bezpłatny dojazd na oględziny i wycenę",
-    ],
-  },
 ];
 
 function Line({ line }) {

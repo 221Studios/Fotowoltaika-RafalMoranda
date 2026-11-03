@@ -1,43 +1,73 @@
 import PageHeader from "@/components/PageHeader";
-import StatementBanner from "@/components/StatementBanner";
-import PartnersSection from "@/components/PartnersSection";
 import JsonLd from "@/components/JsonLd";
 import { createPageMetadata, createServiceSchema } from "@/lib/site";
+import ElectricalSeoContent from "./ElectricalSeoContent";
+import {
+  ELECTRICAL_FAQ_ITEMS,
+  ELECTRICAL_SCOPE_ITEMS,
+  ELECTRICAL_UPDATED_AT,
+} from "./electricalContent";
 
 const DESCRIPTION =
-  "Instalacje elektryczne i niskoprądowe dla domów oraz firm w Kaliszu i okolicach. Projektowanie, montaż, modernizacja i serwis firmy ALFA.";
+  "Elektryk Kalisz: instalacje w domach i firmach, wymiana rozdzielnic, pomiary z protokołem i podłączenie płyt indukcyjnych. Uprawnienia E i D, bezpłatny dojazd.";
+
+const HERO_IMAGE = "/images/elektryka/rozdzielnica-budynek.webp";
 
 export const metadata = createPageMetadata({
-  title: "Instalacje elektryczne w Kaliszu",
+  title: "Elektryk Kalisz — instalacje, pomiary i rozdzielnice",
   description: DESCRIPTION,
   path: "/elektryka/",
-  image: "/images/partnerships/banner.webp",
-  imageAlt: "Instalacje elektryczne wykonywane przez firmę ALFA",
+  image: HERO_IMAGE,
+  imageAlt: "Rozdzielnica elektryczna wykonana przez firmę ALFA",
 });
 
-const SERVICE_SCHEMA = createServiceSchema({
-  name: "Instalacje elektryczne i niskoprądowe",
-  description: DESCRIPTION,
-  path: "/elektryka/",
-});
+const SERVICE_SCHEMA = {
+  ...createServiceSchema({
+    name: "Instalacje elektryczne, rozdzielnice i pomiary w Kaliszu",
+    description: DESCRIPTION,
+    path: "/elektryka/",
+  }),
+  serviceType: "Instalacje elektryczne i pomiary elektryczne",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Usługi elektryczne",
+    itemListElement: ELECTRICAL_SCOPE_ITEMS.map(({ title, copy }) => ({
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name: title, description: copy },
+    })),
+  },
+};
 
-export default function PartnershipsPage() {
+const FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  dateModified: ELECTRICAL_UPDATED_AT,
+  mainEntity: ELECTRICAL_FAQ_ITEMS.map(({ question, answer }) => ({
+    "@type": "Question",
+    name: question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: answer,
+    },
+  })),
+};
+
+export default function ElectricalPage() {
   return (
     <>
       <JsonLd data={SERVICE_SCHEMA} />
+      <JsonLd data={FAQ_SCHEMA} />
       <PageHeader
-        title="Instalacje"
-        subtitle="elektryczne"
-        description="Projektujemy, montujemy i modernizujemy instalacje elektryczne oraz niskoprądowe."
+        title="Elektryk Kalisz"
+        subtitle="instalacje · pomiary · rozdzielnice"
+        description="Nowe instalacje, wymiana rozdzielnic i pomiary z protokołem dla domów i firm. Własna ekipa z Cekowa, uprawnienia E i D."
         icon="BoltIcon"
+        theme="cctv"
+        backgroundImage={HERO_IMAGE}
+        backgroundAlt="Rozdzielnica elektryczna w budynku wykonana przez ALFA"
       />
 
-      <StatementBanner
-        showContent={false}
-        src="/images/partnerships/banner.webp"
-      />
-
-      <PartnersSection />
+      <ElectricalSeoContent />
     </>
   );
 }

@@ -165,6 +165,10 @@ export default function Menu() {
             wordSplit.masks.forEach((mask) => {
               mask.style.display = "inline-block";
               mask.style.verticalAlign = "bottom";
+              mask.style.paddingTop = "0.12em";
+              mask.style.marginTop = "-0.12em";
+              mask.style.paddingBottom = "0.22em";
+              mask.style.marginBottom = "-0.22em";
             });
             const words = wordSplit.words;
             if (!words?.length) {
@@ -222,7 +226,6 @@ export default function Menu() {
 
   useEffect(() => {
     const timeline = timelineRef.current;
-    document.body.style.overflow = isOpen ? "hidden" : "";
 
     if (isOpen) {
       const wasStopped = Boolean(lenis?.isStopped);
@@ -231,7 +234,6 @@ export default function Menu() {
       timeline?.timeScale(1).play();
       return () => {
         if (lenis && !wasStopped) lenis.start();
-        document.body.style.overflow = "";
       };
     }
 

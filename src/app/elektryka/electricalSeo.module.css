@@ -1,0 +1,210 @@
+.inlineLink {
+  color: var(--text-warm-gray);
+  text-decoration: underline;
+  text-decoration-color: var(--brand-red);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+  transition: color 0.2s ease;
+}
+
+.inlineLink:hover,
+.inlineLink:focus-visible {
+  color: var(--brand-red);
+}
+
+.listLabel {
+  margin-bottom: 1rem;
+  color: rgb(243 241 237 / 60%);
+}
+
+.note {
+  padding-left: 1rem;
+  border-left: 2px solid var(--brand-red);
+  color: rgb(243 241 237 / 76%);
+  font-size: 1rem;
+}
+
+.tableSection,
+.trustSection {
+  position: relative;
+  background: var(--base-200);
+}
+
+.tableInner,
+.trustInner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(24rem, 1.1fr);
+  align-items: start;
+  gap: 4rem clamp(4rem, 8vw, 9rem);
+  padding-block: 10rem 8rem;
+}
+
+.tableLead h2,
+.trustCopy h2 {
+  margin-top: 1rem;
+  font-size: clamp(2.75rem, 5vw, 5.5rem);
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+.tableLead > p:not(:first-child) {
+  max-width: 42rem;
+  margin-top: 1.75rem;
+  line-height: 1.55;
+}
+
+.dataTable {
+  border-top: 1px solid rgb(243 241 237 / 14%);
+}
+
+.dataRow {
+  display: grid;
+  grid-template-columns: minmax(7rem, 0.35fr) 1fr;
+  gap: 1.5rem;
+  padding-block: 1.75rem;
+  border-bottom: 1px solid rgb(243 241 237 / 14%);
+}
+
+.dataRow dt {
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  line-height: 1.12;
+}
+
+.dataRow dd {
+  color: rgb(243 241 237 / 76%);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.priceRow {
+  grid-template-columns: 1fr minmax(9rem, auto);
+  align-items: baseline;
+}
+
+.priceRow dt {
+  font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+  line-height: 1.2;
+}
+
+.priceRow dd {
+  color: var(--text-warm-gray);
+  font-family: var(--font-google-sans-code), monospace;
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+.credentials {
+  display: grid;
+  margin-block: 2.5rem;
+  list-style: none;
+  border-top: 1px solid rgb(243 241 237 / 14%);
+}
+
+.credentials li {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 1.5rem;
+  padding-block: 1.25rem;
+  border-bottom: 1px solid rgb(243 241 237 / 14%);
+}
+
+.credentials strong {
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.credentials span {
+  color: rgb(243 241 237 / 76%);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.areaList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.areaList li {
+  padding: 0.45rem 0.75rem;
+  border: 1px solid rgb(243 241 237 / 18%);
+  font-size: 0.95rem;
+}
+
+.areaList li:first-child {
+  border-color: var(--brand-red);
+  color: var(--text-warm-gray);
+  background: rgb(227 0 22 / 16%);
+}
+
+.gallery {
+  position: sticky;
+  top: 8rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.galleryItem {
+  overflow: hidden;
+  aspect-ratio: 9 / 16;
+  background: var(--base-100);
+}
+
+.galleryItem:nth-child(2) {
+  margin-top: 3rem;
+}
+
+.galleryItem img {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.galleryItem:hover img {
+  transform: scale(1.04);
+}
+
+@media (max-width: 1100px) {
+  .tableInner,
+  .trustInner {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    position: relative;
+    top: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .tableInner,
+  .trustInner {
+    gap: 3rem;
+    padding-block: 8rem 6rem;
+  }
+
+  .dataRow,
+  .credentials li {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .priceRow dd {
+    text-align: left;
+  }
+
+  .gallery {
+    gap: 0.5rem;
+  }
+
+  .galleryItem:nth-child(2) {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .galleryItem img,
+  .inlineLink {
+    transition: none;
+  }
+}

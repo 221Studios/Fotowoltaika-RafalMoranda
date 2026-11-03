@@ -113,7 +113,8 @@
   left: 0;
   z-index: 1;
   width: 100%;
-  height: calc(100svh - 2 * var(--gap));
+  height: auto;
+  max-height: calc(100svh - 2 * var(--gap));
   padding-top: var(--bar-h);
   display: flex;
   flex-direction: column;
@@ -132,17 +133,30 @@
 .nav {
   display: flex;
   flex-direction: column;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: none;
+  background-color: var(--menu-surface);
+}
+
+.nav::-webkit-scrollbar {
+  display: none;
 }
 
 .navItem {
   display: grid;
+  flex: 0 0 auto;
   grid-template-columns: var(--col1) 1fr auto;
   align-items: center;
   gap: var(--col-gap);
-  padding: 1.05rem var(--pad);
+  padding: 0.85rem var(--pad);
   border-top: var(--dash);
   text-decoration: none;
   color: inherit;
+}
+
+.navItem:last-child {
+  border-bottom: var(--dash);
 }
 
 .split {
@@ -165,6 +179,7 @@
 .label {
   margin: 0;
   font-size: 1.7rem;
+  line-height: 1.2;
   color: var(--menu-ink);
 }
 
@@ -181,8 +196,8 @@
   grid-template-columns: var(--col1) 1fr 120px;
   align-items: stretch;
   column-gap: var(--col-gap);
-  min-height: 150px;
-  margin-top: auto;
+  flex: 0 0 auto;
+  min-height: clamp(100px, 12svh, 120px);
   padding-left: var(--pad);
   overflow: hidden;
   background-color: var(--base-300);
@@ -199,8 +214,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-self: center;
   gap: 0.75rem;
-  padding-block: var(--pad);
+  padding-block: 0;
 }
 
 .contactTitle {
@@ -224,7 +240,7 @@
 
 .contactArrow .reveal {
   display: flex;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .contactArrow svg {

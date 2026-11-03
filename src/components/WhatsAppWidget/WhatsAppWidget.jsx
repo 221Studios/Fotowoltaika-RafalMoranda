@@ -5,6 +5,7 @@ import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa6";
 import { FiArrowUpRight, FiX } from "react-icons/fi";
 
+import { OPENING_HOURS } from "@/lib/site";
 import { withBasePath } from "@/lib/withBasePath";
 
 import styles from "./WhatsAppWidget.module.css";
@@ -164,21 +165,19 @@ export default function WhatsAppWidget() {
       >
         <header className={styles.header}>
           <div className={styles.identity}>
-            <span className={styles.avatar} aria-hidden="true">
-              <Image
-                className={styles.companyMark}
-                src={withBasePath("/images/alfa-mark.svg")}
-                alt=""
-                width={48}
-                height={45}
-              />
-              <span className={styles.whatsappBadge}>
-                <FaWhatsapp />
-              </span>
-            </span>
+            <Image
+              className={styles.companyMark}
+              src={withBasePath("/images/alfa-mark.svg")}
+              alt=""
+              width={48}
+              height={45}
+            />
             <div>
               <p className={styles.company}>ALFA Rafał Morańda</p>
-              <p className={styles.status}>Dostępni na WhatsApp</p>
+              <p className={styles.status}>
+                <FaWhatsapp aria-hidden="true" />
+                WhatsApp · {OPENING_HOURS.label}
+              </p>
             </div>
           </div>
           <button
@@ -193,24 +192,21 @@ export default function WhatsAppWidget() {
         </header>
 
         <div className={styles.conversation}>
-          <p className={styles.eyebrow}>Szybki kontakt</p>
-          <div className={styles.messageBubble}>
-            <p className={styles.greeting}>Dzień dobry!</p>
-            <p>Napisz, czego potrzebujesz. Odpowiemy na każde zapytanie.</p>
-            <span className={styles.messageMeta}>ALFA · teraz</span>
-          </div>
-
-          <div className={styles.quickReplies} aria-label="Popularne tematy">
-            {QUICK_MESSAGES.map((item) => (
+          <p className={styles.eyebrow}>Wybierz temat</p>
+          <div className={styles.quickReplies} role="group" aria-label="Popularne tematy">
+            {QUICK_MESSAGES.map((item, index) => (
               <button
                 className={styles.quickReply}
-                data-selected={selectedTopic === item.id ? "true" : "false"}
+                aria-pressed={selectedTopic === item.id}
                 type="button"
                 key={item.id}
                 onClick={() => selectQuickMessage(item)}
                 tabIndex={isOpen ? 0 : -1}
               >
-                {item.label}
+                <span className={styles.quickIndex}>
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span className={styles.quickLabel}>{item.label}</span>
               </button>
             ))}
           </div>
@@ -235,6 +231,7 @@ export default function WhatsAppWidget() {
             disabled={!message.trim()}
             tabIndex={isOpen ? 0 : -1}
           >
+            <FaWhatsapp aria-hidden="true" />
             <span>Przejdź do WhatsApp</span>
             <FiArrowUpRight aria-hidden="true" />
           </button>

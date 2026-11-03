@@ -1,7 +1,6 @@
 import PageHeader from "@/components/PageHeader";
 import ContactBanner from "@/components/ContactBanner";
 import ContactChecklist from "@/components/ContactChecklist/ContactChecklist";
-import RegionalServiceMap from "@/components/RegionalServiceMap/RegionalServiceMap";
 import JsonLd from "@/components/JsonLd";
 import {
   BUSINESS_ID,
@@ -58,8 +57,6 @@ export default function ContactPage() {
       <ContactBanner />
 
       <ContactChecklist />
-
-      <RegionalServiceMap />
     </>
   );
 }

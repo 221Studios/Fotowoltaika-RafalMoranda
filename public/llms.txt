@@ -10,7 +10,7 @@
 - Telefon: +48 600 306 425
 - E-mail: rafal@moranda.com.pl
 - Godziny pracy: poniedziałek–piątek 7:00–15:00; sobota i niedziela nieczynne
-- Dojazd na oględziny i wycenę w Kaliszu i powiecie kaliskim jest bezpłatny
+- Dojazd na oględziny i wycenę w Kaliszu i powiecie kaliskim jest bezpłatny; przy usługach elektrycznych także dojazd do zleceń i awarii
 - Firma działa od 2005 roku; praktyka instalacyjna Rafała Morańdy sięga 1998 roku
 - Czas dojazdu zależy od trasy, ruchu i adresu inwestycji; konkretny termin należy potwierdzić z firmą.
 
@@ -18,7 +18,8 @@
 
 - Projektowanie, montaż, uruchomienie i serwis instalacji fotowoltaicznych
 - Magazyny energii
-- Instalacje elektryczne
+- Instalacje elektryczne: nowe instalacje i wymiana starych, rozdzielnice, pomiary odbiorcze i okresowe z protokołem, podłączenie płyt indukcyjnych z wpisem do gwarancji, uziomy i WLZ, obwody pod pompy ciepła i ładowarki EV, usuwanie awarii
+- Kwalifikacje elektryczne: świadectwa kwalifikacyjne E i D w grupie 1 (do 1 kV i powyżej 1 kV) z zakresem prac kontrolno-pomiarowych
 - Systemy alarmowe, kontrola dostępu i monitoring CCTV
 
 ## Obsługa Kalisza i udokumentowane realizacje
@@ -46,5 +47,7 @@ Zasady programów i terminy naborów mogą się zmieniać. Według stanu na 2 li
 
 - [Strona główna firmy](https://www.moranda.com.pl/)
 - [Oferta fotowoltaiki](https://www.moranda.com.pl/fotowoltaika/)
+- [Elektryk Kalisz: instalacje, rozdzielnice i pomiary](https://www.moranda.com.pl/elektryka/)
+- [Montaż kamer i monitoring CCTV](https://www.moranda.com.pl/cctv/)
 - [O firmie ALFA](https://www.moranda.com.pl/o-nas/)
 - [Kontakt](https://www.moranda.com.pl/kontakt/)
