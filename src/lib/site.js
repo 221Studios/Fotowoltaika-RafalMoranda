@@ -7,6 +7,17 @@ export const DEFAULT_OG_IMAGE = "/images/home/hero.webp";
 
 export const BUSINESS_ID = `${SITE_URL}/#firma`;
 
+export const OFFICE_DIRECTIONS_URL =
+  "https://www.google.com/maps/search/?api=1&query=ALFA%20Rafa%C5%82%20Mora%C5%84da&query_place_id=ChIJW7gAcBXfGkcRpLSZ251ae5E";
+
+export const OPENING_HOURS = {
+  days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+  opens: "07:00",
+  closes: "15:00",
+  label: "Pon.–pt. 7:00–15:00",
+  closedLabel: "Sob.–niedz. nieczynne",
+};
+
 export const BUSINESS_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Electrician",
@@ -28,6 +39,15 @@ export const BUSINESS_SCHEMA = {
     addressRegion: "Wielkopolskie",
     addressCountry: "PL",
   },
+  hasMap: OFFICE_DIRECTIONS_URL,
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: OPENING_HOURS.days,
+      opens: OPENING_HOURS.opens,
+      closes: OPENING_HOURS.closes,
+    },
+  ],
   areaServed: [
     {
       "@type": "City",

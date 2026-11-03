@@ -30,7 +30,9 @@
   line-height: 1;
 }
 
-.word-mask {
+.line :global([class$="-mask"]) {
+  display: inline-block;
+  vertical-align: bottom;
   padding-bottom: 0.2em;
   margin-bottom: -0.2em;
 }

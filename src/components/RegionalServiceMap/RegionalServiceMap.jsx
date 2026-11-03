@@ -3,8 +3,6 @@ import styles from "./RegionalServiceMap.module.css";
 
 const OFFICE_MAP_URL =
   "https://maps.google.com/maps?q=ALFA+Rafa%C5%82+Mora%C5%84da%2C+Cek%C3%B3w+Kolonia+6a%2C+62-834+Cek%C3%B3w&z=15&output=embed";
-const OFFICE_DIRECTIONS_URL =
-  "https://www.google.com/maps/search/?api=1&query=ALFA%20Rafa%C5%82%20Mora%C5%84da&query_place_id=ChIJW7gAcBXfGkcRpLSZ251ae5E";
 
 export default function RegionalServiceMap() {
   return (
@@ -40,14 +38,6 @@ export default function RegionalServiceMap() {
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen
           />
-          <a
-            className={styles.mapLink}
-            href={OFFICE_DIRECTIONS_URL}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Otwórz siedzibę w Google Maps <span aria-hidden="true">↗</span>
-          </a>
         </div>
       </div>
     </section>

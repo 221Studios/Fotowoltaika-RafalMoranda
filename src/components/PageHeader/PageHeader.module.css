@@ -1,11 +1,51 @@
 .pageHeader {
+  position: relative;
   width: 100%;
   height: 65svh;
   background-color: var(--base-300);
   color: var(--base-500);
 }
 
+.pageHeader::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(32vw, 640px);
+  height: 60%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Crect width='5' height='5' fill='white'/%3E%3C/svg%3E");
+  -webkit-mask-image: radial-gradient(
+    ellipse at 100% 0%,
+    #000 0%,
+    rgb(0 0 0 / 0.82) 36%,
+    transparent 82%
+  );
+  mask-image: radial-gradient(
+    ellipse at 100% 0%,
+    #000 0%,
+    rgb(0 0 0 / 0.82) 36%,
+    transparent 82%
+  );
+  opacity: 0.72;
+  pointer-events: none;
+  content: "";
+  animation: pixelWashIn 1.25s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes pixelWashIn {
+  from {
+    opacity: 0;
+    transform: translate(2rem, -1.5rem) scale(0.96);
+  }
+
+  to {
+    opacity: 0.72;
+    transform: translate(0, 0) scale(1);
+  }
+}
+
 .container {
+  position: relative;
+  z-index: 1;
   height: 100%;
 }
 
@@ -72,6 +112,11 @@
     height: 75svh;
   }
 
+  .pageHeader::after {
+    width: min(55vw, 360px);
+    height: 45%;
+  }
+
   .meta {
     align-items: flex-start;
     flex-direction: column;
@@ -82,5 +127,11 @@
   .copy {
     max-width: none;
     text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pageHeader::after {
+    animation: none;
   }
 }

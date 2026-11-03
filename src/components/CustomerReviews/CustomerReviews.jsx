@@ -212,7 +212,7 @@ export default function CustomerReviews() {
       <div className={`container ${styles.container}`}>
         <aside className={styles.summary}>
           <p className={`mono ${styles.kicker}`}>Opinie klientów</p>
-          <h2 id="reviews-title">Polecają firmę ALFA Rafał Morańda</h2>
+          <h2 id="reviews-title">Poznaj opinie</h2>
           <div
             className={styles.googleSummary}
             role="img"

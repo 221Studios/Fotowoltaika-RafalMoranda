@@ -51,6 +51,7 @@ export default function PageHeader({
   title,
   subtitle,
   description,
+  descriptionClassName = "",
   icon = "WorkspaceIcon",
 }) {
   const sectionRef = useRef(null);
@@ -107,7 +108,7 @@ export default function PageHeader({
             </button>
             {description ? (
               <Copy animateOnScroll={false} delay={META_DELAY}>
-                <p className={styles.copy}>{description}</p>
+                <p className={`${styles.copy} ${descriptionClassName}`}>{description}</p>
               </Copy>
             ) : null}
           </div>

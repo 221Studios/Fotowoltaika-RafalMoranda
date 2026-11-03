@@ -44,6 +44,9 @@ export default function Footer() {
           (element) => new SplitText(element, { type: "lines", mask: "lines" }),
         );
       const contentLines = lineSplits.flatMap((split) => split.lines);
+      const contactIcons = gsap.utils.toArray(
+        `.${styles.quickContactIcon} svg`,
+      );
       const splits = [...headingSplits, ...lineSplits];
 
       gsap.set(headingChars, {
@@ -51,6 +54,7 @@ export default function Footer() {
         yPercent: 125,
       });
       gsap.set(contentLines, { yPercent: 100 });
+      gsap.set(contactIcons, { yPercent: 100, opacity: 0 });
 
       const animateIn = () => {
         gsap.to(headingChars, {
@@ -62,6 +66,14 @@ export default function Footer() {
         });
         gsap.to(contentLines, {
           yPercent: 0,
+          duration: 1,
+          ease: "power3.out",
+          stagger: 0.08,
+          overwrite: true,
+        });
+        gsap.to(contactIcons, {
+          yPercent: 0,
+          opacity: 1,
           duration: 1,
           ease: "power3.out",
           stagger: 0.08,
@@ -79,6 +91,14 @@ export default function Footer() {
         });
         gsap.to(contentLines, {
           yPercent: 100,
+          duration: 0.4,
+          ease: "power2.in",
+          stagger: 0.02,
+          overwrite: true,
+        });
+        gsap.to(contactIcons, {
+          yPercent: 100,
+          opacity: 0,
           duration: 0.4,
           ease: "power2.in",
           stagger: 0.02,
@@ -121,7 +141,9 @@ export default function Footer() {
             </h3>
             <address className={styles.quickContactList}>
               <p className={styles.quickContactItem}>
-                <FiMapPin aria-hidden="true" />
+                <span className={styles.quickContactIcon} aria-hidden="true">
+                  <FiMapPin />
+                </span>
                 <span className={styles.quickContactText}>
                   Biuro i magazyn: Ceków Kolonia 6a, 62-834 Ceków
                 </span>
@@ -130,13 +152,17 @@ export default function Footer() {
                 className={styles.quickContactItem}
                 href="mailto:rafal@moranda.com.pl"
               >
-                <FiMail aria-hidden="true" />
+                <span className={styles.quickContactIcon} aria-hidden="true">
+                  <FiMail />
+                </span>
                 <span className={styles.quickContactText}>
                   rafal@moranda.com.pl
                 </span>
               </a>
               <a className={styles.quickContactItem} href="tel:+48600306425">
-                <FiPhone aria-hidden="true" />
+                <span className={styles.quickContactIcon} aria-hidden="true">
+                  <FiPhone />
+                </span>
                 <span className={styles.quickContactText}>+48 600 306 425</span>
               </a>
             </address>

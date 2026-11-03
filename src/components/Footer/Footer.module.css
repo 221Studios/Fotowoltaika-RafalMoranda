@@ -91,6 +91,14 @@
   flex: 0 0 auto;
 }
 
+.quickContactIcon {
+  display: flex;
+  width: 1.3rem;
+  height: 1.3rem;
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+
 .quickContactItem[href]:hover .quickContactText,
 .quickContactItem[href]:focus-visible .quickContactText {
   text-decoration: underline;

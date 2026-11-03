@@ -40,6 +40,13 @@
   gap: 1.75rem;
 }
 
+.title {
+  max-width: 18ch;
+  font-size: clamp(1.75rem, 2.6vw, 2.6rem);
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
 .intro p {
   max-width: 22em;
   opacity: 0.8;

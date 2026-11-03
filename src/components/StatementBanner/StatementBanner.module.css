@@ -27,11 +27,18 @@
   align-self: flex-end;
   max-width: 8em;
   color: var(--base-500);
-  font-size: clamp(18px, 3vw, 42px);
+  text-align: right;
 }
 
 .multiline {
   max-width: none;
+}
+
+.singleLine h6 {
+  width: 100%;
+  max-width: 100%;
+  font-size: clamp(48px, 0.06 * calc(100 * var(--vw, 1vw)), 120px);
+  white-space: normal;
 }
 
 .copyLine {

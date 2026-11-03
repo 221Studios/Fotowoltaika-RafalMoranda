@@ -9,6 +9,7 @@ import { useGSAP } from "@gsap/react";
 
 import DitherImage from "@/components/DitherImage/DitherImage";
 import Copy from "@/components/Copy";
+import { OPENING_HOURS } from "@/lib/site";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -17,23 +18,26 @@ const CLIP_END = "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)";
 
 const GROUPS = [
   {
-    label: "Adres",
-    lines: ["Ceków Kolonia 6a", "62-834 Ceków"],
-  },
-  {
-    label: "Kontakt",
+    label: "Telefon i e-mail",
     lines: [
       { href: "tel:+48600306425", text: "+48 600 306 425" },
       { href: "mailto:rafal@moranda.com.pl", text: "rafal@moranda.com.pl" },
     ],
   },
   {
-    label: "Zakres usług",
-    lines: ["Fotowoltaika", "Instalacje elektryczne", "Monitoring i alarmy"],
+    label: "Biuro i magazyn",
+    lines: ["Ceków Kolonia 6a", "62-834 Ceków"],
+  },
+  {
+    label: "Godziny pracy",
+    lines: [OPENING_HOURS.label, OPENING_HOURS.closedLabel],
   },
   {
     label: "Obszar obsługi",
-    lines: ["Kalisz i okolice w promieniu około 50 km od miasta"],
+    lines: [
+      "Kalisz, powiat kaliski i okolice do ok. 50 km",
+      "Bezpłatny dojazd na oględziny i wycenę",
+    ],
   },
 ];
 
@@ -88,12 +92,14 @@ export default function ContactBanner() {
         <div ref={panelRef} className={styles.panel}>
           <div className={styles.intro}>
             <Copy delay={0.2} trigger={`.${styles.panel}`}>
-              <h6>Skontaktuj się z nami</h6>
+              <h2 className={styles.title}>ALFA Rafał Morańda — lokalny instalator z Cekowa</h2>
             </Copy>
             <Copy delay={0.35} trigger={`.${styles.panel}`}>
               <p>
-                Zapytaj o instalację fotowoltaiczną, elektryczną lub system
-                zabezpieczeń. Doradzimy i przygotujemy bezpłatną wycenę.
+                Zapytaj o fotowoltaikę z magazynem energii, instalację
+                elektryczną lub monitoring CCTV. Montaż i serwis wykonuje nasza
+                własna ekipa — z bazy w Cekowie dojeżdżamy do centrum Kalisza
+                w około 30 minut.
               </p>
             </Copy>
           </div>

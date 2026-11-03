@@ -38,7 +38,7 @@ if (typeof window !== "undefined") {
 const INTRO_SLOWDOWN = 1.2;
 const COPY_SPEED_FACTOR = 0.8;
 const INTRO_GAP = 1.15 * COPY_SPEED_FACTOR;
-const COPY_DURATION = 0.75 * INTRO_SLOWDOWN * COPY_SPEED_FACTOR;
+const HERO_COPY_DURATION = 1.15;
 const HERO_REVEAL_DURATION =
   PRELOADER_HERO_SCALE_DURATION * INTRO_SLOWDOWN * 1.1;
 
@@ -51,7 +51,7 @@ export default function Home() {
     ? PRELOADER_HERO_DELAY + HERO_REVEAL_DURATION + INTRO_GAP
     : 0.3;
   const supportingCopyDelay = titleDelay + INTRO_GAP;
-  const ctaDelay = supportingCopyDelay + INTRO_GAP;
+  const ctaDelay = titleDelay;
 
   useEffect(() => {
     return () => {
@@ -102,9 +102,9 @@ export default function Home() {
 
       gsap.to(btns, {
         y: 0,
-        duration: COPY_DURATION,
+        duration: 0.75,
         delay: ctaDelay,
-        stagger: 0.25 * INTRO_SLOWDOWN * COPY_SPEED_FACTOR,
+        stagger: 0.25,
         ease: "power3.out",
       });
     },
@@ -153,16 +153,19 @@ export default function Home() {
             <Copy
               animateOnScroll={false}
               delay={titleDelay}
-              duration={COPY_DURATION}
+              duration={HERO_COPY_DURATION}
+              stagger={0}
             >
               <h1 className={styles.heroTitle}>
-                Instalacje dla domu i firmy w Kaliszu
+                Instalacje dla domu i<br />
+                firmy w Kaliszu
               </h1>
             </Copy>
             <Copy
               animateOnScroll={false}
-              delay={supportingCopyDelay}
-              duration={COPY_DURATION}
+              delay={titleDelay}
+              duration={HERO_COPY_DURATION}
+              stagger={0}
             >
               <p className={styles.heroLead}>
                 Projektujemy, montujemy i serwisujemy fotowoltaikę, instalacje
@@ -221,10 +224,13 @@ export default function Home() {
 
       <div className={styles.areaGroup}>
         <RegionalServiceMap />
-        <RecentInstallations />
       </div>
 
       <CustomerReviews />
+
+      <div className={styles.areaGroup}>
+        <RecentInstallations />
+      </div>
 
       <section className={styles.trust} aria-labelledby="credentials-title">
         <div className={`container ${styles.credentialsInner}`}>

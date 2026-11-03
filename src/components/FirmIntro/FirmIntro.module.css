@@ -1,35 +1,111 @@
-.firmIntro {
+.studioCopy {
   width: 100%;
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
   background-color: var(--base-200);
   color: var(--base-500);
 }
 
-.inner {
-  flex: 1;
-  width: 100%;
-  min-height: 100svh;
+.studioCopyInner {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 10rem;
+  padding-block: 5rem 10rem;
 }
 
-.block {
+.studioCopyRow {
   width: 100%;
 }
 
-.heading {
-  width: 100%;
+.studioCopyRow + .studioCopyRow {
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+.studioCopyRow.studioCopyFirstBodyRow {
+  margin-top: 10rem;
+}
+
+.studioCopyRowRight::before,
+.studioCopyRowLeft::before {
+  position: absolute;
+  top: 50%;
+  width: calc(35% - 2rem);
+  height: 5px;
+  border-radius: 999px;
+  background-color: var(--brand-red);
+  content: "";
+  transform: translateY(-50%);
+}
+
+.studioCopyRowRight::before {
+  left: 0;
+}
+
+.studioCopyRowLeft::before {
+  right: 0;
+}
+
+.studioCopyNumber {
+  position: absolute;
+  top: 50%;
+  z-index: 0;
+  color: var(--brand-orange);
   font-size: clamp(48px, 0.06 * calc(100 * var(--vw, 1vw)), 120px);
   font-weight: 450;
   line-height: 1;
+  transform: translate(-50%, -50%);
+}
+
+.studioCopyRowRight .studioCopyNumber {
+  left: 35%;
+}
+
+.studioCopyRowLeft .studioCopyNumber {
+  left: 65%;
+}
+
+.studioCopyParagraph {
+  width: 65%;
+  margin: 0 0 0 auto;
+  font-size: clamp(22px, 2.3vw, 44px);
+  line-height: 1.2;
+  text-align: left;
+  text-wrap: pretty;
+}
+
+.studioCopyLead {
+  width: 100%;
+  margin-left: 0;
+  font-size: clamp(48px, 0.06 * calc(100 * var(--vw, 1vw)), 120px);
+  font-weight: 450;
+  line-height: 1;
+  text-align: center;
+  text-wrap: pretty;
+}
+
+.brandAccent {
+  display: inline-block;
+  color: var(--brand-red);
+  white-space: nowrap;
+}
+
+.studioCopyParagraphLeft {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.studioCopyParagraphRight {
+  text-align: right;
 }
 
 @media (max-width: 768px) {
-  .inner {
-    padding-block: 4rem;
+  .studioCopyInner {
+    padding-block: 5rem 6rem;
+  }
+
+  .studioCopyRow.studioCopyFirstBodyRow {
+    margin-top: 6rem;
+  }
+
+  .studioCopyParagraph {
+    width: 65%;
   }
 }
