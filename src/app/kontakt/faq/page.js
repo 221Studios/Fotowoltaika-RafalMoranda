@@ -42,6 +42,7 @@ export default function FAQPage() {
         subtitle="i odpowiedzi"
         description={`Ceny, formalności, dotacje, gwarancja i serwis instalacji ALFA Rafał Morańda. Stan informacji: ${UPDATED_LABEL}.`}
         icon="QuestionIcon"
+        theme="cctv"
       />
       <FAQ />
     </>

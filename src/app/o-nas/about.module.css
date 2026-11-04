@@ -1,6 +1,7 @@
 .headerDescription.headerDescription {
-  max-width: min(52rem, 56vw);
-  font-size: clamp(1.25rem, 1.9vw, 1.9rem);
+  max-width: min(46rem, 55vw);
+  font-size: clamp(1.1rem, 1.8vw, 1.45rem);
+  line-height: 1.4;
 }
 
 @media (max-width: 768px) {

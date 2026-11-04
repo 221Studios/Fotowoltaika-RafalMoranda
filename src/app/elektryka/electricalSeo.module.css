@@ -14,7 +14,7 @@
 
 .listLabel {
   margin-bottom: 1rem;
-  color: rgb(243 241 237 / 60%);
+  color: var(--brand-red);
 }
 
 .note {
@@ -36,14 +36,14 @@
   grid-template-columns: minmax(0, 0.9fr) minmax(24rem, 1.1fr);
   align-items: start;
   gap: 4rem clamp(4rem, 8vw, 9rem);
-  padding-block: 10rem 8rem;
+  padding-block: 7rem 6rem;
 }
 
 .tableLead h2,
 .trustCopy h2 {
   margin-top: 1rem;
-  font-size: clamp(2.75rem, 5vw, 5.5rem);
-  line-height: 0.98;
+  font-size: clamp(2.4rem, 4vw, 4.5rem);
+  line-height: 1;
   text-wrap: balance;
 }
 
@@ -66,8 +66,8 @@
 }
 
 .dataRow dt {
-  font-size: clamp(1.25rem, 2vw, 2rem);
-  line-height: 1.12;
+  font-size: clamp(1.15rem, 1.65vw, 1.65rem);
+  line-height: 1.2;
 }
 
 .dataRow dd {
@@ -149,6 +149,7 @@
 .galleryItem {
   overflow: hidden;
   aspect-ratio: 9 / 16;
+  border-top: 2px solid var(--brand-red);
   background: var(--base-100);
 }
 
@@ -180,7 +181,7 @@
   .tableInner,
   .trustInner {
     gap: 3rem;
-    padding-block: 8rem 6rem;
+    padding-block: 5rem 4rem;
   }
 
   .dataRow,

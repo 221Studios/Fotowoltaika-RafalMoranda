@@ -2,36 +2,23 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 100% 18%, rgb(227 0 22 / 10%), transparent 28rem),
-    var(--base-200);
+  background: var(--base-200);
   color: var(--base-500);
 }
 
 .journalArticles::before {
-  position: absolute;
-  right: -8rem;
-  bottom: 8%;
-  width: 24rem;
-  height: 24rem;
-  border: 1px solid rgb(243 241 237 / 8%);
-  border-radius: 50%;
-  box-shadow:
-    0 0 0 4rem rgb(243 241 237 / 2%),
-    0 0 0 8rem rgb(243 241 237 / 1%);
-  pointer-events: none;
-  content: "";
+  display: none;
 }
 
 .inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5rem;
+  gap: 3.5rem;
 }
 
 :global(.container).inner {
-  padding-block: 12rem;
+  padding-block: 7rem 6rem;
 }
 
 .header {
@@ -45,8 +32,8 @@
 }
 
 .header h2 {
-  font-size: clamp(2.75rem, 5.2vw, 5.75rem);
-  line-height: 0.98;
+  font-size: clamp(2.4rem, 4vw, 4.5rem);
+  line-height: 1;
   text-wrap: balance;
 }
 
@@ -65,7 +52,7 @@
   padding: 0.75rem;
   overflow: hidden;
   border-top: 2px solid var(--brand-red);
-  background: linear-gradient(150deg, #2a2a2a 0%, var(--base-100) 100%);
+  background: var(--base-100);
   opacity: 0;
   transform: translateY(120px) scale(0.97);
   transition:
@@ -99,8 +86,8 @@
 .title {
   margin-top: 1.25rem;
   margin-bottom: 1rem;
-  font-size: clamp(28px, 2vw, 40px);
-  line-height: 1.05;
+  font-size: clamp(1.5rem, 2vw, 2.25rem);
+  line-height: 1.08;
   min-height: 2.1em;
   color: var(--text-warm-gray);
   text-wrap: balance;
@@ -108,7 +95,7 @@
 
 .description {
   margin-bottom: 2rem;
-  color: rgb(243 241 237 / 72%);
+  color: rgb(243 241 237 / 78%);
   font-size: 1rem;
   line-height: 1.55;
 }
@@ -130,7 +117,7 @@
 
 @media (max-width: 768px) {
   :global(.container).inner {
-    padding-block: 8rem;
+    padding-block: 5rem 4rem;
   }
 
   .article:hover {

@@ -8,10 +8,7 @@
 
 .cctv {
   overflow: hidden;
-  background:
-    radial-gradient(circle at 82% 20%, rgb(227 0 22 / 30%), transparent 28%),
-    radial-gradient(circle at 62% 105%, rgb(227 0 22 / 12%), transparent 32%),
-    linear-gradient(135deg, var(--base-200) 0%, #242424 58%, #171717 100%);
+  background: linear-gradient(135deg, var(--base-200) 0%, #242424 58%, #171717 100%);
 }
 
 .background {
@@ -26,14 +23,12 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background:
-    linear-gradient(
-      90deg,
-      rgb(16 16 16 / 86%) 0%,
-      rgb(16 16 16 / 66%) 48%,
-      rgb(16 16 16 / 74%) 100%
-    ),
-    linear-gradient(180deg, rgb(16 16 16 / 22%) 0%, rgb(16 16 16 / 52%) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(0 0 0 / 62%) 0%,
+    rgb(0 0 0 / 40%) 52%,
+    rgb(0 0 0 / 18%) 100%
+  );
   pointer-events: none;
   content: "";
 }
@@ -46,17 +41,7 @@
 }
 
 .cctv::before {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgb(243 241 237 / 3%) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(243 241 237 / 3%) 1px, transparent 1px);
-  background-size: 48px 48px;
-  opacity: 0.55;
-  pointer-events: none;
-  content: "";
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 48%, #000 100%);
-  mask-image: linear-gradient(90deg, transparent 0%, #000 48%, #000 100%);
+  display: none;
 }
 
 .cctv::after {
@@ -64,7 +49,7 @@
 }
 
 .cctv .subtitle {
-  color: var(--brand-red);
+  color: var(--text-warm-gray);
   opacity: 1;
 }
 
@@ -84,19 +69,9 @@
   height: 6rem;
   overflow: hidden;
   border: 0;
+  border-radius: 1rem;
   background: var(--brand-red);
-  color: #b9b7b2;
-  clip-path: polygon(
-    0 0.9rem,
-    0.9rem 0,
-    calc(100% - 0.9rem) 0,
-    100% 0.9rem,
-    100% calc(100% - 0.9rem),
-    calc(100% - 0.9rem) 100%,
-    0.9rem 100%,
-    0 calc(100% - 0.9rem)
-  );
-  filter: drop-shadow(0 0 1.25rem rgb(227 0 22 / 20%));
+  color: var(--text-warm-gray);
   transition:
     color 0.35s ease,
     transform 0.35s ease;
@@ -106,7 +81,7 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: #b9b7b2;
+  background: var(--brand-orange);
   content: "";
   transform: translateY(102%);
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
@@ -114,7 +89,7 @@
 
 .cctv .scrollBtn:hover,
 .cctv .scrollBtn:focus-visible {
-  color: var(--brand-red);
+  color: var(--text-warm-gray);
   transform: translateY(-0.35rem);
 }
 
@@ -129,11 +104,11 @@
 }
 
 .cctv .copy {
-  width: min(32rem, 45vw);
-  max-width: 32rem;
-  color: rgb(243 241 237 / 86%);
-  font-size: clamp(1rem, 1.35vw, 1.75rem);
-  line-height: 1.18;
+  width: min(46rem, 55vw);
+  max-width: 46rem;
+  color: var(--text-warm-gray);
+  font-size: clamp(1.1rem, 1.8vw, 1.45rem);
+  line-height: 1.4;
 }
 
 .pageHeader::after {
@@ -285,6 +260,11 @@
     height: 75svh;
   }
 
+  .pageHeader.cctv {
+    height: 100svh;
+    min-height: 42rem;
+  }
+
   .pageHeader::after {
     width: min(55vw, 360px);
     height: 45%;
@@ -317,8 +297,8 @@
 
   .background::after {
     background:
-      linear-gradient(180deg, rgb(16 16 16 / 76%) 0%, rgb(16 16 16 / 58%) 48%, rgb(16 16 16 / 86%) 100%),
-      linear-gradient(90deg, rgb(16 16 16 / 52%) 0%, rgb(16 16 16 / 24%) 100%);
+      linear-gradient(180deg, rgb(0 0 0 / 60%) 0%, rgb(0 0 0 / 34%) 50%, rgb(0 0 0 / 72%) 100%),
+      linear-gradient(90deg, rgb(0 0 0 / 38%) 0%, rgb(0 0 0 / 12%) 100%);
   }
 
   .backgroundImage {

@@ -9,11 +9,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5rem;
+  gap: 3.5rem;
 }
 
 :global(.container).inner {
-  padding-block: 12rem;
+  padding-block: 7rem 6rem;
 }
 
 .header {
@@ -24,6 +24,12 @@
   width: 100%;
   max-width: 44rem;
   text-align: center;
+}
+
+.header h2 {
+  font-size: clamp(2.4rem, 4vw, 4.5rem);
+  line-height: 1;
+  text-wrap: balance;
 }
 
 .label {
@@ -43,7 +49,7 @@
   width: min(75%, 56rem);
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2.5rem;
 }
 
 .item {
@@ -143,7 +149,7 @@
   }
 
   :global(.container).inner {
-    padding-block: 10rem;
+    padding-block: 6rem 5rem;
   }
 
   .list {
@@ -157,6 +163,6 @@
 
 @media (max-width: 768px) {
   :global(.container).inner {
-    padding-block: 8rem;
+    padding-block: 5rem 4rem;
   }
 }

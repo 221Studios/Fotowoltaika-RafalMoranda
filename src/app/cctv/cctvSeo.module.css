@@ -12,7 +12,7 @@
 .sectionInner,
 .priceInner,
 .faqInner {
-  padding-block: 10rem 8rem;
+  padding-block: 7rem 6rem;
 }
 
 .eyebrow,
@@ -32,8 +32,8 @@
 .priceLead h2,
 .faqHeading h2 {
   margin-top: 1rem;
-  font-size: clamp(2.75rem, 5vw, 5.5rem);
-  line-height: 0.98;
+  font-size: clamp(2.4rem, 4vw, 4.5rem);
+  line-height: 1;
   text-wrap: balance;
 }
 
@@ -52,7 +52,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
-  margin-top: 5rem;
+  margin-top: 3.5rem;
 }
 
 .scopeCard {
@@ -69,13 +69,13 @@
 }
 
 .scopeCard:hover {
-  background: #2b2b2b;
+  background: var(--base-100);
   transform: translateY(-0.4rem);
 }
 
 .scopeCard h3 {
-  font-size: clamp(1.65rem, 2.1vw, 2.4rem);
-  line-height: 1.05;
+  font-size: clamp(1.35rem, 1.8vw, 2rem);
+  line-height: 1.12;
   text-wrap: balance;
 }
 
@@ -87,9 +87,7 @@
 }
 
 .priceSection {
-  background:
-    radial-gradient(circle at 10% 15%, rgb(227 0 22 / 14%), transparent 25rem),
-    var(--base-100);
+  background: var(--base-100);
 }
 
 .priceInner {
@@ -139,8 +137,8 @@
 }
 
 .factorList p {
-  font-size: clamp(1.25rem, 2vw, 2rem);
-  line-height: 1.12;
+  font-size: clamp(1.15rem, 1.65vw, 1.65rem);
+  line-height: 1.2;
 }
 
 .faqSection {
@@ -245,7 +243,7 @@
   .sectionInner,
   .priceInner,
   .faqInner {
-    padding-block: 8rem 6rem;
+    padding-block: 5rem 4rem;
   }
 
   .introGrid {

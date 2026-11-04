@@ -28,6 +28,7 @@ export default function FirmPage() {
           </>
         }
         icon="HomeIcon"
+        theme="cctv"
       />
 
       <FirmIntro />
