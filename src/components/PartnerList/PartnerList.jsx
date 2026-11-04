@@ -12,9 +12,7 @@ const ROWS = [
   ["Domofony", "Kontrola dostępu", "Kamery CCTV"],
 ];
 
-const NAMES = ROWS.flat();
-
-export default function PartnerList() {
+export default function PartnerList({ rows = ROWS, variant = "default", ariaLabel }) {
   const containerRef = useRef(null);
   const highlightRef = useRef(null);
   const itemRefs = useRef([]);
@@ -70,16 +68,23 @@ export default function PartnerList() {
   }, [active, isMobile, placeHighlight]);
 
   return (
-    <div className={styles.partnerList}>
+    <div className={`${styles.partnerList} ${variant === "factors" ? styles.factorVariant : ""}`}>
       <div className={`container ${styles.inner}`} ref={containerRef}>
-        <div className={styles.grid}>
-          {ROWS.map((row, rowIndex) => (
-            <div key={row.join("-")} className={styles.row}>
-              {row.map((name) => {
-                const index = NAMES.indexOf(name);
+        <div
+          className={`${styles.grid} ${variant === "factors" ? styles.factorGrid : ""}`}
+          role={ariaLabel ? "group" : undefined}
+          aria-label={ariaLabel}
+        >
+          {rows.map((row, rowIndex) => (
+            <div key={rowIndex} className={styles.row}>
+              {row.map((content, columnIndex) => {
+                const index = rows
+                  .slice(0, rowIndex)
+                  .reduce((count, previousRow) => count + previousRow.length, 0) +
+                  columnIndex;
                 return (
                   <div
-                    key={name}
+                    key={typeof content === "string" ? content : `${rowIndex}-${columnIndex}`}
                     ref={(node) => {
                       itemRefs.current[index] = node;
                     }}
@@ -90,7 +95,7 @@ export default function PartnerList() {
                       if (!isMobile) setActive(index);
                     }}
                   >
-                    <p>{name}</p>
+                    {typeof content === "string" ? <p>{content}</p> : content}
                   </div>
                 );
               })}

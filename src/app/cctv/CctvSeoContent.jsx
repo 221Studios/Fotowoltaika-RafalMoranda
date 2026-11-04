@@ -1,13 +1,30 @@
 import styles from "./cctvSeo.module.css";
 
 import Button from "@/components/Button";
+import Copy from "@/components/Copy";
+import PartnerList from "@/components/PartnerList";
 import SectionHeader from "@/components/SectionHeader";
+import CctvScopeList from "./CctvScopeList";
 
 import {
   CCTV_FAQ_ITEMS,
   CCTV_PRICE_FACTORS,
-  CCTV_SCOPE_ITEMS,
 } from "./cctvContent";
+
+const PRICE_FACTOR_CELLS = CCTV_PRICE_FACTORS.map((factor, index) => (
+  <p key={factor} className={styles.factorCopy}>
+    <span className={`mono ${styles.factorIndex}`}>
+      {String(index + 1).padStart(2, "0")}
+    </span>
+    <span>{factor}</span>
+  </p>
+));
+
+const PRICE_FACTOR_ROWS = [
+  [0, 2],
+  [2, 5],
+  [5, 7],
+].map(([start, end]) => PRICE_FACTOR_CELLS.slice(start, end));
 
 export default function CctvSeoContent() {
   return (
@@ -42,17 +59,7 @@ export default function CctvSeoContent() {
             </div>
           </div>
 
-          <div className={styles.scopeGrid}>
-            {CCTV_SCOPE_ITEMS.map(({ title, copy }, index) => (
-              <article key={title} className={styles.scopeCard}>
-                <p className={`mono ${styles.cardIndex}`}>
-                  {String(index + 1).padStart(2, "0")}
-                </p>
-                <h3>{title}</h3>
-                <p>{copy}</p>
-              </article>
-            ))}
-          </div>
+          <CctvScopeList />
         </div>
       </section>
 
@@ -66,29 +73,24 @@ export default function CctvSeoContent() {
         <div className={`container ${styles.priceInner}`}>
           <div className={styles.priceLead}>
             <p className={`mono ${styles.eyebrow}`}>Przejrzysty zakres prac</p>
-            <h2 id="cctv-price-title">
-              Od czego zależy cena montażu kamer?
-            </h2>
-            <p>
-              Każdy obiekt wymaga innego rozmieszczenia kamer i prowadzenia
-              przewodów. Dlatego zamiast zgadywać cenę z samej liczby urządzeń,
-              przygotowujemy ofertę po poznaniu warunków montażu i oczekiwań
-              dotyczących obrazu oraz zapisu.
-            </p>
-            <Button href="/kontakt" className={styles.quoteButton}>
-              Umów bezpłatne oględziny i wycenę
-            </Button>
+            <div className={styles.priceTitleRow}>
+              <Copy>
+                <h2 id="cctv-price-title">
+                  Od czego zależy cena montażu kamer?
+                </h2>
+              </Copy>
+              <Button href="/kontakt" className={styles.quoteButton}>
+                Umów bezpłatne oględziny i wycenę
+              </Button>
+            </div>
           </div>
-
-          <ol className={styles.factorList}>
-            {CCTV_PRICE_FACTORS.map((factor, index) => (
-              <li key={factor}>
-                <span className="mono">{String(index + 1).padStart(2, "0")}</span>
-                <p>{factor}</p>
-              </li>
-            ))}
-          </ol>
         </div>
+
+        <PartnerList
+          rows={PRICE_FACTOR_ROWS}
+          variant="factors"
+          ariaLabel="Czynniki wpływające na cenę montażu kamer"
+        />
       </section>
 
       <section id="faq-cctv" className={styles.faqSection} aria-labelledby="cctv-faq-title">

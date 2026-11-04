@@ -1,4 +1,7 @@
 .partnerList {
+  --grid-line: rgba(0, 0, 0, 0.14);
+  --grid-active: var(--base-300);
+
   position: relative;
   display: flex;
   width: 100%;
@@ -8,6 +11,19 @@
   padding-bottom: 6rem;
   overflow: hidden;
   color: var(--base-500);
+}
+
+.factorVariant {
+  --grid-line: rgb(243 241 237 / 20%);
+  --grid-active: var(--brand-red);
+
+  min-height: 0;
+  padding-block: 0 6rem;
+}
+
+.factorVariant .inner {
+  min-height: 0;
+  padding-block: 0;
 }
 
 .inner {
@@ -27,7 +43,12 @@
   width: 90%;
   height: 60svh;
   margin: 0 auto;
-  border: 1px dashed rgba(0, 0, 0, 0.14);
+  border: 1px dashed var(--grid-line);
+}
+
+.factorGrid {
+  width: 100%;
+  height: min(60svh, 44rem);
 }
 
 .row,
@@ -40,11 +61,11 @@
 }
 
 .row:not(:last-child) {
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.14);
+  border-bottom: 1px dashed var(--grid-line);
 }
 
 .item:not(:last-child) {
-  border-right: 1px dashed rgba(0, 0, 0, 0.14);
+  border-right: 1px dashed var(--grid-line);
 }
 
 .item p {
@@ -53,8 +74,12 @@
   color: var(--base-500);
 }
 
+.factorGrid .item {
+  padding: 1.5rem clamp(1.25rem, 3vw, 3rem);
+}
+
 .itemActive p {
-  color: var(--base-300);
+  color: var(--grid-active);
 }
 
 .highlight {
@@ -67,21 +92,21 @@
   pointer-events: none;
   box-sizing: border-box;
   background:
-    linear-gradient(var(--base-300), var(--base-300)) left top / var(--notch)
+    linear-gradient(var(--grid-active), var(--grid-active)) left top / var(--notch)
       var(--stroke) no-repeat,
-    linear-gradient(var(--base-300), var(--base-300)) left top / var(--stroke)
+    linear-gradient(var(--grid-active), var(--grid-active)) left top / var(--stroke)
       var(--notch) no-repeat,
-    linear-gradient(var(--base-300), var(--base-300)) right top / var(--notch)
+    linear-gradient(var(--grid-active), var(--grid-active)) right top / var(--notch)
       var(--stroke) no-repeat,
-    linear-gradient(var(--base-300), var(--base-300)) right top / var(--stroke)
+    linear-gradient(var(--grid-active), var(--grid-active)) right top / var(--stroke)
       var(--notch) no-repeat,
-    linear-gradient(var(--base-300), var(--base-300)) left bottom / var(--notch)
+    linear-gradient(var(--grid-active), var(--grid-active)) left bottom / var(--notch)
       var(--stroke) no-repeat,
-    linear-gradient(var(--base-300), var(--base-300)) left bottom /
+    linear-gradient(var(--grid-active), var(--grid-active)) left bottom /
       var(--stroke) var(--notch) no-repeat,
-    linear-gradient(var(--base-300), var(--base-300)) right bottom /
+    linear-gradient(var(--grid-active), var(--grid-active)) right bottom /
       var(--notch) var(--stroke) no-repeat,
-    linear-gradient(var(--base-300), var(--base-300)) right bottom /
+    linear-gradient(var(--grid-active), var(--grid-active)) right bottom /
       var(--stroke) var(--notch) no-repeat;
   transition:
     transform 0.25s ease,
@@ -104,6 +129,20 @@
     height: auto;
   }
 
+  .factorGrid {
+    min-height: 0;
+    height: auto;
+  }
+
+  .factorVariant {
+    padding-bottom: 4rem;
+  }
+
+  .factorVariant .item {
+    height: auto;
+    min-height: 8rem;
+  }
+
   .row {
     flex: none;
     flex-direction: column;
@@ -118,6 +157,6 @@
 
   .item:not(:last-child) {
     border-right: none;
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.14);
+    border-bottom: 1px dashed var(--grid-line);
   }
 }

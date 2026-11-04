@@ -60,12 +60,10 @@ export default function JournalArticles() {
       const cards = grid.querySelectorAll(`.${styles.article}`);
       if (!cards.length) return;
 
-      gsap.set(cards, { y: 120, opacity: 0, scale: 0.97 });
+      gsap.set(cards, { y: 300, opacity: 0 });
       gsap.to(cards, {
         y: 0,
         opacity: 1,
-        scale: 1,
-        clearProps: "transform",
         duration: 0.75,
         stagger: 0.1,
         ease: "power3.out",

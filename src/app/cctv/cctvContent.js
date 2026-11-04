@@ -1,27 +1,27 @@
 export const CCTV_SCOPE_ITEMS = [
   {
     title: "Oględziny i rozmieszczenie kamer",
-    copy: "Sprawdzamy wejścia, bramę, podjazd, elewację i strefy wymagające ochrony. Dobieramy miejsca montażu tak, aby ograniczyć martwe pola.",
+    copy: "Wyznaczamy strefy obserwacji i miejsca kamer, ograniczając martwe pola.",
   },
   {
     title: "Dobór kamer i rejestratora",
-    copy: "Dopasowujemy rozdzielczość, obiektyw, tryb nocny, rejestrator i pojemność dysku do obiektu oraz oczekiwanego czasu przechowywania nagrań.",
+    copy: "Dobieramy rozdzielczość, tryb nocny i zapis do konkretnego obiektu.",
   },
   {
     title: "Okablowanie i estetyczny montaż",
-    copy: "Wykonujemy trasy przewodów, montujemy kamery i zabezpieczamy połączenia. W istniejących budynkach szukamy możliwie dyskretnych tras instalacyjnych.",
+    copy: "Prowadzimy przewody i montujemy kamery możliwie dyskretnie.",
   },
   {
     title: "Podgląd w telefonie",
-    copy: "Konfigurujemy aplikację mobilną, dostęp do obrazu na żywo i nagrań oraz — jeśli system na to pozwala — powiadomienia o wykryciu ludzi lub pojazdów.",
+    copy: "Konfigurujemy aplikację, podgląd na żywo i dostęp do nagrań.",
   },
   {
     title: "Uruchomienie i instruktaż",
-    copy: "Testujemy obraz dzienny i nocny, ustawiamy pola widzenia oraz pokazujemy, jak korzystać z podglądu, wyszukiwać nagrania i eksportować zdarzenia.",
+    copy: "Testujemy obraz i pokazujemy obsługę systemu oraz rejestratora.",
   },
   {
     title: "Serwis i rozbudowa systemu",
-    copy: "Diagnozujemy usterki, wykonujemy przeglądy oraz pomagamy rozbudować istniejący monitoring o kolejne kamery, większy dysk lub nowe funkcje.",
+    copy: "Diagnozujemy usterki, wykonujemy przeglądy i rozbudowę systemu.",
   },
 ];
 export const CCTV_PRICE_FACTORS = [
@@ -31,6 +31,7 @@ export const CCTV_PRICE_FACTORS = [
   "pojemność dysku i oczekiwany czas archiwizacji",
   "detekcja ludzi, pojazdów i powiadomienia",
   "warunki montażu oraz modernizacja istniejącej instalacji",
+  "zasilanie awaryjne i dodatkowe zabezpieczenia systemu",
 ];
 
 export const CCTV_FAQ_ITEMS = [

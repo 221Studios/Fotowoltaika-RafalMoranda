@@ -16,7 +16,6 @@
 }
 
 .eyebrow,
-.cardIndex,
 .faqIndex {
   color: var(--brand-red);
 }
@@ -48,39 +47,27 @@
   line-height: 1.55;
 }
 
-.scopeGrid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+.scopeList {
   margin-top: 3.5rem;
+  border-top: 1px dashed rgb(243 241 237 / 35%);
 }
 
-.scopeCard {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  min-height: 21rem;
-  padding: clamp(1.5rem, 2.5vw, 2.25rem);
-  border-top: 2px solid var(--brand-red);
-  background: var(--base-100);
-  transition:
-    background-color 0.3s ease,
-    transform 0.3s ease;
+.scopeRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  column-gap: 2rem;
+  padding-block: 1.25rem;
+  border-bottom: 1px dashed rgb(243 241 237 / 35%);
+  color: inherit;
 }
 
-.scopeCard:hover {
-  background: var(--base-100);
-  transform: translateY(-0.4rem);
+.scopeTitle {
+  min-width: 0;
 }
 
-.scopeCard h3 {
-  font-size: clamp(1.35rem, 1.8vw, 2rem);
-  line-height: 1.12;
-  text-wrap: balance;
-}
-
-.scopeCard > p:last-child {
-  margin-top: auto;
+.scopeDescription {
+  max-width: 42rem;
   color: rgb(243 241 237 / 76%);
   font-size: 1rem;
   line-height: 1.55;
@@ -91,54 +78,48 @@
 }
 
 .priceInner {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(24rem, 1.1fr);
-  align-items: start;
-  gap: 4rem clamp(4rem, 8vw, 9rem);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4rem;
+  padding-bottom: 2rem;
 }
 
 .priceLead {
-  position: sticky;
-  top: 8rem;
+  width: 100%;
 }
 
-.priceLead > p:not(.eyebrow) {
-  max-width: 42rem;
-  margin-top: 1.75rem;
+.priceTitleRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(20rem, 28rem);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 6rem);
 }
 
 .quoteButton {
-  width: min(100%, 28rem);
+  width: 100%;
   height: auto;
   min-height: 5.5rem;
-  margin-top: 2rem;
+  margin: 0;
   padding: 1.25rem 1.5rem;
 }
 
-.factorList {
-  list-style: none;
+.factorCopy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 30rem;
+  text-align: center;
 }
 
-.factorList li {
-  display: grid;
-  grid-template-columns: 3rem 1fr;
-  align-items: start;
-  gap: 1rem;
-  padding-block: 1.75rem;
-  border-bottom: 1px solid rgb(243 241 237 / 14%);
-}
-
-.factorList li:first-child {
-  border-top: 1px solid rgb(243 241 237 / 14%);
-}
-
-.factorList span {
+.factorIndex {
   color: var(--brand-red);
 }
 
-.factorList p {
+.factorCopy > span:last-child {
   font-size: clamp(1.15rem, 1.65vw, 1.65rem);
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 .faqSection {
@@ -222,16 +203,10 @@
 }
 
 @media (max-width: 1100px) {
-  .scopeGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .priceInner,
   .faqInner {
     grid-template-columns: 1fr;
   }
 
-  .priceLead,
   .faqHeading {
     position: relative;
     top: auto;
@@ -251,21 +226,28 @@
     gap: 2rem;
   }
 
-  .scopeGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .scopeGrid {
+  .scopeList {
     margin-top: 3rem;
   }
 
-  .scopeCard {
-    min-height: 0;
+  .scopeRow {
+    grid-template-columns: 1fr;
+    row-gap: 0.75rem;
+    padding-block: 1.5rem;
   }
 
   .priceInner,
   .faqInner {
     gap: 3rem;
+  }
+
+  .priceTitleRow {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .quoteButton {
+    max-width: 28rem;
   }
 
   .faqItem summary {
@@ -280,7 +262,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .scopeCard,
   .plus::before,
   .plus::after {
     transition: none;

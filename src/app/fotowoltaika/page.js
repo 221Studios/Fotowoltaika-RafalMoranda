@@ -2,7 +2,6 @@ import PageHeader from "@/components/PageHeader";
 import StatementBanner from "@/components/StatementBanner";
 import ResearchAreas from "@/components/ResearchAreas";
 import ResearchOutcomes from "@/components/ResearchOutcomes";
-import ProcessSteps from "@/components/ProcessSteps";
 import PhotovoltaicsLocalService from "@/components/PhotovoltaicsLocalService";
 import JsonLd from "@/components/JsonLd";
 import { createPageMetadata, createServiceSchema } from "@/lib/site";
@@ -107,7 +106,6 @@ export default function ResearchPage() {
 
       <ResearchOutcomes />
 
-      <ProcessSteps />
     </>
   );
 }
