@@ -5,6 +5,8 @@ import shared from "@/app/cctv/cctvSeo.module.css";
 import styles from "./electricalSeo.module.css";
 
 import Button from "@/components/Button";
+import Copy from "@/components/Copy";
+import PartnerList from "@/components/PartnerList";
 import SectionHeader from "@/components/SectionHeader";
 import { withBasePath } from "@/lib/withBasePath";
 
@@ -46,6 +48,19 @@ const GALLERY = [
 
 const index = (value) => String(value + 1).padStart(2, "0");
 
+const TEST_CELLS = ELECTRICAL_TESTS.map((test, testIndex) => (
+  <p key={test} className={shared.factorCopy}>
+    <span className={`mono ${shared.factorIndex}`}>{index(testIndex)}</span>
+    <span>{test}</span>
+  </p>
+));
+
+const TEST_ROWS = [
+  [0, 2],
+  [2, 4],
+  [4, 6],
+].map(([start, end]) => TEST_CELLS.slice(start, end));
+
 export default function ElectricalSeoContent() {
   return (
     <div className={shared.seoContent}>
@@ -80,14 +95,28 @@ export default function ElectricalSeoContent() {
             </div>
           </div>
 
-          <div className={shared.scopeGrid}>
-            {ELECTRICAL_SCOPE_ITEMS.map(({ title, copy }, i) => (
-              <article key={title} className={shared.scopeCard}>
-                <p className={`mono ${shared.cardIndex}`}>{index(i)}</p>
-                <h3>{title}</h3>
-                <p>{copy}</p>
-              </article>
-            ))}
+          <div className={styles.scopeTimeline}>
+            <svg
+              className={styles.timelineLine}
+              viewBox="0 0 1200 620"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            >
+              <path
+                className={styles.timelinePath}
+                d="M 0 190 C 90 105 170 75 245 170 S 420 235 475 135 S 620 55 690 175 S 840 245 905 135 S 1080 50 1200 175 C 1240 230 1180 330 1080 300 S 930 250 850 385 S 680 500 590 385 S 410 280 330 405 S 130 535 0 440"
+              />
+            </svg>
+
+            <ol className={styles.timelineList} aria-label="Zakres prac elektrycznych">
+              {ELECTRICAL_SCOPE_ITEMS.map(({ title, copy }, i) => (
+                <li key={title} className={styles.timelineItem}>
+                  <span className={styles.timelineIndex}>{index(i)}</span>
+                  <h3>{title}</h3>
+                  <p>{copy}</p>
+                </li>
+              ))}
+            </ol>
           </div>
         </div>
       </section>
@@ -98,34 +127,35 @@ export default function ElectricalSeoContent() {
         <div className={`container ${shared.priceInner}`}>
           <div className={shared.priceLead}>
             <p className={`mono ${shared.eyebrow}`}>Art. 62 Prawa budowlanego</p>
-            <h2 id="elektryka-pomiary">
-              Pomiary elektryczne — kiedy są obowiązkowe?
-            </h2>
-            <p>
-              Instalację elektryczną w budynku trzeba kontrolować co najmniej raz
-              na 5 lat — także w domu jednorodzinnym. Pomiary odbiorcze
-              wykonujemy też po nowej instalacji, wymianie rozdzielnicy i każdej
-              większej przeróbce, zgodnie z normą PN-HD 60364-6.
-            </p>
-            <p>
-              Protokół podpisuje osoba ze świadectwem dozoru (D) z zakresem
-              kontrolno-pomiarowym. Zawiera wyniki każdej próby, użyty przyrząd i
-              ocenę instalacji.
-            </p>
-          </div>
+            <div className={shared.priceTitleRow}>
+              <Copy>
+                <h2 id="elektryka-pomiary">
+                  Pomiary elektryczne — kiedy są obowiązkowe?
+                </h2>
+              </Copy>
 
-          <div>
-            <p className={`mono ${styles.listLabel}`}>Co sprawdzamy</p>
-            <ol className={shared.factorList}>
-              {ELECTRICAL_TESTS.map((test, i) => (
-                <li key={test}>
-                  <span className="mono">{index(i)}</span>
-                  <p>{test}</p>
-                </li>
-              ))}
-            </ol>
+              <div className={styles.measurementCopy}>
+                <p>
+                  Instalację elektryczną w budynku trzeba kontrolować co najmniej
+                  raz na 5 lat — także w domu jednorodzinnym. Pomiary odbiorcze
+                  wykonujemy też po nowej instalacji, wymianie rozdzielnicy i
+                  każdej większej przeróbce, zgodnie z normą PN-HD 60364-6.
+                </p>
+                <p>
+                  Protokół podpisuje osoba ze świadectwem dozoru (D) z zakresem
+                  kontrolno-pomiarowym. Zawiera wyniki każdej próby, użyty
+                  przyrząd i ocenę instalacji.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
+
+        <PartnerList
+          rows={TEST_ROWS}
+          variant="factors"
+          ariaLabel="Zakres pomiarów instalacji elektrycznej"
+        />
       </section>
 
       <section className={styles.tableSection} aria-labelledby="elektryka-plyta">
@@ -154,33 +184,50 @@ export default function ElectricalSeoContent() {
         </div>
       </section>
 
-      <section className={shared.priceSection} aria-labelledby="elektryka-ceny">
-        <SectionHeader bullet left="Ceny 2026" right="Widełki rynkowe" />
+      <section
+        className={`${shared.scopeSection} ${styles.pricingSection}`}
+        aria-labelledby="elektryka-ceny"
+      >
+        <SectionHeader bullet left="Ceny 2026" right="Elektryk · Kalisz" />
 
-        <div className={`container ${shared.priceInner}`}>
-          <div className={shared.priceLead}>
-            <p className={`mono ${shared.eyebrow}`}>Aktualizacja: {UPDATED_LABEL}</p>
-            <h2 id="elektryka-ceny">Ile kosztują prace elektryczne w 2026 r.?</h2>
-            <p>
-              To widełki z cenników firm w Polsce, a nie nasza oferta. Cenę
-              ustalamy po oględzinach — zależy od liczby punktów i obwodów,
-              rodzaju ścian, stanu rozdzielnicy i zakresu pomiarów.
-            </p>
-            <p className={styles.note}>
-              VAT 8% obejmuje prace instalacyjne w domu do 300 m² i mieszkaniu do
-              150 m². Stawka 23% dotyczy lokali użytkowych i firm oraz pomiarów
-              okresowych zlecanych jako osobna usługa.
-            </p>
-            <Button href="/kontakt" className={shared.quoteButton}>
-              Umów bezpłatne oględziny i wycenę
-            </Button>
+        <div className={`container ${shared.sectionInner}`}>
+          <div className={shared.introGrid}>
+            <div>
+              <p className={`mono ${shared.eyebrow}`}>
+                Aktualizacja: {UPDATED_LABEL}
+              </p>
+              <h2 id="elektryka-ceny">
+                Ile kosztują prace elektryczne w 2026 r.?
+              </h2>
+            </div>
+
+            <div className={shared.introCopy}>
+              <p>
+                To widełki z cenników firm w Polsce, a nie nasza oferta. Cenę
+                ustalamy po oględzinach — zależy od liczby punktów i obwodów,
+                rodzaju ścian, stanu rozdzielnicy i zakresu pomiarów.
+              </p>
+              <p className={styles.note}>
+                VAT 8% obejmuje prace instalacyjne w domu do 300 m² i mieszkaniu
+                do 150 m². Stawka 23% dotyczy lokali użytkowych i firm oraz
+                pomiarów okresowych zlecanych jako osobna usługa.
+              </p>
+              <Button href="/kontakt" className={styles.pricingCta}>
+                Umów bezpłatne oględziny i wycenę
+              </Button>
+            </div>
           </div>
 
-          <dl className={styles.dataTable}>
+          <dl className={`${shared.scopeList} ${styles.pricingList}`}>
             {ELECTRICAL_PRICES.map(({ service, price }) => (
-              <div key={service} className={`${styles.dataRow} ${styles.priceRow}`}>
-                <dt>{service}</dt>
-                <dd>{price}</dd>
+              <div
+                key={service}
+                className={`${shared.scopeRow} ${styles.pricingRow}`}
+              >
+                <dt className={`lg ${shared.scopeTitle}`}>{service}</dt>
+                <dd className={`${shared.scopeDescription} ${styles.priceValue}`}>
+                  {price}
+                </dd>
               </div>
             ))}
           </dl>
