@@ -58,8 +58,8 @@ export default function ElectricalPage() {
       <JsonLd data={SERVICE_SCHEMA} />
       <JsonLd data={FAQ_SCHEMA} />
       <PageHeader
-        title="Elektryk Kalisz"
-        subtitle="instalacje · pomiary · rozdzielnice"
+        title="Elektryka Kalisz"
+        subtitle="instalacje pomiary rozdzielnice"
         description="Nowe instalacje, wymiana rozdzielnic i pomiary z protokołem dla domów i firm. Własna ekipa z Cekowa, uprawnienia E i D."
         icon="BoltIcon"
         theme="cctv"

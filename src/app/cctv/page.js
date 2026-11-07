@@ -59,7 +59,6 @@ export default function CctvPage() {
       <JsonLd data={FAQ_SCHEMA} />
       <PageHeader
         title="Montaż kamer CCTV"
-        subtitle="Kalisz · dom i firma"
         description="Projektujemy i montujemy monitoring domu, firmy i posesji. Konfigurujemy zapis nagrań, podgląd w telefonie oraz serwis systemu."
         icon="EyeIcon"
         theme="cctv"

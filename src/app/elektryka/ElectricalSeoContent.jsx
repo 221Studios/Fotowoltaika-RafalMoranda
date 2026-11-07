@@ -48,6 +48,9 @@ const GALLERY = [
 
 const index = (value) => String(value + 1).padStart(2, "0");
 
+const TIMELINE_PATH =
+  "M 0 190 C 90 105 170 75 245 170 S 420 235 475 135 S 620 55 690 175 S 840 245 905 135 S 1080 50 1200 175 C 1240 230 1180 330 1080 300 S 930 250 850 385 S 680 500 590 385 S 410 280 330 405 S 130 535 0 440";
+
 const TEST_CELLS = ELECTRICAL_TESTS.map((test, testIndex) => (
   <p key={test} className={shared.factorCopy}>
     <span className={`mono ${shared.factorIndex}`}>{index(testIndex)}</span>
@@ -102,10 +105,80 @@ export default function ElectricalSeoContent() {
               preserveAspectRatio="none"
               aria-hidden="true"
             >
+              <defs>
+                <filter
+                  id="electrical-current-glow"
+                  x="-50%"
+                  y="-50%"
+                  width="200%"
+                  height="200%"
+                  colorInterpolationFilters="sRGB"
+                >
+                  <feGaussianBlur stdDeviation="3.5" result="glow" />
+                  <feMerge>
+                    <feMergeNode in="glow" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+
               <path
+                id="electrical-timeline-wire"
                 className={styles.timelinePath}
-                d="M 0 190 C 90 105 170 75 245 170 S 420 235 475 135 S 620 55 690 175 S 840 245 905 135 S 1080 50 1200 175 C 1240 230 1180 330 1080 300 S 930 250 850 385 S 680 500 590 385 S 410 280 330 405 S 130 535 0 440"
+                d={TIMELINE_PATH}
+                pathLength="1000"
               />
+
+              <path
+                className={styles.timelineChargeGlow}
+                d={TIMELINE_PATH}
+                pathLength="1000"
+                filter="url(#electrical-current-glow)"
+              >
+                <animate
+                  attributeName="stroke-dashoffset"
+                  begin="0s"
+                  dur="7s"
+                  values="150; -850"
+                  repeatCount="indefinite"
+                />
+              </path>
+              <path
+                className={styles.timelineChargeCore}
+                d={TIMELINE_PATH}
+                pathLength="1000"
+              >
+                <animate
+                  attributeName="stroke-dashoffset"
+                  begin="0s"
+                  dur="7s"
+                  values="82; -918"
+                  repeatCount="indefinite"
+                />
+              </path>
+
+              <g
+                className={styles.timelineSpark}
+                filter="url(#electrical-current-glow)"
+              >
+                <circle className={styles.sparkHalo} r="11" />
+                <circle className={styles.sparkCore} r="3.5" />
+                <path
+                  className={styles.sparkBolt}
+                  d="M -2 -9 L 4 -2 L 0 -2 L 3 8 L -5 0 L -1 0 Z"
+                />
+                <animateMotion
+                  begin="0s"
+                  calcMode="linear"
+                  dur="7s"
+                  keyPoints="0; 1"
+                  keyTimes="0; 1"
+                  repeatCount="indefinite"
+                  rotate="auto"
+                >
+                  <mpath href="#electrical-timeline-wire" />
+                </animateMotion>
+              </g>
             </svg>
 
             <ol className={styles.timelineList} aria-label="Zakres prac elektrycznych">
