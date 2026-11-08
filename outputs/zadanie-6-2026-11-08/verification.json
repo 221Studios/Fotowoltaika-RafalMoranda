@@ -1,0 +1,51 @@
+{
+  "tests": [
+    {
+      "label": "Blank rate blocks commission",
+      "result": "{\"kind\":\"table\",\"sheet\":\"Leady\",\"address\":\"U8\",\"rows\":1,\"cols\":1,\"values\":[[\"Brak akceptacji / stawki\"]]}"
+    },
+    {
+      "label": "Day 90 included",
+      "result": "{\"kind\":\"table\",\"sheet\":\"Leady\",\"address\":\"S8\",\"rows\":1,\"cols\":1,\"values\":[[\"Gotowy\"]]}"
+    },
+    {
+      "label": "Cash net of refunds",
+      "result": "{\"kind\":\"table\",\"sheet\":\"Leady\",\"address\":\"T8\",\"rows\":1,\"cols\":1,\"values\":[[8000]]}"
+    },
+    {
+      "label": "Accrued commission 5% test",
+      "result": "{\"kind\":\"table\",\"sheet\":\"Leady\",\"address\":\"U8\",\"rows\":1,\"cols\":1,\"values\":[[400]]}"
+    },
+    {
+      "label": "Refund correction stays negative",
+      "result": "{\"kind\":\"table\",\"sheet\":\"Leady\",\"address\":\"W8\",\"rows\":1,\"cols\":1,\"values\":[[-100]]}"
+    },
+    {
+      "label": "TEST excluded from real summary",
+      "result": "{\"kind\":\"table\",\"sheet\":\"Leady\",\"address\":\"K3\",\"rows\":1,\"cols\":1,\"values\":[[0]]}"
+    },
+    {
+      "label": "Day 91 blocked",
+      "result": "{\"kind\":\"table\",\"sheet\":\"Leady\",\"address\":\"S8\",\"rows\":1,\"cols\":1,\"values\":[[\"Do wyjaśnienia\"]]}"
+    },
+    {
+      "label": "Duplicate lead blocked",
+      "result": "{\"kind\":\"table\",\"sheet\":\"Leady\",\"address\":\"S8\",\"rows\":1,\"cols\":1,\"values\":[[\"Duplikat ID\"]]}"
+    },
+    {
+      "label": "Payment with ambiguous lead blocked",
+      "result": "{\"kind\":\"table\",\"sheet\":\"Rozliczenia\",\"address\":\"G7\",\"rows\":1,\"cols\":1,\"values\":[[\"Sprawdź Lead ID\"]]}"
+    },
+    {
+      "label": "Positive refund rejected",
+      "result": "{\"kind\":\"table\",\"sheet\":\"Rozliczenia\",\"address\":\"G8\",\"rows\":1,\"cols\":1,\"values\":[[\"Sprawdź rodzaj / znak\"]]}"
+    },
+    {
+      "label": "Existing client blocked",
+      "result": "{\"kind\":\"table\",\"sheet\":\"Leady\",\"address\":\"S9\",\"rows\":1,\"cols\":1,\"values\":[[\"Wykluczony\"]]}"
+    }
+  ],
+  "finalErrors": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}",
+  "settingsRestored": true,
+  "realCustomers": 0
+}

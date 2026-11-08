@@ -1,0 +1,235 @@
+{
+  "requested": "https://ekosolary.pl/kontakt",
+  "url": "https://ekosolary.pl/kontakt",
+  "status": 200,
+  "title": [
+    "Kontakt ze specjalistami od solarów - Ekosolary"
+  ],
+  "h1": [
+    "Kontakt"
+  ],
+  "links": [
+    {
+      "href": "tel:+48792463350",
+      "text": " +48 792 463 350"
+    },
+    {
+      "href": "https://ekosolary.pl/",
+      "text": "  "
+    },
+    {
+      "href": "https://ekosolary.pl/",
+      "text": "  "
+    },
+    {
+      "href": "/",
+      "text": " Strona główna"
+    },
+    {
+      "href": "/o-firmie",
+      "text": " O firmie"
+    },
+    {
+      "href": "/oferta",
+      "text": " Oferta"
+    },
+    {
+      "href": "#",
+      "text": " "
+    },
+    {
+      "href": "/oferta/lampy-solarne-uliczne",
+      "text": " Lampy solarne uliczne"
+    },
+    {
+      "href": "/oferta/fotowoltaika",
+      "text": " Fotowoltaika"
+    },
+    {
+      "href": "/oferta/monitoring-sieci-energetycznej",
+      "text": " Monitoring sieci energetycznej"
+    },
+    {
+      "href": "/oferta/turbiny-wiatrowe",
+      "text": " Turbiny wiatrowe"
+    },
+    {
+      "href": "/oferta/pompy-ciepla",
+      "text": " Pompy ciepła"
+    },
+    {
+      "href": "/oferta/termomodernizacja",
+      "text": " Termomodernizacja"
+    },
+    {
+      "href": "/realizacje",
+      "text": " Realizacje"
+    },
+    {
+      "href": "/artykuly",
+      "text": " Artykuły"
+    },
+    {
+      "href": "/kontakt",
+      "text": " Kontakt"
+    },
+    {
+      "href": "/",
+      "text": " Strona główna Strona główna"
+    },
+    {
+      "href": "tel:+48792463350",
+      "text": " +48 792 463 350"
+    },
+    {
+      "href": "tel:+48601315878",
+      "text": " +48 601 315 878"
+    },
+    {
+      "href": "tel:+48792463351",
+      "text": " +48 792 463 351"
+    },
+    {
+      "href": "tel:+48792463350",
+      "text": " +48 792 463 350"
+    },
+    {
+      "href": "/polityka-prywatnosci",
+      "text": " Polityką prywatności"
+    },
+    {
+      "href": "/polityka-prywatnosci",
+      "text": " Polityce prywatności"
+    },
+    {
+      "href": "/obowiazek-informacyjny",
+      "text": " Obowiązek Informacyjny"
+    },
+    {
+      "href": "https://www.facebook.com/irek.jozwik.98",
+      "text": ""
+    },
+    {
+      "href": "https://www.google.com/maps/place/Ekosolary+Ireneusz+J%C3%B3%C5%BAwik/@51.7705473,18.0668114,17z/data=!3m1!4b1!4m6!3m5!1s0x471ac5f6de3589fb:0x7ae109a642d25088!8m2!3d51.7705473!4d18.0668114!16s%2Fg%2F11gzxyct9?entry=ttu&g_ep=EgoyMDI0MTAyMC4xIKXMDSoASAFQAw%3D%3D",
+      "text": ""
+    },
+    {
+      "href": "/pleszew",
+      "text": " Pleszew"
+    },
+    {
+      "href": "/turek",
+      "text": " Turek"
+    },
+    {
+      "href": "/ostrow-wielkopolski",
+      "text": " Ostrów Wielkopolski"
+    },
+    {
+      "href": "/ostrzeszow",
+      "text": " Ostrzeszów"
+    },
+    {
+      "href": "/fotowoltaika-turbiny-wiatrowe-i-pompy-ciepla-krotoszyn",
+      "text": " Krotoszyn"
+    },
+    {
+      "href": "/pompy-ciepla-fotowoltaika-i-turbiny-wiatrowe-konin",
+      "text": " Konin"
+    },
+    {
+      "href": "tel:+48792463350",
+      "text": " +48 792 463 350"
+    },
+    {
+      "href": "https://wenet.pl/",
+      "text": " WeNet"
+    },
+    {
+      "href": "/polityka-prywatnosci",
+      "text": " Polityka prywatności"
+    },
+    {
+      "href": "/polityka-cookies",
+      "text": " Polityka Cookies"
+    }
+  ],
+  "forms": [
+    {
+      "attrs": {
+        "method": "post",
+        "id": "userForm",
+        "action": "https://ekosolary.pl/kontakt"
+      },
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "value": "",
+          "size": "20",
+          "name": "form[name]",
+          "id": "name",
+          "class": "rsform-input-box form-control",
+          "aria-required": "true"
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "value": "",
+          "size": "20",
+          "name": "form[email]",
+          "id": "email",
+          "class": "rsform-input-box form-control",
+          "aria-required": "true"
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "value": "",
+          "size": "20",
+          "name": "form[phone]",
+          "id": "phone",
+          "class": "rsform-input-box form-control"
+        },
+        {
+          "tag": "textarea",
+          "cols": "50",
+          "rows": "9",
+          "name": "form[message]",
+          "id": "message",
+          "class": "rsform-text-box form-control",
+          "aria-required": "true"
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "form[agree-d][]",
+          "value": "tak",
+          "id": "agree-d0",
+          "class": "rsform-checkbox",
+          "aria-required": "true"
+        },
+        {
+          "tag": "button",
+          "type": "submit",
+          "name": "form[submit]",
+          "id": "submit",
+          "class": "btn btn-default rsform-submit-button  btn btn-primary"
+        },
+        {
+          "tag": "input",
+          "type": "hidden",
+          "name": "form[formId]",
+          "value": "6"
+        },
+        {
+          "tag": "input",
+          "type": "hidden",
+          "name": "a351338ba20eaecce9a5ac1b19a94c30",
+          "value": "1"
+        }
+      ]
+    }
+  ],
+  "text": "Kontakt ze specjalistami od solarów - Ekosolary\nKontakt:\nTen adres pocztowy jest chroniony przed spamowaniem. Aby go zobaczyć, konieczne jest włączenie w przeglądarce obsługi JavaScript.\n+48 792 463 350\nStrona główna\nO firmie\nOferta\nLampy solarne uliczne\nFotowoltaika\nMonitoring sieci energetycznej\nTurbiny wiatrowe\nPompy ciepła\nTermomodernizacja\nRealizacje\nArtykuły\nKontakt\nStrona główna\nStrona główna\nKontakt\nKontakt\nNasz zespół\nIreneusz\nlampy solarne uliczne, monitoring sieci energetycznej, fotowoltaika, pompy ciepła, termomodernizacja  budynków, program Czyste Powietrze\n+48 792 463 350\nTen adres pocztowy jest chroniony przed spamowaniem. Aby go zobaczyć, konieczne jest włączenie w przeglądarce obsługi JavaScript.\nSylwester\nfotowoltaika - doradztwo handlowe, projektowanie, audyty energetyczne, program Czyste Powietrze\n+48 601 315 878\nTen adres pocztowy jest chroniony przed spamowaniem. Aby go zobaczyć, konieczne jest włączenie w przeglądarce obsługi JavaScript.\nAgnieszka\nzarządzanie sprawami administracyjnymi\n+48 792 463 351\nTen adres pocztowy jest chroniony przed spamowaniem. Aby go zobaczyć, konieczne jest włączenie w przeglądarce obsługi JavaScript.\nKontakt z firmą Ekosolary z Kalisza\nZapraszamy na bezpłatne spotkanie, na którym omówimy wszelkie informacje dotyczące naszej oferty oraz dotacji.\nAdres\nEkoSolary Ireneusz Jóźwik\nul. Złota 72,\nal. Wojska Polskiego 46/5,\n62-800 Kalisz\nNIP: 6181253445\nE-mail\nTen adres pocztowy jest chroniony przed spamowaniem. Aby go zobaczyć, konieczne jest włączenie w przeglądarce obsługi JavaScript.\nTelefon\n+48 792 463 350\nFormularz kontaktowy\nImię i nazwisko\n*\nNieprawidłowe dane\nE-mail\n*\nNieprawidłowe dane\nTelefon\nNieprawidłowe dane\nWiadomość\n*\nNieprawidłowe dane\nZapoznałem się z\nPolityką prywatności\nserwisu\nekosolary.pl\noraz wyrażam zgodę na przetwarzanie przez\nEKOSOLARY IRENEUSZ JÓŹWIK, Aleja Wojska Polskiego 46/5, 62-800 Kalisz,\nudostępnionych przeze mnie danych osobowych na zasadach opisanych w\nPolityce prywatności\ndostępnej w Serwisie. Oświadczam, że są mi znane cele przetwarzania danych oraz moje uprawnienia. Niniejsza zgoda może być wycofana w dowolnym czasie poprzez kontakt z Administratorem pod adresem\nTen adres pocztowy jest chroniony przed spamowaniem. Aby go zobaczyć, konieczne jest włączenie w przeglądarce obsługi JavaScript.\n, bez wpływu na zgodność z prawem przetwarzania, którego dokonano na podstawie zgody przed jej cofnięciem.\nWięcej informacji dotyczących przetwarzania danych osobowych -\nObowiązek Informacyjny\n.\nNieprawidłowe dane\nCaptcha\nNieprawidłowe dane\nWyślij\nDziałamy między innymi w:\nPleszew\nTurek\nOstrów Wielkopolski\nOstrzeszów\nKrotoszyn\nKonin\nEkoSolary\nFirma Ekosolary zajmuje się sprzedażą, montażem, serwisem gwarancyjnym i pogwarancyjnym lamp ulicznych solarnych, kolektorów słonecznych, baterii słonecznych-fotowoltaika, turbin wiatrowych, pompa ciepła, oświetlenia domowego i przemysłowego LED.\nAdres\nul. Złota 72,\nal. Wojska Polskiego 46/5,\n62-800 Kalisz\nE-mail\nTen adres pocztowy jest chroniony przed spamowaniem. Aby go zobaczyć, konieczne jest włączenie w przeglądarce obsługi JavaScript.\nTelefon\n+48 792 463 350\nWszelkie prawa zastrzeżone © 2026\nWeNet\nPolityka prywatności\nPolityka Cookies"
+}

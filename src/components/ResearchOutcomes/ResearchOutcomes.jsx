@@ -59,8 +59,8 @@ export default function ResearchOutcomes() {
         <Copy variant="flicker">
           <SectionHeader
             bullet
-            left="Zakres instalacji"
-            right="Projekt i montaż"
+            left="Co ustalamy w ofercie"
+            right="Od doboru do serwisu"
           />
         </Copy>
 
@@ -74,9 +74,10 @@ export default function ResearchOutcomes() {
 
         <Copy>
           <p className={`lg ${styles.copy}`}>
-            Każdy budynek i sposób korzystania z energii jest inny. Dlatego
-            zaczynamy od rozmowy, oględzin oraz pomiarów, a potem dobieramy
-            urządzenia i sposób montażu do konkretnej instalacji.
+            Zanim zdecydujesz się na montaż, ustalamy urządzenia, zakres prac
+            i sposób uruchomienia instalacji. Dzięki temu możesz porównać
+            ofertę z potrzebami swojego budynku i wiedzieć, co obejmuje
+            realizacja oraz późniejsza obsługa.
           </p>
         </Copy>
 

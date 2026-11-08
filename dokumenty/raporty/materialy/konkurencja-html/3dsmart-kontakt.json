@@ -1,0 +1,700 @@
+{
+  "url": "https://3dsmart.pl/kontakt.html",
+  "final_url": "https://3dsmart.pl/kontakt.html",
+  "status": 200,
+  "title": "Kontakt, 3DSmart | Kompleksowe Instalacje OZE dla przemysłu, biznesu, rolnictwa i domu",
+  "headings": [
+    [
+      "h1",
+      "Kontakt"
+    ],
+    [
+      "h2",
+      "Kalisz - Siedziba główna"
+    ],
+    [
+      "h2",
+      "Poznań - Oddział"
+    ],
+    [
+      "h2",
+      "Zduńska Wola - Punkt partnerski"
+    ],
+    [
+      "h2",
+      " Bezpłatna wycena "
+    ],
+    [
+      "h3",
+      "Oferta"
+    ],
+    [
+      "h3",
+      ""
+    ],
+    [
+      "h3",
+      "Informacje"
+    ],
+    [
+      "h3",
+      "Social media"
+    ],
+    [
+      "h3",
+      ""
+    ],
+    [
+      "h3",
+      "Szybki kontakt"
+    ],
+    [
+      "h2",
+      "Zamów rozmowę"
+    ],
+    [
+      "h2",
+      "Napisz do nas"
+    ]
+  ],
+  "forms": [
+    {
+      "attrs": {
+        "id": "formularzPopForm_Tel",
+        "method": "post",
+        "action": "#"
+      },
+      "fields": [
+        {
+          "tag": "input",
+          "id": "formularzPopTelefon",
+          "class": "formInput",
+          "type": "text",
+          "name": "formularzPopTelefon",
+          "required": null,
+          "placeholder": "Nr telefonu, np.: 789 456 123"
+        },
+        {
+          "tag": "button",
+          "type": "submit",
+          "class": "btn btn_zielony",
+          "id": "formularzPopInfoSubmit_Tel"
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "checked": null,
+          "required": null,
+          "id": "formularzPopReg_Tel",
+          "name": "formularzPopRegv"
+        }
+      ]
+    },
+    {
+      "attrs": {
+        "id": "formularzPopForm",
+        "method": "post",
+        "action": "#"
+      },
+      "fields": [
+        {
+          "tag": "input",
+          "type": "hidden",
+          "name": "utm_source",
+          "id": "utm_source",
+          "value": ""
+        },
+        {
+          "tag": "input",
+          "type": "hidden",
+          "name": "utm_campaign",
+          "id": "utm_campaign",
+          "value": ""
+        },
+        {
+          "tag": "input",
+          "type": "hidden",
+          "name": "utm_medium",
+          "id": "utm_medium",
+          "value": ""
+        },
+        {
+          "tag": "input",
+          "type": "hidden",
+          "name": "utm_content",
+          "id": "utm_content",
+          "value": ""
+        },
+        {
+          "tag": "input",
+          "id": "formularzPopNazwa",
+          "class": "formInput",
+          "name": "imie",
+          "minlength": "2",
+          "type": "text",
+          "required": null,
+          "placeholder": "Imię i nazwisko lub nazwa firmy"
+        },
+        {
+          "tag": "input",
+          "id": "formularzPopEmail",
+          "class": "formInput",
+          "type": "text",
+          "name": "formularzPopEmail",
+          "required": null,
+          "placeholder": "Adres e-mail"
+        },
+        {
+          "tag": "input",
+          "id": "formularzPopPhone",
+          "class": "formInput",
+          "type": "text",
+          "name": "formularzPopPhone",
+          "placeholder": "Nr telefonu"
+        },
+        {
+          "tag": "textarea",
+          "id": "formularzPopTresc",
+          "class": "formInput",
+          "required": null,
+          "name": "tresc",
+          "placeholder": "Twoja wiadomość",
+          "style": "height: 120px;"
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "checked": null,
+          "required": null,
+          "id": "formularzPopReg",
+          "name": "formularzPopReg"
+        },
+        {
+          "tag": "button",
+          "type": "submit",
+          "class": "btn btn_zielony",
+          "id": "formularzPopInfoSubmit"
+        }
+      ]
+    }
+  ],
+  "links": [
+    [
+      "/",
+      "\n                \n            "
+    ],
+    [
+      "/",
+      "Start"
+    ],
+    [
+      "oferta.html",
+      "Oferta"
+    ],
+    [
+      "business.html",
+      "Business Dla biznesu "
+    ],
+    [
+      "business-magazyny-energii.html",
+      "Magazyny energii"
+    ],
+    [
+      "business-instalacje-pv.html",
+      "Instalacje PV"
+    ],
+    [
+      "mikroinstalacje-dla-biznesu.html",
+      "Mikroinstalacje (0,8-50 kW)"
+    ],
+    [
+      "srednie-instalacje-dla-biznesu.html",
+      "Średnie instalacje (50 kW-1 MW)"
+    ],
+    [
+      "farmy-fotowoltaiczne-dla-biznesu.html",
+      "Farmy fotowoltaiczne (od 1MW)"
+    ],
+    [
+      "business-carporty.html",
+      "Carporty"
+    ],
+    [
+      "business-stacje-ladowania.html",
+      "Stacje ładowania pojazdów"
+    ],
+    [
+      "business-telemechanika.html",
+      "Telemechanika"
+    ],
+    [
+      "business-opracowanie-dokumentacji.html",
+      "Opracowanie dokumentacji"
+    ],
+    [
+      "industry.html",
+      "Industry Dla wykonawcy "
+    ],
+    [
+      "industry-magazyny-energii.html",
+      "Magazyny energii"
+    ],
+    [
+      "industry-instalacje-pv.html",
+      "Instalacje PV"
+    ],
+    [
+      "mikroinstalacje-industry.html",
+      "Mikroinstalacje (0,8-50 kW)"
+    ],
+    [
+      "srednie-instalacje-industry.html",
+      "Średnie instalacje (50 kW-1 MW)"
+    ],
+    [
+      "farmy-fotowoltaiczne-industry.html",
+      "Farmy fotowoltaiczne (od 1MW)"
+    ],
+    [
+      "industry-carporty.html",
+      "Carporty"
+    ],
+    [
+      "industry-stacje-ladowania.html",
+      "Stacje ładowania pojazdów"
+    ],
+    [
+      "industry-telemechanika.html",
+      "Telemechanika"
+    ],
+    [
+      "industry-opracowanie-dokumentacji.html",
+      "Opracowanie dokumentacji"
+    ],
+    [
+      "home-agro.html",
+      "Home&Agro Dla domu i gospodarstwa "
+    ],
+    [
+      "magazyny-energii.html",
+      "Magazyny energii"
+    ],
+    [
+      "fotowoltaika-dla-domu.html",
+      "Fotowoltaika dla domu"
+    ],
+    [
+      "pompy-ciepla.html",
+      "Pompy ciepła"
+    ],
+    [
+      "klimatyzacja.html",
+      "Klimatyzacja"
+    ],
+    [
+      "stacje-ladowania-pojazdow.html",
+      "Punkty ładowania pojazdów"
+    ],
+    [
+      "carporty.html",
+      "Carporty"
+    ],
+    [
+      "audyty-energetyczne.html",
+      "Audyty energetyczne"
+    ],
+    [
+      "realizacje.html",
+      "Realizacje"
+    ],
+    [
+      "dotacje.html",
+      "Dotacje"
+    ],
+    [
+      "serwis.html",
+      "Serwis"
+    ],
+    [
+      "firma.html",
+      "Firma"
+    ],
+    [
+      "kontakt.html",
+      "Kontakt"
+    ],
+    [
+      "blog.html",
+      "Blog"
+    ],
+    [
+      "tel:+48577151315",
+      "+48 577 15 13 15577 151 315"
+    ],
+    [
+      "tel:+48577151315",
+      ""
+    ],
+    [
+      null,
+      ""
+    ],
+    [
+      "https://3dsmart.pl",
+      "\n                        Strona główna\n                        "
+    ],
+    [
+      "https://3dsmart.pl/kontakt.html",
+      "\n\t\t                            Kontakt\n\t\t                            \n\t\t                        "
+    ],
+    [
+      "https://www.google.com/maps/place//data=!4m2!3m1!1s0x471ac509d6b9f189:0x7acf07eed854ed13?sa=X&ved=1t:8290&ictx=111",
+      " ul. Legionów 41, 62-800 Kalisz"
+    ],
+    [
+      "tel:48577151315",
+      " +48 577 15 13 15"
+    ],
+    [
+      "mailto:biuro@3dsmart.pl",
+      " biuro@3dsmart.pl"
+    ],
+    [
+      "mailto:biuro@3dsmart.pl",
+      "biuro@3dsmart.pl"
+    ],
+    [
+      "mailto:piotr@3dsmart.pl",
+      "piotr@3dsmart.pl"
+    ],
+    [
+      "mailto:pawel@3dsmart.pl",
+      "pawel@3dsmart.pl"
+    ],
+    [
+      "mailto:magda@3dsmart.pl",
+      "magda@3dsmart.pl"
+    ],
+    [
+      "tel:48577151312",
+      "+48 577 15 13 12"
+    ],
+    [
+      "mailto:patrykgrzyb@3dsmart.pl",
+      "patrykgrzyb@3dsmart.pl"
+    ],
+    [
+      "tel:48736745992",
+      "+48 736 74 59 92"
+    ],
+    [
+      "mailto:emilia@3dsmart.pl",
+      "emilia@3dsmart.pl"
+    ],
+    [
+      "tel:48577151315",
+      "+48 577 15 13 15"
+    ],
+    [
+      "mailto:gosia@3dsmart.pl",
+      "gosia@3dsmart.pl"
+    ],
+    [
+      "tel:48577151311",
+      "+48 577 15 13 11"
+    ],
+    [
+      "mailto:serwispompy@3dsmart.pl",
+      "serwispompy@3dsmart.pl"
+    ],
+    [
+      "tel:48577151318",
+      "+48 577 15 13 18"
+    ],
+    [
+      "mailto:serwispanele@3dsmart.pl",
+      "serwispanele@3dsmart.pl"
+    ],
+    [
+      "tel:48577141614",
+      "+48 577 14 16 14"
+    ],
+    [
+      "mailto:aldona@3dsmart.pl",
+      "aldona@3dsmart.pl"
+    ],
+    [
+      "tel:48577151306",
+      "+48 577 15 13 06"
+    ],
+    [
+      "mailto:sebastian@3dsmart.pl",
+      "sebastian@3dsmart.pl"
+    ],
+    [
+      "tel:48577151317",
+      "+48 577 15 13 17"
+    ],
+    [
+      "mailto:ewa@3dsmart.pl",
+      "ewa@3dsmart.pl"
+    ],
+    [
+      "tel:+48%20794%2099%2079%2003",
+      ""
+    ],
+    [
+      "tel:48577151340",
+      "+48 577 15 13 40"
+    ],
+    [
+      "mailto:zdunskawola@3dsmart.pl",
+      ""
+    ],
+    [
+      "mailto:pawel.poz@3dsmart.pl",
+      " "
+    ],
+    [
+      "mailto:pawel.poz@3dsmart.pl",
+      "pawel.poz@3dsmart.pl"
+    ],
+    [
+      "https://www.google.com/maps/place//data=!4m2!3m1!1s0x471a5b208469fbf5:0xb5ac613cfac72e5b?sa=X&ved=1t:8290&ictx=111",
+      " ul. Moniuszki 1bcd 98-220 Zduńska Wola"
+    ],
+    [
+      "tel:+48%20794%2099%2079%2003",
+      " +48 794 99 79 03"
+    ],
+    [
+      "mailto:zdunskawola@3dsmart.pl",
+      " zdunskawola@3dsmart.pl"
+    ],
+    [
+      "tel:+48 577 15 13 15",
+      "  +48 577 15 13 15"
+    ],
+    [
+      "mailto:biuro@3dsmart.pl",
+      "  biuro@3dsmart.pl"
+    ],
+    [
+      null,
+      "  Porozmawiajmy"
+    ],
+    [
+      "business-magazyny-energii.html",
+      " Magazyny energii"
+    ],
+    [
+      "business-instalacje-pv.html",
+      " Instalacje PV"
+    ],
+    [
+      "business-carporty.html",
+      " Carporty"
+    ],
+    [
+      "business-stacje-ladowania.html",
+      " Stacje ładowania pojazdów"
+    ],
+    [
+      "business-telemechanika.html",
+      " Telemechanika"
+    ],
+    [
+      "business-opracowanie-dokumentacji.html",
+      " Opracowanie dokumentacji"
+    ],
+    [
+      "industry-magazyny-energii.html",
+      " Magazyny energii"
+    ],
+    [
+      "industry-instalacje-pv.html",
+      " Instalacje PV"
+    ],
+    [
+      "industry-carporty.html",
+      " Carporty"
+    ],
+    [
+      "industry-stacje-ladowania.html",
+      " Stacje ładowania pojazdów"
+    ],
+    [
+      "industry-telemechanika.html",
+      " Telemechanika"
+    ],
+    [
+      "industry-opracowanie-dokumentacji.html",
+      " Opracowanie dokumentacji"
+    ],
+    [
+      "magazyny-energii.html",
+      " Magazyny energii"
+    ],
+    [
+      "fotowoltaika-dla-domu.html",
+      " Fotowoltaika dla domu"
+    ],
+    [
+      "pompy-ciepla.html",
+      " Pompy ciepła"
+    ],
+    [
+      "klimatyzacja.html",
+      " Klimatyzacja"
+    ],
+    [
+      "stacje-ladowania-pojazdow.html",
+      " Punkty ładowania pojazdów"
+    ],
+    [
+      "carporty.html",
+      " Carporty"
+    ],
+    [
+      "audyty-energetyczne.html",
+      " Audyty energetyczne"
+    ],
+    [
+      null,
+      "Porozmawiajmy  "
+    ],
+    [
+      "business.html",
+      " BUSINESS Dla biznesu"
+    ],
+    [
+      "industry.html",
+      " INDUSTRY Dla wykonawcy"
+    ],
+    [
+      "home-agro.html",
+      " HOME&AGRO Dla domu i gospodarstwa"
+    ],
+    [
+      "magazyny-energii.html",
+      " Magazyny energii"
+    ],
+    [
+      "fotowoltaika-dla-domu.html",
+      " Fotowoltaika dla domu"
+    ],
+    [
+      "pompy-ciepla.html",
+      " Pompy ciepła"
+    ],
+    [
+      "klimatyzacja.html",
+      " Klimatyzacja"
+    ],
+    [
+      "stacje-ladowania-pojazdow.html",
+      " Punkty ładowania pojazdów"
+    ],
+    [
+      "carporty.html",
+      " Carporty"
+    ],
+    [
+      "audyty-energetyczne.html",
+      " Audyty energetyczne"
+    ],
+    [
+      "dotacje.html",
+      " Dotacje"
+    ],
+    [
+      "serwis.html",
+      " Serwis"
+    ],
+    [
+      "wydarzenia.html",
+      " Wydarzenia"
+    ],
+    [
+      "referencje.html",
+      " Referencje"
+    ],
+    [
+      "realizacje.html",
+      " Realizacje"
+    ],
+    [
+      "firma.html",
+      " Firma"
+    ],
+    [
+      "kontakt.html",
+      " Kontakt"
+    ],
+    [
+      "https://www.facebook.com/3dsmartpl/",
+      " "
+    ],
+    [
+      "https://www.instagram.com/3dsmart_/",
+      " "
+    ],
+    [
+      "https://www.tiktok.com/@3dsmart.pl",
+      " "
+    ],
+    [
+      "https://youtube.com/@3dsmartpl?si=hAJIXiLbr3eXK4-j",
+      " "
+    ],
+    [
+      "https://pl.linkedin.com/company/3dsmart",
+      " "
+    ],
+    [
+      "polityka-prywatnosci.html",
+      "Polityka prywatności"
+    ],
+    [
+      "regulamin.html",
+      "Regulamin"
+    ],
+    [
+      "tel:+48 577 15 13 15",
+      "  +48 577 15 13 15"
+    ],
+    [
+      "mailto:biuro@3dsmart.pl",
+      "  biuro@3dsmart.pl"
+    ],
+    [
+      "kontakt.html",
+      "  Kalisz, ul. Legionów 41"
+    ],
+    [
+      "kontakt.html",
+      "  Pon. - pt. 8:00 - 17:00"
+    ],
+    [
+      "https://influencja.pl",
+      ""
+    ],
+    [
+      "polityka-prywatnosci.html",
+      "Polityce prywatności"
+    ],
+    [
+      "tel:+48 577 15 13 15",
+      "  +48 577 15 13 15"
+    ],
+    [
+      "mailto:biuro@3dsmart.pl",
+      "  biuro@3dsmart.pl"
+    ],
+    [
+      "polityka-prywatnosci.html",
+      "Polityce prywatności"
+    ]
+  ],
+  "text": "Kontakt, 3DSmart | Kompleksowe Instalacje OZE dla przemysłu, biznesu, rolnictwa i domu\nStart\nOferta\nBusiness\nDla biznesu\nMagazyny energii\nInstalacje PV\nMikroinstalacje (0,8-50 kW)\nŚrednie instalacje (50 kW-1 MW)\nFarmy fotowoltaiczne (od 1MW)\nCarporty\nStacje ładowania pojazdów\nTelemechanika\nOpracowanie dokumentacji\nIndustry\nDla wykonawcy\nMagazyny energii\nInstalacje PV\nMikroinstalacje (0,8-50 kW)\nŚrednie instalacje (50 kW-1 MW)\nFarmy fotowoltaiczne (od 1MW)\nCarporty\nStacje ładowania pojazdów\nTelemechanika\nOpracowanie dokumentacji\nHome&Agro\nDla domu i gospodarstwa\nMagazyny energii\nFotowoltaika dla domu\nPompy ciepła\nKlimatyzacja\nPunkty ładowania pojazdów\nCarporty\nAudyty energetyczne\nRealizacje\nDotacje\nSerwis\nFirma\nKontakt\nBlog\n+48 577 15 13 15\n577 151 315\nPorozmawiajmy\n→\nKontakt\nStrona główna\nKontakt\nMasz pytania? Skontaktuj się z nami – z przyjemnością doradzimy i znajdziemy rozwiązanie dopasowane do Twoich potrzeb.\nKalisz - Siedziba główna\nul. Legionów 41, 62-800 Kalisz\n+48 577 15 13 15\nbiuro@3dsmart.pl\nBiuro obsługi klienta czynne:\nod poniedziałku do piątku między 8:00 - 17:00\nZarząd\nPatryk Łuczak\nCEO & Co-founder\nbiuro@3dsmart.pl\nPiotr Łuczak\nCo-founder\npiotr@3dsmart.pl\nPaweł Kubiś\nCo-founder\npawel@3dsmart.pl\nKierownictwo i Administracja\nMagdalena Przegenda\nDyrektor ds. administracyjno-personalnych\nmagda@3dsmart.pl\n+48 577 15 13 12\nPatryk Grzyb\nDyrektor handlowy\npatrykgrzyb@3dsmart.pl\n+48 736 74 59 92\nObsługa, Dofinansowania i Marketing\nEmilia Prus\nSpecjalista ds. obsługi klienta\nemilia@3dsmart.pl\n+48 577 15 13 15\nMałgorzata Bach\nSpecjalista ds. dofinansowań\ngosia@3dsmart.pl\n+48 577 15 13 11\nSerwis i Montaż\nArtur Michalak\nSerwisant pomp ciepła\nserwispompy@3dsmart.pl\n+48 577 15 13 18\nMichał Madela\nSerwisant paneli fotowoltaicznych\nserwispanele@3dsmart.pl\n+48 577 14 16 14\nDział Przyłączeń i Audytów\nAldona Adamczewska\nSpecjalista ds. projektów biznesowych i przyłączeń\naldona@3dsmart.pl\n+48 577 15 13 06\nSebastian Pietrucha\nAudytor energetyczny\nsebastian@3dsmart.pl\n+48 577 15 13 17\nEwa Winiarska\nMłodszy audytor energetyczny\newa@3dsmart.pl\nPoznań - Oddział\n+48 577 15 13 40\npawel.poz@3dsmart.pl\nZduńska Wola - Punkt partnerski\nul. Moniuszki 1bcd 98-220 Zduńska Wola\n+48 794 99 79 03\nzdunskawola@3dsmart.pl\nBezpłatna wycena\n+48 577 15 13 15\nbiuro@3dsmart.pl\nPorozmawiajmy\nZobacz także\nFirmy i instytucje\nOFERTA BUSINESS\nWykonawcy budowlani\nOFERTA INDUSTRY\nKlienci indywidualni\nOFERTA HOME&AGRO\nMagazyny energii\nInstalacje PV\nCarporty\nStacje ładowania pojazdów\nTelemechanika\nOpracowanie dokumentacji\nMagazyny energii\nInstalacje PV\nCarporty\nStacje ładowania pojazdów\nTelemechanika\nOpracowanie dokumentacji\nMagazyny energii\nFotowoltaika dla domu\nPompy ciepła\nKlimatyzacja\nPunkty ładowania pojazdów\nCarporty\nAudyty energetyczne\nPorozmawiajmy\nOferta\nBUSINESS\nDla biznesu\nINDUSTRY\nDla wykonawcy\nHOME&AGRO\nDla domu i gospodarstwa\nMagazyny energii\nFotowoltaika dla domu\nPompy ciepła\nKlimatyzacja\nPunkty ładowania pojazdów\nCarporty\nAudyty energetyczne\nInformacje\nDotacje\nSerwis\nWydarzenia\nReferencje\nRealizacje\nFirma\nKontakt\nSocial media\nPolityka prywatności\nRegulamin\nSzybki kontakt\n+48 577 15 13 15\nbiuro@3dsmart.pl\nKalisz, ul. Legionów 41\nPon. - pt. 8:00 - 17:00\nWszystkie materialy zamieszczone na niniejszej stronie są własnością firmy 3DSmart są chronione prawem autorskim. Zabrania się ich kopiowania i wykorzystywania w jakikolwiek sposób.\n2026  3DSmart®\nZamów rozmowę\nZostaw numer telefonu - oddzwonimy:\nWyślij\nWyrażam zgodę na przetwarzanie moich danych osobowych podanych w formularzu przez 3P NSU Sp. z o.o. z siedzibą w Cienia Pierwsza 35, 62-860 Opatówek w celu udzielenia odpowiedzi na przesłane zapytanie. Więcej informacji o przetwarzaniu danych osobowych znajduje się w\nPolityce prywatności\nZadzwoń:\n+48 577 15 13 15\nLub napisz do nas:\nbiuro@3dsmart.pl\nNapisz do nas\nFormularz kontaktowy:\nWyrażam zgodę na przetwarzanie moich danych osobowych podanych w formularzu przez 3P NSU Sp. z o.o. z siedzibą w Cienia Pierwsza 35, 62-860 Opatówek w celu udzielenia odpowiedzi na przesłane zapytanie. Więcej informacji o przetwarzaniu danych osobowych znajduje się w\nPolityce prywatności\nWyślij wiadomość"
+}

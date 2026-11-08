@@ -23,28 +23,28 @@ const CARDS = [
     title: "Panele fotowoltaiczne",
     label: "Moduły",
     description:
-      "Dobieramy moc instalacji do zużycia energii i warunków montażu. W realizacjach wykorzystaliśmy moduły JaSolar o mocy 410–550 Wp.",
+      "Moc pojedynczego modułu to jeden z elementów doboru. Liczą się również liczba paneli, dostępne miejsce i zacienienie. W realizacjach ALFA zobaczysz moduły JA Solar o różnych mocach i układach montażu.",
     Icon: SunIcon,
   },
   {
     title: "Falowniki i monitoring",
     label: "Sterowanie",
     description:
-      "Dobieramy falowniki Huawei SUN2000 do instalacji i pomagamy monitorować jej pracę w aplikacji.",
+      "Falownik dobieramy do układu modułów i planowanych funkcji instalacji. W realizacjach wykorzystano m.in. Huawei SUN2000. Przy wyborze uwzględniamy monitoring pracy i możliwość późniejszej rozbudowy.",
     Icon: BoltIcon,
   },
   {
     title: "Magazyny energii",
     label: "Autokonsumpcja",
     description:
-      "Wybrane falowniki Huawei SUN2000 można połączyć z magazynami energii LUNA 2000. Kompatybilność potwierdzamy dla konkretnego modelu.",
+      "W realizacjach ALFA znajdują się zestawy z Huawei LUNA2000. Pojemność magazynu i zgodność z falownikiem dobieramy do konkretnego systemu. Większe wykorzystanie własnej energii i zasilanie awaryjne to różne funkcje, które trzeba osobno zaplanować.",
     Icon: HomeIcon,
   },
   {
     title: "Konstrukcje montażowe",
     label: "Montaż",
     description:
-      "Dobieramy system mocowań do rodzaju dachu lub montażu naziemnego. Wykorzystujemy m.in. rozwiązania BAKS.",
+      "Mocowania dopasowujemy do pokrycia i konstrukcji dachu albo montażu na gruncie. Sposób prowadzenia przewodów i rozmieszczenie urządzeń ustalamy razem z układem modułów. W ofercie wykorzystujemy m.in. rozwiązania BAKS.",
     Icon: CheckIcon,
   },
 ];

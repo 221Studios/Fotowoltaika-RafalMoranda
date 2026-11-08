@@ -1,0 +1,10 @@
+{
+  "actions": 10,
+  "comparisonRows": 21,
+  "runs": 30,
+  "summaries": 10,
+  "inputChangeTest": "{\"kind\":\"table\",\"sheet\":\"PSI mobile\",\"address\":\"E41\",\"rows\":1,\"cols\":1,\"values\":[[80]]}",
+  "restored": true,
+  "summaryInspect": "{\"kind\":\"table\",\"sheet\":\"PSI mobile\",\"address\":\"D40:I50\",\"rows\":11,\"cols\":6,\"values\":[[\"Liczba prób\",\"Mediana\",\"Minimum\",\"Maksimum\",\"LCP mediana\\n(s)\",\"CLS\\nmediana\"],[3,76,76,80,5.468,0],[3,97,94,97,2.574,0],[3,65,60,70,13.696,0],[3,73,68,73,6.713,0],[3,62,59,62,32.476,0.001],[3,72,72,72,6.339,0],[3,99,97,99,1.671,0],[3,97,97,97,1.68,0.084],[3,53,51,54,8.553,0.452],[3,75,56,75,2.723,0.442]]}",
+  "errorScan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}"
+}

@@ -1,0 +1,35 @@
+{
+  "observed_date": "2026-11-08",
+  "form_factor": "PHONE",
+  "period_display": "Ostatni 28-dniowy okres",
+  "period_exact_start": null,
+  "period_exact_end": null,
+  "percentile": 75,
+  "origins": [
+    {
+      "origin": "https://3dsmart.pl",
+      "scope": "origin",
+      "applies_to_reports": ["3dsmart-home", "3dsmart-pv"],
+      "lcp_p75_ms": 2300,
+      "inp_p75_ms": 190,
+      "cls_p75": 0,
+      "assessment_display": "zaliczone",
+      "evidence": "https://pagespeed.web.dev/analysis/https-3dsmart-pl/dgnkyoh12e?form_factor=mobile",
+      "scope_evidence": "URL button disabled; history link contains identifier=origin. Same values observed on PV report."
+    },
+    {
+      "origin": "https://www.prowable.pl",
+      "scope": "origin",
+      "applies_to_reports": ["prowable-home", "prowable-pv"],
+      "lcp_p75_ms": 3400,
+      "inp_p75_ms": null,
+      "inp_display": "Nie dotyczy",
+      "cls_p75": 0.01,
+      "assessment_display": "niezaliczone",
+      "evidence": "https://pagespeed.web.dev/analysis/https-www-prowable-pl/6qebe737pj?form_factor=mobile",
+      "scope_evidence": "URL button disabled; history link contains identifier=origin. Same values observed on PV report."
+    }
+  ],
+  "no_field_data_in_reports": ["gpro-home", "gpro-pv", "aurelum-home", "aurelum-pv", "ekosolary-home", "ekosolary-pv"],
+  "note": "Values transcribed from PSI public UI, not a direct CrUX API response. Origin-level data must not be represented as individual URL performance. Repeated lab runs do not produce new independent field samples."
+}

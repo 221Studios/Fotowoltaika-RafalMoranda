@@ -1,0 +1,15 @@
+{
+  "requested_url": "https://ekosolary.pl/",
+  "form_factor": "mobile",
+  "run": 1,
+  "report_url": "https://pagespeed.web.dev/analysis/https-ekosolary-pl/e3u03r05qf?form_factor=mobile",
+  "report_timestamp": "2026-11-08 22:13:11 CET",
+  "performance_score": 53,
+  "lab": {"FCP_ms": 794, "LCP_ms": 8556, "TBT_ms": 77, "CLS": 0.453, "SpeedIndex_ms": 3944},
+  "scorecalc_url": "https://googlechrome.github.io/lighthouse/scorecalc/#FCP=794&LCP=8556&TBT=77&CLS=0.45&SI=3944&TTI=8974&device=mobile&version=13.6.0",
+  "precision_note": "Milliseconds from the visible score calculator link; CLS from visible metric because score calculator rounded it to 0.45.",
+  "environment": {"device": "Emulated Moto G Power", "lighthouse_version": "13.6.0", "browser": "HeadlessChromium 157.0.8103.38", "network": "Slow 4G", "load": "Initial page load", "session": "Single page"},
+  "field": {"status": "No data (Brak danych)", "scope": null, "period": null, "LCP_p75": null, "INP_p75": null, "CLS_p75": null},
+  "diagnostics_observed": ["Render blocking requests: estimated saving 560 ms", "Layout shifts", "Image delivery: estimated saving 253 KiB", "Unused JS: estimated saving 328 KiB", "Unused CSS: estimated saving 75 KiB", "Images without explicit width/height", "Total network payload 2718 KiB"],
+  "source": "PageSpeed Insights public UI; fresh Analyze action; mobile tab selected"
+}

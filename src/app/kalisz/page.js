@@ -16,17 +16,32 @@ const FAQ = [
   {
     question: "Czy obsługujecie Kalisz i okoliczne miejscowości?",
     answer:
-      "Tak. Realizujemy instalacje w Kaliszu i regionie. Skontaktuj się z nami, aby potwierdzić możliwość dojazdu pod konkretny adres.",
+      "Tak. Obsługujemy Kalisz i okolice z bazy w Cekowie. W sprawie fotowoltaiki, instalacji elektrycznej lub monitoringu podaj miejscowość i planowany zakres prac. Termin dojazdu oraz możliwość realizacji pod konkretnym adresem ustalimy podczas kontaktu.",
   },
   {
     question: "Gdzie znajduje się firma ALFA?",
     answer:
-      "Nasza siedziba znajduje się w Cekowie: Ceków Kolonia 6a, 62-834 Ceków.",
+      "Biuro i magazyn znajdują się pod adresem Ceków Kolonia 6a, 62-834 Ceków. Stąd dojeżdżamy do klientów w Kaliszu i okolicy. Aby zapytać o usługę, wystarczy telefon lub e-mail; przed przyjazdem do siedziby umów wizytę.",
   },
   {
     question: "Jak umówić oględziny na terenie Kalisza?",
     answer:
-      "Zadzwoń pod numer +48 600 306 425 lub napisz przez formularz kontaktowy. Ustalimy dogodny termin.",
+      "Zadzwoń pod +48 600 306 425 lub napisz na rafal@moranda.com.pl. Podaj miejscowość, rodzaj obiektu i usługę, której potrzebujesz. Na tej podstawie ustalimy kolejne kroki i termin ewentualnych oględzin. Nie musisz przyjeżdżać do Cekowa, aby rozpocząć rozmowę.",
+  },
+  {
+    question: "Czy mogę zapytać o kilka instalacji w jednym budynku?",
+    answer:
+      "Tak. W jednym zapytaniu możesz opisać fotowoltaikę, prace elektryczne i monitoring. Warto zaznaczyć, co już istnieje, a co ma dopiero powstać. Ustalimy zakres poszczególnych prac oraz ich kolejność; sam wspólny kontakt nie oznacza jednego terminu wykonania wszystkich instalacji.",
+  },
+  {
+    question: "Czy pokazujecie realizacje wykonane w samym Kaliszu?",
+    answer:
+      "Tak. Na tej stronie znajdziesz realizacje fotowoltaiczne opisane miejscowością Kalisz. Każda karta prowadzi do zdjęć i zestawienia urządzeń. W katalogu realizacji możesz obejrzeć także montaże z innych miejscowości regionu.",
+  },
+  {
+    question: "Jakie informacje o lokalizacji ułatwią przygotowanie wizyty?",
+    answer:
+      "Na pierwszy kontakt wystarczy miejscowość i informacja, czy chodzi o dom, firmę czy inny obiekt. Przed oględzinami przydadzą się szczegóły dojazdu, dostęp do budynku i miejsca planowanych prac. Dokładny adres ustalamy bezpośrednio z Tobą; nie publikujemy go w opisie realizacji.",
   },
 ];
 
@@ -44,16 +59,16 @@ const FAQ_SCHEMA = {
 };
 
 const DESCRIPTION =
-  "Fotowoltaika w Kaliszu i okolicach — lokalna obsługa, dojazd i realizacje firmy ALFA Rafał Morańda z Cekowa.";
+  "ALFA obsługuje Kalisz i okolice z bazy w Cekowie. Fotowoltaika, elektryka i monitoring CCTV: lokalne realizacje, dojazd i kontakt w sprawie wyceny.";
 
 export const metadata = createPageMetadata({
-  title: "Fotowoltaika w Kaliszu i okolicach",
+  title: "Kalisz i okolice — lokalna obsługa instalacji",
   description: DESCRIPTION,
   path: "/kalisz/",
 });
 
 const SERVICE_SCHEMA = createServiceSchema({
-  name: "Fotowoltaika w Kaliszu i okolicach",
+  name: "Usługi instalacyjne w Kaliszu i okolicach",
   description: DESCRIPTION,
   path: "/kalisz/",
 });
@@ -81,26 +96,27 @@ export default function KaliszPage() {
             <p className={`mono ${styles.eyebrow}`}>ALFA Rafał Morańda · Kalisz</p>
           </Copy>
           <Copy animateOnScroll={false} delay={0.4}>
-            <h1>Fotowoltaika w Kaliszu i okolicach</h1>
+            <h1>Instalacje w Kaliszu i okolicach</h1>
           </Copy>
           <Copy animateOnScroll={false} delay={0.65}>
             <p className={styles.lead}>
-              Szukasz wykonawcy blisko Kalisza? Firma ALFA z siedzibą w Cekowie
-              obsługuje klientów z miasta i okolic. Sprawdź, jak skontaktować
-              się z nami w sprawie lokalnej realizacji.
+              Planujesz fotowoltaikę, prace elektryczne albo monitoring?
+              ALFA Rafał Morańda obsługuje domy i firmy w Kaliszu oraz
+              pobliskich miejscowościach. Poznaj nasze realizacje z miasta
+              i umów rozmowę o pracach w Twoim budynku.
             </p>
           </Copy>
           <Copy animateOnScroll={false} delay={0.8}>
             <ul className={styles.benefits}>
-              <li>Obsługa Kalisza i okolicznych miejscowości</li>
-              <li>Siedziba firmy w Cekowie, w powiecie kaliskim</li>
-              <li>Kontakt bezpośrednio z lokalną firmą ALFA</li>
+              <li>Fotowoltaika, instalacje elektryczne i monitoring CCTV</li>
+              <li>Dojazd z biura i magazynu w Cekowie</li>
+              <li>Rozmowa o zakresie prac i wycenie dla Twojej nieruchomości</li>
             </ul>
           </Copy>
           <Copy animateOnScroll={false} delay={1}>
             <div className={styles.actions}>
               <Link className={styles.primaryAction} href="/kontakt">
-                Zapytaj o obsługę w Kaliszu
+                Umów rozmowę o instalacji
               </Link>
               <a className={styles.phoneAction} href="tel:+48600306425">
                 Zadzwoń: +48 600 306 425
@@ -113,7 +129,7 @@ export default function KaliszPage() {
       <section className={styles.intro}>
         <div className={`container ${styles.introGrid}`}>
           <Copy variant="flicker">
-            <p className={`mono ${styles.sectionLabel}`}>Fotowoltaika dla regionu</p>
+            <p className={`mono ${styles.sectionLabel}`}>Lokalna obsługa</p>
           </Copy>
           <div>
             <Copy>
@@ -122,15 +138,48 @@ export default function KaliszPage() {
             <Copy>
               <p>
                 Nasze biuro i magazyn znajdują się w Cekowie, około 30 minut
-                drogi od centrum Kalisza. Baza poza centrum ułatwia nam
-                planowanie bezpośrednich dojazdów na montaże w Kaliszu, Nowych
-                Skalmierzycach, Opatówku i pobliskich miejscowościach. Czas
-                dojazdu zależy od trasy, ruchu i adresu inwestycji, dlatego
-                termin potwierdzamy indywidualnie.
+                drogi od centrum Kalisza. Stąd dojeżdżamy na oględziny,
+                montaże i prace serwisowe. Obsługujemy Kalisz oraz region,
+                m.in. okolice Opatówka i Nowych Skalmierzyc. Czas przejazdu
+                zależy od trasy i ruchu; termin wizyty ustalamy dla konkretnego
+                adresu i zakresu zlecenia.
+              </p>
+            </Copy>
+            <Copy>
+              <h3>Fotowoltaika i magazyny energii</h3>
+              <p>
+                Jeśli planujesz nową instalację lub rozbudowę istniejącej,
+                przejdź do oferty PV. Znajdziesz tam informacje o doborze
+                urządzeń, magazynach, etapach współpracy i przygotowaniu wyceny.
+                Lokalne przykłady montażu zobaczysz poniżej.
               </p>
             </Copy>
             <Link className={styles.textLink} href="/fotowoltaika">
               Poznaj ofertę fotowoltaiki <span aria-hidden="true">↗</span>
+            </Link>
+            <Copy>
+              <h3>Instalacje elektryczne</h3>
+              <p>
+                Przy budowie, remoncie lub zmianie wyposażenia budynku mogą
+                być potrzebne nowe obwody, modernizacja rozdzielnicy albo
+                pomiary. Opisz, jakie prace planujesz i na jakim etapie jest
+                inwestycja. Szczegółowy zakres znajdziesz na stronie elektryki.
+              </p>
+            </Copy>
+            <Link className={styles.textLink} href="/elektryka">
+              Sprawdź usługi elektryczne <span aria-hidden="true">↗</span>
+            </Link>
+            <Copy>
+              <h3>Monitoring domu, firmy i posesji</h3>
+              <p>
+                W sprawie kamer podaj, jaki obiekt i które miejsca chcesz
+                obserwować: wejście, bramę, parking czy wnętrze budynku.
+                Dobór systemu, zapis nagrań i podgląd w telefonie opisujemy
+                na osobnej stronie monitoringu CCTV.
+              </p>
+            </Copy>
+            <Link className={styles.textLink} href="/cctv">
+              Poznaj ofertę monitoringu CCTV <span aria-hidden="true">↗</span>
             </Link>
           </div>
         </div>
@@ -144,13 +193,13 @@ export default function KaliszPage() {
             </p>
           </Copy>
           <Copy>
-            <h2>Udokumentowane instalacje ALFA wykonane w Kaliszu</h2>
+            <h2>Zobacz nasze realizacje fotowoltaiki w Kaliszu</h2>
           </Copy>
           <p className={styles.projectsIntro}>
-            Poniżej pokazujemy wszystkie realizacje oznaczone w archiwum firmy
-            lokalizacją „Kalisz”. Karty prowadzą do galerii, parametrów
-            opublikowanych dla danej instalacji i oryginalnego wpisu. Nie
-            przypisujemy ich do konkretnych osiedli, bo archiwum ich nie podaje.
+            Zobacz zdjęcia montaży i urządzenia wykorzystane w instalacjach
+            na terenie Kalisza. Każda karta prowadzi do szczegółów realizacji.
+            To przykłady różnych konfiguracji — rozwiązanie dla Twojego
+            budynku dobieramy do jego warunków i potrzeb.
           </p>
           <div className={styles.projectGrid}>
             {KALISZ_INSTALLATIONS.map((installation) => {
@@ -199,7 +248,7 @@ export default function KaliszPage() {
               <p className={`mono ${styles.sectionLabel}`}>FAQ</p>
             </Copy>
             <Copy>
-              <h2>Fotowoltaika w Kaliszu — pytania i odpowiedzi</h2>
+              <h2>Jak skorzystać z obsługi w Kaliszu?</h2>
             </Copy>
           </div>
           <div className={styles.questions}>
@@ -223,7 +272,15 @@ export default function KaliszPage() {
             <p className={`mono ${styles.eyebrow}`}>Kalisz i okolice</p>
           </Copy>
           <Copy>
-            <h2>Porozmawiajmy o fotowoltaice dla Twojego domu lub firmy.</h2>
+            <h2>Powiedz, jakie prace planujesz w Kaliszu lub okolicy.</h2>
+          </Copy>
+          <Copy>
+            <p>
+              Podaj miejscowość, rodzaj obiektu i usługę. Przy remoncie lub
+              budowie wspomnij o etapie inwestycji, a przy rozbudowie — o
+              istniejących urządzeniach. Ustalimy, jakie informacje i oględziny
+              będą potrzebne do przygotowania oferty.
+            </p>
           </Copy>
           <Copy>
             <Link className={styles.primaryAction} href="/kontakt">

@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-08",
+  "timezone": "Europe/Warsaw",
+  "columns": ["site", "run", "report_id", "time_CET", "score", "fcp_ms", "lcp_ms", "tbt_ms", "cls", "si_ms", "no_crux"],
+  "rows": [
+    ["gpro-home",1,"eter678w1l","22:12:15",76,1001,5468,3,0,5243,true],
+    ["gpro-home",2,"sb7uueup9m","22:13:31",76,1008,5472,9,0,5243,true],
+    ["gpro-home",3,"89jrha6hj1","22:14:38",80,955,5420,0,0,1919,true],
+    ["3dsmart-home",1,"0r7on5t9rr","22:13:37",65,1834,13696,182,0,6917,false],
+    ["3dsmart-home",2,"hpzyepr6pv","22:14:40",70,1834,8702,111,0,4490,false],
+    ["3dsmart-home",3,"dgnkyoh12e","22:16:13",60,1805,13698,286,0,7978,false],
+    ["gpro-pv",1,"lo3fk62c3x","22:13:44",97,957,2574,0,0,1479,true],
+    ["gpro-pv",2,"rns85pxojg","22:14:41",97,957,2574,0,0,1479,true],
+    ["gpro-pv",3,"qq6ppwz3yh","22:16:14",94,965,2594,0,0,4657,true],
+    ["3dsmart-pv",1,"1zkjmhudpe","22:13:50",73,1540,6713,111,0,4313,false],
+    ["3dsmart-pv",2,"yopd8y4k1t","22:14:43",73,1540,6713,111,0,4313,false],
+    ["3dsmart-pv",3,"kp2x4qlcz2","22:16:16",68,1511,6680,262,0,4779,false],
+    ["aurelum-home",2,"iaeax7niu1","22:16:56",59,2632,32476,182,0.001,15572,true],
+    ["aurelum-home",3,"yogbc7at36","22:18:06",62,2588,32476,6,0.001,14196,true],
+    ["aurelum-pv",2,"l4cuwv6snn","22:16:55",72,2138,6339,0,0,4676,true],
+    ["aurelum-pv",3,"0jlxx3mbrx","22:17:29",72,2138,6339,0,0,4676,true],
+    ["ekosolary-home",2,"rrnw2rq1fz","22:17:09",54,787,8553,60,0.448,3254,true],
+    ["ekosolary-home",3,"xod0aflbv6","22:18:18",51,814,8525,171,0.452,3926,true],
+    ["ekosolary-pv",1,"25ct5mtv74","22:17:11",75,780,2723,2,0.442,3510,true],
+    ["ekosolary-pv",2,"aeq8xe0dgu","22:17:35",75,780,2723,2,0.442,3510,true],
+    ["ekosolary-pv",3,"7io7a0rqey","22:18:12",56,804,6376,65,0.446,3275,true],
+    ["prowable-home",2,"20sj1eguds","22:17:07",99,1671,1671,0,0,2856,false],
+    ["prowable-home",3,"jgz5px57f6","22:17:31",99,1671,1671,0,0,2856,false],
+    ["prowable-pv",1,"cjdfj05q2t","22:17:10",97,1680,1680,0,0.084,1695,false],
+    ["prowable-pv",2,"padnr2my83","22:17:35",97,1680,1680,0,0.084,1695,false],
+    ["prowable-pv",3,"jkkqqo6r3u","22:18:11",97,1690,1690,0,0.085,1690,false]
+  ]
+}

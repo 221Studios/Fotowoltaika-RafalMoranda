@@ -1,0 +1,11 @@
+{
+  "requested_url": "https://www.prowable.pl/",
+  "strategy": "mobile",
+  "report_url": "https://pagespeed.web.dev/analysis/https-www-prowable-pl/6qebe737pj?form_factor=mobile",
+  "report_time_local": "2026-11-08 22:13:00 CET",
+  "independent_run": 1,
+  "lab": {"performance":97,"fcp_ms":1674,"lcp_ms":1674,"tbt_ms":0,"cls":0.08,"speed_index_ms":1674,"lighthouse_version":"13.6.0","device":"Moto G Power","throttling":"4G","browser":"HeadlessChromium 157.0.8103.38"},
+  "field": {"scope":"origin","origin":"https://www.prowable.pl","period":"last 28 days","lcp_p75_ms":3400,"inp_p75_ms":null,"inp_display":"Nie dotyczy","cls_p75":0.01,"fcp_p75_ms":2800,"ttfb_p75_ms":2100,"cwv_assessment":"failed"},
+  "evidence": "Metrics read from PSI UI and its visible score calculator link. Final Screenshot inspected: real PROWABLE page with contact header and Nasze usługi, not a 429/error page.",
+  "score_calculator_url": "https://googlechrome.github.io/lighthouse/scorecalc/#FCP=1674&LCP=1674&TBT=0&CLS=0.08&SI=1674&TTI=1674&device=mobile&version=13.6.0"
+}

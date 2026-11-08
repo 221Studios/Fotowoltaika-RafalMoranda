@@ -1,0 +1,542 @@
+[
+  {
+    "company": "G-PRO ECO ENERGY",
+    "key": "gpro",
+    "url": "https://g-pro.com.pl/",
+    "observed_date": "2026-11-08",
+    "source_html": "gpro-home.html",
+    "source_sha256": "33cea802cdf00a18001f466a794e9b3d14c74847f26e1737ded46e74b8c895c9",
+    "title": [
+      "Fotowoltaika, pompy ciepła i dachy - Kalisz | G-PRO ECO ENERGY"
+    ],
+    "meta_description": [
+      "Fotowoltaika, pompy ciepła, dachy - Kalisz i południowa Wielkopolska"
+    ],
+    "h1": [
+      "Fotowoltaika, pompy ciepła i dachy od jednego wykonawcy"
+    ],
+    "h2": [
+      "Jeden wykonawca, cała instalacja",
+      "Ponad 25 lat w branży elektrycznej",
+      "Zobacz, co zrobiliśmy w okolicy",
+      "Kalisz i okolice do 100 km",
+      "Porozmawiajmy o Twojej instalacji",
+      "Oferta",
+      "Informacje",
+      "Kontakt",
+      "Dbamy o Twoją prywatność"
+    ],
+    "canonical": [
+      "https://g-pro.com.pl/"
+    ],
+    "service_links": [
+      {
+        "text": "Oferta",
+        "url": "https://g-pro.com.pl/oferta/",
+        "aria_label": null
+      },
+      {
+        "text": "Fotowoltaika",
+        "url": "https://g-pro.com.pl/oferta/fotowoltaika/",
+        "aria_label": null
+      },
+      {
+        "text": "Dachy",
+        "url": "https://g-pro.com.pl/oferta/dachy/",
+        "aria_label": null
+      },
+      {
+        "text": "Pompy ciepła",
+        "url": "https://g-pro.com.pl/oferta/pompy-ciepla/",
+        "aria_label": null
+      },
+      {
+        "text": "Magazyny energii",
+        "url": "https://g-pro.com.pl/oferta/magazyny-energii/",
+        "aria_label": null
+      },
+      {
+        "text": "Klimatyzacja",
+        "url": "https://g-pro.com.pl/oferta/klimatyzacja/",
+        "aria_label": null
+      },
+      {
+        "text": "Stacje ładowania",
+        "url": "https://g-pro.com.pl/oferta/stacje-ladowania/",
+        "aria_label": null
+      },
+      {
+        "text": "Monitoring i alarmy",
+        "url": "https://g-pro.com.pl/oferta/monitoring-i-alarmy/",
+        "aria_label": null
+      },
+      {
+        "text": "Farmy fotowoltaiczne",
+        "url": "https://g-pro.com.pl/oferta/farmy-fotowoltaiczne/",
+        "aria_label": null
+      }
+    ],
+    "scope": "Saved static HTML from step 4.2; not a new HTTP request or rendered DOM."
+  },
+  {
+    "company": "3DSmart",
+    "key": "3dsmart",
+    "url": "https://3dsmart.pl/",
+    "observed_date": "2026-11-08",
+    "source_html": "3dsmart-home.html",
+    "source_sha256": "826c06e8b423648b0b3881e6ec3915582aed7acdf8d1c325c02dc344fae8b92b",
+    "title": [
+      "3DSmart | Kompleksowe Instalacje OZE dla przemysłu, biznesu, rolnictwa i domu"
+    ],
+    "meta_description": [
+      "Projektujemy i montujemy fotowoltaikę, pompy ciepła, magazyny energii i stacje ładowania. Ponad 13 lat doświadczenia i 3400+ realizacji. Sprawdź nasze rozwiązania."
+    ],
+    "h1": [],
+    "h2": [
+      "Business",
+      "Industry",
+      "Home&Agro",
+      "Dla kogo pracujemy",
+      "Dotacje",
+      "Serwis",
+      "Zaufali nam",
+      "Zobacz nasze realizacje",
+      "Kontakt",
+      "Zamów rozmowę",
+      "Napisz do nas"
+    ],
+    "canonical": [
+      "https://3dsmart.pl/"
+    ],
+    "service_links": [
+      {
+        "text": "Oferta",
+        "url": "https://3dsmart.pl/oferta.html",
+        "aria_label": null
+      },
+      {
+        "text": "Business Dla biznesu",
+        "url": "https://3dsmart.pl/business.html",
+        "aria_label": null
+      },
+      {
+        "text": "Magazyny energii",
+        "url": "https://3dsmart.pl/business-magazyny-energii.html",
+        "aria_label": null
+      },
+      {
+        "text": "Instalacje PV",
+        "url": "https://3dsmart.pl/business-instalacje-pv.html",
+        "aria_label": null
+      },
+      {
+        "text": "Mikroinstalacje (0,8-50 kW)",
+        "url": "https://3dsmart.pl/mikroinstalacje-dla-biznesu.html",
+        "aria_label": null
+      },
+      {
+        "text": "Średnie instalacje (50 kW-1 MW)",
+        "url": "https://3dsmart.pl/srednie-instalacje-dla-biznesu.html",
+        "aria_label": null
+      },
+      {
+        "text": "Farmy fotowoltaiczne (od 1MW)",
+        "url": "https://3dsmart.pl/farmy-fotowoltaiczne-dla-biznesu.html",
+        "aria_label": null
+      },
+      {
+        "text": "Carporty",
+        "url": "https://3dsmart.pl/business-carporty.html",
+        "aria_label": null
+      },
+      {
+        "text": "Stacje ładowania pojazdów",
+        "url": "https://3dsmart.pl/business-stacje-ladowania.html",
+        "aria_label": null
+      },
+      {
+        "text": "Telemechanika",
+        "url": "https://3dsmart.pl/business-telemechanika.html",
+        "aria_label": null
+      },
+      {
+        "text": "Opracowanie dokumentacji",
+        "url": "https://3dsmart.pl/business-opracowanie-dokumentacji.html",
+        "aria_label": null
+      },
+      {
+        "text": "Industry Dla wykonawcy",
+        "url": "https://3dsmart.pl/industry.html",
+        "aria_label": null
+      },
+      {
+        "text": "Magazyny energii",
+        "url": "https://3dsmart.pl/industry-magazyny-energii.html",
+        "aria_label": null
+      },
+      {
+        "text": "Instalacje PV",
+        "url": "https://3dsmart.pl/industry-instalacje-pv.html",
+        "aria_label": null
+      },
+      {
+        "text": "Mikroinstalacje (0,8-50 kW)",
+        "url": "https://3dsmart.pl/mikroinstalacje-industry.html",
+        "aria_label": null
+      },
+      {
+        "text": "Średnie instalacje (50 kW-1 MW)",
+        "url": "https://3dsmart.pl/srednie-instalacje-industry.html",
+        "aria_label": null
+      },
+      {
+        "text": "Farmy fotowoltaiczne (od 1MW)",
+        "url": "https://3dsmart.pl/farmy-fotowoltaiczne-industry.html",
+        "aria_label": null
+      },
+      {
+        "text": "Carporty",
+        "url": "https://3dsmart.pl/industry-carporty.html",
+        "aria_label": null
+      },
+      {
+        "text": "Stacje ładowania pojazdów",
+        "url": "https://3dsmart.pl/industry-stacje-ladowania.html",
+        "aria_label": null
+      },
+      {
+        "text": "Telemechanika",
+        "url": "https://3dsmart.pl/industry-telemechanika.html",
+        "aria_label": null
+      },
+      {
+        "text": "Opracowanie dokumentacji",
+        "url": "https://3dsmart.pl/industry-opracowanie-dokumentacji.html",
+        "aria_label": null
+      },
+      {
+        "text": "Home&Agro Dla domu i gospodarstwa",
+        "url": "https://3dsmart.pl/home-agro.html",
+        "aria_label": null
+      },
+      {
+        "text": "Magazyny energii",
+        "url": "https://3dsmart.pl/magazyny-energii.html",
+        "aria_label": null
+      },
+      {
+        "text": "Fotowoltaika dla domu",
+        "url": "https://3dsmart.pl/fotowoltaika-dla-domu.html",
+        "aria_label": null
+      },
+      {
+        "text": "Pompy ciepła",
+        "url": "https://3dsmart.pl/pompy-ciepla.html",
+        "aria_label": null
+      },
+      {
+        "text": "Klimatyzacja",
+        "url": "https://3dsmart.pl/klimatyzacja.html",
+        "aria_label": null
+      },
+      {
+        "text": "Punkty ładowania pojazdów",
+        "url": "https://3dsmart.pl/stacje-ladowania-pojazdow.html",
+        "aria_label": null
+      },
+      {
+        "text": "Carporty",
+        "url": "https://3dsmart.pl/carporty.html",
+        "aria_label": null
+      },
+      {
+        "text": "Audyty energetyczne",
+        "url": "https://3dsmart.pl/audyty-energetyczne.html",
+        "aria_label": null
+      },
+      {
+        "text": "Dotacje",
+        "url": "https://3dsmart.pl/dotacje.html",
+        "aria_label": null
+      },
+      {
+        "text": "Serwis",
+        "url": "https://3dsmart.pl/serwis.html",
+        "aria_label": null
+      }
+    ],
+    "scope": "Saved static HTML from step 4.2; not a new HTTP request or rendered DOM."
+  },
+  {
+    "company": "Aurelum",
+    "key": "aurelum",
+    "url": "https://www.aurelum.pl/",
+    "observed_date": "2026-11-08",
+    "source_html": "aurelum-home.html",
+    "source_sha256": "ea7dbf8fb80711ec5bf0e4723142731ed8f94305c729df417adaacf08b327650",
+    "title": [
+      "Aurelum – Fotowoltaika | Pompy ciepła | Klimatyzacja | Smart Home | Termomodernizacje – Rozświetl przyszłość z Aurelum – Twoim partnerem w energii odnawialnej! Od paneli słonecznych, przez klimatyzację i pompy ciepła, po inteligentne domy – oferujemy kompleksowe rozwiązania, które zapewniają nie tylko komfort, ale i oszczędność energii. Dzięki naszym panelom fotowoltaicznym możesz czerpać moc słoneczną na własne potrzeby, podczas gdy nasze innowacyjne systemy klimatyzacyjne i pompy ciepła dbają o optymalną temperaturę w Twoim domu. Wprowadź inteligencję do swojego życia z naszymi rozwiązaniami smart home, gdzie kontrola nad oświetleniem, ogrzewaniem i bezpieczeństwem jest na wyciągnięcie ręki. Wybierz Aurelum – krocz w stronę ekologicznej przyszłości już dziś!"
+    ],
+    "meta_description": [],
+    "h1": [
+      "Produkuj własną energię, żyj komfortowo"
+    ],
+    "h2": [
+      "Nasza oferta",
+      "Fotowoltaika dla domu",
+      "Fotowoltaika dla biznesu",
+      "Pompy ciepła",
+      "Klimatyzacje",
+      "Smart Home",
+      "Stacje ładowania EV",
+      "Przykładowe realizacje",
+      "Instalacja 988,48 kWp - Radom",
+      "Instalacja 999,56 kWp - Opoczno",
+      "Instalacja 328,58 kWp - Kalisz",
+      "Instalacja 199,80 kWp - Wolica",
+      "Baza wiedzy",
+      "Jak przebiega współpraca z Aurelum?",
+      "Nasi partnerzy",
+      "Poznaj opinie naszych klientów",
+      "Skontaktuj się z nami."
+    ],
+    "canonical": [
+      "https://www.aurelum.pl/"
+    ],
+    "service_links": [
+      {
+        "text": "Instalacja dla domu",
+        "url": "https://www.aurelum.pl/fotowoltaika-dla-domu/",
+        "aria_label": null
+      },
+      {
+        "text": "Instalacja dla biznesu",
+        "url": "https://www.aurelum.pl/fotowoltaika-dla-biznesu/",
+        "aria_label": null
+      },
+      {
+        "text": "Instalacja dla domu",
+        "url": "https://www.aurelum.pl/pompy-ciepla-instalacje-domowe/",
+        "aria_label": null
+      },
+      {
+        "text": "Instalacja dla biznesu",
+        "url": "https://www.aurelum.pl/pompy-ciepla-instalacje-przemyslowe/",
+        "aria_label": null
+      },
+      {
+        "text": "Klimatyzacja",
+        "url": "https://www.aurelum.pl/klimatyzacja-dla-domu-i-firmy/",
+        "aria_label": null
+      },
+      {
+        "text": "Termomodernizacja budynków",
+        "url": "https://www.aurelum.pl/termomodernizacja-budynkow",
+        "aria_label": null
+      },
+      {
+        "text": "Inteligentne domy",
+        "url": "https://www.aurelum.pl/smart-home/",
+        "aria_label": null
+      },
+      {
+        "text": "Instalacje elektryczne",
+        "url": "https://www.aurelum.pl/instalacje-elektryczne-dla-domu/",
+        "aria_label": null
+      },
+      {
+        "text": "Folie i panele grzewcze IR",
+        "url": "https://www.aurelum.pl/folie-i-panele-grzewcze-ir/",
+        "aria_label": null
+      },
+      {
+        "text": "Instalacje hydrauliczne",
+        "url": "https://www.aurelum.pl/instalacje-hydrauliczne/",
+        "aria_label": null
+      },
+      {
+        "text": "Stacje ładowania EV",
+        "url": "https://www.aurelum.pl/stacje-ladowania-ev/",
+        "aria_label": null
+      },
+      {
+        "text": "Rekuperacja",
+        "url": "https://www.aurelum.pl/rekuperacja/",
+        "aria_label": null
+      }
+    ],
+    "scope": "Saved static HTML from step 4.2; not a new HTTP request or rendered DOM."
+  },
+  {
+    "company": "PROWABLE — polska wersja",
+    "key": "prowable",
+    "url": "https://www.prowable.pl/",
+    "observed_date": "2026-11-08",
+    "source_html": "prowable-home.html",
+    "source_sha256": "570b3056a833bd5a6c94ef4877b11ee13571a2c8820e7fb7f267e717132809ba",
+    "title": [
+      "PROWABLE - Pompy ciepła Kalisz"
+    ],
+    "meta_description": [
+      "Pompy ciepła, instalacje fotowoltaiczne, rekuperacje, klimatyzacje. Zacznij oszczędzać z PROWABLE już dziś! Najlepsza jakość to podstawa!"
+    ],
+    "h1": [
+      "rozwiązania dla twojego domu"
+    ],
+    "h2": [
+      "Kompleksowe",
+      "Oferujemy",
+      "Nasze usługi",
+      "Jesteśmy partnerem i instalatorem",
+      "Kalkulator Fotowaltaiki"
+    ],
+    "canonical": [
+      "https://www.prowable.pl/"
+    ],
+    "service_links": [
+      {
+        "text": "Oferta",
+        "url": "https://www.prowable.pl/oferta-kalisz/",
+        "aria_label": null
+      },
+      {
+        "text": "Pompy Ciepła",
+        "url": "https://www.prowable.pl/pompy-ciepla/",
+        "aria_label": null
+      },
+      {
+        "text": "Przemysłowe pompy ciepła",
+        "url": "https://www.prowable.pl/przemyslowe-pompy-ciepla-kalisz/",
+        "aria_label": null
+      },
+      {
+        "text": "Ogrzewanie podłogowe",
+        "url": "https://www.prowable.pl/ogrzewanie-podlogowe-kalisz/",
+        "aria_label": null
+      },
+      {
+        "text": "Fotowoltaika",
+        "url": "https://www.prowable.pl/fotowoltaika-kalisz/",
+        "aria_label": null
+      },
+      {
+        "text": "Rekuperacja",
+        "url": "https://www.prowable.pl/rekuperacja-kalisz/",
+        "aria_label": null
+      },
+      {
+        "text": "Klimatyzacja",
+        "url": "https://www.prowable.pl/klimatyzacja-kalisz/",
+        "aria_label": null
+      },
+      {
+        "text": "Pomiary termowizyjne",
+        "url": "https://www.prowable.pl/pomiary-termowizyjne-kalisz/",
+        "aria_label": null
+      },
+      {
+        "text": "Dowiedz się więcej",
+        "url": "https://www.prowable.pl/pompy-ciepla",
+        "aria_label": null
+      },
+      {
+        "text": "Więcej",
+        "url": "https://www.prowable.pl/przemyslowe-pompy-ciepla/",
+        "aria_label": null
+      },
+      {
+        "text": "Więcej",
+        "url": "https://www.prowable.pl/fotowoltaika-dla-domu/",
+        "aria_label": null
+      },
+      {
+        "text": "Więcej",
+        "url": "https://www.prowable.pl/klimatyzacja-dla-domu/",
+        "aria_label": null
+      },
+      {
+        "text": "Więcej",
+        "url": "https://www.prowable.pl/rekuperacja/",
+        "aria_label": null
+      },
+      {
+        "text": "Oferta",
+        "url": "https://www.prowable.pl/oferta/",
+        "aria_label": null
+      }
+    ],
+    "scope": "Saved static HTML from step 4.2; not a new HTTP request or rendered DOM."
+  },
+  {
+    "company": "Ekosolary",
+    "key": "ekosolary",
+    "url": "https://ekosolary.pl/",
+    "observed_date": "2026-11-08",
+    "source_html": "ekosolary-home.html",
+    "source_sha256": "8686e339a40748cbffcc9b05de84350bd2f093398838817585eb1f63f463ad45",
+    "title": [
+      "Fotowoltaika Kalisz – montaż paneli fotowoltaicznych - Ekosolary"
+    ],
+    "meta_description": [
+      "Firma Ekosolary w Kaliszu zajmuje się fotowoltaiką oraz montażem paneli fotowoltaicznych. Oferujemy sprzedaż i montaż instalacji OZE. Skontaktuj się z nami!"
+    ],
+    "h1": [
+      "Sprzedaż i montaż paneli solarnych w Kaliszu – Ekosolary"
+    ],
+    "h2": [
+      "Instalacja solarów w Kaliszu i inne usługi – gwarancja najwyższej jakości",
+      "Energia odnawialna",
+      "Dlaczego warto nas wybrać",
+      "Fotowoltaika w Olsztynie",
+      "Izolacja okien i drzwi",
+      "Usługi serwisowe",
+      "Przegląd pompy ciepła – ile kosztuje i kiedy warto?",
+      "Fotowoltaika dla firm – czy to się opłaca?",
+      "Przydomowa elektrownia wiatrowa – dlaczego warto?",
+      "Fotowoltaika na dom – jaka moc będzie odpowiednia?",
+      "Jak oszczędzać na rachunkach za prąd w firmie",
+      "Oświetlenie LED",
+      "Jak wygląda wstępny proces budowy farmy fotowoltaicznej",
+      "Aktualne formy dotacji:"
+    ],
+    "canonical": [],
+    "service_links": [
+      {
+        "text": "Oferta",
+        "url": "https://ekosolary.pl/oferta",
+        "aria_label": null
+      },
+      {
+        "text": "Lampy solarne uliczne",
+        "url": "https://ekosolary.pl/oferta/lampy-solarne-uliczne",
+        "aria_label": null
+      },
+      {
+        "text": "Fotowoltaika",
+        "url": "https://ekosolary.pl/oferta/fotowoltaika",
+        "aria_label": null
+      },
+      {
+        "text": "Monitoring sieci energetycznej",
+        "url": "https://ekosolary.pl/oferta/monitoring-sieci-energetycznej",
+        "aria_label": null
+      },
+      {
+        "text": "Turbiny wiatrowe",
+        "url": "https://ekosolary.pl/oferta/turbiny-wiatrowe",
+        "aria_label": null
+      },
+      {
+        "text": "Pompy ciepła",
+        "url": "https://ekosolary.pl/oferta/pompy-ciepla",
+        "aria_label": null
+      },
+      {
+        "text": "Termomodernizacja",
+        "url": "https://ekosolary.pl/oferta/termomodernizacja",
+        "aria_label": null
+      }
+    ],
+    "scope": "Saved static HTML from step 4.2; not a new HTTP request or rendered DOM."
+  }
+]

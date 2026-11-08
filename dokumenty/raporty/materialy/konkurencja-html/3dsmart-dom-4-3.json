@@ -1,0 +1,11 @@
+{
+  "source": "https://3dsmart.pl/",
+  "observed_date": "2026-11-08",
+  "method": "Read-only DOM inspection in browser after navigation and accessibility observation",
+  "title": "3DSmart | Kompleksowe Instalacje OZE dla przemysłu, biznesu, rolnictwa i domu",
+  "description": ["Projektujemy i montujemy fotowoltaikę, pompy ciepła, magazyny energii i stacje ładowania. Ponad 13 lat doświadczenia i 3400+ realizacji. Sprawdź nasze rozwiązania."],
+  "h1": [],
+  "h2": ["Business", "Industry", "Home&Agro", "Dla kogo pracujemy", "Dotacje", "Serwis", "Zaufali nam", "Zobacz nasze realizacje", "Kontakt", "Zamów rozmowę", "Napisz do nas"],
+  "canonical": ["https://3dsmart.pl/"],
+  "limitation": "Observed DOM snapshot, not a guarantee for other sessions or future page versions. The final two H2 belong to contact forms."
+}

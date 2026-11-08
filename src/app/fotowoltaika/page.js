@@ -2,12 +2,12 @@ import PageHeader from "@/components/PageHeader";
 import StatementBanner from "@/components/StatementBanner";
 import ResearchAreas from "@/components/ResearchAreas";
 import ResearchOutcomes from "@/components/ResearchOutcomes";
-import PhotovoltaicsLocalService from "@/components/PhotovoltaicsLocalService";
+import PhotovoltaicsLocalService, { PHOTOVOLTAICS_FAQ } from "@/components/PhotovoltaicsLocalService/PhotovoltaicsLocalService";
 import JsonLd from "@/components/JsonLd";
 import { createPageMetadata, createServiceSchema } from "@/lib/site";
 
 const DESCRIPTION =
-  "Montaż fotowoltaiki w Kaliszu i powiecie kaliskim. Lokalne realizacje JA Solar, Huawei, LUNA i BAKS. Serwis gwarancyjny i pogwarancyjny.";
+  "Fotowoltaika Kalisz: dobór, montaż i serwis dla domu i firmy. Magazyny energii, realizacje ALFA z regionu i bezpłatna wycena instalacji.";
 
 export const metadata = createPageMetadata({
   title: "Fotowoltaika w Kaliszu — montaż i serwis",
@@ -23,13 +23,24 @@ const SERVICE_SCHEMA = createServiceSchema({
   path: "/fotowoltaika/",
 });
 
-export default function ResearchPage() {
+const FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: PHOTOVOLTAICS_FAQ.map(({ question, answer }) => ({
+    "@type": "Question",
+    name: question,
+    acceptedAnswer: { "@type": "Answer", text: answer },
+  })),
+};
+
+export default function PhotovoltaicsPage() {
   return (
     <>
       <JsonLd data={SERVICE_SCHEMA} />
+      <JsonLd data={FAQ_SCHEMA} />
       <PageHeader
-        title="Fotowoltaika"
-        subtitle="dla domu i biznesu"
+        title="Fotowoltaika w Kaliszu"
+        subtitle="dla domu i firmy"
         description="Dobór, montaż, uruchomienie i serwis instalacji fotowoltaicznych oraz magazynów energii. Firma ALFA działa z Cekowa i obsługuje Kalisz oraz region."
         icon="SunIcon"
       />

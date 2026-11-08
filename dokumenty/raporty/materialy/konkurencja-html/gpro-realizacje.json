@@ -1,0 +1,462 @@
+{
+  "url": "https://g-pro.com.pl/realizacje/",
+  "final_url": "https://g-pro.com.pl/realizacje/",
+  "status": 200,
+  "title": "Nasze realizacje | G-PRO ECO ENERGY",
+  "headings": [
+    [
+      "h1",
+      "Nasze realizacje"
+    ],
+    [
+      "h2",
+      "Porozmawiajmy o Twojej instalacji"
+    ],
+    [
+      "h2",
+      "Oferta"
+    ],
+    [
+      "h2",
+      "Informacje"
+    ],
+    [
+      "h2",
+      "Kontakt"
+    ],
+    [
+      "h2",
+      "Dbamy o Twoją prywatność"
+    ]
+  ],
+  "forms": [
+    {
+      "attrs": {
+        "class": "formularz",
+        "method": "post",
+        "action": "",
+        "data-formularz": null,
+        "novalidate": null
+      },
+      "fields": [
+        {
+          "tag": "input",
+          "type": "hidden",
+          "id": "bezpieczenstwo",
+          "name": "bezpieczenstwo",
+          "value": "86f59f2825"
+        },
+        {
+          "tag": "input",
+          "type": "hidden",
+          "name": "_wp_http_referer",
+          "value": "/realizacje/"
+        },
+        {
+          "tag": "input",
+          "type": "hidden",
+          "name": "action",
+          "value": "gpro_formularz"
+        },
+        {
+          "tag": "input",
+          "type": "hidden",
+          "name": "gpro_formularz_klasyczny",
+          "value": "1"
+        },
+        {
+          "tag": "input",
+          "type": "hidden",
+          "name": "czas",
+          "value": "1794171666"
+        },
+        {
+          "tag": "input",
+          "type": "hidden",
+          "name": "zrodlo",
+          "value": "https://g-pro.com.pl/realizacje/"
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "id": "pole-telefon",
+          "name": "telefon",
+          "autocomplete": "tel",
+          "required": null,
+          "inputmode": "tel",
+          "placeholder": "np. 515 686 622"
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "id": "pole-email",
+          "name": "email",
+          "autocomplete": "email",
+          "required": null,
+          "placeholder": "np. jan@przyklad.pl"
+        },
+        {
+          "tag": "select",
+          "id": "pole-temat",
+          "name": "temat"
+        },
+        {
+          "tag": "textarea",
+          "id": "pole-wiadomosc",
+          "name": "wiadomosc",
+          "required": null,
+          "placeholder": "Napisz krótko, czego potrzebujesz - np. metraż dachu, rodzaj budynku, planowany termin."
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "id": "pole-adres-www",
+          "name": "adres_www",
+          "tabindex": "-1",
+          "autocomplete": "off"
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "id": "pole-zgoda",
+          "name": "zgoda",
+          "value": "1",
+          "required": null
+        },
+        {
+          "tag": "button",
+          "type": "submit",
+          "class": "przycisk przycisk--glowny",
+          "data-zdarzenie": "formularz-wyslany"
+        }
+      ]
+    }
+  ],
+  "links": [
+    [
+      "#tresc",
+      "Przejdź do treści"
+    ],
+    [
+      "https://g-pro.com.pl/",
+      "\n\t\t\t\t\t\n\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/oferta/",
+      "Oferta"
+    ],
+    [
+      "https://g-pro.com.pl/oferta/fotowoltaika/",
+      "Fotowoltaika"
+    ],
+    [
+      "https://g-pro.com.pl/oferta/dachy/",
+      "Dachy"
+    ],
+    [
+      "https://g-pro.com.pl/oferta/pompy-ciepla/",
+      "Pompy ciepła"
+    ],
+    [
+      "https://g-pro.com.pl/oferta/magazyny-energii/",
+      "Magazyny energii"
+    ],
+    [
+      "https://g-pro.com.pl/oferta/klimatyzacja/",
+      "Klimatyzacja"
+    ],
+    [
+      "https://g-pro.com.pl/oferta/stacje-ladowania/",
+      "Stacje ładowania"
+    ],
+    [
+      "https://g-pro.com.pl/oferta/monitoring-i-alarmy/",
+      "Monitoring i alarmy"
+    ],
+    [
+      "https://g-pro.com.pl/oferta/farmy-fotowoltaiczne/",
+      "Farmy fotowoltaiczne"
+    ],
+    [
+      "https://g-pro.com.pl/o-firmie/",
+      "O firmie"
+    ],
+    [
+      "https://g-pro.com.pl/kontakt/",
+      "Kontakt"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/",
+      "Realizacje"
+    ],
+    [
+      "tel:+48515686622",
+      "\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t+48 515 686 622\n\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/",
+      "Strona główna"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/fotowoltaika-na-dachu-skosnym/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tFotowoltaika na dachu skośnym\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/panele-fotowoltaiczne-dom-jednorodzinny/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tPanele fotowoltaiczne – dom jednorodzinny\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/instalacja-fotowoltaiczna-pod-kaliszem/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tInstalacja fotowoltaiczna pod Kaliszem\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/panele-na-polaci-dachowej/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tPanele na połaci dachowej\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/fotowoltaika-na-dachowce-ceramicznej/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tFotowoltaika na dachówce ceramicznej\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/instalacja-fotowoltaiczna-kalisz/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tInstalacja fotowoltaiczna – Kalisz\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/panele-fotowoltaiczne-na-budynku-mieszkalnym/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tPanele fotowoltaiczne na budynku mieszkalnym\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/instalacja-fotowoltaiczna-w-trakcie-montazu/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tInstalacja fotowoltaiczna w trakcie montażu\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/fotowoltaika-na-gruncie-konstrukcja-wolnostojaca/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tFotowoltaika na gruncie – konstrukcja wolnostojąca\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/panele-na-konstrukcji-gruntowej/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tPanele na konstrukcji gruntowej\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/instalacja-wielkoskalowa-na-gruncie/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tInstalacja wielkoskalowa na gruncie\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/fotowoltaika-dla-firmy-dach-hali/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tFotowoltaika dla firmy – dach hali\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/instalacja-firmowa-w-okolicach-kalisza/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tInstalacja firmowa w okolicach Kalisza\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/fotowoltaika-i-pompa-ciepla-w-jednym-obiekcie/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tFotowoltaika i pompa ciepła w jednym obiekcie\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/zestaw-fotowoltaika-plus-pompa-ciepla/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tZestaw fotowoltaika plus pompa ciepła\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/pompa-ciepla-panasonic-montaz-na-wspornikach/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tPompa ciepła Panasonic – montaż na wspornikach\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/pompa-ciepla-na-elewacji-budynku/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tPompa ciepła na elewacji budynku\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/jednostka-zewnetrzna-pompy-ciepla/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tJednostka zewnętrzna pompy ciepła\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/pompa-ciepla-przy-domu-jednorodzinnym/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tPompa ciepła przy domu jednorodzinnym\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/pompa-ciepla-powietrze-woda/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tPompa ciepła powietrze-woda\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/pompa-ciepla-dla-domu-jednorodzinnego/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tPompa ciepła dla domu jednorodzinnego\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/pompa-ciepla-u-klienta-indywidualnego/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tPompa ciepła u klienta indywidualnego\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/pompa-ciepla-w-komplecie-z-fotowoltaika/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tPompa ciepła w komplecie z fotowoltaiką\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/zasobnik-i-jednostka-wewnetrzna-w-kotlowni/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tZasobnik i jednostka wewnętrzna w kotłowni\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/falowniki-i-osprzet-instalacji/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tFalowniki i osprzęt instalacji\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/magazyn-energii-deye-z-falownikiem/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tMagazyn energii Deye z falownikiem\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/magazyn-energii-w-pomieszczeniu-technicznym/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tMagazyn energii w pomieszczeniu technicznym\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/klimatyzacja-w-pomieszczeniu-mieszkalnym/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tKlimatyzacja w pomieszczeniu mieszkalnym\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/klimatyzator-lg-jednostka-zewnetrzna/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tKlimatyzator LG – jednostka zewnętrzna\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/klimatyzator-lg-na-elewacji/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tKlimatyzator LG na elewacji\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/jednostka-wewnetrzna-klimatyzatora-lg/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tJednostka wewnętrzna klimatyzatora LG\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/wallbox-do-ladowania-samochodu-elektrycznego/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tWallbox do ładowania samochodu elektrycznego\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/stacja-ladowania-wraz-ze-skrzynka-zasilajaca/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tStacja ładowania wraz ze skrzynką zasilającą\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/ladowarka-ev-zamontowana-na-scianie/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tŁadowarka EV zamontowana na ścianie\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/samochod-elektryczny-podczas-ladowania/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tSamochód elektryczny podczas ładowania\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/wtyczka-ladowarki-w-gniezdzie-pojazdu/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tWtyczka ładowarki w gnieździe pojazdu\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/kamery-monitoringu-na-slupie/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tKamery monitoringu na słupie\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/dach-z-fotowoltaika-realizacja-kompleksowa/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tDach z fotowoltaiką – realizacja kompleksowa\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/krycie-dachu-dachowka-na-membranie/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tKrycie dachu dachówką na membranie\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/montaz-wiezby-dachowej/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tMontaż więźby dachowej\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/konstrukcja-dachu-na-budowie-domu/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tKonstrukcja dachu na budowie domu\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/dach-z-blachy-na-rabek-stojacy/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tDach z blachy na rąbek stojący\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/drewno-konstrukcyjne-na-placu-budowy/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tDrewno konstrukcyjne na placu budowy\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/realizacje/dom-z-dachem-na-rabek-stojacy/",
+      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tDom z dachem na rąbek stojący\n\t\t\t\t\t\t"
+    ],
+    [
+      "tel:+48515686622",
+      "+48 515 686 622"
+    ],
+    [
+      "mailto:pawel@g-pro.com.pl",
+      "pawel@g-pro.com.pl"
+    ],
+    [
+      "https://g-pro.com.pl/polityka-prywatnosci/",
+      "polityce prywatności"
+    ],
+    [
+      "https://www.facebook.com/gprokalisz/",
+      "\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://www.instagram.com/g.pro.eco.energy.kalisz/",
+      "\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t"
+    ],
+    [
+      "https://g-pro.com.pl/oferta/fotowoltaika/",
+      "Fotowoltaika"
+    ],
+    [
+      "https://g-pro.com.pl/oferta/dachy/",
+      "Dachy"
+    ],
+    [
+      "https://g-pro.com.pl/oferta/pompy-ciepla/",
+      "Pompy ciepła"
+    ],
+    [
+      "https://g-pro.com.pl/oferta/magazyny-energii/",
+      "Magazyny energii"
+    ],
+    [
+      "https://g-pro.com.pl/oferta/klimatyzacja/",
+      "Klimatyzacja"
+    ],
+    [
+      "https://g-pro.com.pl/oferta/stacje-ladowania/",
+      "Stacje ładowania"
+    ],
+    [
+      "https://g-pro.com.pl/oferta/monitoring-i-alarmy/",
+      "Monitoring i alarmy"
+    ],
+    [
+      "https://g-pro.com.pl/oferta/farmy-fotowoltaiczne/",
+      "Farmy fotowoltaiczne"
+    ],
+    [
+      "https://g-pro.com.pl/o-firmie/",
+      "O firmie"
+    ],
+    [
+      "https://g-pro.com.pl/kontakt/",
+      "Kontakt"
+    ],
+    [
+      "tel:+48515686622",
+      "+48 515 686 622"
+    ],
+    [
+      "mailto:pawel@g-pro.com.pl",
+      "pawel@g-pro.com.pl"
+    ],
+    [
+      "https://g-pro.com.pl/polityka-prywatnosci/",
+      "Polityka prywatności"
+    ],
+    [
+      "https://g-pro.com.pl/regulamin-serwisu/",
+      "Regulamin serwisu"
+    ],
+    [
+      "https://kamikstudio.pl",
+      "KamikStudio"
+    ],
+    [
+      "https://g-pro.com.pl/polityka-prywatnosci/",
+      "Polityka prywatności i cookies"
+    ]
+  ],
+  "text": "Nasze realizacje | G-PRO ECO ENERGY\nPrzejdź do treści\nOferta\nFotowoltaika\nDachy\nPompy ciepła\nMagazyny energii\nKlimatyzacja\nStacje ładowania\nMonitoring i alarmy\nFarmy fotowoltaiczne\nO firmie\nKontakt\nRealizacje\n+48 515 686 622\nStrona główna\nRealizacje\nNasze realizacje\nInstalacje fotowoltaiczne, pompy ciepła, dachy, magazyny energii i klimatyzacja wykonane przez nas w Kaliszu, Ostrowie Wielkopolskim, Pleszewie, Koninie, Sieradzu, Ostrzeszowie, Gnieźnie i okolicach.\nFotowoltaika na dachu skośnym\nPanele fotowoltaiczne – dom jednorodzinny\nInstalacja fotowoltaiczna pod Kaliszem\nPanele na połaci dachowej\nFotowoltaika na dachówce ceramicznej\nInstalacja fotowoltaiczna – Kalisz\nPanele fotowoltaiczne na budynku mieszkalnym\nInstalacja fotowoltaiczna w trakcie montażu\nFotowoltaika na gruncie – konstrukcja wolnostojąca\nPanele na konstrukcji gruntowej\nInstalacja wielkoskalowa na gruncie\nFotowoltaika dla firmy – dach hali\nInstalacja firmowa w okolicach Kalisza\nFotowoltaika i pompa ciepła w jednym obiekcie\nZestaw fotowoltaika plus pompa ciepła\nPompa ciepła Panasonic – montaż na wspornikach\nPompa ciepła na elewacji budynku\nJednostka zewnętrzna pompy ciepła\nPompa ciepła przy domu jednorodzinnym\nPompa ciepła powietrze-woda\nPompa ciepła dla domu jednorodzinnego\nPompa ciepła u klienta indywidualnego\nPompa ciepła w komplecie z fotowoltaiką\nZasobnik i jednostka wewnętrzna w kotłowni\nFalowniki i osprzęt instalacji\nMagazyn energii Deye z falownikiem\nMagazyn energii w pomieszczeniu technicznym\nKlimatyzacja w pomieszczeniu mieszkalnym\nKlimatyzator LG – jednostka zewnętrzna\nKlimatyzator LG na elewacji\nJednostka wewnętrzna klimatyzatora LG\nWallbox do ładowania samochodu elektrycznego\nStacja ładowania wraz ze skrzynką zasilającą\nŁadowarka EV zamontowana na ścianie\nSamochód elektryczny podczas ładowania\nWtyczka ładowarki w gnieździe pojazdu\nKamery monitoringu na słupie\nDach z fotowoltaiką – realizacja kompleksowa\nKrycie dachu dachówką na membranie\nMontaż więźby dachowej\nKonstrukcja dachu na budowie domu\nDach z blachy na rąbek stojący\nDrewno konstrukcyjne na placu budowy\nDom z dachem na rąbek stojący\nKontakt\nPorozmawiajmy o Twojej instalacji\nZadzwoń albo zostaw numer - oddzwonimy i bezpłatnie wycenimy zakres prac.\nTelefon\n+48 515 686 622\nE-mail\npawel@g-pro.com.pl\nAdres\nMigdałowa 16, 62-800 Kalisz\nGodziny pracy\nPoniedziałek – piątek, 8:00 – 16:00\nTelefon\n*\nE-mail\n*\nCzego dotyczy zapytanie?\nDachy\nFarmy fotowoltaiczne\nFotowoltaika\nKlimatyzacja\nMagazyny energii\nMonitoring i alarmy\nPompy ciepła\nStacje ładowania\nDofinansowania (Czyste Powietrze, magazyn energii)\nInny temat\nWiadomość\n*\nNie wypełniaj tego pola\nWyrażam zgodę na kontakt telefoniczny i mailowy w sprawie mojego zapytania.\n\t\t\t\t\t\t\tDane przetwarza G-PRO Gracjan Papierski, Migdałowa 16, 62-800 Kalisz.\n\t\t\t\t\t\t\tSzczegóły w\npolityce prywatności\n.\nWyślij zapytanie\nFotowoltaika, pompy ciepła, dachy, magazyny energii, klimatyzacja, stacje ładowania i monitoring. Kalisz i południowa Wielkopolska.\nOferta\nFotowoltaika\nDachy\nPompy ciepła\nMagazyny energii\nKlimatyzacja\nStacje ładowania\nMonitoring i alarmy\nFarmy fotowoltaiczne\nInformacje\nO firmie\nKontakt\nKontakt\n+48 515 686 622\npawel@g-pro.com.pl\nMigdałowa 16\n62-800 Kalisz\nNIP: 6182185639\nREGON: 386322888\n2026 © G-PRO Gracjan Papierski. Wszelkie prawa zastrzeżone.\nPolityka prywatności\nRegulamin serwisu\nwdrożenie i realizacja\nKamikStudio\nDbamy o Twoją prywatność\nUżywamy plików cookies, żeby strona działała poprawnie oraz - za Twoją zgodą - żeby\n\t\tmierzyć ruch i skuteczność reklam. Niezbędne działają zawsze.\nPolityka prywatności i cookies\n.\nNiezbędne\nPotrzebne do działania strony i formularza. Nie można ich wyłączyć.\nStatystyczne\nPokazują, które podstrony są odwiedzane (Google Analytics 4).\nMarketingowe\nPozwalają mierzyć skuteczność reklam i docierać do osób, które już tu były.\nAkceptuję wszystkie\nTylko niezbędne\nUstawienia"
+}
