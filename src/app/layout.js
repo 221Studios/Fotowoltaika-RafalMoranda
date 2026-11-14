@@ -1,5 +1,6 @@
 import "./globals.css";
 
+import Script from "next/script";
 import { Google_Sans_Flex, Google_Sans_Code, Manrope } from "next/font/google";
 
 import ClientLayout from "@/components/ClientLayout";
@@ -100,6 +101,7 @@ export default function RootLayout({ children }) {
           <DitherCursorTrail />
         </ClientLayout>
         <WhatsAppWidget />
+        {!isPreview && <Script src="/cms-public.js" strategy="beforeInteractive" />}
       </body>
     </html>
   );
