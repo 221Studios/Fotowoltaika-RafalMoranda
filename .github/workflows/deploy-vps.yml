@@ -1,0 +1,58 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fotowoltaika-vps-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static site
+        run: npm run build
+
+      - name: Configure SSH
+        env:
+          VPS_DEPLOY_KEY: ${{ secrets.VPS_DEPLOY_KEY }}
+        run: |
+          install -d -m 700 ~/.ssh
+          printf '%s\n' "$VPS_DEPLOY_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          printf '%s\n' '[221studio.pl]:222 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDSzI00leJjWmWxnUDEW9FqpWUpA33bOSTpOfIOBz9zF' > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: Upload static export
+        run: >-
+          rsync -az --delete
+          -e 'ssh -i ~/.ssh/id_ed25519 -p 222 -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes'
+          ./out/
+          fotowoltaika-deploy@221studio.pl:/home/fotowoltaika-deploy/incoming/${GITHUB_SHA}/
+
+      - name: Activate release
+        run: >-
+          ssh -i ~/.ssh/id_ed25519 -p 222
+          -o IdentitiesOnly=yes
+          -o StrictHostKeyChecking=yes
+          fotowoltaika-deploy@221studio.pl
+          "sudo -n /usr/local/sbin/fotowoltaika-promote ${GITHUB_SHA}"
