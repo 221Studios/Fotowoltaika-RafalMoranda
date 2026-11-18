@@ -10,7 +10,7 @@ const DESCRIPTION =
   "Fotowoltaika Kalisz: dobór, montaż i serwis dla domu i firmy. Magazyny energii, realizacje ALFA z regionu i bezpłatna wycena instalacji.";
 
 export const metadata = createPageMetadata({
-  title: "Fotowoltaika w Kaliszu — montaż i serwis",
+  title: "Fotowoltaika w Kaliszu - montaż i serwis",
   description: DESCRIPTION,
   path: "/fotowoltaika/",
   image: "/images/research/banner.webp",
@@ -54,7 +54,7 @@ export default function PhotovoltaicsPage() {
 
       <section className="container pv-guidance" id="dotacje-przylaczenia" aria-labelledby="pv-guidance-title">
         <p className="mono">Praktyczny przewodnik · aktualizacja 2 listopada 2026</p>
-        <h2 id="pv-guidance-title">Dotacje i zgłoszenie instalacji — od czego zacząć?</h2>
+        <h2 id="pv-guidance-title">Dotacje i zgłoszenie instalacji - od czego zacząć?</h2>
         <p>
           Dostępność wsparcia zależy od rodzaju urządzeń, dat inwestycji i
           warunków naboru. Przed zakupem sprawdź aktualny regulamin oraz
@@ -103,7 +103,7 @@ export default function PhotovoltaicsPage() {
               wymagany wniosek i aktualne dokumenty operatora.
             </p>
             <a href="https://energa-operator.pl/przylaczenie-do-sieci/przylaczanie-wytworcy-energii/mikroinstalacja" target="_blank" rel="noreferrer">
-              Proces przyłączenia mikroinstalacji — Energa-Operator <span aria-hidden="true">↗</span>
+              Proces przyłączenia mikroinstalacji - Energa-Operator <span aria-hidden="true">↗</span>
             </a>
           </article>
         </div>

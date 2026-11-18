@@ -9,7 +9,7 @@ const DESCRIPTION =
   "Montaż kamer i monitoring CCTV w Kaliszu dla domu i firmy. Dobór kamer, podgląd w telefonie, zapis nagrań, konfiguracja i serwis. Bezpłatna wycena.";
 
 export const metadata = createPageMetadata({
-  title: "Montaż kamer CCTV Kalisz — monitoring domu i firmy",
+  title: "Montaż kamer CCTV Kalisz - monitoring domu i firmy",
   description: DESCRIPTION,
   path: "/cctv/",
   image: "/images/journal/banner.webp",

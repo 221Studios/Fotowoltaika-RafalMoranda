@@ -110,6 +110,11 @@
     row-gap: 2rem;
   }
 
+  .list {
+    width: 100%;
+    margin-inline: 0;
+  }
+
   .heading {
     position: relative;
     top: auto;

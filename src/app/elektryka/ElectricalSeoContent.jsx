@@ -82,14 +82,14 @@ export default function ElectricalSeoContent() {
               <p>
                 Wykonujemy nowe instalacje, wymieniamy stare i modernizujemy
                 rozdzielnice w Kaliszu i gminach powiatu kaliskiego. Prace
-                prowadzi nasza własna ekipa z Cekowa — bez podwykonawców.
+                prowadzi nasza własna ekipa z Cekowa - bez podwykonawców.
               </p>
               <p>
                 Alarmy, domofony i kontrolę dostępu opisujemy przy{" "}
                 <Link href="/cctv" className={styles.inlineLink}>
                   monitoringu CCTV
                 </Link>
-                , a rozdzielnicę pod falownik i magazyn energii — przy{" "}
+                , a rozdzielnicę pod falownik i magazyn energii - przy{" "}
                 <Link href="/fotowoltaika" className={styles.inlineLink}>
                   fotowoltaice
                 </Link>
@@ -203,14 +203,14 @@ export default function ElectricalSeoContent() {
             <div className={shared.priceTitleRow}>
               <Copy>
                 <h2 id="elektryka-pomiary">
-                  Pomiary elektryczne — kiedy są obowiązkowe?
+                  Pomiary elektryczne - kiedy są obowiązkowe?
                 </h2>
               </Copy>
 
               <div className={styles.measurementCopy}>
                 <p>
                   Instalację elektryczną w budynku trzeba kontrolować co najmniej
-                  raz na 5 lat — także w domu jednorodzinnym. Pomiary odbiorcze
+                  raz na 5 lat - także w domu jednorodzinnym. Pomiary odbiorcze
                   wykonujemy też po nowej instalacji, wymianie rozdzielnicy i
                   każdej większej przeróbce, zgodnie z normą PN-HD 60364-6.
                 </p>
@@ -237,7 +237,7 @@ export default function ElectricalSeoContent() {
         <div className={`container ${styles.tableInner}`}>
           <div className={styles.tableLead}>
             <p className={`mono ${shared.eyebrow}`}>Stan warunków: {UPDATED_LABEL}</p>
-            <h2 id="elektryka-plyta">Płyta indukcyjna a gwarancja — co wymaga producent?</h2>
+            <h2 id="elektryka-plyta">Płyta indukcyjna a gwarancja - co wymaga producent?</h2>
             <p>
               Nie każdy producent wymaga pieczątki w karcie. Przed podłączeniem
               sprawdzamy warunki Twojej marki, a po podłączeniu wpisujemy je do
@@ -277,7 +277,7 @@ export default function ElectricalSeoContent() {
             <div className={shared.introCopy}>
               <p>
                 To widełki z cenników firm w Polsce, a nie nasza oferta. Cenę
-                ustalamy po oględzinach — zależy od liczby punktów i obwodów,
+                ustalamy po oględzinach - zależy od liczby punktów i obwodów,
                 rodzaju ścian, stanu rozdzielnicy i zakresu pomiarów.
               </p>
               <p className={styles.note}>
@@ -334,7 +334,7 @@ export default function ElectricalSeoContent() {
               <li>
                 <strong>Bezpłatny dojazd</strong>
                 <span>
-                  W Kaliszu i powiecie kaliskim — na oględziny, zlecenia i do
+                  W Kaliszu i powiecie kaliskim - na oględziny, zlecenia i do
                   awarii.
                 </span>
               </li>

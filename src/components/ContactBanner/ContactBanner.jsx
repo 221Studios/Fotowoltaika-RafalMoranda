@@ -85,13 +85,13 @@ export default function ContactBanner() {
         <div ref={panelRef} className={styles.panel}>
           <div className={styles.intro}>
             <Copy delay={0.2} trigger={`.${styles.panel}`}>
-              <h2 className={styles.title}>ALFA Rafał Morańda — lokalny instalator z Cekowa</h2>
+              <h2 className={styles.title}>ALFA Rafał Morańda - lokalny instalator z Cekowa</h2>
             </Copy>
             <Copy delay={0.35} trigger={`.${styles.panel}`}>
               <p>
                 Zapytaj o fotowoltaikę z magazynem energii, instalację
                 elektryczną lub monitoring CCTV. Montaż i serwis wykonuje nasza
-                własna ekipa — z bazy w Cekowie dojeżdżamy do centrum Kalisza
+                własna ekipa - z bazy w Cekowie dojeżdżamy do centrum Kalisza
                 w około 30 minut.
               </p>
             </Copy>

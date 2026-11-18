@@ -9,7 +9,7 @@ export const PHOTOVOLTAICS_FAQ = [
       "Porównuj oferty obejmujące ten sam zakres: modele i liczbę modułów, moc PV, falownik, konstrukcję, zabezpieczenia, montaż oraz uruchomienie. Sprawdź również, jakie prace elektryczne, dokumentacja i warunki gwarancji obejmuje cena. Dzięki temu wiesz, za jakie urządzenia i prace płacisz.",
   },
   {
-    question: "Mam już fotowoltaikę — co przygotować przed rozbudową?",
+    question: "Mam już fotowoltaikę - co przygotować przed rozbudową?",
     answer:
       "Przygotuj model falownika, obecną moc i liczbę modułów, dokumentację instalacji, jeśli ją masz, oraz informację o zużyciu energii. Ważne są też wolne miejsce na dachu lub gruncie i powód rozbudowy, np. dodatkowe urządzenia albo zakup magazynu. Pozwala to ocenić, które elementy można zachować, a które wymagają zmiany.",
   },
@@ -26,12 +26,12 @@ export const PHOTOVOLTAICS_FAQ = [
   {
     question: "Ile trwa montaż i kiedy może się rozpocząć?",
     answer:
-      "Orientacyjny czas montażu standardowej instalacji domowej to 1–2 dni robocze. Nie jest to termin od pierwszego kontaktu do uruchomienia całego procesu: osobno ustalamy oględziny, przygotowanie oferty, dostępność urządzeń i rozpoczęcie prac. Magazyn, trudniejszy dach lub dodatkowe prace elektryczne mogą wydłużyć montaż.",
+      "Orientacyjny czas montażu standardowej instalacji domowej to 1-2 dni robocze. Nie jest to termin od pierwszego kontaktu do uruchomienia całego procesu: osobno ustalamy oględziny, przygotowanie oferty, dostępność urządzeń i rozpoczęcie prac. Magazyn, trudniejszy dach lub dodatkowe prace elektryczne mogą wydłużyć montaż.",
   },
   {
     question: "Co ustalić przy odbiorze instalacji?",
     answer:
-      "Ustal, jakie dokumenty otrzymujesz, jak sprawdzić pracę falownika i gdzie zgłosić usterkę. Jeśli zestaw ma monitoring w aplikacji, ważne są dostęp właściciela i wyjaśnienie podstawowych odczytów. Przy magazynie warto omówić tryb pracy, a przy zasilaniu awaryjnym — które obwody będą zasilane i jakie są ograniczenia zestawu.",
+      "Ustal, jakie dokumenty otrzymujesz, jak sprawdzić pracę falownika i gdzie zgłosić usterkę. Jeśli zestaw ma monitoring w aplikacji, ważne są dostęp właściciela i wyjaśnienie podstawowych odczytów. Przy magazynie warto omówić tryb pracy, a przy zasilaniu awaryjnym - które obwody będą zasilane i jakie są ograniczenia zestawu.",
   },
 ];
 
@@ -46,7 +46,7 @@ export default function PhotovoltaicsLocalService() {
             Fotowoltaika powinna odpowiadać temu, jak korzystasz z prądu.
             ALFA z Cekowa oferuje dobór, montaż i serwis instalacji dla domów
             i firm w Kaliszu oraz okolicy. Zacznij od rozmowy o budynku,
-            zużyciu energii i planach rozbudowy — na tej podstawie ustalimy
+            zużyciu energii i planach rozbudowy - na tej podstawie ustalimy
             zakres rozwiązania i wyceny.
           </p>
         </header>
@@ -82,7 +82,7 @@ export default function PhotovoltaicsLocalService() {
               czasie niż jej produkcja, np. wieczorem. Pojemność dobieramy do
               zużycia i możliwości instalacji. Przy rozbudowie trzeba sprawdzić
               zgodność z falownikiem. Zasilanie podczas awarii sieci wymaga
-              odpowiedniej konfiguracji — sam magazyn go nie gwarantuje.
+              odpowiedniej konfiguracji - sam magazyn go nie gwarantuje.
             </p>
             <p><Link href="/kontakt">Zapytaj o dobór magazynu energii →</Link></p>
           </article>
@@ -149,7 +149,7 @@ export default function PhotovoltaicsLocalService() {
             <p className={`mono ${styles.eyebrow}`}>Przed decyzją</p>
             <h3 id="pv-faq-title">Pytania o fotowoltaikę i magazyny energii</h3>
             <p>Praktyczne ustalenia dotyczące oferty, rozbudowy i odbioru.</p>
-            <Link href="/kontakt/faq">Ceny, dotacje i formalności — przejdź do FAQ →</Link>
+            <Link href="/kontakt/faq">Ceny, dotacje i formalności - przejdź do FAQ →</Link>
           </div>
           <div>
             {PHOTOVOLTAICS_FAQ.map(({ question, answer }) => (
@@ -170,7 +170,7 @@ export default function PhotovoltaicsLocalService() {
             <p>
               Podaj miejscowość, przybliżone roczne zużycie energii i informację,
               czy planujesz nową instalację, czy rozbudowę. Jeśli nie masz jeszcze
-              wszystkich danych, zacznij od kontaktu — ustalimy, co będzie potrzebne.
+              wszystkich danych, zacznij od kontaktu - ustalimy, co będzie potrzebne.
             </p>
             <p><Link href="/kontakt">Poproś o wycenę fotowoltaiki →</Link></p>
             <p>

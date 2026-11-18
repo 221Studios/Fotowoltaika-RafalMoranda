@@ -13,7 +13,7 @@
   top: var(--gap);
   left: var(--gap);
   width: var(--w);
-  z-index: 1000;
+  z-index: 1200;
   transition: transform 0.4s ease;
 }
 
@@ -135,6 +135,9 @@
   flex-direction: column;
   min-height: 0;
   overflow-y: auto;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   background-color: var(--menu-surface);
 }
@@ -288,5 +291,36 @@
 
   .word {
     text-shadow: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    --gap: 0.75rem;
+    --bar-h: 96px;
+    --pad: 1rem;
+    --col1: 32px;
+    --col-gap: 1rem;
+  }
+
+  .logo {
+    width: min(220px, calc(var(--w) - 112px));
+  }
+
+  .toggle {
+    width: 80px;
+  }
+
+  .navItem {
+    padding-block: 0.7rem;
+  }
+
+  .label,
+  .contactTitle {
+    font-size: 1.35rem;
+  }
+
+  .contact {
+    min-height: 88px;
   }
 }

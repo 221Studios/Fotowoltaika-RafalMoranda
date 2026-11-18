@@ -89,6 +89,11 @@
     padding: 1.5rem;
   }
 
+  .title {
+    font-size: clamp(2rem, 10vw, 2.6rem);
+    overflow-wrap: anywhere;
+  }
+
   .side {
     align-items: flex-start;
     padding-left: 0;

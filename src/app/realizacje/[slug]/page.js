@@ -28,7 +28,7 @@ export async function generateMetadata({ params }) {
   }
 
   const pageMetadata = createPageMetadata({
-    title: `${installation.title} — realizacja fotowoltaiki`,
+    title: `${installation.title} - realizacja fotowoltaiki`,
     description: `${installation.originalTitle}. Zdjęcia i potwierdzone dane urządzeń z realizacji ALFA Rafał Morańda.`,
     path: `/realizacje/${installation.slug}/`,
     image: installation.image,

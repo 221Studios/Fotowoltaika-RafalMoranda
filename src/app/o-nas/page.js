@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/site";
 import styles from "./about.module.css";
 
 export const metadata = createPageMetadata({
-  title: "O firmie | ALFA Rafał Morańda – Doświadczenie od 1998 roku",
+  title: "O firmie | ALFA Rafał Morańda - Doświadczenie od 1998 roku",
   description:
     "Poznaj firmę ALFA Rafał Morańda z Cekowa. Doświadczenie od 1998 roku, własne ekipy, certyfikaty i uprawnienia SEP oraz odpowiedzialność od projektu po serwis.",
   path: "/o-nas/",

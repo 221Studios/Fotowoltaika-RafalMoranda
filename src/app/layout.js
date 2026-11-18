@@ -37,7 +37,7 @@ export const metadata = {
   metadataBase: new URL(SITE_URL),
   applicationName: SITE_NAME,
   title: {
-    default: "Fotowoltaika Kalisz — bezpłatna wycena | ALFA",
+    default: "Fotowoltaika Kalisz - bezpłatna wycena | ALFA",
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
@@ -68,7 +68,7 @@ export const metadata = {
     locale: "pl_PL",
     url: "/",
     siteName: SITE_NAME,
-    title: "Fotowoltaika Kalisz — bezpłatna wycena | ALFA",
+    title: "Fotowoltaika Kalisz - bezpłatna wycena | ALFA",
     description: SITE_DESCRIPTION,
     images: [
       {
@@ -79,7 +79,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fotowoltaika Kalisz — bezpłatna wycena | ALFA",
+    title: "Fotowoltaika Kalisz - bezpłatna wycena | ALFA",
     description: SITE_DESCRIPTION,
     images: [DEFAULT_OG_IMAGE],
   },

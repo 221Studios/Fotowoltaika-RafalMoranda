@@ -11,16 +11,16 @@ export const FAQ_ITEMS = [
   {
     question: "Ile kosztuje instalacja fotowoltaiczna dla domu w Kaliszu w 2026 roku?",
     answer: [
-      "Według przeglądów cen z sierpnia–października 2026 instalacja z montażem kosztuje zwykle: 5 kWp — ok. 15–22 tys. zł, 8 kWp — ok. 21–32 tys. zł, 10 kWp — ok. 24–40 tys. zł brutto (VAT 8%).",
-      "To średnio ok. 2,6–3,8 tys. zł za 1 kWp. Cena zależy od pokrycia dachu, długości tras kablowych, modelu falownika i paneli oraz tego, czy wymagane jest uzgodnienie przeciwpożarowe.",
+      "Według przeglądów cen z sierpnia-października 2026 instalacja z montażem kosztuje zwykle: 5 kWp - ok. 15-22 tys. zł, 8 kWp - ok. 21-32 tys. zł, 10 kWp - ok. 24-40 tys. zł brutto (VAT 8%).",
+      "To średnio ok. 2,6-3,8 tys. zł za 1 kWp. Cena zależy od pokrycia dachu, długości tras kablowych, modelu falownika i paneli oraz tego, czy wymagane jest uzgodnienie przeciwpożarowe.",
       "Wiążącą cenę dla Twojego budynku podajemy po bezpłatnych oględzinach.",
     ],
   },
   {
     question: "Ile kosztuje fotowoltaika z magazynem energii?",
     answer: [
-      "Zestaw 5 kWp z magazynem 10 kWh kosztuje zwykle ok. 24–31 tys. zł, a 10 kWp z magazynem 10 kWh ok. 37–46 tys. zł brutto (przeglądy cen z października 2026).",
-      "Magazyny z segmentu premium, do którego należy Huawei LUNA2000, kosztują ok. 1,6–2 tys. zł za 1 kWh pojemności, więc 10 kWh to ok. 16–20 tys. zł. Część tej kwoty może pokryć program Przydomowe Magazyny Energii 2.",
+      "Zestaw 5 kWp z magazynem 10 kWh kosztuje zwykle ok. 24-31 tys. zł, a 10 kWp z magazynem 10 kWh ok. 37-46 tys. zł brutto (przeglądy cen z października 2026).",
+      "Magazyny z segmentu premium, do którego należy Huawei LUNA2000, kosztują ok. 1,6-2 tys. zł za 1 kWh pojemności, więc 10 kWh to ok. 16-20 tys. zł. Część tej kwoty może pokryć program Przydomowe Magazyny Energii 2.",
     ],
   },
   {
@@ -41,8 +41,8 @@ export const FAQ_ITEMS = [
     question: "Jakie dofinansowanie do fotowoltaiki jest dostępne w 2026 roku?",
     answer: [
       "Na same panele nie ma obecnie dotacji. Program „Mój Prąd” zakończył się 12 września 2025 r., a edycji 7.0 nie będzie. „Czyste Powietrze” nie obejmuje fotowoltaiki.",
-      "Instalację i magazyn energii możesz odliczyć w uldze termomodernizacyjnej — do 53 000 zł od podstawy opodatkowania PIT. Na magazyn energii działa program Przydomowe Magazyny Energii 2.",
-      "Stan na 3 listopada 2026 r. Zasady programów mogą się zmienić — przed złożeniem wniosku sprawdzamy je ponownie.",
+      "Instalację i magazyn energii możesz odliczyć w uldze termomodernizacyjnej - do 53 000 zł od podstawy opodatkowania PIT. Na magazyn energii działa program Przydomowe Magazyny Energii 2.",
+      "Stan na 3 listopada 2026 r. Zasady programów mogą się zmienić - przed złożeniem wniosku sprawdzamy je ponownie.",
     ],
   },
   {
@@ -54,7 +54,7 @@ export const FAQ_ITEMS = [
     ],
   },
   {
-    question: "Jaki VAT obowiązuje na fotowoltaikę — 8% czy 23%?",
+    question: "Jaki VAT obowiązuje na fotowoltaikę - 8% czy 23%?",
     answer: [
       "8% dla instalacji na domu jednorodzinnym do 300 m² powierzchni użytkowej lub w mieszkaniu do 150 m², także z magazynem energii.",
       "23% dotyczy budynków niemieszkalnych, instalacji dla firmy oraz części domu powyżej limitu metrażu.",
@@ -63,7 +63,7 @@ export const FAQ_ITEMS = [
   {
     question: "Po ilu latach zwraca się fotowoltaika w net-billingu?",
     answer: [
-      "Bez magazynu energii — zwykle po ok. 7–9 latach. Z magazynem — po ok. 10–14 latach, krócej przy dotacji i uldze termomodernizacyjnej.",
+      "Bez magazynu energii - zwykle po ok. 7-9 latach. Z magazynem - po ok. 10-14 latach, krócej przy dotacji i uldze termomodernizacyjnej.",
       "Najwięcej zyskujesz, zużywając prąd na bieżąco, gdy panele produkują. Od lipca 2024 r. nowi prosumenci rozliczają nadwyżki po godzinowej cenie rynkowej (RCE), a wartość depozytu jest powiększana o 23%.",
       "To szacunki z kalkulacji rynkowych z 2026 r. Okres zwrotu dla Twojego domu liczymy na podstawie Twoich rachunków.",
     ],
@@ -79,7 +79,7 @@ export const FAQ_ITEMS = [
   {
     question: "Czy fotowoltaika działa, gdy nie ma prądu w sieci?",
     answer: [
-      "Zwykła instalacja — nie. Falownik wyłącza się przy zaniku napięcia w sieci, co wymagają przepisy bezpieczeństwa.",
+      "Zwykła instalacja - nie. Falownik wyłącza się przy zaniku napięcia w sieci, co wymagają przepisy bezpieczeństwa.",
       "Zasilanie awaryjne daje dopiero zestaw z magazynem energii i modułem Huawei Backup Box. Wtedy wybrane obwody w domu działają także podczas awarii sieci. Montujemy takie zestawy.",
     ],
   },
@@ -87,7 +87,7 @@ export const FAQ_ITEMS = [
     question: "Jaka jest gwarancja na panele, falownik i magazyn energii?",
     answer: [
       "Falowniki Huawei SUN2000 mają 10 lat gwarancji producenta, z możliwością płatnego przedłużenia do 20 lat.",
-      "Panele JA Solar mają, zależnie od modelu, 12–25 lat gwarancji na produkt i 25–30 lat gwarancji na moc. Magazyny Huawei LUNA2000 mają 10 lat gwarancji (seria S0) albo do 15 lat przy stałym połączeniu z aplikacją FusionSolar (seria S1).",
+      "Panele JA Solar mają, zależnie od modelu, 12-25 lat gwarancji na produkt i 25-30 lat gwarancji na moc. Magazyny Huawei LUNA2000 mają 10 lat gwarancji (seria S0) albo do 15 lat przy stałym połączeniu z aplikacją FusionSolar (seria S1).",
       "Okres gwarancji dla konkretnego zestawu podajemy w ofercie.",
     ],
   },
@@ -95,7 +95,7 @@ export const FAQ_ITEMS = [
     question: "Co zrobić, gdy falownik pokazuje błąd lub instalacja przestała produkować?",
     answer: [
       "Zadzwoń do nas: +48 600 306 425. Serwis gwarancyjny i pogwarancyjny prowadzi nasza własna ekipa z Cekowa.",
-      "Przed telefonem sprawdź w aplikacji FusionSolar treść alarmu i czy w rozdzielnicy nie zadziałało zabezpieczenie — to przyspiesza diagnozę.",
+      "Przed telefonem sprawdź w aplikacji FusionSolar treść alarmu i czy w rozdzielnicy nie zadziałało zabezpieczenie - to przyspiesza diagnozę.",
     ],
   },
   {
@@ -108,7 +108,7 @@ export const FAQ_ITEMS = [
   {
     question: "Czy panele można zamontować na każdym dachu?",
     answer: [
-      "Na większości dachów tak — konstrukcję dobieramy do rodzaju pokrycia (np. blachodachówka, dachówka ceramiczna), kąta nachylenia i stanu dachu.",
+      "Na większości dachów tak - konstrukcję dobieramy do rodzaju pokrycia (np. blachodachówka, dachówka ceramiczna), kąta nachylenia i stanu dachu.",
       "Dach skierowany na wschód i zachód również się sprawdza: produkcja rozkłada się wtedy równiej w ciągu dnia. Warunki montażu sprawdzamy podczas bezpłatnych oględzin.",
     ],
   },

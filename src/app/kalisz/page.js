@@ -62,7 +62,7 @@ const DESCRIPTION =
   "ALFA obsługuje Kalisz i okolice z bazy w Cekowie. Fotowoltaika, elektryka i monitoring CCTV: lokalne realizacje, dojazd i kontakt w sprawie wyceny.";
 
 export const metadata = createPageMetadata({
-  title: "Kalisz i okolice — lokalna obsługa instalacji",
+  title: "Kalisz i okolice - lokalna obsługa instalacji",
   description: DESCRIPTION,
   path: "/kalisz/",
 });
@@ -198,7 +198,7 @@ export default function KaliszPage() {
           <p className={styles.projectsIntro}>
             Zobacz zdjęcia montaży i urządzenia wykorzystane w instalacjach
             na terenie Kalisza. Każda karta prowadzi do szczegółów realizacji.
-            To przykłady różnych konfiguracji — rozwiązanie dla Twojego
+            To przykłady różnych konfiguracji - rozwiązanie dla Twojego
             budynku dobieramy do jego warunków i potrzeb.
           </p>
           <div className={styles.projectGrid}>
@@ -227,7 +227,7 @@ export default function KaliszPage() {
                   </div>
                   <h3>
                     {installationPower
-                      ? `Fotowoltaika ${installationPower} — Kalisz`
+                      ? `Fotowoltaika ${installationPower} - Kalisz`
                       : installation.originalTitle}
                   </h3>
                   <p>{equipment}</p>
@@ -277,7 +277,7 @@ export default function KaliszPage() {
           <Copy>
             <p>
               Podaj miejscowość, rodzaj obiektu i usługę. Przy remoncie lub
-              budowie wspomnij o etapie inwestycji, a przy rozbudowie — o
+              budowie wspomnij o etapie inwestycji, a przy rozbudowie - o
               istniejących urządzeniach. Ustalimy, jakie informacje i oględziny
               będą potrzebne do przygotowania oferty.
             </p>

@@ -306,7 +306,7 @@ export default function Menu() {
           <Link
             href="/"
             className={styles.logo}
-            aria-label="Strona główna — Fotowoltaika Kalisz, Rafał Morańda"
+            aria-label="Strona główna - Fotowoltaika Kalisz, Rafał Morańda"
             onClick={() => handleLinkClick("/")}
           >
             <Logo />
@@ -329,7 +329,7 @@ export default function Menu() {
         </button>
       </div>
       <div className={styles.panel}>
-        <nav className={styles.nav}>
+        <nav className={styles.nav} data-lenis-prevent>
           {NAV_LINKS.map((link, i) => {
             const MenuItem = link.disabled ? "div" : Link;
 

@@ -1,7 +1,7 @@
 export const customerReviews = [
   {
     author: "Raybeez",
-    text: "Przystępne ceny, pomoc w przygotowaniu dokumentów do dofinansowania, a przede wszystkim staranny i czysty montaż. Instalacja o mocy 6,8 kW, z panelami skierowanymi na wschód i zachód, produkuje około 5 500–6 000 kWh rocznie. Gorąco polecam tę firmę. Wszystko działa bez zarzutu już od trzech lat!",
+    text: "Przystępne ceny, pomoc w przygotowaniu dokumentów do dofinansowania, a przede wszystkim staranny i czysty montaż. Instalacja o mocy 6,8 kW, z panelami skierowanymi na wschód i zachód, produkuje około 5 500-6 000 kWh rocznie. Gorąco polecam tę firmę. Wszystko działa bez zarzutu już od trzech lat!",
   },
   {
     author: "Krzysztof Lewandowski",

@@ -5,7 +5,7 @@ import { FAQ_ITEMS, FAQ_UPDATED_AT } from "@/data/faq";
 import { createPageMetadata } from "@/lib/site";
 
 const DESCRIPTION =
-  "Ceny fotowoltaiki w Kaliszu w 2026 r., zgłoszenie do Energa-Operator, dotacje na magazyny energii, VAT, gwarancje i serwis — odpowiedzi ALFA Rafał Morańda z Cekowa.";
+  "Ceny fotowoltaiki w Kaliszu w 2026 r., zgłoszenie do Energa-Operator, dotacje na magazyny energii, VAT, gwarancje i serwis - odpowiedzi ALFA Rafał Morańda z Cekowa.";
 
 const UPDATED_LABEL = new Intl.DateTimeFormat("pl-PL", {
   day: "numeric",
@@ -14,7 +14,7 @@ const UPDATED_LABEL = new Intl.DateTimeFormat("pl-PL", {
 }).format(new Date(`${FAQ_UPDATED_AT}T12:00:00`));
 
 export const metadata = createPageMetadata({
-  title: "FAQ — ceny fotowoltaiki, Energa, dotacje i serwis",
+  title: "FAQ - ceny fotowoltaiki, Energa, dotacje i serwis",
   description: DESCRIPTION,
   path: "/kontakt/faq/",
 });

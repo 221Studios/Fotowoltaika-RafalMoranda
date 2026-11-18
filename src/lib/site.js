@@ -14,8 +14,8 @@ export const OPENING_HOURS = {
   days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
   opens: "07:00",
   closes: "15:00",
-  label: "Pon.–pt. 7:00–15:00",
-  closedLabel: "Sob.–niedz. nieczynne",
+  label: "Pon.-pt. 7:00-15:00",
+  closedLabel: "Sob.-niedz. nieczynne",
 };
 
 export const BUSINESS_SCHEMA = {

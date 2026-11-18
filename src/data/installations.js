@@ -982,7 +982,7 @@ export const INSTALLATIONS = [
     "originalTitle": "Kalisz, falownik Huawei Sun 2000 10KTL M1, 10kWp JA Solar oraz magazyn energii LUNA 2000 5 kWh",
     "publishedAt": "2023-04-05",
     "completedAt": "2023-04-05",
-    "summary": "Montaż na który składa się instalacja fotowoltaiczna – falownik Huawei Sun 2000 10KTL M1, 10kWp JA Solar oraz magazyn energii LUNA 2000 5 kWh.",
+    "summary": "Montaż na który składa się instalacja fotowoltaiczna - falownik Huawei Sun 2000 10KTL M1, 10kWp JA Solar oraz magazyn energii LUNA 2000 5 kWh.",
     "sourceUrl": "https://www.moranda.com.pl/kalisz-falownik-huawei-sun-2000-10ktl-m1-10kwp-ja-solar-oraz-magazyn-energii-luna-2000-5-kwh/",
     "image": "/images/realizacje/kalisz-falownik-huawei-sun-2000-10ktl-m1-10kwp-ja-solar-oraz-magazyn-energii-luna-2000-5-kwh/01.webp",
     "imageAlt": "Panele fotowoltaiczne na stelażu z falownikiem i magazynem energii w Kaliszu",

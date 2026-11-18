@@ -48,7 +48,7 @@ export default function CctvSeoContent() {
               <p>
                 Montujemy monitoring CCTV w Kaliszu, powiecie kaliskim i
                 okolicznych miejscowościach. Zaczynamy od poznania obiektu i
-                miejsc, które mają być chronione — nie od przypadkowego doboru
+                miejsc, które mają być chronione - nie od przypadkowego doboru
                 gotowego zestawu kamer.
               </p>
               <p>

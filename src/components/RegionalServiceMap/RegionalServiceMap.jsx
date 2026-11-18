@@ -32,7 +32,7 @@ export default function RegionalServiceMap() {
         <div className={styles.mapWrap}>
           <iframe
             className={styles.map}
-            title="Google Maps — siedziba ALFA Rafał Morańda w Cekowie Kolonii"
+            title="Google Maps - siedziba ALFA Rafał Morańda w Cekowie Kolonii"
             src={OFFICE_MAP_URL}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

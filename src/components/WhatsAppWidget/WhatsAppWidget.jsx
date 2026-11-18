@@ -236,7 +236,7 @@ export default function WhatsAppWidget() {
             <FiArrowUpRight aria-hidden="true" />
           </button>
           <p className={styles.disclaimer}>
-            Wiadomość otworzy się w WhatsApp — nic nie wysyłamy automatycznie.
+            Wiadomość otworzy się w WhatsApp - nic nie wysyłamy automatycznie.
           </p>
         </form>
       </section>

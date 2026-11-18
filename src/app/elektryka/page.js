@@ -14,7 +14,7 @@ const DESCRIPTION =
 const HERO_IMAGE = "/images/elektryka/rozdzielnica-budynek.webp";
 
 export const metadata = createPageMetadata({
-  title: "Elektryk Kalisz — instalacje, pomiary i rozdzielnice",
+  title: "Elektryk Kalisz - instalacje, pomiary i rozdzielnice",
   description: DESCRIPTION,
   path: "/elektryka/",
   image: HERO_IMAGE,

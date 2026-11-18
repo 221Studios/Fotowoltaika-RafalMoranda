@@ -10,9 +10,9 @@ import {
 } from "@/lib/site";
 import styles from "./contact.module.css";
 
-const TITLE = "Kontakt — elektryk i fotowoltaika Kalisz";
+const TITLE = "Kontakt - elektryk i fotowoltaika Kalisz";
 const DESCRIPTION =
-  "Bezpłatna wycena fotowoltaiki i instalacji elektrycznych w Kaliszu i powiecie kaliskim. Dojazd z bazy w Cekowie. Pn–pt 7:00–15:00, tel. +48 600 306 425.";
+  "Bezpłatna wycena fotowoltaiki i instalacji elektrycznych w Kaliszu i powiecie kaliskim. Dojazd z bazy w Cekowie. Pn-pt 7:00-15:00, tel. +48 600 306 425.";
 
 export const metadata = createPageMetadata({
   title: TITLE,
