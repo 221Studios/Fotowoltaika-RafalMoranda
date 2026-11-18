@@ -159,6 +159,16 @@
   border-bottom: var(--dash);
 }
 
+.navItemDisabled {
+  color: #858585;
+  cursor: default;
+}
+
+.navItemDisabled .index,
+.navItemDisabled .label {
+  color: inherit;
+}
+
 .split {
   display: block;
   will-change: transform;

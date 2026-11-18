@@ -22,8 +22,12 @@ import {
 gsap.registerPlugin(useGSAP, SplitText);
 
 const NAV_LINKS = [
-  { href: "/kalisz", label: "Kalisz" },
-  { href: "/fotowoltaika", label: "Fotowoltaika" },
+  { href: "/kalisz", label: "Kalisz (w trakcie tworzenia)", disabled: true },
+  {
+    href: "/fotowoltaika",
+    label: "Fotowoltaika (w trakcie tworzenia)",
+    disabled: true,
+  },
   { href: "/realizacje", label: "Realizacje" },
   { href: "/cctv", label: "CCTV" },
   { href: "/elektryka", label: "Elektryka" },
@@ -326,21 +330,27 @@ export default function Menu() {
       </div>
       <div className={styles.panel}>
         <nav className={styles.nav}>
-          {NAV_LINKS.map((link, i) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={styles.navItem}
-              onClick={() => handleLinkClick(link.href)}
-            >
-              <p className={`mono sm ${styles.index} ${styles.split}`}>
-                {String(i + 1).padStart(2, "0")}
-              </p>
-              <h6 className={`${styles.label} ${styles.split}`}>
-                {link.label}
-              </h6>
-            </Link>
-          ))}
+          {NAV_LINKS.map((link, i) => {
+            const MenuItem = link.disabled ? "div" : Link;
+
+            return (
+              <MenuItem
+                key={link.href}
+                {...(!link.disabled ? { href: link.href } : {})}
+                className={`${styles.navItem}${link.disabled ? ` ${styles.navItemDisabled}` : ""}`}
+                {...(link.disabled
+                  ? { "aria-disabled": "true" }
+                  : { onClick: () => handleLinkClick(link.href) })}
+              >
+                <p className={`mono sm ${styles.index} ${styles.split}`}>
+                  {String(i + 1).padStart(2, "0")}
+                </p>
+                <h6 className={`${styles.label} ${styles.split}`}>
+                  {link.label}
+                </h6>
+              </MenuItem>
+            );
+          })}
         </nav>
 
         <Link href="/kontakt" className={styles.contact}>
